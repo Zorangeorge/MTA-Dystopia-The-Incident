@@ -10,11 +10,11 @@ mtasa://37.187.171.204:22008
 ### More details:
 
 On Dystopia:
-https://forum.mtasa.com/topic/98093-action-rpg-zombie-sandbox-dystopia-the-incident-en/
-https://discord.gg/Zs5bWSX
+- https://forum.mtasa.com/topic/98093-action-rpg-zombie-sandbox-dystopia-the-incident-en/
+- https://discord.gg/Zs5bWSX
 
 On MTA:
-https://www.multitheftauto.com/
+- https://www.multitheftauto.com/
 
 ## Installation:
 1. Copy all files in your 'Resources' folder. 
