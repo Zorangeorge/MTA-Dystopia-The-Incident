@@ -7,7 +7,7 @@ _Explore a detailed post-apocalyptic map with many encounter zones. 2000+ NPCs, 
 
 
 ### For server owners:
-Gamemode is in playable state. Some aspects are still  not optimized, so you might experience low performance in certain map areas or when doing certain actions. There are still some bugs left (nothing that cannot be solved through a quick relog). You will find some unfinished features, but the gamemode will be updated on a regular basis at least until v 1.0. Keep an eye on the MTA forum topic or the Discord community provided below. Suggestions are welcome!
+Gamemode is already in playable state. Some aspects are still  not optimized, so you might experience low performance in certain map areas or when doing certain actions. There are still some bugs left (nothing that cannot be solved through a quick relog). You will find some unfinished features, but the gamemode will be updated on a regular basis at least until v 1.0. Keep an eye on the MTA forum topic or the Discord community provided below. Suggestions are welcome! If you plan to open a server using this gamemode, I'll provide support.
 
 ### For developers:
 *All contributions are welcome*, but be aware: this project was and still is a learning experience for me. The codebase follows few to no standards, is poorly organized and is un-optimized; you're likely to encounter dead code, oddities, unneedingly cloned scripts and other stupid stuff: just about any kind of mistake you would expect a beginner to make. To give you an idea, when I started this I had only a very vague notion of what a variable is. Nonetheless, the result itself is very much playable and enjoyable. First things on my list are de-cluttering, cleaning and attempt at standardising the code.
