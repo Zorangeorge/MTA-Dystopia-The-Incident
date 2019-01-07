@@ -3,8 +3,8 @@
 
 Dystopia: The Incident is my attempt at creating a story-driven post-apocalyptic MMO-RPG for the MTA San Andreas platform.
 Some of the code is original but huge amounts of it comes from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world, designed to be also enjoyable as a single-player experience.  
-```
-Explore a detailed post-apocalyptic map with many encounter zones. 2000+ NPCs, both friendlies and baddies. Dynamic faction and spawn system. More than 50 missions already in the game. Detailed inventory with more than 100 items to be found and used. Basic needs, stamina, infection, various other modifiers like pain, bleeding, exhaustion or inebriation. Innovative looting mechanic. Four zombie types, with different behavior. Scavenge the world for materials to use simple crafting and cooking. Upgrade and drive rugged vehicles across the wasteland and engage in vehicular combat. Trade, recruit and discover parts of the story by chatting with NPCs. Experience dark humor and some strong themes (16+). Simple interface, consistent graphic style._ 
+
+```Explore a detailed post-apocalyptic map with many encounter zones. 2000+ NPCs, both friendlies and baddies. Dynamic faction and spawn system. More than 50 missions already in the game. Detailed inventory with more than 100 items to be found and used. Basic needs, stamina, infection, various other modifiers like pain, bleeding, exhaustion or inebriation. Innovative looting mechanic. Four zombie types, with different behavior. Scavenge the world for materials to use simple crafting and cooking. Upgrade and drive rugged vehicles across the wasteland and engage in vehicular combat. Trade, recruit and discover parts of the story by chatting with NPCs. Experience dark humor and some strong themes (16+). Simple interface, consistent graphic style. 
 ```
 
 ### For server owners:
