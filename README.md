@@ -1,8 +1,7 @@
 ## MTA:SA 
 # Dystopia: The Incident v0.75
 
-Dystopia: The Incident is my attempt at creating a story-driven post-apocalyptic MMO-RPG for the MTA San Andreas platform.
-Some of the code is original but huge amounts of it comes from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world, designed to be also enjoyable as a single-player experience.  
+Dystopia: The Incident is my attempt at creating a story-driven zombie post-apocalyptic MMO-RPG for the MTA San Andreas platform. Some of the code is original but huge amounts of it comes from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world, designed to be also enjoyable as a single-player experience.  
 
 _Explore a detailed post-apocalyptic map with many encounter zones. 2000+ NPCs, both friendlies and baddies. Dynamic faction and spawn system. More than 50 missions already in the game. Detailed inventory with more than 100 items to be found and used. Basic needs, stamina, infection, various other modifiers like pain, bleeding, exhaustion or inebriation. Innovative looting mechanic. Four zombie types, with different behavior. Scavenge the world for materials to build settlements or to use simple crafting and cooking. Upgrade and drive rugged vehicles across the wasteland and engage in vehicular combat. Trade, recruit and discover parts of the story by chatting with NPCs. Experience dark humor and some strong themes (16+). Simple interface, consistent graphic style._
 
@@ -11,19 +10,19 @@ _Explore a detailed post-apocalyptic map with many encounter zones. 2000+ NPCs, 
 Gamemode is in playable state. Some aspects are still  not optimized, so you might experience low performance in certain map areas or when doing certain actions. There are still some bugs left (nothing that cannot be solved through a quick relog). You will find some unfinished features, but the gamemode will be updated on a regular basis at least until v 1.0. Keep an eye on the MTA forum topic or the Discord community provided below. Suggestions are welcome!
 
 ### For developers:
-*All contributions are welcome*, but be aware: this project was and still is a learning experience for me. The codebase follows few to no standards, is poorly organized and is un-optimized; you're likely to encounter dead code, oddities, stupid stuff and just about any kind of mistake you would expect a beginner to make. To give you an idea, when I started this I had only a very vague notion of what a variable is. Nonetheless, the result itself is very much playable and enjoyable.
+*All contributions are welcome*, but be aware: this project was and still is a learning experience for me. The codebase follows few to no standards, is poorly organized and is un-optimized; you're likely to encounter dead code, oddities, unneedingly cloned scripts and other stupid stuff: just about any kind of mistake you would expect a beginner to make. To give you an idea, when I started this I had only a very vague notion of what a variable is. Nonetheless, the result itself is very much playable and enjoyable. First things on my list are de-cluttering, cleaning and attempt at standardising the code.
 
 ### Test server:
 mtasa://37.187.171.204:22008
 
 ### More details:
 
-On Dystopia:
+About Dystopia:
 - https://forum.mtasa.com/topic/98093-action-rpg-zombie-sandbox-dystopia-the-incident-en/
 - https://discord.gg/Zs5bWSX
 - https://dystopiatheincident.imgur.com/
 
-On MTA:
+About MTA:
 - https://www.multitheftauto.com/
 
 ## Installation:
