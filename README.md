@@ -12,7 +12,7 @@ mtasa://37.187.171.204:22008
 On Dystopia:
 - https://forum.mtasa.com/topic/98093-action-rpg-zombie-sandbox-dystopia-the-incident-en/
 - https://discord.gg/Zs5bWSX
-- https://imgur.com/user/DystopiaTheIncident
+- https://dystopiatheincident.imgur.com/
 
 On MTA:
 - https://www.multitheftauto.com/
