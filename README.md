@@ -20,7 +20,7 @@ https://www.multitheftauto.com/
 1. Copy all files in your 'Resources' folder. 
 
 2. Edit your server's mtaserver.conf file and replace the resource lines with the following:
-
+```xml
     <resource src="admin" startup="1" protected="0" />
     <resource src="defaultstats" startup="1" protected="0" />
     <resource src="parachute" startup="1" protected="0" />
@@ -86,7 +86,7 @@ https://www.multitheftauto.com/
     <resource src="killmessages" startup="1" protected="0" />
     <resource src="dystopia_traffic" startup="1" protected="0" />
     <resource src="dystopia_sync" startup="1" protected="0" />
-
+```
 3. You're all set up, run the server and have fun.
 
 _Note: Some resources (like 'killmessages') might be already present in your MTA installation - make sure you delete the original resources and use those provided here._
