@@ -1,0 +1,11 @@
+<meta>
+    <info author="PrettySweetie" version="1.0" type="scrpit" />
+    <script src="sv_upgrades.lua" type="server"/>
+    <script src="setups.lua" type="server"/>
+    <script src="cl_upgrades.lua" type="client" cache="false" />
+    
+    <export function="getVehicleAddonInfos" type="server" />
+    <export function="setVehicleGunsEnabled" type="server" />
+    <file src="shotgun.png" cache="false" />
+    <file src="19.wav" cache="false" />
+</meta>

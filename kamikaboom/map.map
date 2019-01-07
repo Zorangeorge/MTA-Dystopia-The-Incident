@@ -1,0 +1,12 @@
+<map edf:definitions="editor_main">
+    <vehicle id="kamikaboom1vehicle" paintjob="3" interior="0" alpha="255" model="545" plate="KAMIKABO" dimension="0" posX="2492.6006" posY="-1679.2998" posZ="13.3" rotX="0" rotY="0" rotZ="0" upgrades="1025" color="255,40,20,255,40,20,0,0,0,0,0,0"></vehicle>
+    <object id="object (CLOTHES_RAIL) (4)" breakable="true" interior="0" collisions="false" alpha="255" model="2371" doublesided="false" scale="1" dimension="0" posX="2492.5" posY="-1680.3" posZ="13" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrel1) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="1218" doublesided="true" scale="1" dimension="0" posX="2492.5" posY="-1680.5" posZ="14.4" rotX="49.5" rotY="90" rotZ="0"></object>
+    <object id="object (barrel4) (3)" breakable="true" interior="0" collisions="false" alpha="255" model="1225" doublesided="true" scale="1" dimension="0" posX="2492.5" posY="-1681.1" posZ="13.4" rotX="359.065" rotY="339.247" rotZ="89.646"></object>
+    <object id="object (barrel4) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="1225" doublesided="true" scale="1" dimension="0" posX="2492.3" posY="-1679.7" posZ="14.4" rotX="90" rotY="0" rotZ="91.999"></object>
+    <object id="object (fbmp_lr_rem2) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="1185" doublesided="true" scale="1" dimension="0" posX="2491.5" posY="-1681.6" posZ="12.8" rotX="0" rotY="0" rotZ="179"></object>
+    <object id="object (CLOTHES_RAIL) (5)" breakable="true" interior="0" collisions="false" alpha="255" model="2371" doublesided="false" scale="1" dimension="0" posX="2492.3" posY="-1680.6" posZ="13.2" rotX="0" rotY="89.75" rotZ="0"></object>
+    <object id="object (CLOTHES_RAIL) (6)" breakable="true" interior="0" collisions="false" alpha="255" model="2371" doublesided="false" scale="1" dimension="0" posX="2492.8" posY="-1680.6" posZ="13.1" rotX="0" rotY="272.497" rotZ="0"></object>
+    <object id="object (fbb_lr_slv1) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="1115" doublesided="true" scale="1.5" dimension="0" posX="2492.6001" posY="-1677.4" posZ="12.7" rotX="0" rotY="0" rotZ="358.75"></object>
+    <object id="object (CJ_TARGET6) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2056" doublesided="false" scale="1" dimension="0" posX="2491.8999" posY="-1678.6" posZ="13.3" rotX="0" rotY="0" rotZ="265.25"></object>
+</map>

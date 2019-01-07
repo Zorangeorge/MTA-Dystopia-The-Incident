@@ -1,0 +1,88 @@
+Bomber script 1.0 (Resource) Ace_Gambit
+
+Support thread: http://forum.mtasa.com/viewtopic.php?f=91&t=22648
+
+This resource allows you to attach bombs to any vehicle. Please take note that you can not run this resource as a stand alone script. You will have to incorporate it in a game mode.
+
+Also be aware of the fact that the bombs are not synchronized. In other words, only you can see the bombs falling! The explosions on the other hand are synchronized for all players.
+
+Features:
+
+- realistic bomb dropping with real GTA world physics
+- configurable bomb models
+- velocity triggered bombs
+- depth bombs
+
+Controls:
+
+- LSHIFT drop bomb
+- MOUSE2 switch off depth camera
+
+Usage (The "samples" folder includes a demo game mode that you can use as a sandbox):
+
+1) Copy archive to resource folder and include resource in your script.
+
+<include resource="bomber" />
+
+2) Register markers using one of the following export functions.
+
+2a) Register all markers as bomb reloading spots
+call(getResourceFromName("bomber"), "regBombMarkers", getElementsByType("marker", getRootElement()))
+
+2b) Register marker as bomb reloading spot
+call(getResourceFromName("bomber"), "regBombMarker", marker)
+
+2c) Unregister marker as bomb reloading spot *
+call(getResourceFromName("bomber"), "unregBombMarker", marker)
+
+2d) Unregister all markers as bomb reloading spots *
+call(getResourceFromName("bomber"), "unregBombMarkers", getElementsByType("marker", getRootElement()))
+
+3) Play!
+
+Settings:
+
+<setting name="@[setting name]" value="[vehicle id] [model id] [x pos offset] [y pos offset] [z pos offset] [x rot offset] [y rot offset] [z rot offset] [depth bomb]" />
+
+Setting names **:
+
+- andromada
+- at400
+- beagle
+- cargobob
+- cropduster
+- dodo
+- hunter
+- hydra
+- leviathan
+- maverick
+- nevada
+- newschopper
+- policemaverick
+- raindance
+- rustler
+- seasparrow
+- shamal
+- skimmer
+- sparrow
+- stuntplane
+- coastguard
+- dinghy
+- jetmax
+- launch
+- marquis
+- predator
+- reefer
+- speeder
+- squalo
+- tropic
+- fbirancher
+- patriot
+- policecar
+- policeranger
+- rhino
+
+* Markers are automatically unregistered when the resource is stopped
+** Setting names are just predefined tags. You can use any vehicle id in combination with a setting tag. This is more or less a design flaw since I am just starting to learn how to use the settings system.
+
+Credits to the MTA team

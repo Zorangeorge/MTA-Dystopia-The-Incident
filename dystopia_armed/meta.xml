@@ -1,0 +1,6 @@
+<meta>
+	<info type="script" author="r1k3" name="dystopia_armed" version="1.0.0" />
+	<min_mta_version client="1.3.5" server="1.3.5" />	
+	<script src="client.lua" type="client"/> 
+	<script src="server.lua" type="server"/> 
+</meta>

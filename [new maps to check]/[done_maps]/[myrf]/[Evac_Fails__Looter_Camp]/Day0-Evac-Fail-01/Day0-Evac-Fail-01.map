@@ -1,0 +1,11 @@
+<map edf:definitions="editor_main">
+    <vehicle id="vehicle (Bus) (1)" paintjob="3" interior="0" alpha="255" model="431" plate="VUVHY3D" dimension="0" color="32,32,44,78,104,129,0,0,0,0,0,0" posX="-1803.7998" posY="1379.2998" posZ="7.3" rotX="180" rotY="85.995" rotZ="321.998" sirens="false"></vehicle>
+    <vehicle id="vehicle (FBI Rancher) (1)" paintjob="3" interior="0" alpha="255" model="490" plate="WKM6P4R" dimension="0" color="0,0,0,0,0,0,0,0,0,0,0,0" posX="-1819.7" posY="1372" posZ="7.4" rotX="0" rotY="0" rotZ="121.998" sirens="false"></vehicle>
+    <object id="object (lamppost2) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="1290" doublesided="false" scale="1" dimension="0" posX="-1820.9" posY="1371" posZ="11.1" rotX="0" rotY="30" rotZ="34"></object>
+    <removeWorldObject id="removeWorldObject (lamppost2) (1)" radius="8.8853035" interior="0" model="1290" lodModel="0" posX="-1823.2561" posY="1369.3783" posZ="9.44519" rotX="0" rotY="0" rotZ="0"></removeWorldObject>
+    <object id="object (DYN_BOX_PILE_2) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="1438" doublesided="false" scale="1" dimension="0" posX="-1807.4004" posY="1379.9004" posZ="6" rotX="0" rotY="0" rotZ="1.5"></object>
+    <object id="object (veg_procgrasspatch) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="874" doublesided="false" scale="1" dimension="0" posX="-1802.6" posY="1383.8" posZ="6.3" rotX="0" rotY="0" rotZ="41.995"></object>
+    <object id="object (veg_procgrasspatch) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="874" doublesided="false" scale="1" dimension="0" posX="-1809.1" posY="1373.7" posZ="6.1" rotX="1.994" rotY="357.995" rotZ="274.065"></object>
+    <object id="object (veg_procgrasspatch) (3)" breakable="true" interior="0" collisions="true" alpha="255" model="874" doublesided="false" scale="1" dimension="0" posX="-1812.7" posY="1378.3" posZ="5.9" rotX="1.989" rotY="357.99" rotZ="318.06"></object>
+    <object id="object (veg_procgrasspatch) (4)" breakable="true" interior="0" collisions="true" alpha="255" model="874" doublesided="false" scale="1" dimension="0" posX="-1818.5" posY="1371.5" posZ="6.4" rotX="1.989" rotY="357.99" rotZ="274.065"></object>
+</map>

@@ -1,0 +1,7 @@
+<meta>
+	<info type="misc" name="Vehreplacer" author="--" description="" version="1.0" />
+	<file src="skins/quad.txd" />
+	<file src="skins/quad.dff" />
+	
+	<script src="client.lua" type="client" />
+</meta>

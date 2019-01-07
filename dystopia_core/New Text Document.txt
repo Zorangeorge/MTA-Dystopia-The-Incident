@@ -1,0 +1,9 @@
+setTimer(Radar_check, 3000, 0)
+
+addEventHandler("onClientRender", root, VehicleHud)
+
+--hydra res
+addEventHandler("onClientRender"
+
+--- PLAYER HEAD MOVING	
+addEventHandler("onClientRender"

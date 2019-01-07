@@ -1,0 +1,17 @@
+--2977 then --kmilitary_crate -> blue metal crate, military loot
+--2971 then --k_smashboxes -> large cardboard boxes
+--1431 then --DYN_BOX_PILE -> five wooden crates piled up
+--1440 then --DYN_BOX_PILE_3 -> garbage bags cardboard crates pile
+--1438 then --DYN_BOX_PILE_2 -> (only) cardboard crates pile
+--1441 then --DYN_BOX_PILE_4 -> wood plank cardboard crates pile
+--1429 then --DYN_TV -> broken TV -> good for electric parts drop; any other objects like it?
+--1421 then --DYN_BOXES -> two wooden and one cardboard box; breaks in smaller pieces/boxes, might be good for ammo drops and smaller items
+--2968 then --cm_box -> smallest cardboard box; breaks very easy, good for low level/food loot and smaller items; movable
+--2900 then --temp_cardbox -> one large cardboard box; breaks very easy, good for low level loot; movable
+--1230 then --cardboardbox -> small cardboard box; breaks very easy, good for low level loot; movable
+--1265 then --BlackBag2 -> garbage bag; breaks very easy, good for low level loot; movable
+--1264 then --BlackBag1 -> garbage bag; breaks very easy, good for low level loot; movable
+--1224 then --woodenbox -> one wooden box; movable
+1558 then --CJ_CARDBRD_PICKUP -> medium cardboard box on a pallet
+--1220 then --cardboardbox2 -> small cardboard box
+--1221 then --cardboardbox4) -> medium cardboard box

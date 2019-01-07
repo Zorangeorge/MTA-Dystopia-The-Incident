@@ -1,0 +1,190 @@
+<car>
+	<data id="-1" fuel="20" /><!-- Respawn entry -->
+	
+	<data id="0" fuel="120" /><!-- Default entry -->
+
+	<data id="581" fuel="80" /><!-- BF-400 -->
+	<data id="462" fuel="60" /><!-- Faggio -->
+	<data id="521" fuel="80" /><!-- FCR-900 -->
+	<data id="463" fuel="120" /><!-- Freeway -->
+	<data id="522" fuel="80" /><!-- NRG-500 -->
+	<data id="461" fuel="80" /><!-- PCJ-600 -->
+	<data id="448" fuel="60" /><!-- Pizza Boy -->
+	<data id="468" fuel="80" /><!-- Sanchez -->
+	<data id="586" fuel="120" /><!-- Wayfarer -->
+	
+	<data id="602" fuel="120" /><!-- Alpha -->
+	<data id="496" fuel="120" /><!-- Blista -->
+	<data id="401" fuel="120" /><!-- Bravura -->
+	<data id="518" fuel="120" /><!-- Buccaneer -->
+	<data id="600" fuel="120" /><!-- Picador -->
+	<data id="527" fuel="120" /><!-- Cadrona -->
+	<data id="436" fuel="120" /><!-- Previon -->
+	<data id="589" fuel="120" /><!-- Club -->
+	<data id="580" fuel="120" /><!-- Stafford -->
+	<data id="419" fuel="120" /><!-- Esperanto -->
+	<data id="439" fuel="120" /><!-- Stallion -->
+	<data id="533" fuel="120" /><!-- Feltzer -->
+	<data id="549" fuel="120" /><!-- Tampa -->
+	<data id="526" fuel="120" /><!-- Fortune -->
+	<data id="491" fuel="120" /><!-- Virgo -->
+	<data id="474" fuel="120" /><!-- Hermes -->
+	<data id="545" fuel="120" /><!-- Hustler -->
+	<data id="517" fuel="120" /><!-- Majestic -->
+	<data id="410" fuel="120" /><!-- Manana -->
+
+	<data id="445" fuel="120" /><!-- Admiral -->
+	<data id="604" fuel="120" /><!-- Damaged Glendale -->
+	<data id="507" fuel="120" /><!-- Elegant -->
+	<data id="585" fuel="120" /><!-- Emperor -->
+	<data id="587" fuel="120" /><!-- Euros -->
+	<data id="466" fuel="120" /><!-- Glendale -->
+	<data id="492" fuel="120" /><!-- Greenwood -->
+	<data id="546" fuel="120" /><!-- Intruder -->
+	<data id="551" fuel="120" /><!-- Merit -->
+	<data id="516" fuel="120" /><!-- Nebula -->
+	<data id="467" fuel="120" /><!-- Oceanic -->
+	<data id="426" fuel="120" /><!-- Premier -->
+	<data id="547" fuel="120" /><!-- Primo -->
+	<data id="405" fuel="120" /><!-- Sentinel -->
+	<data id="409" fuel="120" /><!-- Stretch -->
+	<data id="550" fuel="120" /><!-- Sunrise -->
+	<data id="566" fuel="120" /><!-- Tahoma -->
+	<data id="540" fuel="120" /><!-- Vincent -->
+	<data id="421" fuel="120" /><!-- Washington -->
+	<data id="529" fuel="120" /><!-- Willard -->
+	
+	<data id="472" fuel="180" /><!-- Coastguard -->
+	<data id="473" fuel="120" /><!-- Dinghy -->
+	<data id="493" fuel="160" /><!-- Jetmax -->
+	<data id="595" fuel="180" /><!-- Launch -->
+	<data id="484" fuel="300" /><!-- Marquis -->
+	<data id="430" fuel="160" /><!-- Predator -->
+	<data id="453" fuel="160" /><!-- Reefer -->
+	<data id="452" fuel="160" /><!-- Speeder -->
+	<data id="446" fuel="160" /><!-- Squalo -->
+	<data id="454" fuel="300" /><!-- Tropic -->
+	
+	<data id="548" fuel="280" /><!-- Cargobob -->
+	<data id="425" fuel="220" /><!-- Hunter -->
+	<data id="417" fuel="280" /><!-- Leviathan -->
+	<data id="487" fuel="220" /><!-- Maverick -->
+	<data id="488" fuel="200" /><!-- News Chopper -->
+	<data id="497" fuel="220" /><!-- Police Maverick -->
+	<data id="563" fuel="280" /><!-- Raindance -->
+	<data id="447" fuel="220" /><!-- Seasparrow  -->
+	<data id="469" fuel="220" /><!-- Sparrow -->
+
+	<data id="592" fuel="800" /><!-- Andromada -->
+	<data id="577" fuel="600" /><!-- AT-400 -->
+	<data id="511" fuel="400" /><!-- Beagle -->
+	<data id="512" fuel="280" /><!-- Cropduster -->
+	<data id="593" fuel="280" /><!-- Dodo -->
+	<data id="520" fuel="400" /><!-- Hydra -->
+	<data id="553" fuel="460" /><!-- Nevada -->
+	<data id="476" fuel="340" /><!-- Rustler -->
+	<data id="519" fuel="460" /><!-- Shamal -->
+	<data id="460" fuel="280" /><!-- Skimmer -->
+	<data id="513" fuel="280" /><!-- Stuntplane -->
+	
+	<data id="485" fuel="60" /><!-- Baggage -->
+	<data id="431" fuel="180" /><!-- Bus -->
+	<data id="438" fuel="120" /><!-- Cabbie -->
+	<data id="437" fuel="180" /><!-- Coach -->
+	<data id="574" fuel="60" /><!-- Sweeper -->
+	<data id="420" fuel="120" /><!-- Taxi -->
+	<data id="525" fuel="120" /><!-- Towtruck -->
+	<data id="408" fuel="180" /><!-- Trashmaster -->
+	<data id="552" fuel="120" /><!-- Utility Van -->
+
+	<data id="416" fuel="160" /><!-- Ambulance -->
+	<data id="433" fuel="180" /><!-- Barracks -->
+	<data id="427" fuel="160" /><!--  Enforcer  -->
+	<data id="490" fuel="140" /><!-- FBI Rancher -->
+	<data id="528" fuel="140" /><!-- FBI Truck -->
+	<data id="407" fuel="180" /><!-- Fire Truck -->
+	<data id="544" fuel="180" /><!-- Fire Truck -->
+	<data id="523" fuel="120" /><!-- HPV1000 -->
+	<data id="470" fuel="160" /><!-- Patriot -->
+	<data id="596" fuel="120" /><!-- Police LS  -->
+	<data id="598" fuel="120" /><!-- Police LV -->
+	<data id="599" fuel="120" /><!-- Police Ranger  -->
+	<data id="597" fuel="120" /><!-- Police SF  -->
+	<data id="432" fuel="200" /><!-- Rhino  -->
+	<data id="601" fuel="160" /><!-- S.W.A.T.  -->
+	<data id="428" fuel="160" /><!-- Securicar -->
+
+	<data id="499" fuel="160" /><!-- Benson -->
+	<data id="609" fuel="160" /><!-- Black Boxville  -->
+	<data id="498" fuel="160" /><!-- Boxville -->
+	<data id="524" fuel="160" /><!-- Cement Truck -->
+	<data id="532" fuel="160" /><!-- Combine Harvester  -->
+	<data id="578" fuel="180" /><!-- DFT-30 -->
+	<data id="486" fuel="160" /><!-- Dozer  -->
+	<data id="406" fuel="180" /><!-- Dumper  -->
+	<data id="573" fuel="180" /><!-- Dune  -->
+	<data id="455" fuel="180" /><!-- Flatbed -->
+	<data id="588" fuel="160" /><!-- Hotdog  -->
+	<data id="403" fuel="180" /><!-- Linerunner -->
+	<data id="423" fuel="160" /><!-- Mr. Whoopee  -->
+	<data id="414" fuel="160" /><!-- Mule  -->
+	<data id="443" fuel="180" /><!-- Packer  -->
+	<data id="515" fuel="180" /><!-- Roadtrain  -->
+	<data id="514" fuel="180" /><!-- Tanker  -->
+	<data id="531" fuel="120" /><!-- Tractor -->
+	<data id="456" fuel="160" /><!-- Yankee -->
+
+	<data id="459" fuel="140" /><!-- Berkley's RC Van -->
+	<data id="422" fuel="120" /><!-- Bobcat -->
+	<data id="482" fuel="140" /><!-- Burrito -->
+	<data id="605" fuel="120" /><!-- Damaged Sadler  -->
+	<data id="530" fuel="60" /><!-- Forklift -->
+	<data id="418" fuel="140" /><!-- Moonbeam -->
+	<data id="572" fuel="60" /><!-- Mower -->
+	<data id="582" fuel="140" /><!-- News Van  -->
+	<data id="413" fuel="140" /><!-- Pony -->
+	<data id="440" fuel="140" /><!-- Rumpo -->
+	<data id="543" fuel="120" /><!-- Sadler -->
+	<data id="583" fuel="60" /><!-- Tug -->
+	<data id="478" fuel="120" /><!-- Walton -->
+	<data id="554" fuel="120" /><!-- Yosemite -->
+
+	<data id="579" fuel="120" /><!-- Huntley -->
+	<data id="400" fuel="120" /><!-- Landstalker -->
+	<data id="404" fuel="120" /><!-- Perennial -->
+	<data id="489" fuel="120" /><!-- Rancher -->
+	<data id="505" fuel="120" /><!-- Rancher -->
+	<data id="479" fuel="120" /><!-- Regina -->
+	<data id="442" fuel="120" /><!-- Romero -->
+	<data id="458" fuel="120" /><!-- Solair -->
+
+	<data id="536" fuel="120" /><!-- Blade -->
+	<data id="575" fuel="120" /><!-- Broadway -->
+	<data id="534" fuel="120" /><!-- Remington -->
+	<data id="567" fuel="120" /><!-- Savanna -->
+	<data id="535" fuel="120" /><!-- Slamvan -->
+	<data id="576" fuel="120" /><!-- Tornado -->
+	<data id="412" fuel="120" /><!-- Voodoo -->
+
+	<data id="402" fuel="120" /><!-- Buffalo -->
+	<data id="542" fuel="120" /><!-- Clover -->
+	<data id="603" fuel="120" /><!-- Phoenix -->
+	<data id="475" fuel="120" /><!-- Sabre -->
+
+	<data id="568" fuel="120" /><!-- Bandito -->
+	<data id="424" fuel="120" /><!-- BF Injection  -->
+	<data id="504" fuel="120" /><!-- Bloodring Banger -->
+	<data id="457" fuel="60" /><!-- Caddy -->
+	<data id="483" fuel="140" /><!-- Camper -->
+	<data id="508" fuel="180" /><!-- Journey -->
+	<data id="571" fuel="60" /><!-- Kart -->
+	<data id="500" fuel="120" /><!-- Mesa -->
+	<data id="444" fuel="140" /><!-- Monster -->
+	<data id="556" fuel="140" /><!-- Monster  -->
+	<data id="557" fuel="140" /><!-- Monster  -->
+	<data id="471" fuel="120" /><!-- Quadbike -->
+	<data id="495" fuel="120" /><!-- Sandking -->
+	<data id="539" fuel="100" /><!-- Vortex -->
+
+	<!-- street racers all have 120, default entry; I'm too lazy to add them here -->
+	</car>

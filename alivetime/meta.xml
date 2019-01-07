@@ -1,0 +1,5 @@
+<meta>
+	<info author="The'Oskar" version="1.0.0" type="script" name="tiempo" description="TiempoDelJugador" />
+	
+	<script src="tiempo_S.lua" type="server"/>/>
+</meta>

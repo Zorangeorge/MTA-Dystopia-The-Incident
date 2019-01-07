@@ -1,0 +1,8 @@
+<meta>
+    <info author="[GT]zorrigas" description="OldGarage SF | This work is licensed under a Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License" version="1.0" type="script" />
+    <script src="mod.lua" type="client" />
+	<script src="mapa.lua" type="server" />
+    <file src="data/hubprops6_SFSe.col" />
+    <file src="data/hubprops1_SFS.col" />
+	<file src="data/oldgarage_sfse.txd" />
+</meta>

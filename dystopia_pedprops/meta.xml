@@ -1,0 +1,43 @@
+<meta>
+
+	<info description="Dystopia: Ped Props" name="Dystopia: Ped Props" type="script" version="1.0" author="Zorgman, ShockWave"/>
+	
+	<script src="client.lua" type="client" />
+	<script src="server.lua" type="server" />
+
+
+
+<file src="object/hat_cowboy.txd"/> 
+<file src="object/hat_cowboy.dff"/>
+
+<file src="object/mask_bloodhokey.txd"/> 
+<file src="object/mask_bloodhokey.dff"/>
+
+<file src="object/mask_bag.txd"/> 
+<file src="object/mask_bag.dff"/>
+
+<file src="object/mask_guyfawkes.txd"/> 
+<file src="object/mask_guyfawkes.dff"/>
+
+<file src="object/gasmask1.txd"/> 
+<file src="object/gasmask1.dff"/>
+
+<file src="object/gasmask2.txd"/> 
+<file src="object/gasmask2.dff"/>
+
+<file src="object/gasmask3.txd"/> 
+<file src="object/gasmask3.dff"/>
+
+<file src="object/vest1.txd"/> 
+<file src="object/vest1.dff"/>
+
+<file src="object/vest2.txd"/> 
+<file src="object/vest2.dff"/>
+
+<file src="object/vest3.txd"/> 
+<file src="object/vest3.dff"/>
+
+
+
+
+</meta>

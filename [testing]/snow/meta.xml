@@ -1,0 +1,43 @@
+<meta>
+    <info author="MrMarko" name="Snow" version="1.0" type="misc"/>
+	<!-- This script is 2 in 1, I don't have full copy rights. -->
+	
+	<file src="direction_image.png"/>
+	<file src="direction_pointer.png"/>
+	<file src="cursor.png"/>
+	
+	<file src="flakes/cartoon_tile.png"/>
+	<file src="flakes/real_tile.png"/>
+	
+	<config src="help.xml" type="client"/>
+
+	<script src="snow_gui.lua" type="client"/>
+	<script src="snow.lua" type="client"/>
+	<script src="snow_s.lua"/>
+	
+	<export function="updateSnowType" type="client"/> <!-- <type> - can be "real" or "cartoon" (or your own specified type) -->
+	<export function="updateSnowDensity" type="client"/> <!-- <new density> <blend> -->
+	<export function="updateSnowWindDirection" type="client"/> <!-- <x> <y> - between 1 and 0 -->
+	<export function="updateSnowWindSpeed" type="client"/> <!-- <speed> -->
+	<export function="updateSnowflakeSize" type="client"/> <!-- <min size> <max size> -->
+	<export function="updateSnowJitter" type="client"/> <!-- <true/false> -->
+	<export function="startSnow" type="client"/>
+	<export function="stopSnow" type="client"/>
+	<export function="setGuiEnabled" type="client"/> <!-- <true/false> -->
+	<export function="setSnowToggle" type="client"/> <!-- <true/false> -->
+	
+	<settings>
+		<!-- set whether the snow gui will be available, if false players cannot change their snow settings -->
+		<setting name="gui_enabled" value="[true]"/>
+		
+		<!-- set whether the player can turn snow on/off by themselves -->
+		<setting name="snow_toggle" value="[true]"/>
+	</settings>
+	
+
+	<file src="smallnoise3d.dds" type="client" />
+	<file src="snow_ground.fx" type="client" />
+	<file src="snow_trees.fx" type="client" />
+	<file src="snow_naughty_trees.fx" type="client" />
+	<file src="mta-helper.fx" type="client" />
+</meta>

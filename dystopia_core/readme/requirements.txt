@@ -1,0 +1,5 @@
+bone_attach
+spawnmanager
+slothbot
+zombies - for now, need to canibalize it
+acl admin access for dystopia

@@ -1,0 +1,14 @@
+<meta>
+	<info name ="Realistic Explosions by MadnessReloaded" description="Explosion Reaction Shader" version="1.0.0" type="script" author="MadnessReloaded (Samake Original)"/>
+	<min_mta_version client="1.4" server="1.4"/>
+	<oop>true</oop>
+	
+	<!-- client scripts -->
+	<script src="client/VehicleReaction.lua" type="client" cache="false"/>
+	
+	<!-- shaders -->
+	<file src="res/Shaders/damage.fx" type="client"/>
+	
+	<!-- sounds -->
+	<!-- <file src="res/Sounds/tinnitus.ogg" type="client"/>-->
+</meta>

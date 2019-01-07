@@ -1,0 +1,181 @@
+--MOUNTED MINIGUN BELOW
+
+function mountminigun ( pla, dim ) 
+if not isPedInVehicle(pla)then 
+local mountedgun=getElementData(pla,"mountedgun") 
+if mountedgun then 
+local x,y,z=getElementPosition(pla) 
+local xx,yy,zz=getElementRotation(pla) 
+setElementPosition(mountedgun,x,y+2,z-1) 
+setElementRotation(mountedgun,xx,yy,zz+90) 
+else 
+local x,y,z=getElementPosition(pla) 
+local xx,yy,zz=getElementRotation(pla) 
+local mountgun = createObject(2985, x,y+2, z-1,0,0,0) 
+local miniggun1 = createVehicle(464, 0, 0, 0) 
+local serial = getPlayerSerial(pla) 
+setElementRotation(mountgun,xx,yy,zz+90) 
+setElementData(pla,"mountedgun",mountgun) 
+setElementData(pla,"mountedgun2",miniggun1) 
+setElementData(mountgun,"doel","mountedgun") 
+  
+setVehicleVariant ( miniggun1, 601 , 601  ) 
+setVehicleDamageProof ( miniggun1, true ) 
+setElementCollisionsEnabled(mountgun, false) 
+setVehicleEngineState ( miniggun1, false ) 
+attachElements( miniggun1, mountgun, -0.4, 0, 1.1, 0, 0, -90 ) 
+        setElementAlpha(miniggun1, 0) 
+end 
+  
+end 
+if isPedInVehicle(pla)then 
+local zitin=getElementModel(getPedOccupiedVehicle(pla)) 
+if (zitin == 441)or(zitin == 464)or(zitin == 501)or(zitin == 465)or(zitin == 564)then 
+cancelEvent() 
+else 
+local mountedgun=getElementData(pla,"mountedgun") 
+if mountedgun then 
+local heeftal=getElementData(getPedOccupiedVehicle(pla),"ismounted") 
+if not heeftal then 
+attachElements( mountedgun, getPedOccupiedVehicle(pla), 0, 0, 0.5, 0, 0, 90 ) 
+setElementData(pla,"ismounted",getPedOccupiedVehicle(pla)) 
+setElementData(getPedOccupiedVehicle(pla),"ismounted",pla) 
+end 
+end 
+end 
+end 
+end 
+  
+  
+  
+  
+  
+  
+  
+  
+function mmmgleft(pla) 
+if isPedInVehicle(pla)then 
+local mountedgun=getElementData(pla,"mountedgun") 
+local ismounted=getElementData(pla,"ismounted") 
+  
+if mountedgun  then 
+local x,y,z=getElementPosition(mountedgun) 
+local xx,yy,zz=getElementRotation(mountedgun) 
+setElementRotation(mountedgun,xx,yy,zz-10) 
+end 
+end 
+end 
+  
+  
+  
+function mmmgright(pla) 
+if isPedInVehicle(pla)then 
+local mountedgun=getElementData(pla,"mountedgun") 
+local ismounted=getElementData(pla,"ismounted") 
+if mountedgun  then 
+local x,y,z=getElementPosition(mountedgun) 
+local xx,yy,zz=getElementRotation(mountedgun) 
+setElementRotation(mountedgun,xx,yy,zz+10) 
+end 
+end 
+end 
+  
+function mmmgleft2(pla) 
+if isPedInVehicle(pla)then 
+local mountedgun=getElementData(pla,"mountedgun") 
+if mountedgun then 
+local ismounted=getElementData(pla,"ismounted") 
+if ismounted then 
+local xx,yy,zz=getElementRotation(mountedgun) 
+attachElements( mountedgun, ismounted, 0, 0, 0.5, 0, 0,zz+10) 
+  
+end 
+end 
+end 
+end 
+function mmmgright2(pla) 
+if isPedInVehicle(pla)then 
+local mountedgun=getElementData(pla,"mountedgun") 
+if mountedgun then 
+local ismounted=getElementData(pla,"ismounted") 
+if ismounted then 
+local xx,yy,zz=getElementRotation(mountedgun) 
+local xxx,yyy,zzz=getElementRotation(ismounted) 
+local test=(zz-zzz) 
+attachElements( mountedgun, ismounted, 0, 0, 0.5, 0, 0,zz -10) 
+end 
+end 
+end 
+end 
+  
+  
+addEventHandler ("onPlayerQuit", getRootElement(),  
+function(quitType, reason, responsibleElement) 
+  if (getElementData (source, "mountedgun")) then 
+local mountedgun=getElementData(source,"mountedgun") 
+local mountedgun2=getElementData(source,"mountedgun2") 
+destroyElement (mountedgun)     
+  
+destroyElement (mountedgun2)     
+removeElementData (source, "mountedgun") 
+removeElementData (source, "mountedgun2") 
+removeElementData (source, "ismounted") 
+  end 
+end) 
+  
+addEventHandler( "onResourceStop", getResourceRootElement( getThisResource() ), 
+    function () 
+        for i,v in ipairs (getElementsByType ("player")) do 
+            if (getElementData (v, "mountedgun")) then 
+removeElementData (v, "ismounted") 
+                 
+                removeElementData (v, "mountedgun") 
+            end 
+        end 
+    end 
+) 
+addEventHandler( "onResourceStart", getResourceRootElement( getThisResource() ), 
+    function () 
+        for i,v in ipairs (getElementsByType ("player")) do 
+  
+            if (getElementData (v, "mountedgun")) then 
+                 
+removeElementData (v, "ismounted") 
+                removeElementData (v, "mountedgun") 
+            end 
+        end 
+    end 
+) 
+  
+  
+addEventHandler("onPlayerLogin", root, 
+    function(_, account) 
+  
+bindKey (source,"u", "up", mountminigun) 
+bindKey (source,"k", "down", mmmgright) 
+  
+bindKey (source,"l", "down", mmmgleft) 
+bindKey (source,"j", "down", mmmgright2) 
+  
+bindKey (source,"h", "down", mmmgleft2) 
+    end 
+) 
+
+--LONG RANGE RADIO STATION SCRIPT BELOW
+
+--This example creates an edit box alongside an "Output!" button. When the button is --clicked, it will output the message in the edit box into the Chat Box.
+
+--create our button
+button = guiCreateButton( 0.7, 0.1, 0.2, 0.1, "Output!", true )
+--Create an edit box and define it as "editBox".
+editBox = guiCreateEdit( 0.3, 0.1, 0.4, 0.1, "Type your message here!", true )
+-- and attach our button to the outputEditBox function
+addEventHandler ( "onClientGUIClick", editBox, outputEditBox )
+guiEditSetMaxLength ( editBox, 128 ) --the max chatbox length is 128, so force this
+
+--setup our function to output the message to the chatbox
+function outputEditBox ()
+        local text = guiGetText ( editBox )--get the text from the edit box
+        outputChatBox ( text ) --output that text
+end
+addEventHandler ( "onClientGUIClick", button, outputEditBox )  

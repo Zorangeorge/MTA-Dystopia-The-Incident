@@ -1,0 +1,14 @@
+<map edf:definitions="editor_main">
+    <vehicle id="vehicle (Barracks) (1)" sirens="false" paintjob="3" interior="0" alpha="255" model="433" plate="A11U 13U" dimension="0" posX="-1895.3" posY="-1110.5" posZ="38.8" rotX="0" rotY="0" rotZ="214" color="95,10,21,0,0,0,0,0,0,0,0,0"></vehicle>
+    <object id="object (DYN_ROADBARRIER_6) (1)" breakable="true" interior="0" alpha="255" model="1459" doublesided="false" scale="1" dimension="0" posX="-1901.1" posY="-1112.9" posZ="37.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (DYN_ROADBARRIER_6) (2)" breakable="true" interior="0" alpha="255" model="1459" doublesided="false" scale="1" dimension="0" posX="-1898.1" posY="-1113" posZ="37.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (DYN_ROADBARRIER_6) (3)" breakable="true" interior="0" alpha="255" model="1459" doublesided="false" scale="1" dimension="0" posX="-1900.9" posY="-1108.6" posZ="37.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (DYN_ROADBARRIER_6) (4)" breakable="true" interior="0" alpha="255" model="1459" doublesided="false" scale="1" dimension="0" posX="-1906.5996" posY="-1112.7002" posZ="37.8" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (bar_gatebox01) (1)" breakable="true" interior="0" alpha="255" model="967" doublesided="false" scale="1" dimension="0" posX="-1908.8" posY="-1112.8" posZ="37.2" rotX="0" rotY="0" rotZ="90"></object>
+    <object id="object (bar_gatebar01) (1)" breakable="true" interior="0" alpha="255" model="966" doublesided="false" scale="1" dimension="0" posX="-1909.6" posY="-1114.3" posZ="37.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (barrierturn) (1)" breakable="true" interior="0" alpha="255" model="968" doublesided="false" scale="1" dimension="0" posX="-1909.5" posY="-1114.4" posZ="38.1" rotX="0" rotY="320" rotZ="0"></object>
+    <object id="object (gasstatiohut) (1)" breakable="true" interior="0" alpha="255" model="11292" doublesided="false" scale="1" dimension="0" posX="-1908.4" posY="-1120.1" posZ="38.7" rotX="0" rotY="0" rotZ="270"></object>
+    <object id="object (kmilitary_crate) (1)" breakable="true" interior="0" alpha="255" model="2977" doublesided="false" scale="1" dimension="0" posX="-1908.2" posY="-1122.5" posZ="37.5" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (kmilitary_crate) (2)" breakable="true" interior="0" alpha="255" model="2977" doublesided="false" scale="1" dimension="0" posX="-1893.8" posY="-1107.7" posZ="37.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (woodenbox) (1)" breakable="true" interior="0" alpha="255" model="1224" doublesided="false" scale="1" dimension="0" posX="-1906.5" posY="-1109.3" posZ="37.8" rotX="0" rotY="0" rotZ="0"></object>
+</map>

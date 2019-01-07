@@ -1,0 +1,792 @@
+<meta>
+	<info name= "Dystopia" author="Zorgman" description="A sandbox zombie RPG" version="0.73" type="gamemode" />
+	<min_mta_version server="1.3.5-9.06139" client="1.3.1-9.04939"/>
+         
+<include resource="spawnmanager" />
+<!--<include resource="dystopia_map" />-->
+<!--<include resource="dystopia_vehicles"/>-->
+<!-- <include resource="bone_attach"/> -->
+<include resource="dystopia_slothbot"/>		
+<!-- <include resource="dystopia_zombies"/> -->
+<!-- <include resource="drawtag_bc"/>		 -->
+<include resource="dgs"/>
+<!-- <include resource="msgbox" />		 -->
+  
+  <settings>
+  <setting name="*spawnreset" value="onSpawn" friendlyname="Spawn Reset" accept="onSpawn,onServerEmpty,onServerStart" desc="When should a new spawnpoint be chosen?" /> 
+  <setting name="*timeout" value="[60000]" desc="on death loot lifespan"/>
+  <setting name="*radius" value="[1]" desc="on death loot spread radius" />
+  <setting name="*lootrespawnduration" value="[3600]" desc="How fast the loot boxes will respawn after being broken" />
+  <setting name="*TrustObjectAttacker" value="true"	accept="boolean"
+		desc="If set to true the attacker of a breakable object will be trusted, so that they will see the object break immediately. If set to false the server will first check validity of the client and then break the object for all clients."
+			/>
+		<!--Weapon ids that the driver can use.  For no weapons just use "[[ ]]"-->
+	<setting name="driveby_driver" value="[[ 22,24,26,32 ]]"/>
+
+	<!--Weapon ids that passngers can use-->
+	<setting name="driveby_passenger" value="[[ 22,23,24,25,26,27,28,29,30,31,33 ]]"/>
+
+	<!--Defines the shot delay for individual weapons that arent meant for driveby, in the format of 'weapon':time(ms)-->
+	<setting name="driveby_shot_delay" value="[{ '22':300,'23':300,'24':800,'26':700 }]"/>
+
+	<!--Vehicles that cannot be drivebyd inside-->
+	<setting name="driveby_blocked_vehicles" value="[[ 432,601,437,431,592,553,577,488,497,548,563,512,476,447,425,519,520,460,417,469,487,513,441,464,501,465,564,538,449,537,539,570472,473,493,595,484,430,453,452,446,454,606,591,607,611,610,590,569,611,435,608,584,450 ]]"/>
+
+	<!--Whether or not turning should be enabled for vehicles (excluding bikes) while in driveby mode-->
+	<setting name="driveby_steer_cars" value="[true]"/>
+
+	<!--Whether or not turning should be enabled for bikes/motorbikes while in driveby mode-->
+	<setting name="driveby_steer_bikes" value="[true]"/>
+
+	<!--Whether a weapon should be equiped as soon as you enter a vehicle. -->
+	<setting name="driveby_auto_equip" value="[false]"/>
+
+	<!--Block instant eject when using driveby while exiting vehicle -->
+	<setting name="block_instant_eject" value="[true]"/>
+  </settings>
+  
+<config src="config/ignore.behavior.xml" type="client" />
+<config src="config/custom.damage.xml" type="client" />
+<!--<map src="config/fuelPointsLocations.xml" />-->
+<file src="config/vehicleFuelData.xml" />
+
+<map src="cargoplane_path.map" />
+
+		   <script src="inventory_client.lua" type="client" cache="false" />  
+           <script src="inventory_server.lua" type="server" />
+		   <script src="hunger_client.lua" type="client" cache="false" />
+		   <script src="thirst_client.lua" type="client" cache="false" />
+		   <script src="stamina_client.lua" type="client" cache="false" />
+		   <script src="NPCs_server.lua" type="server" />
+		   <script src="test_server.lua" type="server" />
+		   <script src="test_client.lua" type="client" cache="false" />
+		   <script src="utils_server.lua" type="server" />
+		   <script src="utils_client.lua" type="client" cache="false" />
+		   <script src="vehicles_server.lua" type="server" />
+		   <script src="vehicles_client.lua" type="client" cache="false" />
+		   <script src="spawn_system.lua" type="server" />
+		   <script src="login_client.lua" type="client"  cache="false"/>
+		   <script src="login_server.lua" type="server" />
+		   <script src="tables.lua" type="server" />
+		   <script src="tables.lua" type="client"  cache="false"/>
+		   <script src="bots_spawn_server.lua" type="server" />
+		   <script src="bots_spawn_client.lua" type="client"  cache="false"/>
+		   <script src="loot_client.lua" type="client" cache="false" /> 
+		   <script src="loot_server.lua" type="server" /> 
+		   <script src="helpscreens_client.lua" type="client" cache="false" />
+		   <script src="helpscreens_server.lua" type="server" />
+		   <script src="screenmessages_client.lua" type="client"  cache="false"/> 
+		   <script src="screenmessages_server.lua" type="server" /> 
+		   <script src="strongbox_client.lua" type="client"  cache="false"/> 
+		   <script src="strongbox_server.lua" type="server" />
+		   <script src="debug_client.lua" type="client"  cache="false"/>
+		   <script src="map_client.lua" type="client"  cache="false"/>
+		   <script src="deathpickups_server.lua" type="server" />
+		   <script src="NPC_interaction_server.lua" type="server" />
+		   <script src="NPC_interaction_client.lua" type="client" cache="false" />
+		   <script src="chat_client.lua" type="client" cache="false" />
+		   <script src="chat_server.lua" type="server" />
+		   <script src="nametag_client.lua" type="client" cache="false" />
+		   <script src="nametag_server.lua" type="server" />
+		   <script src="craft_panel_client.lua" type="client" cache="false" />
+		   <script src="craft_panel_server.lua" type="server" />		   
+		   <script src="trade_panel_client.lua" type="client" cache="false" />
+		   <script src="trade_panel_server.lua" type="server" />
+		   <script src="lootspawn_server.lua" type="server" />
+		   <script src="fuel_client.lua" type="client" cache="false"/>
+		   <script src="fuel_server.lua" type="server"/>
+		   <script src="HUD_client.lua" type="client" cache="false"/>
+		   <script src="meleedamage_server.lua" type="server" />
+		   <script src="meleedamage_client.lua" type="client" cache="false" />
+		   <script src="armed_server.lua" type="server" />
+		   <script src="armed_client.lua" type="client" cache="false" />
+		   <script src="weaponstats_server.lua" type="server" />
+		   <script src="weaponstats_client.lua" type="client" cache="false" />
+		   <script src="skills_server.lua" type="server" />
+		   <script src="skills_client.lua" type="client" cache="false" />
+		   <script src="flashlight_client.lua" type="client" cache="false"/>
+		   <script src="flashlight_server.lua" type="server"/>
+		   <script src="grapple_client.lua" type="client" cache="false"/>
+		   <script src="grapple_server.lua" type="server"/>
+		   <script src="warroom_client.lua" type="client" cache="false"/>
+		   <script src="warroom_server.lua" type="server"/>
+		   <script src="map_scenery_server.lua" type="server" />
+		   <script src="carnames_client.lua" type="client" cache="false"/>
+		   <script src="carnames_server.lua" type="server"/>
+		   <script src="level_server.lua" type="server" />   
+		   <script src="level_client.lua" type="client" cache="false" /> 
+	       <script src="shared.lua" type="server" /> 
+	       <script src="shared.lua" type="client" cache="false" />
+		   <script src="spawn_system_client.lua" type="client" cache="false" />
+		   <script src="perceptive_client.lua" type="client" cache="false" />
+		   <script src="skinreplacer_client.lua" type="client" cache="false"/>
+		   <script src="toonpanel_server.lua" type="server" />   
+		   <script src="toonpanel_client.lua" type="client" cache="false" /> 
+		   <script src="effecticonshud_client.lua" type="client" cache="false" />
+		   <script src="skinchanger_client.lua" type="client" cache="false" /> 
+		   <script src="skinchanger_server.lua" type="server" />
+		   <script src="gates_client.lua" type="client" cache="false"/>
+		   <script src="gates_server.lua" type="server"/>
+		   <script src="joinquit_client.lua" type="client" cache="false"/>
+		   <!-- <script src="airstrike_server.lua" type="server"/> -->
+		   <script src="airstrike_client.lua" type="client" cache="false"/>
+		   <script src="scanner_server.lua" type="server"/>
+		   <script src="scanner_client.lua" type="client" cache="false"/>
+		   <script src="manual_client.lua" type="client" cache="false"/>
+		   <script src="infection_client.lua" type="client" cache="false"/>
+		   <script src="zombiezones_server.lua" type="server" />
+		   <script src="dgs_tip.lua" type="client"  cache="false"/>
+		   <script src="dgs_tip.lua" type="server" />
+		   <script src="sleep_client.lua" type="client"  cache="false" />
+		   <script src="sleep_server.lua" type="server" />
+		   <script src="wasted_server.lua" type="server" />
+		   <script src="wasted_client.lua" type="client"  cache="false" />		   
+		   <script src="radiation_server.lua" type="server" />
+		   <script src="radiation_client.lua" type="client"  cache="false" />
+		   <script src="storage_client.lua" type="client" cache="false" />
+		   <script src="storage_server.lua" type="server" />
+		   <script src="storagesaving_server.lua" type="server" />
+		   <script src="damagesource_client.lua" type="client"  cache="false"/>
+		   <script src="quests_client.lua" type="client"  cache="false"/>
+		   <script src="quests_core_client.lua" type="client"  cache="false"/>
+		   <script src="objectthrow_client.lua" type="client"  cache="false"/>
+		   <script src="elevators_server.lua" type="server"/>
+		   <script src="minigun_server.lua" type="server"/>
+		   <script src="arenaLV_server.lua" type="server"/>
+		   <script src="arenaQuarry_server.lua" type="server"/>
+		   <script src="blips_client.lua" type="client"  cache="false"/>
+		   <script src="missions_client.lua" type="client"  cache="false"/>
+		   <script src="missions_server.lua" type="server"/>
+           <script src="saving/dynamicsaving.lua" type="server"/>
+		   <script src="saving/persistentsaving.lua" type="server"/>
+		   <script src="airtraffic_server.lua" type="server"/>
+		   <script src="climbing_server.lua" type="server"/>
+		   <script src="airtraffic_client.lua" type="client" cache="false"/>		   
+		   <script src="cargoplane_server.lua" type="server"/>
+		   <script src="cargoplane_client.lua" type="client" cache="false"/>
+		   <script src="SAM_server.lua" type="server"/>
+		   <script src="SAM_client.lua" type="client" cache="false"/>
+		   <script src="climbing_client.lua" type="client" cache="false"/>
+		   <script src="minigunsaving_server.lua" type="server"/>
+		   <script src="saving/lootsaving.lua" type="server"/>
+		   <script src="mechanic_client.lua" type="client" cache="false"/>
+		   <script src="autospawning_server.lua" type="server"/>
+		   
+		    <script src="driveby_client.lua" type="client"  cache="false"/>
+			<script src="drivemelee_client.lua" type="client"  cache="false"/>
+			<script src="drivebyexports_client.lua" type="client"  cache="false"/>
+			<script src="driveby_server.lua" type="server" />
+			<script src="drivemelee_server.lua" type="server" />
+			<script src="driverminigun_client.lua" type="client" cache="false"/>
+			<script src="driverminigun_server.lua" type="server"/>			
+			<script src="ejectorseats_client.lua" type="client" cache="false"/>
+			<script src="ejectorseats_server.lua" type="server"/>
+			<script src="building_client.lua" type="client" cache="false"/>
+			<script src="building_server.lua" type="server"/>
+		   <!--utils-->
+		   	<script src="utils/textlib.lua" type="client" />
+			<script src="utils/client_anim.lua" type="client" />
+			<script src="utils/textlib_anim.lua" type="client" />
+
+			<file src="images/titlescreen1.png" />
+			<!--<file src="images/titlescreen2.png" />-->
+			<file src="images/helpscreen.png" />
+			<file src="images/map.png" />
+			<file src="images/map_military.png" />
+			<file src="images/map_survivor.png" />
+			<file src="images/empty.png" />
+		    <file src="images/1.png" />
+    		<file src="images/2.png" />
+			<file src="images/beltblack.png" />
+			<file src="images/bubble[1].png" />
+			<file src="images/bubble[2].png" />
+			<file src="images/bubble[3].png" />
+			<file src="images/bleeding.png"/>
+			<file src="images/killstreak.png"/>
+			<file src="images/binocular_shader.png"/>
+			<file src="images/dmg.png"/>
+			<file src="images/raiders_logo.png"/>
+			<file src="images/scavengers_logo.png"/>
+			<file src="images/wanted_logo.png"/>
+			<file src="images/cdf_logo.png"/>
+			<file src="images/bandits_logo.png"/>
+			<file src="images/establishment_logo.png"/>
+			<file src="images/heart.png" />
+			<file src="images/crosshair.png" />
+			<file src="images/radarnorth.png"/>
+			<file src="images/scans.png"/>
+			<file src="images/radius.png"/>
+			<file src="images/miniback.png"/>
+			<file src="images/slot1.png"/>
+			<file src="images/slot2.png"/>
+			<file src="images/slot3.png"/>
+			<file src="images/vehicle_crosshair.png"/>
+			
+<file src="icons/Fist.png" />
+<file src="icons/Detonator.png" />
+<file src="icons/Dildo.png" />		   
+<file src="icons/Pistol Ammo.png" />
+<file src="icons/Shotgun Ammo.png" /> 
+<file src="icons/Assault Ammo.png" />
+<file src="icons/SMG Ammo.png" /> 
+<file src="icons/Chainsaw.png" />
+<file src="icons/Axe.png" />
+<file src="icons/M4.png" />
+<file src="icons/AK 47.png" />
+<file src="icons/Rocket Launcher.png" />
+<file src="icons/Knife.png" />
+<file src="icons/Hunting Rifle.png" />
+<file src="icons/Crossbow.png" />
+<file src="icons/Sniper Rifle.png" /> 
+<file src="icons/Minigun.png" />            
+<file src="icons/Uzi.png" />
+<file src="icons/Vehicle Minigun.png" />
+<file src="icons/Combat Shotgun.png" />
+<file src="icons/Sawn-off Shotgun.png" />
+<file src="icons/Satchel Charge.png" />
+<file src="icons/MP5.png" />
+<file src="icons/Grenade.png" />
+<file src="icons/Magnum Revolver.png" />
+<file src="icons/Stinger Launcher.png" />
+<file src="icons/Meat Can.png" />
+<file src="icons/Water Bottle.png" />
+<file src="icons/Alcohol Bottle.png" />
+<file src="icons/Rags.png" />
+<file src="icons/Empty Bottle.png" />
+<file src="icons/Raw Meat.png" />
+<file src="icons/Machete.png" />
+<file src="icons/Kitchen Knife.png" />
+<file src="icons/Meatcleaver.png" />
+<file src="icons/Broken Bottle.png" />
+<file src="icons/Nail Bat.png" />
+<file src="icons/Crowbar.png" />
+<file src="icons/Sledgehammer.png" />
+<file src="icons/Pistol.png" />
+<file src="icons/Molotov.png" />
+<file src="icons/Nightstick.png" />
+<file src="icons/Baseball Bat.png" />
+<file src="icons/Tactical Shield.png" />
+<file src="icons/Raider Sword.png" />
+<file src="icons/Binoculars.png" />
+<file src="icons/Spray Can.png" />
+<file src="icons/Pump Shotgun.png" />
+<file src="icons/Body Armor.png" />
+<file src="icons/Backpack.png" />
+<file src="icons/Medikit.png" />
+<file src="icons/Flamethrower.png" />
+<file src="icons/Teargas.png" />
+<file src="icons/Agent Pale.png" />
+<file src="icons/Painkillers.png" />
+<file src="icons/Bolts.png" />
+<file src="icons/Magnum Ammo.png" />
+<file src="icons/Rifle Ammo.png" />
+<file src="icons/Fuel Canister.png" />
+<file src="icons/Empty Canister.png" />
+<file src="icons/Scrap Metal.png" />
+<file src="icons/Ammo Box.png" />
+<file src="icons/Toolbox.png" />
+<file src="icons/Map.png" />
+<file src="icons/Raw Human Meat.png" />
+<file src="icons/Roasted Human Meat.png" />
+<file src="icons/Roasted Meat.png" />
+<file src="icons/Wire.png" />
+<file src="icons/Plastic Foil.png" />
+<file src="icons/Fish Can.png" />
+<file src="icons/Vehicle Parts.png" />
+<file src="icons/Water Canister.png" />
+<file src="icons/Dirty Water.png" />
+<file src="icons/Military Map.png" />
+<file src="icons/Survivor Map.png" />
+<file src="icons/Headlamp.png" /> <!-- 15060 / -->
+<file src="icons/Thermal Googles.png" /> <!-- 369 / -->
+<file src="icons/Wood.png" /> <!-- 1463 / -->
+<file src="icons/Laser Pointer.png" /> <!-- 15060 / -->
+<file src="icons/Night Vision Googles.png" /> <!-- 368 / -->
+<file src="icons/Lighter.png" /> <!-- 2351 / -->
+<file src="icons/Bandage.png" /> <!-- 2386 / -->
+<file src="icons/Zip Line.png" /> <!-- 328 temp same as bolts/ -->
+<file src="icons/Splint.png" />
+<file src="icons/Camouflage Suit.png" />
+<file src="icons/Stockpile.png" />
+<file src="icons/Adrenaline.png" />
+<file src="icons/ZomboKleen.png" />
+<file src="icons/Road Flare.png" />
+<file src="icons/Hazmat Suit.png" />
+<file src="icons/Scuba Gear.png" />
+<file src="icons/Watch.png" />
+<file src="icons/EM Scanner.png" />
+<file src="icons/Radio.png" />
+<file src="icons/M37 Stomper.png" />
+<file src="icons/Stomper Ammo.png" />
+<file src="icons/Minigun Ammo.png" />
+<file src="icons/Stinger Missile.png" />
+<file src="icons/Spikestrip.png" />
+<file src="icons/Timed Bomb.png" />
+<file src="icons/Mine.png" />
+<file src="icons/Incendiary Trap.png" />
+<file src="icons/Shards Trap.png" />
+<file src="icons/Soup Can.png" />
+<file src="icons/Wire Fence.png" />
+<file src="icons/Barricade.png" />
+<file src="icons/Empty.png" />
+<file src="icons/Build.png" />
+<file src="icons/Special.png" />
+<file src="icons/Metal Objects.png" />
+<file src="icons/Wood Objects.png" />
+<file src="icons/Structures.png" />
+
+<file src="icons/Wood Panel.png" />
+<file src="icons/Wood Fence.png" />
+<file src="icons/Wood Platform.png" />
+<file src="icons/Wood Ladder.png" />
+<file src="icons/Wood Steps.png" />
+<file src="icons/Wood Chair.png" />
+<file src="icons/Wood Table.png" />
+<file src="icons/Wood Sign.png" />
+<file src="icons/Wood Door.png" />
+
+<file src="icons/Metal Fence.png" />
+<file src="icons/Metal Barbed Fence.png" />
+<file src="icons/Metal Panel.png" />
+<file src="icons/Metal Grate.png" />
+<file src="icons/Metal Plank.png" />
+<file src="icons/Metal Barrier.png" />
+<file src="icons/Metal Strong Fence.png" />
+<file src="icons/Metal Door.png" />
+<file src="icons/Metal Wall.png" />
+
+<file src="icons/Gate.png" />
+<file src="icons/Shelter.png" />
+<file src="icons/Hut Structure.png" />
+<file src="icons/Outhouse.png" />
+<file src="icons/Scaffold.png" />
+<file src="icons/Reinforced Scaffold.png" />
+<file src="icons/Scaffold Tower.png" />
+<file src="icons/Small Cabin.png" />
+<file src="icons/Large Cabin.png" />
+
+<file src="icons/Fire Bin.png" />
+<file src="icons/Bed.png" />
+<file src="icons/Storage.png" />
+<file src="icons/Workbench.png" />
+<file src="icons/Large Storage.png" />
+<file src="icons/Fish Trap.png" />
+<file src="icons/Potato Farm.png" />
+<file src="icons/Critter Pen.png" />
+<file src="icons/Trading Post.png" />
+
+<file src="icons/Assault Kit.png" />
+<file src="icons/Demolitions Kit.png" />
+<file src="icons/Recon Kit.png" />
+<file src="icons/Sniper Kit.png" />
+<file src="icons/Agent Kit.png" />
+<file src="icons/Cleaner Kit.png" />
+<file src="icons/Peacekeeper Kit.png" />
+<file src="icons/Support Kit.png" />
+<file src="icons/Combat Medic Kit.png" />
+
+<file src="icons/Roadrunner Kit.png" />
+<file src="icons/Man Eater Kit.png" />
+<file src="icons/Unburnt Kit.png" />
+<file src="icons/Pitdog Kit.png" />
+<file src="icons/Berserker Kit.png" />
+<file src="icons/Body Snatcher Kit.png" />
+<file src="icons/Greasemonkey Kit.png" />
+<file src="icons/Mongrel Kit.png" />
+
+<file src="icons/Militia Kit.png" />
+<file src="icons/Ranger Kit.png" />
+<file src="icons/Survivalist Kit.png" />
+<file src="icons/Medicine Man Kit.png" />
+<file src="icons/Citizen Kit.png" />
+<file src="icons/Vigilante Kit.png" />
+
+<file src="icons/Robber Kit.png" />
+<file src="icons/Highwayman Kit.png" />
+<file src="icons/Veteran Kit.png" />
+<file src="icons/Pirate Kit.png" />
+<file src="icons/Infiltrator Kit.png" />
+<file src="icons/Saboteur Kit.png" />
+<file src="icons/Thug Kit.png" />
+
+<file src="icons/Survivor Kit.png" />
+<file src="icons/Scavenger Kit.png" />
+<file src="icons/Wastelander Kit.png" />
+<file src="icons/Hunter Kit.png" />
+<file src="icons/Medic Kit.png" />
+<file src="icons/Traveler Kit.png" />
+<file src="icons/Bounty Hunter Kit.png" />
+
+<file src="skins/k_militbx.txd"/>
+<file src="skins/a51fence.dff"/>
+<file src="skins/a51fence.col"/>
+<file src="skins/medikit.dff"/>
+<file src="skins/medikit.txd"/>
+<file src="skins/assault_ammo.dff"/>
+<file src="skins/assault_ammo.txd"/>
+<file src="skins/shotgun_ammo.dff"/>
+<file src="skins/shotgun_ammo.txd"/>
+<file src="skins/pistol_ammo.dff"/>
+<file src="skins/pistol_ammo.txd"/>
+<file src="skins/smg_ammo.dff"/>
+<file src="skins/smg_ammo.txd"/>
+<file src="skins/pain_killers.dff"/>
+<file src="skins/pain_killers.txd"/>
+<file src="skins/cunte_gas01.txd"/>
+<file src="skins/sw_gas01.dff"/>
+<file src="skins/countrye_13.col"/>
+<file src="skins/sniper_ammo.dff"/>
+<file src="skins/sniper_ammo.txd"/>
+<file src="skins/ogloc.txd"/>
+<file src="skins/pulaski.txd"/>
+<file src="skins/fam2.txd"/>
+<file src="skins/swat.txd"/>
+<file src="skins/lapdm1.txd"/>
+<file src="skins/army.txd"/>
+<file src="skins/lsv1.txd"/>
+<file src="skins/lsv2.txd"/>
+<file src="skins/bikera.txd"/>
+<file src="skins/bikerb.txd"/>
+<file src="skins/vwmycr.txd"/>
+<file src="skins/smyst2.txd"/>
+<file src="skins/ballas3.txd"/>
+<file src="skins/bmycg.txd"/>
+<file src="skins/sffd1.txd"/>
+<file src="skins/sffd1.dff"/>
+<file src="skins/vbmybox.txd"/>
+<file src="skins/vbmybox.dff"/>
+<file src="skins/vwmybox.txd"/>
+<file src="skins/vwmybox.dff"/>
+<file src="skins/wmybmx.txd"/>
+<file src="skins/bmyap.txd"/>
+<file src="skins/wfyburg.dff"/>
+<file src="skins/wfyburg.txd"/>
+<file src="skins/cultleader.dff"/>
+<file src="skins/cultleader.txd"/>
+<file src="skins/swmyhp2.txd"/>
+<file src="skins/heavy.dff"/>
+<file src="skins/heavy.txd"/>
+<file src="skins/bmotr1.dff"/>
+<file src="skins/bmotr1.txd"/>
+<file src="skins/bikerchick.dff"/>
+<file src="skins/bikerchick.txd"/>
+<file src="skins/bandit_biker.dff"/>
+<file src="skins/bandit_biker.txd"/>
+<file src="skins/bandit_greensweater.dff"/>
+<file src="skins/bandit_greensweater.txd"/>
+<file src="skins/bandit_bullets.dff"/>
+<file src="skins/bandit_bullets.txd"/>
+<file src="skins/bandit_wastelander.dff"/>
+<file src="skins/bandit_wastelander.txd"/>
+<file src="skins/eltopo.dff"/>
+<file src="skins/eltopo.txd"/>
+<file src="skins/cdfrecruitor.dff"/>
+<file src="skins/cdfrecruitor.txd"/>
+<file src="skins/cdfsoldier.dff"/>
+<file src="skins/cdfsoldier.txd"/>
+<file src="skins/cdfvet.dff"/>
+<file src="skins/cdfvet.txd"/>
+<file src="skins/CDF_boss.dff"/>
+<file src="skins/CDF_boss.txd"/>
+<file src="skins/hazmat.dff"/>
+<file src="skins/hazmat.txd"/>
+<file src="skins/cleaner.dff"/>
+<file src="skins/cleaner.txd"/>
+<file src="skins/camo.dff"/>
+<file src="skins/camo.txd"/>
+<file src="skins/infiltrator.dff"/>
+<file src="skins/infiltrator.txd"/>
+<file src="skins/peacekeeperheavy.dff"/>
+<file src="skins/peacekeeperheavy.txd"/>
+<file src="skins/bountyhunterscar.dff"/>
+<file src="skins/bountyhunterscar.txd"/>
+<file src="skins/tenpen.dff"/>
+<file src="skins/tenpen.txd"/>
+<file src="skins/wmybe.txd"/>
+<file src="skins/wmylg.txd"/>
+<file src="skins/wmyva2.txd"/>
+<file src="skins/fbi.txd"/>
+<file src="skins/punk.dff"/>
+<file src="skins/sayels.txd"/>
+
+
+<file src="skins/bomb.txd"/>
+<file src="skins/bomb.dff"/>
+<file src="skins/sniper.txd"/>
+<file src="skins/sniper.dff"/>
+<file src="skins/knifecur.txd"/>
+<file src="skins/knifecur.dff"/>
+<file src="skins/gun_vibe1.txd"/>
+<file src="skins/gun_vibe1.dff"/>
+<file src="skins/rocketla.txd"/>
+<file src="skins/rocketla.dff"/>
+<file src="skins/gun_dildo1.txd"/>
+<file src="skins/gun_dildo1.dff"/>
+<file src="skins/chnsaw.txd"/>
+<file src="skins/chnsaw.dff"/>
+<file src="skins/katana.txd"/>
+<file src="skins/katana.dff"/>
+<file src="skins/heatseek.txd"/>
+<file src="skins/heatseek.dff"/>
+<file src="skins/nitestick.txd"/>
+<file src="skins/nitestick.dff"/>
+<file src="skins/armour.txd"/>
+<file src="skins/armour.dff"/>
+<file src="skins/silenced.txd"/>
+<file src="skins/silenced.dff"/>
+<file src="skins/shotgspa.txd"/>
+<file src="skins/shotgspa.dff"/>
+<file src="skins/ak47.txd"/>
+<file src="skins/ak47.dff"/>
+<file src="skins/flame.txd"/>
+<file src="skins/flame.dff"/>
+<file src="skins/gun_para.txd"/>
+<file src="skins/gun_para.dff"/>
+<file src="skins/spraycan.txd"/>
+<file src="skins/spraycan.dff"/>
+<file src="skins/satchel.txd"/>
+<file src="skins/satchel.dff"/>
+<file src="skins/camera.txd"/>
+<file src="skins/camera.dff"/>
+<file src="skins/nvgoggles.txd"/>
+<file src="skins/nvgoggles.dff"/>
+<file src="skins/teargas.txd"/>
+<file src="skins/teargas.dff"/>
+<file src="skins/irgoggles.txd"/>
+<file src="skins/irgoggles.dff"/>
+<file src="skins/gun_dildo2.txd"/>
+<file src="skins/gun_dildo2.dff"/>
+<file src="skins/micro_uzi.txd"/>
+<file src="skins/micro_uzi.dff"/>
+<file src="skins/flowera.txd"/>
+<file src="skins/flowera.dff"/>
+<file src="skins/minigun.txd"/>
+<file src="skins/minigun.dff"/>
+<file src="skins/tec9.txd"/>
+<file src="skins/tec9.dff"/>
+<file src="skins/cuntgun.txd"/>
+<file src="skins/cuntgun.dff"/>
+<file src="skins/chromegun.txd"/>
+<file src="skins/chromegun.dff"/>
+<file src="skins/grenade.txd"/>
+<file src="skins/grenade.dff"/>
+<file src="skins/golfclub.txd"/>
+<file src="skins/golfclub.dff"/>
+<file src="skins/sawnoff.txd"/>
+<file src="skins/sawnoff.dff"/>
+<file src="skins/gun_cane.txd"/>
+<file src="skins/gun_cane.dff"/>
+<file src="skins/mp5lng.txd"/>
+<file src="skins/mp5lng.dff"/>
+<file src="skins/desert_eagle.txd"/>
+<file src="skins/desert_eagle.dff"/>
+<file src="skins/colt45.txd"/>
+<file src="skins/colt45.dff"/>
+<file src="skins/brassknuckle.txd"/>
+<file src="skins/brassknuckle.dff"/>
+<file src="skins/missile.txd"/>
+<file src="skins/missile.dff"/>
+<file src="skins/molotov.txd"/>
+<file src="skins/molotov.dff"/>
+<file src="skins/poolcue.txd"/>
+<file src="skins/poolcue.dff"/>
+<file src="skins/m4.txd"/>
+<file src="skins/m4.dff"/>
+<file src="skins/bat.txd"/>
+<file src="skins/bat.dff"/>
+<file src="skins/shovel.txd"/>
+<file src="skins/shovel.dff"/>
+<file src="skins/fire_ex.txd"/>
+
+<file src="skins/quad.txd"/>
+<file src="skins/quad.dff"/>
+<file src="skins/MatTextures.txd"/>
+<file src="skins/smoke_flare.dff"/>
+				  
+				<file src="blips/0.png" />
+				<file src="blips/1.png" />
+				<file src="blips/2.png" />
+				<file src="blips/3.png" />
+				<file src="blips/4.png" />
+				<file src="blips/5.png" />
+				<file src="blips/6.png" />
+				<file src="blips/7.png" />
+				<file src="blips/8.png" />
+				<file src="blips/9.png" />
+				<file src="blips/10.png" />
+				<file src="blips/11.png" />
+				<file src="blips/12.png" />
+				<file src="blips/13.png" />
+				<file src="blips/14.png" />
+				<file src="blips/15.png" />
+				<file src="blips/16.png" />
+				<file src="blips/17.png" />
+				<file src="blips/18.png" />
+				<file src="blips/19.png" />
+				<file src="blips/20.png" />
+				<file src="blips/21.png" />
+				<file src="blips/22.png" />
+				<file src="blips/23.png" />
+				<file src="blips/24.png" />
+				<file src="blips/25.png" />
+				<file src="blips/26.png" />
+				<file src="blips/27.png" />
+				<file src="blips/28.png" />
+				<file src="blips/29.png" />
+				<file src="blips/30.png" />
+				<file src="blips/31.png" />
+				<file src="blips/32.png" />
+				<file src="blips/33.png" />
+				<file src="blips/34.png" />
+				<file src="blips/35.png" />
+				<file src="blips/36.png" />
+				<file src="blips/37.png" />
+				<file src="blips/38.png" />
+				<file src="blips/39.png" />
+				<file src="blips/40.png" />
+				<file src="blips/41.png" />
+				<file src="blips/42.png" />
+				<file src="blips/43.png" />
+				<file src="blips/44.png" />
+				<file src="blips/45.png" />
+				<file src="blips/46.png" />
+				<file src="blips/47.png" />
+				<file src="blips/48.png" />
+				<file src="blips/49.png" />
+				<file src="blips/50.png" />
+				<file src="blips/51.png" />
+				<file src="blips/52.png" />
+				<file src="blips/53.png" />
+				<file src="blips/54.png" />
+				<file src="blips/55.png" />
+				<file src="blips/56.png" />
+				<file src="blips/57.png" />
+				<file src="blips/58.png" />
+				<file src="blips/59.png" />
+				<file src="blips/60.png" />
+				<file src="blips/61.png" />
+				<file src="blips/62.png" />
+				<!--<file src="blips/63.png" / -->
+				<!--<file src="blips/64.png" / -->
+				<file src="blips/ped.png" />
+				<file src="blips/ped_dead.png" />
+				<file src="blips/pedvehicle.png" />
+				<file src="blips/vehicle.png" />
+				<file src="blips/weapon.png" />
+				<file src="blips/health.png" />
+				<file src="blips/armor.png" />
+				
+				<file src="textures/cubebox.dds"/>
+				<!-- <file src="textures/VignetteEffect.dds"/> -->
+				<!--<file src="textures/crosshair.png"/>-->
+				
+				<file src="shaders/black_blur_borders.png" />
+				<file src="shaders/infectionshader.png" />
+				<file src="shaders/drunkshader.png" />
+				<file src="shaders/adrenalineshader.png" />
+				<file src="shaders/shader_light.fx"/>
+				<file src="shaders/mta-helper.fx"/>
+				<file src="shaders/shader_jaroovka.fx"/>
+				<file src="shaders/shader_null.fx"/>
+				<file src="shaders/flash_light_rays.fx"/>
+				<file src="shaders/ped_wall.fx" type="client" />
+				<file src="shaders/shad_exp.png"/>
+				<file src="shaders/coronastar.png"/>
+				<file src="shaders/texreplace.fx"/>
+				<file src="shaders/old_film.fx" type="client"/>
+				<!--<file src="shaders/shader_crosshair.fx"/>-->
+
+				<file src="objects/flashlight.txd"/>
+				<file src="objects/flashlight.dff"/>
+				<file src="objects/a51fencing.txd" />
+				<file src="objects/a51fencing.dff" />
+				<file src="objects/a51fencing.col" />
+				<file src="objects/a51fensin.col" />
+				<file src="objects/a51fensin.dff" />
+				<file src="objects/vgseland08_lvs.col" />
+				<file src="objects/vgseland08_lvs.txd" />
+				<file src="objects/vgseland08_lvs.dff" />
+				<file src="objects/noDoors.col" />
+				<file src="objects/noDoors.dff" />
+				<file src="objects/noDoors.txd" />
+
+				<file src="sounds/switch.wav"/>
+				<file src="sounds/enginefail.mp3" />
+				<file src="sounds/Bow_Fire_Arrow.mp3" />
+				<file src="sounds/openclose.mp3" />
+				<file src="sounds/heartbeat.mp3" />
+				<file src="sounds/map.mp3" />
+				<file src="sounds/lock.mp3" />
+				<file src="sounds/pain.mp3" />
+				<file src="sounds/cough.mp3" />
+				<file src="sounds/wasted.mp3" />
+				<file src="sounds/levelup.wav" />
+				<file src="sounds/bottlebreak.mp3" />
+				<file src="sounds/m79.wav" />
+				<file src="sounds/engine.wav" />
+				<file src="sounds/helicopter.ogg" />
+				<!-- <file src="sounds/Crash.m4a" /> -->
+				<!-- <file src="sounds/Missile.mp3" /> -->
+
+				<file src="fonts/Chunkfive.otf" />
+				<file src="fonts/Dystopia_font.ttf" />
+				<file src="fonts/Westrider2057.ttf" />
+				
+<export function="addPlayerItem" type="server" />
+<export function="getPlayerItens" type="server" />
+<export function="setPlayerItens" type="server" />
+<export function="syncronizePlayerItens" type="server" />
+<export function="RefreshDropedItens" type="server" />
+<export function="clearInventorySandBox" type="server" />
+<export function="createObjectItem" type="server"/>
+<export function="setHungerState" type="client"/>
+<export function="getHungerState" type="client"/>
+<export function="getThirstState" type="client"/>
+<export function="setThirstState" type="client"/>
+<export function="findGroundZ" type="client"/>
+<export function="getCarFuel" type="server"/>
+<export function="breakObject" type="server"/>
+<export function="respawnObject" type="server"/>
+<export function="playSound3DToElement" type="server"/>
+<export function="getPlayerLevel" type="server"/>
+<export function="getPlayerLevel" type="client"/>
+<export function="setPlayerLevel" type="server"/>
+<export function="setPlayerLevel" type="client"/>
+<export function="getPlayerExp" type="server"/>
+<export function="getPlayerExp" type="client"/>
+<export function="setPlayerExp" type="server"/>
+<export function="setPlayerExp" type="client"/>
+<export function="addPlayerExp" type="server"/>
+<export function="addPlayerExp" type="client"/>
+<export function="getLevelValues" type="server"/>
+<export function="getLevelValues" type="client"/>
+<export function="outputTopBar" type="client"/>
+<export function="outputTopBar" type="server"/>
+<export function="outputStatusInfo" type="client"/>
+<export function="outputStatusInfo" type="server"/>
+<export function="outputInteractInfo" type="client"/>
+<export function="deploySpikestrip" type="server"/>
+<export function="outputInteractInfo" type="server"/>
+<export type="server" function="brHideBlip"/>
+<export type="client" function="brShowBlip"/>
+<export type="client" function="brHideBlip"/>
+<export type="server" function="brSetPedName"/>
+<export type="server" function="brSetPickupName"/>
+<export type="client" function="brSetPedName"/>
+<export type="client" function="brSetPickupName"/>
+<export function="dxProgressBar" type="client"/>
+<export function="dxKillProgressBar" type="client"/>
+<export function="showHelpMessage" type="client"/>
+<export function="setDriverDrivebyAbility" type="client" />
+<export function="setPassengerDrivebyAbility" type="client" />
+<export function="getDriverDrivebyAbility" type="client" />
+<export function="getPassengerDrivebyAbility" type="client" />
+<export function="setWeaponShotDelay" type="client" />
+<export function="getWeaponShotDelay" type="client" />
+<export function="setDrivebySteeringAbility" type="client" />
+<export function="getDrivebySteeringAbility" type="client" />
+<export function="setDrivebyAutoEquip" type="client" />
+<export function="getDrivebyAutoEquip" type="client" />
+
+<oop>true</oop>
+</meta>

@@ -1,0 +1,62 @@
+-- About
+--
+
+Uses dxDrawImage for map/blips, instead of the default F11 map.
+This gives you a little bit more functionality; i.e. custom HUD map, custom blips, any size/scale/rotation, coloring.
+Reads normal blips as well, so it will work instantly.
+
+-- INSTRUCTIONS FOR BASIC USE
+--
+
+Toggle Map: "F11"
+Hold (Quick-View): "/"
+Command: "/map"
+
+You can change this in client.lua very easily, or just write "bind <key> map" in-game.
+
+-- INSTRUCTIONS FOR SCRIPTERS
+--
+
+(You don't need to do anything for normal blips, they already appear on the dxMap )
+
+1. In the meta.xml of your resource, put:
+<include resource="dxMap"/>
+
+2. Use Export functions (client-side only!)
+
+dxCreateBlip( int x = 0, int y = 0, int z = 0 [, int rotation = 0, int icon = 0, int width = 0, int height = 0, int color = tocolor(255,255,255,255), int visibleDistance = 16000] )
+dxCreateBlipAttachedTo( element elemAttachedTo [, int icon = 0, int width = 0, int height = 0, int color = tocolor(255,255,255,255), int visibleDistance = 16000] )
+
+Examples:
+exports.dxMap:dxCreateBlip(0,0,0,0,6,32,32,tocolor(255,0,0,255) )
+exports.dxMap:dxCreateBlipAttachedTo(localPlayer,2,16,16,tocolor(0,128,255,255), 100 )
+
+
+-- INSTRUCTIONS FOR MODDING
+--
+
+Feel free to mod and release without permission
+
+1. You can replace "map.jpg" with your own map
+2. g_blipList table contains all of the icons. Add or modify this table with your own blip icons.
+3. You can simply replace the files in the blips folder.
+
+I tried to keep the syntax similar to createBlip() and createBlipAttachedTo(), but you have more functionality with dxMap so it the parameters had to change.
+
+-- STUFF TO DO
+--
+
+This is a WIP so there is some missing functionality, PLEASE READ THE TODO!
+
+TODO:
+- make all blips black and white, so dx can tint them properly.
+- add 'visibleTo' for dxBlips and normal Blips.
+- make player icon (blip 0) show elevation level (up and down)
+- add server-side functions (will just be triggerClientEvent based functions)
+- hide the extraneous square outside the radar circle
+
+-- OTHER
+--
+
+Default Icons are from here:
+http://www.gtagaming.com/downloads/gta-san-andreas/misc-mods/23263

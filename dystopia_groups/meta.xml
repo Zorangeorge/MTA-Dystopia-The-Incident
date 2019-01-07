@@ -1,0 +1,6 @@
+<meta>
+	<info author="K1parik" name="Group sustem" type="script" version="1.1" />
+	<script src="group_client.lua" type="client" cache="false"/>
+	<script src="group_server.lua" type="server"/>
+	<file src="fonts/Chunkfive.otf" />
+</meta>

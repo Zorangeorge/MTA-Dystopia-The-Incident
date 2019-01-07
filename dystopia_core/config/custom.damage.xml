@@ -1,0 +1,5 @@
+<!-- The integer in damage represents the percent that the damage gets amplified. -->
+<!-- Example: <weapon id = "30" damage = "100" /> -->
+<meta>
+<weapon id = "37" damage = "500" />
+</meta>

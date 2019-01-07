@@ -1,0 +1,17 @@
+vehicles_server.lua:351 - unnecesary usage of ifs.									-- not sure how it can be done more efficiently?
+vehicles_cliet.lua:166 to 177 - unnecesary usage of ifs.							-- not sure how it can be done more efficiently?
+spawn_system.lua:377 -- don't pass player in triggers!								--looks benign in this particular case? i do need to pass the player element for the function that's triggered; I could use client, but function is also called directly from client-side so I still need that 'player' parameter.
+skinreplacer_client.lua -- 400 lines that can be reduced to 10 ;D					--TODO; it would require renaming all assets as just the model id number, right? 
+skinchanger_server.lua:101 to 110 -- there's a missing check, might cause errors	--not sure what you mean; 
+skills_client.lua:62 to 66 -- the event is superfluous								--what do you mean? it draws the combo kill text 
+NPCs_server.lua:533 -- don't use root T_T											--still needed, all peds are created by diff. resource; confirm?
+NPC_interaction_server.lua:342 -- root :'c											--not sure what to use here if not root. resourceRoot would suffice? it is a player, so technically it's parent is the root element?
+NPC_interaction_server.lua:406 -- root :'c											--still needed, since all peds are created by diff. resource. confirm?
+HUD_client.lua:24 to 64 -- can be reduced											-- how?
+grapple_client.lua:312 -- needs an empty check										--not sure what you mean
+gates_server.lua:1 to 700 -- im almost crying										--i'm all out of napkins :P I should make some general openGate and closeGate functions and pull all gate specific data from tables? is this what you meant?
+chat_server.lua -- private rooms are using unnecesary element datas					-- I need more details, not sure how to approach it
+
+
+In inventory_server.lua I'm using a huge function (useItem(...) at line 155; I think that's one of the causes for item duplication and general inventory use lag. Would it help if I make lots of smaller functions and call them where necessary, instead of having all code in this large func?
+Is commented out content making the scripts run slower? I have huge chunks of code commented out, should I remove them from the live server code or it makes no difference? 

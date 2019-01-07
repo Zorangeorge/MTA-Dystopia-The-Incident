@@ -1,0 +1,5 @@
+<meta>
+  <info author="Spanky" name="object_placer" version="1.0" type="script"/>
+  <script src="building_server.lua" type="server" />
+  <script src="building_client.lua" type="client" cache="false" />
+</meta>

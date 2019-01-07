@@ -1,0 +1,13 @@
+<map edf:definitions="editor_main">
+    <vehicle id="fieldburner1vehicle" sirens="false" paintjob="3" interior="0" alpha="255" model="412" plate="BURN!" dimension="0" posX="0" posY="0" posZ="0" rotX="0" rotY="0" rotZ="0" color="163,34,17,245,245,245,0,0,0,0,0,0"></vehicle>
+    <object id="object (kmilitary_base) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2978" doublesided="false" scale="1" dimension="0" posX="0" posY="-0.3" posZ="0.6" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (kmilitary_base) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="2978" doublesided="false" scale="1" dimension="0" posX="0" posY="-2.7" posZ="0.1" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (DYN_MESH_1) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="1411" doublesided="false" scale="0.3298023" dimension="0" posX="-0.8" posY="1.6" posZ="-0.1" rotX="273" rotY="180" rotZ="270.75"></object>
+    <object id="object (DYN_MESH_1) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="1411" doublesided="false" scale="0.3298023" dimension="0" posX="-0.8" posY="-2.5" posZ="-0.2" rotX="272.999" rotY="179.995" rotZ="273.5"></object>
+    <object id="object (CLOTHES_RAIL3) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2373" doublesided="true" scale="1" dimension="0" posX="0.5" posY="-2.4" posZ="-0.5" rotX="0" rotY="0" rotZ="89"></object>
+    <object id="object (barrel3) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="1218" doublesided="true" scale="1" dimension="0" posX="0.4" posY="-1.5" posZ="1.2" rotX="0" rotY="25.75" rotZ="100"></object>
+    <object id="object (barrel3) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="1218" doublesided="true" scale="1" dimension="0" posX="0.5" posY="-2.9" posZ="1.1" rotX="0" rotY="14" rotZ="270"></object>
+    <object id="object (exbrtorch01) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="3525" doublesided="true" scale="1" dimension="0" posX="-1" posY="-1.8" posZ="0.6" rotX="0" rotY="0" rotZ="318"></object>
+    <object id="object (CLOTHES_RAIL3) (3)" breakable="true" interior="0" collisions="false" alpha="255" model="2373" doublesided="true" scale="1" dimension="0" posX="-0.3" posY="0.6" posZ="-0.2" rotX="270.75" rotY="180" rotZ="178.995"></object>
+    <object id="object (barrel1) (1)" breakable="true" interior="0" alpha="255" model="1218" doublesided="true" scale="1.2" dimension="0" posX="1.9" posY="1.1" posZ="-0.1" rotX="272.75" rotY="0" rotZ="0"></object>
+</map>

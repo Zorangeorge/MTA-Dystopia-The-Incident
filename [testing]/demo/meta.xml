@@ -1,0 +1,15 @@
+<!-- MTA:SA Deathmatch 1.0 Developer preview 2 compatible -->
+
+<meta>
+  <info description="Demo game mode" type="gamemode" author="Ace_Gambit" name="demo" version="1.0" />
+
+  <script src="demo.lua" type="server" />
+
+  <script src="demo_c.lua" type="client" />
+
+  <include resource="bomber" />
+
+  <map src="demo.map" />
+</meta>
+
+<!-- Author: Ace_Gambit -->

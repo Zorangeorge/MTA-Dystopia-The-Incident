@@ -1,0 +1,5 @@
+exp fire + message 'building fire' not showing
+exp medikit from equipped
+exp toolbox, equiped, inventory, wreck, car, repair
+exp bandage
+exp water bottle filling

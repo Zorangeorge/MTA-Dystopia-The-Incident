@@ -1,0 +1,14 @@
+<map edf:definitions="dystopia_map_backup,editor_main">
+    <object id="object (airportgate) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="980" doublesided="false" scale="1" dimension="0" posX="-1725.6" posY="-743" posZ="36.3" rotX="296.018" rotY="301.352" rotZ="164.136"></object>
+    <vehicle id="vehicle (Patriot) (1)" paintjob="3" interior="0" alpha="255" model="470" plate="HNO5YNS" dimension="0" color="95,10,21,0,0,0,0,0,0,0,0,0" posX="-1729.2" posY="-740" posZ="34.9" rotX="350.002" rotY="357.968" rotZ="359.643" sirens="false"></vehicle>
+    <object id="object (dckwrkhut) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="3626" doublesided="false" scale="1" dimension="0" posX="-1718" posY="-751.2002" posZ="37.7" rotX="5.185" rotY="9.033" rotZ="138.418"></object>
+    <object id="object (p_rubble04col) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="867" doublesided="false" scale="1" dimension="0" posX="-1734" posY="-737.70001" posZ="33" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (p_rubble04col) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="867" doublesided="false" scale="1" dimension="0" posX="-1718.6" posY="-730.40002" posZ="34.6" rotX="0" rotY="0" rotZ="40"></object>
+    <object id="object (rubbled02_SFS) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="10985" doublesided="false" scale="1" dimension="0" posX="-1717.1" posY="-746.20001" posZ="35.1" rotX="354.028" rotY="354.47" rotZ="359.423"></object>
+    <object id="object (CJ_urb_rub_3) (1)" breakable="true" interior="0" collisions="true" alpha="255" model="849" doublesided="false" scale="1" dimension="0" posX="-1716.5" posY="-746.5" posZ="36.7" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (CJ_urb_rub_3) (2)" breakable="true" interior="0" collisions="true" alpha="255" model="849" doublesided="false" scale="1" dimension="0" posX="-1712.4" posY="-752" posZ="37" rotX="356.002" rotY="2.005" rotZ="119.14"></object>
+    <object id="object (cardboardbox4) (1)" breakable="true" interior="0" alpha="255" model="1221" doublesided="false" scale="1" dimension="0" posX="-1719.5" posY="-749.40002" posZ="36.5" rotX="349.75" rotY="0" rotZ="0"></object>
+    <object id="object (cardboardbox) (1)" breakable="true" interior="0" alpha="255" model="1230" doublesided="true" scale="1" dimension="0" posX="-1720.5" posY="-750.40002" posZ="36.6" rotX="0" rotY="0" rotZ="0"></object>
+    <Neutral_spawn id="Neutral_spawn (1)" BotType="Freelance" name="" botDialogue="" botRange="100" posX="-1712.4" posY="-747.90002" posZ="37.5" rotX="0" rotY="0" rotZ="0"></Neutral_spawn>
+    <Neutral_spawn id="Neutral_spawn (2)" BotType="Freelance" name="" botDialogue="" botRange="100" alpha="255" interior="0" posX="-1714.9" posY="-742.90002" posZ="36.8" rotX="0" rotY="0" rotZ="0"></Neutral_spawn>
+</map>

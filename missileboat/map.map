@@ -1,0 +1,9 @@
+<map edf:definitions="editor_main">
+    <vehicle id="missileboat1vehicle" sirens="false" paintjob="3" interior="0" alpha="255" model="452" plate="EJ37 HC4" dimension="0" posX="-2199.3999" posY="2421.8" posZ="0" rotX="0" rotY="0" rotZ="0" color="70,91,78,70,91,78,70,91,78,0,0,0"></vehicle>
+    <object id="object (samsite_SFXRF) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="3884" doublesided="false" scale="1" dimension="0" posX="-2199.3999" posY="2420.2" posZ="0.1" rotX="344.25" rotY="0" rotZ="359.25"></object>
+    <object id="object (DYN_CRATE_1) (1)" breakable="false" interior="0" collisions="false" alpha="255" model="1448" doublesided="false" scale="1.8" dimension="0" posX="-2199.3999" posY="2423.3999" posZ="0.4" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (DYN_LIFE_P) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="1461" doublesided="false" scale="1" dimension="0" posX="-2199.1001" posY="2427" posZ="0.9" rotX="272.915" rotY="149.022" rotZ="159.055"></object>
+    <object id="object (kmb_keypad) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2922" doublesided="false" scale="1" dimension="0" posX="-2199.3999" posY="2421.2" posZ="1.6" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (CLOTHES_RAIL) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2371" doublesided="false" scale="1" dimension="0" posX="-2199" posY="2419.6001" posZ="0.5" rotX="0" rotY="103.75" rotZ="355"></object>
+    <object id="object (CLOTHES_RAIL) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="2371" doublesided="false" scale="1" dimension="0" posX="-2199.8999" posY="2420.8" posZ="0.5" rotX="0" rotY="103.749" rotZ="184.996"></object>
+</map>

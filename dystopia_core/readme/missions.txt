@@ -1,0 +1,34 @@
+CDF
+
+Mallory Freemantle
+	"Our long range antenna is dead again. Grab a toolbox, go there and fix it."
+	*Repairman* -- Go to the antenna location and repair it. Toolbox required.
+		"Found the cause. Hmm... Looks like sabotage!"
+		Fix antenna [Toolbox]
+				*Report back to Mallory*
+				"I fixed your antenna. Looks like somebody's been messing with it."
+					*Mission accomplished*
+					"Damned North Point bandits again! Would you do something for me?"
+					Y/N
+					"Those bandits at North Point Rock keep giving us trouble. Can you deliver them a strong message?"
+						*North Point Clean-up* -- Go to North Point Rock and kill the bandits
+							"Here we go!"
+							*Report back to Mallory*
+							"I took care of those bandits for now."
+								*Mission accomplished*
+								"Great news! I still have something for you to do."
+								Y/N
+								"I need you to deliver a different kind of message this time, to my father."
+									*Delivery boy* -- Go to The Farm and deliver the message to Aaron Freemantle.
+									
+Nimsky
+	"I could use some help. Are you up for it?"
+	Y/N
+		"I cannot repair anything without proper parts! Bring me 3 Vehicle Parts if you can find them."
+		*Parts grabber*
+		3 Vehicle Parts 
+			"Here are your vehicle parts."
+				*Mission accomplished*
+									
+	
+				

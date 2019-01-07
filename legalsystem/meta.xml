@@ -1,0 +1,15 @@
+<meta>
+	<info author="Slothman" type="script" name="Legal System" version="2.0.0" />
+	<script src="arrest_server.lua"/>
+	<script src="wantedlevels.lua"/>
+	<script src="arrest_client.lua" type="client"/>
+
+	<settings>
+		<setting name="jailtime" value="[15000]" /> <!-- HOW LONG PER WANTED STAR DO PLAYERS STAY IN JAIL -->
+		<setting name="Areward" value="[2000]" /> <!-- HOW MUCH MONEY PER WANTED STAR DO POLICE RECEIVE FOR ARRESTING -->
+		<setting name="Kreward" value="[500]" /> <!-- HOW MUCH MONEY PER WANTED STAR DO POLICE RECEIVE FOR KILLIMG -->
+		<setting name="Copmethod" value="skin" /> <!-- (CASE SENSITIVE!) HOW THE GAME DETECTS WHO IS A COP, SET TO "skin" TO GO BY SKIN OR "team" TO GO BY TEAM NAME -->
+		<setting name="Copteam" value="Police" /> <!-- (CASE SENSITIVE!) THE NAME OF THE COP TEAM IF "Copmethod" IS SET TO "team" -->
+		<setting name="Copskins" value="[ [ 71, 163, 164, 246, 280, 281, 282, 283, 284, 285, 286, 288] ]" /> <!-- THE SKINS USED FOR COPS IF "Copmethod" IS SET TO "skin" -->
+	</settings>	
+</meta>

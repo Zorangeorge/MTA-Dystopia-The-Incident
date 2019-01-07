@@ -1,0 +1,80 @@
+<meta>
+    <info type="script" description="Automatically load any mod you want!" author="Remi-X" version="1.0.3" name="ModLoader" />
+    <script src="loader_s.lua" type="server" />
+    <script src="deleter_s.lua" type="server" />
+    <script src="handling.lua" type="server" />
+    <script src="data.lua" type="server" />
+    <script src="replacer_c.lua" type="client" />
+    <file src="vehicles/admiral.txd"></file>
+    <file src="vehicles/admiral.dff"></file>
+    <file src="vehicles/patriot.txd"></file>
+    <file src="vehicles/patriot.dff"></file>
+    <file src="vehicles/sabre.txd"></file>
+    <file src="vehicles/sabre.dff"></file>
+    <file src="vehicles/yankee.txd"></file>
+    <file src="vehicles/yankee.dff"></file>
+    <file src="vehicles/shamal.txd"></file>
+    <file src="vehicles/shamal.dff"></file>
+    <file src="vehicles/bravura.txd"></file>
+    <file src="vehicles/bravura.dff"></file>
+    <file src="vehicles/buffalo.txd"></file>
+    <file src="vehicles/buffalo.dff"></file>
+    <file src="vehicles/trash.txd"></file>
+    <file src="vehicles/trash.dff"></file>
+    <file src="vehicles/journey.dff"></file>
+    <file src="vehicles/alpha.txd"></file>
+    <file src="vehicles/alpha.dff"></file>
+    <file src="vehicles/fbiranch.txd"></file>
+    <file src="vehicles/fbiranch.dff"></file>
+    <file src="vehicles/fbitruck.txd"></file>
+    <file src="vehicles/fbitruck.dff"></file>
+    <file src="vehicles/topfun.txd"></file>
+    <file src="vehicles/topfun.dff"></file>
+    <file src="vehicles/androm.txd"></file>
+    <file src="vehicles/androm.dff"></file>
+    <file src="vehicles/blistac.txd"></file>
+    <file src="vehicles/blistac.dff"></file>
+    <file src="vehicles/club.txd"></file>
+    <file src="vehicles/club.dff"></file>
+    <file src="vehicles/wayfarer.txd"></file>
+    <file src="vehicles/wayfarer.dff"></file>
+    <file src="vehicles/mesa.txd"></file>
+    <file src="vehicles/mesa.dff"></file>
+    <file src="vehicles/moonbeam.txd"></file>
+    <file src="vehicles/moonbeam.dff"></file>
+    <file src="vehicles/cargobob.txd"></file>
+    <file src="vehicles/cargobob.dff"></file>
+    <file src="vehicles/broadway.txd"></file>
+    <file src="vehicles/broadway.dff"></file>
+    <file src="vehicles/landstal.txd"></file>
+    <file src="vehicles/landstal.dff"></file>
+    <file src="vehicles/nevada.txd"></file>
+    <file src="vehicles/nevada.dff"></file>
+    <file src="vehicles/hotknife.txd"></file>
+    <file src="vehicles/hotknife.dff"></file>
+    <file src="vehicles/raindanc.txd"></file>
+    <file src="vehicles/raindanc.dff"></file>
+    <file src="vehicles/utility.txd"></file>
+    <file src="vehicles/utility.dff"></file>
+    <file src="vehicles/blade.txd"></file>
+    <file src="vehicles/blade.dff"></file>
+    <file src="vehicles/bullet.txd"></file>
+    <file src="vehicles/bullet.dff"></file>
+    <file src="vehicles/seaspar.txd"></file>
+    <file src="vehicles/seaspar.dff"></file>
+    <file src="vehicles/squalo.txd"></file>
+    <file src="vehicles/squalo.dff"></file>
+    <file src="vehicles/cadrona.txd"></file>
+    <file src="vehicles/cadrona.dff"></file>
+    <file src="vehicles/rumpo.txd"></file>
+    <file src="vehicles/rumpo.dff"></file>
+    <file src="vehicles/walton.txd"></file>
+    <file src="vehicles/walton.dff"></file>
+    <file src="vehicles/leviathn.txd"></file>
+    <file src="vehicles/leviathn.dff"></file>
+    <file src="vehicles/oceanic.txd"></file>
+    <file src="vehicles/oceanic.dff"></file>
+    <file src="vehicles/barracks.dff"></file>
+    <file src="vehicles/swatvan.txd"></file>
+    <file src="vehicles/swatvan.dff"></file>
+</meta>

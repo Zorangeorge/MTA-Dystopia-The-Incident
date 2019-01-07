@@ -1,0 +1,20 @@
+You can create Objects while playing in a gamemode!
+Commands : Create Object /co (ID from Object)
+Place Object /po
+Rotate Object /ro (rotation)
+To remove all Objects simply restart the Resource.
+
+##Free to Use###
+If youre a bro do not remove my name!
+################
+
+Known Bugs :
+- When 2 players creating objects at same time, there can be some bugs.
+- If you already created an Object and create another Object you cant control the object before.
+- If you jump where the Object is attached to you, you jump very high!
+
+Todo :
+- add GUI
+- remove Bugs
+- make Object nocollide while editing
+- add In-Game Object List

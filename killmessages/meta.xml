@@ -1,0 +1,56 @@
+<meta>
+	<info author="Talidan + Iggy; adapted by Zorgman for Dystopia" type="script" version="2.0.1"/>
+	<script src="utils/textlib.lua" type="client"/>
+	<script src="utils/imagelib.lua" type="client"/>
+	<script src="killmessages_client.lua" type="client"/>
+	<script src="killmessages_server.lua" type="server"/>
+	<script src="gui.lua" type="client"/>
+	<script src="definitions.lua" type="client"/>
+	<!--generic kill icon courtesy of Iggy-->
+	<file src="icons/fist.png"/>
+	<file src="icons/brassknuckle.png"/>
+	<file src="icons/golfclub.png"/>
+	<file src="icons/nitestick.png"/>
+	<file src="icons/knifecur.png"/>
+	<file src="icons/bat.png"/>
+	<file src="icons/shovel.png"/>
+	<file src="icons/poolcue.png"/>
+	<file src="icons/katana.png"/>
+	<file src="icons/chnsaw.png"/>
+	<file src="icons/gun_dildo1.png"/>
+	<file src="icons/gun_dildo2.png"/>
+	<file src="icons/gun_vibe1.png"/>
+	<file src="icons/flowera.png"/>
+	<file src="icons/gun_cane.png"/>
+	<file src="icons/grenade.png"/>
+	<file src="icons/teargas.png"/>
+	<file src="icons/molotov.png"/>
+	<file src="icons/colt45.png"/>
+	<file src="icons/Silenced.png"/>
+	<file src="icons/desert_eagle.png"/>
+	<file src="icons/chromegun.png"/>
+	<file src="icons/sawnoff.png"/>
+	<file src="icons/shotgspa.png"/>
+	<file src="icons/micro_uzi.png"/>
+	<file src="icons/mp5lng.png"/>
+	<file src="icons/ak47.png"/>
+	<file src="icons/m4.png"/>
+	<file src="icons/tec9.png"/>
+	<file src="icons/cuntgun.png"/>
+	<file src="icons/sniper.png"/>
+	<file src="icons/rocketla.png"/>
+	<file src="icons/heatseek.png"/>
+	<file src="icons/flame.png"/>
+	<file src="icons/minigun.png"/>
+	<file src="icons/satchel.png"/>
+
+	<file src="icons/generic.png"/>
+	<file src="icons/headshot.png"/>
+	
+	<export function="outputMessage" type="server"/>
+	<export function="outputMessage" type="client"/>
+	<export function="outputKillMessage" type="server"/>
+	<export function="outputKillMessage" type="client"/>
+	<export function="setKillMessageStyle" type="client"/>
+	<export function="setKillMessageStyle" type="server"/>
+</meta>

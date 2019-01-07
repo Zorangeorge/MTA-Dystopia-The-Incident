@@ -1,0 +1,9 @@
+<def name="Zombies">
+	<element name="Zombie_spawn" friendlyname="Zombie Spawnpoint" icon="edf/zombiespawn.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="0" rotation="!rotation!"/>
+		<object model="1254" posZ="1" rotation="!rotation!"/>		
+	</element>
+	
+</def>

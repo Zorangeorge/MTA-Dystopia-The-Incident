@@ -1,0 +1,16 @@
+<map edf:definitions="editor_main">
+    <vehicle id="cdfpatroller1vehicle" paintjob="3" interior="0" alpha="255" model="568" plate="CDF-PATR" dimension="0" posX="2495.1001" posY="-1666.6" posZ="13.3" rotX="0" rotY="0" rotZ="0" color="111,103,95,151,149,146,0,0,0,0,0,0"></vehicle>
+    <object id="object (kmilitary_base) (1)" breakable="true" interior="0" alpha="255" model="2978" collisions="false" doublesided="false" scale="1" dimension="0" posX="2495.1001" posY="-1667.1" posZ="14" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (nt_securecam1_01) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="1616" doublesided="false" scale="0.5" dimension="0" posX="2494.2" posY="-1667.4" posZ="14.3" rotX="0" rotY="0" rotZ="344"></object>
+
+    <object id="object (CJ_SANDBAG) (1)" breakable="true" interior="0" alpha="255" collisions="false" model="2060" doublesided="false" scale="1" dimension="0" posX="2495.2" posY="-1666.6" posZ="14.2" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (CJ_SANDBAG) (2)" breakable="true" interior="0" alpha="255" collisions="false" model="2060" doublesided="false" scale="1" dimension="0" posX="2495.2" posY="-1666.7" posZ="14.4" rotX="0" rotY="358.75" rotZ="4.75"></object>
+
+    <object id="object (rbmp_lr_rem2) (1)" breakable="true" interior="0" alpha="255" model="1178" doublesided="true" scale="0.69999999" dimension="0" posX="2494.3999" posY="-1664.4" posZ="13.2" rotX="0" rotY="179.75" rotZ="180"></object>
+    <object id="object (cxrf_corpanel) (1)" breakable="false" interior="0" collisions="false" alpha="255" model="3302" doublesided="true" scale="0.40000001" dimension="0" posX="2494.6001" posY="-1666.9" posZ="13.3" rotX="85.634" rotY="246.408" rotZ="29.653"></object>
+    <object id="object (cxrf_corpanel) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="3302" doublesided="true" scale="0.40000001" dimension="0" posX="2495.8" posY="-1667.2" posZ="13.3" rotX="85.633" rotY="246.407" rotZ="207.152"></object>
+    <object id="object (wheel_or1) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="1025" doublesided="false" scale="0.60000002" dimension="0" posX="2495.1001" posY="-1667.9" posZ="13.8" rotX="4.742" rotY="291.508" rotZ="281.849"></object>
+    <object id="object (CJ_SANDBAG) (3)" breakable="true" interior="0" alpha="255" collisions="false" model="2060" doublesided="false" scale="1" dimension="0" posX="2495.1001" posY="-1667.6" posZ="14.2" rotX="0" rotY="0" rotZ="5.998"></object>
+    <object id="object (CJ_FLAG1) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2047" doublesided="true" scale="0.40000001" dimension="0" posX="2495.2" posY="-1666.4" posZ="14.3" rotX="336.262" rotY="1.912" rotZ="183.77"></object>
+    <object id="object (CJ_SANDBAG) (5)" breakable="true" interior="0" alpha="255" collisions="false" model="2060" doublesided="false" scale="1" dimension="0" posX="2495.8" posY="-1667.2" posZ="14.2" rotX="55.244" rotY="7.911" rotZ="78.98"></object>
+</map>

@@ -1,0 +1,15 @@
+<meta>
+    <info author="BigBadButler" name="who cares" version="0.0.1" type="script"/>
+    <script src="Syncro_Client.lua" type="client"/>
+    <script src="Syncro_Server.lua"/>
+
+
+    <script src="damagedraw.lua" type="client"/>
+
+    <file src="Chunkfive.otf"/>
+    <settings>
+	<setting name="@DEFAULT_MODE" value="default" />
+	<setting name="@OPTICS" value="false" />
+    </settings>
+
+</meta>

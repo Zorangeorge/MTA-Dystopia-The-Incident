@@ -1,0 +1,13 @@
+<!-- The integer in id represents the weapon being whitlisted or ignored by semiauto guns script -->
+<!-- Example: <weapon id = "30" /> -->
+<meta> 
+	<weapon id = "30" />
+	<weapon id = "31" />
+	<weapon id = "37" />
+	<weapon id = "38" />
+	<weapon id = "41" />
+	<weapon id = "42" />
+	<weapon id = "28" />
+	<weapon id = "32" />
+	<weapon id = "29" />
+</meta>

@@ -1,0 +1,67 @@
+<meta>
+	<settings>
+		<setting name="*MaxZombies" value="[100]" /> <!--maximum allowed zombies -->
+		<setting name="*StreamMethod" value="[1]" /> <!-- 1 to constantly stream zombies, 0 to only allow zombies to spawn via createZombie function, 2 to only allow spawning at set spawnpoints -->
+		<setting name="*Speed" value="[1]" /> <!-- 0 is slowest, 1 is normal, 2 faster -->
+	</settings>
+	
+	<info author="Slothman" name="Zday script" version="3.0.1" type="script" description="Zombie Infestation script" edf:definition="edf/zombies.edf"/>/>
+	<script src="zombie_server.lua" />
+	<script src="zombie_client.lua" type="client" cache = "false"/>
+	<file src="zombiewood.png" />
+	<file src="skins/22.txd" />
+	<file src="skins/56.txd" />
+	<file src="skins/67.txd" />
+	<file src="skins/68.txd" />
+	<file src="skins/69.txd" />
+	<file src="skins/70.txd" />
+	<file src="skins/97.txd" />
+	<file src="skins/128.txd" />
+	<file src="skins/152.txd" />
+	<file src="skins/162.txd" />
+	<file src="skins/167.txd" />
+	<file src="skins/188.txd" />
+	<file src="skins/195.txd" />
+	<file src="skins/206.txd" />
+	<file src="skins/209.txd" />
+	<file src="skins/229.txd" />
+	<file src="skins/264.txd" />
+	<file src="skins/280.txd" />
+	<file src="skins/277.txd" />
+	
+	<file src="skins/107.txd" />
+	<file src="skins/126.txd" />
+	<file src="skins/127.txd" />
+	<file src="skins/212.txd" />
+	<file src="skins/230.txd" />
+	<file src="skins/258.txd" />
+	<file src="skins/287.txd" />
+	
+	<file src="skins/107.dff" />
+	<file src="skins/126.dff" />
+	<file src="skins/127.dff" />
+	<file src="skins/212.dff" />
+	<file src="skins/230.dff" />
+	<file src="skins/258.dff" />
+	<file src="skins/277.dff" />
+	<file src="skins/287.dff" />
+
+	<file src="sounds/idle1.wav" />
+	<file src="sounds/idle2.wav" />
+	<file src="sounds/idle3.wav" />
+	<file src="sounds/idle4.wav" />
+	<file src="sounds/idle5.wav" />
+	<file src="sounds/idle6.wav" />
+	<file src="sounds/idle7.wav" />
+	<file src="sounds/idle8.wav" />
+	<file src="sounds/alert1.wav" />
+	<file src="sounds/alert2.wav" />
+	
+	<file src="shaders/infectionstage1shader.png" />
+	<file src="shaders/mta-helper.fx" />
+	<file src="shaders/ped_morph.fx" />
+	
+	<file src="edf/zombiespawn.png" />
+	<export function="createZombie" type="server"/>
+	<export function="isPedZombie" type="server"/>
+</meta>

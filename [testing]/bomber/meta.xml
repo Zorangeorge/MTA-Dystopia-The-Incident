@@ -1,0 +1,42 @@
+<!-- MTA:SA Deathmatch 1.0 Developer preview 2 compatible -->
+
+<meta>
+  <info description="Realistic bomber script that allows you to drop a bomb with real GTA world physics" type="script" author="Ace_Gambit" name="Bomber" version="1.0" />
+
+  <script src="Objects/Server/ObjBomber.lua" type="server" />
+
+  <script src="bomber.lua" type="server" />
+
+  <script src="Objects/Client/ObjClientBomber.lua" type="client" />
+
+  <script src="bomber_c.lua" type="client" />
+
+  <export function="regBombMarker" type="server"/>
+  <export function="regBombMarkers" type="server"/>
+  <export function="unregBombMarker" type="server"/>
+  <export function="unregBombMarkers" type="server"/>
+
+  <settings>
+    <setting name="@beagle" value="511 3786 0 0 -1.8 0 0 -90 0" />
+    <setting name="@cropduster" value="512 3786 0 0 -0.9 0 0 -90 0" />
+    <setting name="@dodo" value="593 3786 0 0 -0.95 0 0 -90 0" />
+    <setting name="@hunter" value="425 1218 0 1 -1.3 0 -86 -90 0" />
+    <setting name="@hydra" value="520 3786 0 0 -1.05 0 0 -90 0" />
+    <setting name="@maverick" value="487 1218 0 0 -1.0 0 -90 -90 0" />
+    <setting name="@nevada" value="553 3786 0 1 -1.7 0 0 -90 0" />
+    <setting name="@newschopper" value="488 1218 0 0.5 -1.0 0 -90 -90 0" />
+    <setting name="@policemaverick" value="497 1218 0 0.5 -1.0 0 -90 -90 1" />
+    <setting name="@raindance" value="563 1218 0 0.5 -1.3 0 -90 -90 0" />
+    <setting name="@rustler" value="476 3786 0 0 -1.2 0 0 -90 0" />
+    <setting name="@seasparrow" value="447 1218 0 0.5 -0.9 0 -90 -90 0" />
+    <setting name="@shamal" value="519 3786 0 1 -1.3 0 0 -90 0" />
+    <setting name="@skimmer" value="460 3786 0 0 -0.95 0 2 -90 0" />
+    <setting name="@sparrow" value="469 1218 0 0.5 -0.9 0 -90 -90 0" />
+    <setting name="@stuntplane" value="513 3786 0 0 -1.1 0 4 -90 0" />
+    <setting name="@predator" value="430 1218 0 0.5 -1.15 0 -90 -90 1" />
+    <setting name="@jetmax" value="430 1218 0 0.5 -1.3 0 -90 -90 1" />
+    <setting name="@squalo" value="430 1218 0 0.5 -1.2 0 -87 -90 1" />
+  </settings>
+</meta>
+
+<!-- Author: Ace_Gambit -->

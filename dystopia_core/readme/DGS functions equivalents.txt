@@ -1,0 +1,53 @@
+guiCreateWindow = dgsDxCreateWindow
+guiWindowSetMovable = dgsDxWindowSetMovable
+guiWindowSetSizable = dgsDxWindowSetSizable
+guiSetVisible = dgsDxGUISetVisible
+guiCreateGridList = dgsDxCreateGridList
+guiGridListAddColumn = dgsDxGridListAddColumn
+guiGridListAddRow = dgsDxGridListAddRow
+guiGridListSetItemText = dgsDxGridListSetItemText
+guiCreateButton = dgsDxCreateButton
+guiGetVisible = dgsDxGUIGetVisible
+guiGridListGetSelectedItem = dgsDxGridListGetSelectedItem
+guiGridListGetItemText = dgsDxGridListGetItemText
+
+
+guiCreateLabel = dgsDxCreateLabel
+guiLabelSetColor = dgsDxLabelSetColor
+guiLabelSetVerticalAlign = dgsDxLabelSetVerticalAlign
+guiLabelSetHorizontalAlign = dgsDxLabelSetHorizontalAlign
+
+guiSetFont = dgsDxGUISetFont
+
+guiCreateTabPanel = dgsDxCreateTabPanel
+guiCreateTab = dgsDxCreateTab
+
+guiGetText = dgsDxGUIGetText
+guiSetText = dgsDxGUISetText
+
+guiGridListClear = dgsDxGridListClearRow --??
+guiBringToFront = dgsDxGUIBringToFront
+guiMoveToBack = dgsDxGUIMoveToBack --??
+
+guiCreateStaticImage = --??
+
+guiGetAlpha = dgsDxGUIGetAlpha
+guiSetAlpha = dgsDxGUISetAlpha
+
+guiCreateFont = dgsDxGUICreateFont
+
+
+
+
+onClientGUIClick = onClientDgsDxMouseClick
+onClientMouseLeave = onClientDgsDxMouseLeave
+onClientMouseEnter = onClientDgsDxMouseEnter
+
+guiCreateEdit = dgsDxCreateEdit
+guiEditSetMasked = --??
+guiSetInputMode = --??
+guiGridListSetSortingEnabled = --??
+guiMemoSetReadOnly = --??
+
+guiCreateCheckBox = --??
+guiCheckBoxSetSelected = --??

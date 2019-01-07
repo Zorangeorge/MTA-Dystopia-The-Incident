@@ -1,0 +1,14 @@
+<meta>
+	<info author="MoDeR2014" version="1.0" type="script" name="Air Strike" />
+	
+	<oop>true</oop>
+	<include resource="msgbox" />
+	
+	<script src="Client.lua" type="client" cache="false" />
+	<script src="Server.lua" type="server" />
+	
+	<file src="Texture\Effect.dds" />
+	<file src="Sounds\Crash.m4a" />
+	<file src="Sounds\Missile.mp3" />
+	<file src="Font\Chunkfive.otf" />
+</meta>

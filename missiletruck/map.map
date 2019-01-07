@@ -1,0 +1,9 @@
+<map edf:definitions="editor_main">
+    <vehicle id="missiletruck1vehicle" sirens="false" paintjob="3" interior="0" alpha="255" model="573" plate="ARMY-01" dimension="0" posX="-2021.7" posY="-271.89999" posZ="36.3" rotX="0" rotY="0" rotZ="0" color="70,91,78,70,91,78,0,0,0,0,0,0"></vehicle>
+    <object id="object (samsite_SFXRF) (1)" breakable="false" interior="0" collisions="false" alpha="255" model="3884" doublesided="true" scale="0.68000001" dimension="0" posX="-2021.7" posY="-274.60001" posZ="37.2" rotX="350.75" rotY="0" rotZ="358.75"></object>
+    <object id="object (kmb_keypad) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2922" doublesided="false" scale="1" dimension="0" posX="-2023" posY="-274.89999" posZ="36.3" rotX="0" rotY="0" rotZ="90.75"></object>
+    <object id="object (CJ_SHOVEL) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2228" doublesided="false" scale="1" dimension="0" posX="-2020.5" posY="-272.20001" posZ="35.8" rotX="0" rotY="270.5" rotZ="270"></object>
+    <object id="object (CJ_FIRE_EXT) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="2690" doublesided="false" scale="1" dimension="0" posX="-2020.5" posY="-270.60001" posZ="36.5" rotX="0" rotY="0" rotZ="120"></object>
+    <object id="object (wong_dish) (2)" breakable="true" interior="0" collisions="false" alpha="255" model="3031" doublesided="false" scale="0.5" dimension="0" posX="-2023.1" posY="-271.5" posZ="37.7" rotX="300" rotY="0" rotZ="110.938"></object>
+    <object id="object (a51_radar_scan) (1)" breakable="true" interior="0" collisions="false" alpha="255" model="16782" doublesided="true" scale="0.2" dimension="0" posX="-2021.7" posY="-269.10001" posZ="36.4" rotX="0" rotY="0" rotZ="270"></object>
+</map>

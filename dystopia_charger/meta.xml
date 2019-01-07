@@ -1,0 +1,57 @@
+<meta>
+	<info author="Cordex" version="1.5.2"  />
+	
+	<script src="Charger_sl.lua" type="server" />
+	<script src="Charger_cl.lua" type="client" />
+	<script src="LIB.lua" type="server" />
+
+	<file src="model/charger.txd" />
+	<file src="model/charger.dff" /> 
+
+	<file src="images/B_BUTTON.png" />
+	<file src="images/Charger.png" />
+	<file src="images/Circle.png" />
+
+	<file src="sounds/charge/charger_charge_01.wav" />
+	<file src="sounds/charge/charger_charge_02.wav" />
+
+	<file src="sounds/die/charger_die_01.wav" />
+	<file src="sounds/die/charger_die_02.wav" />
+	<file src="sounds/die/charger_die_03.wav" />
+
+	<file src="sounds/n/charger_lurk_06.wav" />
+	<file src="sounds/n/charger_lurk_02.wav" />
+	<file src="sounds/n/charger_spotprey_01.wav" />
+	<file src="sounds/n/charger_spotprey_02.wav" />
+	<file src="sounds/n/charger_spotprey_03.wav" />
+
+	<file src="sounds/pummel/charger_pummel01.wav" />
+	<file src="sounds/pummel/charger_pummel02.wav" />
+	<file src="sounds/pummel/charger_pummel04.wav" />
+
+	<file src="sounds/punch/charger_punch1.wav" />
+	<file src="sounds/punch/charger_punch2.wav" />
+	<file src="sounds/punch/charger_punch3.wav" />
+	<file src="sounds/punch/charger_punch4.wav" />
+
+	<file src="sounds/smash/loud_chargerimpact_01.wav" />
+	<file src="sounds/smash/loud_chargerimpact_02.wav" />
+	<file src="sounds/smash/loud_chargerimpact_03.wav" />
+	<file src="sounds/smash/loud_chargerimpact_04.wav" />
+
+	<file src="sounds/themes/chargerbacteria.wav" />
+	<file src="sounds/themes/chargerbacterias.wav" />
+	<file src="sounds/themes/special.mp3" />
+
+
+
+	<export function="spawnTank" type="server" />
+
+	<export function="playTankTheme" type="server" />
+	<export function="playTankTheme" type="client" />
+	<export function="stopTankTheme" type="server" />
+	<export function="stopTankTheme" type="client" />
+
+	<oop>true</oop>
+
+</meta>

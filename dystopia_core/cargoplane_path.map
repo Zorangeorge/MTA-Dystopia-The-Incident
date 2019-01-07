@@ -1,0 +1,57 @@
+<map> 
+<CARGOPLANEMovements pointID="xxx" index="1" timeInMS="7000" destX="-2432" destY="-1520.8" destZ="545" destRX="30" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="2" timeInMS="20000" destX="-2384" destY="-684" destZ="200" destRX="-30" destRY="-22.5" destRZ="-22.5" /> 
+<CARGOPLANEMovements pointID="xxx" index="3" timeInMS="3000" destX="-2384" destY="-584" destZ="175" destRX="-0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="4" timeInMS="5000" destX="-2384" destY="-483" destZ="150" destRX="0" destRY="0" destRZ="-45.5" /> 
+<CARGOPLANEMovements pointID="xxx" index="5" timeInMS="20000" destX="-1846" destY="-304" destZ="125" destRX="0" destRY="22.5" destRZ="0" /> 
+<CARGOPLANEMovements pointID=" landing at Easter Bay International Airport in 15 seconds." index="6" timeInMS="4000" destX="-1788" destY="-306" destZ="100" destRX="0" destRY="22.5" destRZ="23" /> 
+<CARGOPLANEMovements pointID="xxx" index="7" timeInMS="5000" destX="-1638" destY="-145.3" destZ="50" destRX="0" destRY="-22" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="8" timeInMS="5000" destX="-1490.1" destY="2.5" destZ="17.3" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="9" timeInMS="15000" destX="-1412.4" destY="79.9" destZ="17.3" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="Ready for take-off in 30 seconds!" index="10" timeInMS="30000" destX="-1412.4" destY="79.9" destZ="17.3" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="11" timeInMS="10000" destX="-1365.3" destY="127.2" destZ="17.3" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="12" timeInMS="10000" destX="-1128" destY="364.5" destZ="50" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="13" timeInMS="4000" destX="-1028" destY="564.5" destZ="50" destRX="0" destRY="30" destRZ="45" /> 
+<CARGOPLANEMovements pointID="xxx" index="14" timeInMS="4000" destX="-928" destY="764.5" destZ="50" destRX="0" destRY="-30" destRZ="0" /> 
+<CARGOPLANEMovements pointID="San Fierro" index="15" timeInMS="25000" destX="-800" destY="2260" destZ="250" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="16" timeInMS="2000" destX="-750" destY="2460" destZ="250" destRX="0" destRY="-30" destRZ="-45" /> 
+<CARGOPLANEMovements pointID="xxx" index="17" timeInMS="2000" destX="-650" destY="2500" destZ="250" destRX="0" destRY="0" destRZ="-45" /> 
+<CARGOPLANEMovements pointID=" landing at Verdant Meadows Airfield in 25 seconds. Hot LZ expected!" index="18" timeInMS="1000" destX="-550" destY="2507" destZ="200" destRX="0" destRY="30" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="19" timeInMS="7500" destX="-51.9" destY="2507" destZ="19.9" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="20" timeInMS="7500" destX="186" destY="2507" destZ="19.7" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="21" timeInMS="10000" destX="236" destY="2507" destZ="19.7" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="22" timeInMS="30000" destX="236" destY="2507" destZ="19.7" destRX="0" destRY="0" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="23" timeInMS="5000" destX="265" destY="2507" destZ="19.7" destRX="0" destRY="0" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="24" timeInMS="7000" destX="450" destY="2507" destZ="50" destRX="0" destRY="0" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="25" timeInMS="15000" destX="1077.4" destY="2507" destZ="200" destRX="0" destRY="0" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="26" timeInMS="2000" destX="1177.4" destY="2507" destZ="200" destRX="0" destRY="-30" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="Verdant Meadows" index="27" timeInMS="2000" destX="1277.4" destY="2457" destZ="200" destRX="0" destRY="0" destRZ="-45" /> 
+<CARGOPLANEMovements pointID="xxx" index="28" timeInMS="2000" destX="1377.4" destY="2357" destZ="200" destRX="0" destRY="0" destRZ="-45" /> 
+<CARGOPLANEMovements pointID=" landing at Las Venturas Airport in 30 seconds. Warning, contaminated area!" index="29" timeInMS="2000" destX="1477.4" destY="2207" destZ="150" destRX="0" destRY="30" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="30" timeInMS="10000" destX="1477.4" destY="1696.9" destZ="13.9" destRX="0" destRY="-0" destRZ="-0" />  
+<CARGOPLANEMovements pointID="xxx" index="31" timeInMS="10000" destX="1477.4" destY="1513" destZ="13.9" destRX="0" destRY="0" destRZ="0" />  
+<CARGOPLANEMovements pointID="xxx" index="32" timeInMS="10000" destX="1477.4" destY="1463" destZ="13.9" destRX="0" destRY="0" destRZ="0" />  
+<CARGOPLANEMovements pointID="xxx" index="33" timeInMS="30000" destX="1477.4" destY="1463" destZ="13.9" destRX="0" destRY="0" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="34" timeInMS="10000" destX="1477.4" destY="1363" destZ="13.9" destRX="0" destRY="0" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="35" timeInMS="30000" destX="1477.4" destY="572" destZ="100" destRX="0" destRY="0" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="36" timeInMS="3000" destX="1525.4" destY="525" destZ="100" destRX="0" destRY="30" destRZ="90" /> 
+<CARGOPLANEMovements pointID="xxx" index="37" timeInMS="3000" destX="1577.4" destY="472" destZ="100" destRX="0" destRY="-30" destRZ="0" /> 
+<CARGOPLANEMovements pointID="Las Venturas" index="38" timeInMS="15000" destX="2908" destY="472" destZ="200" destRX="0" destRY="0" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="39" timeInMS="3000" destX="2958" destY="425" destZ="200" destRX="0" destRY="-30" destRZ="-90" /> 
+<CARGOPLANEMovements pointID="xxx" index="40" timeInMS="1500" destX="3015" destY="372" destZ="200" destRX="0" destRY="30" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="41" timeInMS="12500" destX="3015" destY="-1285.5" destZ="200" destRX="0" destRY="0" destRZ="-0" /> 
+<CARGOPLANEMovements pointID="xxx" index="42" timeInMS="12500" destX="3015" destY="-2493.7" destZ="200" destRX="0" destRY="-30" destRZ="0" /> 
+<CARGOPLANEMovements pointID="xxx" index="43" timeInMS="3000" destX="2958" destY="-2543.7" destZ="200" destRX="0" destRY="0" destRZ="-90" /> 
+<CARGOPLANEMovements pointID=" landing at Los Santos International Airport in 35 seconds." index="44" timeInMS="3000" destX="2908" destY="-2593.7" destZ="200" destRX="0" destRY="30" destRZ="-0" />
+<CARGOPLANEMovements pointID="xxx" index="45" timeInMS="12000" destX="2055" destY="-2593.7" destZ="50" destRX="0" destRY="-0" destRZ="-0" />
+<CARGOPLANEMovements pointID="xxx" index="46" timeInMS="9000" destX="1790.7" destY="-2593.7" destZ="16.8" destRX="0" destRY="0" destRZ="-0" />
+<CARGOPLANEMovements pointID="xxx" index="47" timeInMS="10000" destX="1740.7" destY="-2593.7" destZ="16.8" destRX="0" destRY="0" destRZ="-0" />
+<CARGOPLANEMovements pointID="Ready for take-off in 30 seconds!" index="48" timeInMS="30000" destX="1740.7" destY="-2593.7" destZ="16.8" destRX="0" destRY="0" destRZ="-0" />
+<CARGOPLANEMovements pointID="xxx" index="49" timeInMS="10000" destX="1690.7" destY="-2593.7" destZ="16.8" destRX="0" destRY="0" destRZ="-0" />
+<CARGOPLANEMovements pointID="xxx" index="50" timeInMS="10000" destX="1503" destY="-2593.7" destZ="50" destRX="0" destRY="0" destRZ="-0" />
+<CARGOPLANEMovements pointID="xxx" index="51" timeInMS="50000" destX="-2208" destY="-2593.7" destZ="300" destRX="0" destRY="0" destRZ="0" />
+<CARGOPLANEMovements pointID="xxx" index="52" timeInMS="2000" destX="-2308" destY="-2493.7" destZ="300" destRX="0" destRY="-30" destRZ="-90" />
+<CARGOPLANEMovements pointID="Los Santos" index="53" timeInMS="2000" destX="-2408" destY="-2393.7" destZ="300" destRX="-30" destRY="30" destRZ="0" />
+<CARGOPLANEMovements pointID="xxx" index="54" timeInMS="20000" destX="-2432" destY="-1720.8" destZ="545" destRX="0" destRY="0" destRZ="0" />
+<CARGOPLANEMovements pointID="xxx" index="55" timeInMS="7000" destX="-2432" destY="-1620.8" destZ="545" destRX="30" destRY="0" destRZ="0" />
+</map>

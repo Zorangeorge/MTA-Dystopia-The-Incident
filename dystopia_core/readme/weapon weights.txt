@@ -1,0 +1,47 @@
+**slot1**
+knife = 0.5
+sledgehammer = 3
+chainsaw = 4
+raider sword, bat, nitestick, crowbar = 2
+
+**slot2** 
+crossbow = 3
+pistol, magnum = 2
+
+**slot3** 
+shotgun, spas = 3
+sawn-off = 2
+
+**slot4** 
+MP5 = 3
+Uzi = 2
+
+**slot5** 
+AK, M4 = 3
+
+**slot6** 
+rifle, sniper = 3
+
+**slot7** 
+ firethrower, rocket launchers = 4
+ 
+**slot8** 
+projectiles = 0.5 each
+ 
+**slot9** 
+ extinguisher = 2
+ spray, binoculars = 0.5
+ 
+**slot10**
+ kitchen knife, meatcleaver = 0.5
+ machete = 1
+
+**slot11** 
+googles = 0.5
+
+**tools**
+headlamp = 0.5
+medikit = 0.5
+toolbox = 1
+
+Revising the list, I would remove weight from googles, headlamp and binoculars (unless I make them really useful, like highlighting targets for airstrikes or such); also, I would make weight of equiped toolbox 0.5 just like the medikit.

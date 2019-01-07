@@ -1,0 +1,253 @@
+Zorgman: <Neutral_spawn id="Neutral_spawn" BotType="Freelance" name="" botDialogue="" botRange="50" posX="2870.6787109375" posY="-2124.009765625" posZ="5.2685575485229" rotX="0" rotY="0" rotZ="92.217926025391"></Neutral_spawn>
+Zorgman: <Neutral_spawn id="Neutral_spawn" BotType="Freelance" name="" botDialogue="" botRange="50" posX="2796.6728515625" posY="-1946.2314453125" posZ="17.3203125" rotX="0" rotY="0" rotZ="35.7802734375"></Neutral_spawn>
+Zorgman: 2246.7475585938, -1445.9299316406, 24.302925109863, 47.035919189453 // jesus
+Zorgman: 2230.984375, -1415.9697265625, 23.828125, 89.311981201172 // jesusscar
+Zorgman: 307.796875, 1997.783203125, 17.640625, 183.19158935547 // land
+Zorgman: 308.3828125, 1910.29296875, 17.640625, 183.19158935547 // roll
+Zorgman: 311.697265625, 1823.1318359375, 17.640625, 180.66468811035 // takeoff
+Zorgman: 309.146484375, 1777.96875, 35.147125244141, 177.45666503906 // airpoint
+Zorgman: 1298.087890625, 371.7802734375, 29.829942703247, 79.555969238281 // banditcoltargetzone
+Zorgman: -387.9072265625, 2228.1611328125, 42.4296875, 256.36712646484 // new ghost bounty
+Zorgman: 249.1357421875, -44.216796875, 1.5853424072266, 204.81848144531 // blueberry new bount
+Zorgman: 250.134765625, -46.2431640625, 1.5853424072266, 23.222717285156 
+Zorgman: 1288.205078125, -1578.287109375, 13.546875, 193.99130249023 // start superman
+Zorgman: 1462.916015625, -1387.5712890625, 13.546875, 180.80751037598 // elev_bottom
+Zorgman: 1464.2841796875, -1408.1005859375, 47.1484375, 176.73706054688 // elev_up
+Zorgman: 1465.6552734375, -1409.2939453125, 13.7421875, 175.50653076172 // elev_bottom
+Zorgman: 1460.0068359375, -1408.703125, 13.95468711853, 183.96612548828 // elev_bottom_x
+Zorgman: 1460.0068359375, -1408.703125, 47.0546875, 183.96612548828 // elev_top_x
+ProtoBoiseMee: 2116.552734375, -1935.0400390625, 13.703514099121, 275.31335449219 
+ProtoBoiseMee: 1689.357421875, -1973.9697265625, 8.8203125, 119.20074462891 
+ProtoBoiseMee: 1764.9462890625, -1927.833984375, 13.567501068115, 178.6376953125 
+ProtoBoiseMee: 1353.373046875, -1765.0546875, 13.549824714661, 176.42388916016 
+ProtoBoiseMee: 953.435546875, -819.916015625, 96.103019714355, 196.07875061035 
+ProtoBoiseMee: 1270.2724609375, -791.875, 92.03125, 240.82122802734 
+ProtoBoiseMee: 295.869140625, -1170.00390625, 80.909896850586, 225.03364562988 
+ProtoBoiseMee: 308.3857421875, -1173.3125, 80.9140625, 106.28063964844 
+ProtoBoiseMee: 78.56640625, -1517.6435546875, 20.788009643555, 181.34036254883 
+ProtoBoiseMee: 89.7783203125, -1548.6171875, 17.184188842773, 160.97137451172 
+ProtoBoiseMee: 239.666015625, -1447.9287109375, 28.988721847534, 44.509033203125 
+ProtoBoiseMee: 2018.5537109375, -1401.791015625, 26.46875, 301.31289672852 // test
+ProtoBoiseMee: 2018.5537109375, -1401.791015625, 26.46875, 301.31289672852 // item
+ProtoBoiseMee: -2053.6428222656, 170.15090942383, 30.102718353271, 358.7502746582 
+ProtoBoiseMee: -2053.5793457031, 178.66848754883, 30.102718353271, 2.5131530761719 
+ProtoBoiseMee: 207.2626953125, -258.6435546875, 1.578125, 359.76654052734 
+Zorgman: 919.6201171875, -841.623046875, 93.275856018066, 108.16479492188 
+Zorgman: 1403.0322265625, -1446.37109375, 8.6720142364502, 177.33026123047 
+Zorgman: 1326.4912109375, -1577.1123046875, 13.3515625, 256.63629150391 // hideot
+Zorgman: 268.65625, 2021.6640625, 17.893983840942, 255.49371337891 
+Zorgman: 232.9814453125, 2015.7109375, 17.640625, 29.199371337891 
+Zorgman: 234.1171875, 2014.4580078125, 17.640625, 45.805450439453 
+Zorgman: 232.296875, 2018.1630859375, 17.647899627686, 183.32342529297 
+Zorgman: 232.296875, 2018.1630859375, 17.647899627686, 183.32342529297 // estab beaurocrat welcome
+Zorgman: 208.98046875, 2072.7822265625, 22.244075775146, 194.29342651367 // fire location
+Zorgman: 1220.2216796875, -977.4375, 43.4765625, 15.856262207031 // npc go ref 1
+Zorgman: 351.1357421875, 1788.3681640625, 17.835138320923, 37.0107421875 // estab admission point
+Zorgman: 2139.041015625, -2254.8359375, 13.30415725708, 117.50332641602 // bandittrader
+
+Zorgman: 2154.66796875, -2290.4423828125, 13.392587661743, 224.66011047363 // lootvanstartlocation
+Zorgman: 2494.19921875, -1682.6904296875, 13.338341712952, 279.40582275391 // grovestpickpu
+Zorgman: 1253.71875, -808.6796875, 84.140625, 354.9049987793 // point3CJmansion
+Zorgman: 294.4853515625, -1177.9951171875, 80.9140625, 137.69650268555 // point4banditbaserichman
+
+Zorgman: 2374.6611328125, -652.9990234375, 127.51765441895, 176.87432861328 // point2northpointbase
+Zorgman: 217.4375, -243.1015625, 1.578125, 85.021728515625 // point1aBllueberrMech
+Zorgman: 1324.916015625, 412.154296875, 19.540714263916, 67.877319335938 // montgomerypoint5ramp
+Zorgman: -2201.4013671875, -2430.3212890625, 30.626251220703, 227.73083496094 // DESTPOINTangelPine
+
+
+Zorgman: 1160.3095703125, -1357.0087890625, 26.658447265625, 144.61798095703 // LShospitalrescuelanding
+Zorgman: 1158.443359375, -1345.544921875, 26.686153411865, 200.77546691895 // LShospitalrescueped
+Zorgman: 1639.8046875, -1512.11328125, 22.595613479614, 355.52026367188 // LShighwaynoderescuelanding
+Zorgman: 1639.8046875, -1512.11328125, 22.595613479614, 355.52026367188 // LShighwaynoderescueped
+Zorgman: 1637.34375, -1498.6337890625, 22.589454650879, 190.10208129883 // LShighwaynoderescueped
+Zorgman: 2193.0439453125, -1032.5224609375, 70.3046875, 297.89059448242 // LScarniceriarescueped
+Zorgman: 2199.55859375, -1025.921875, 70.3046875, 66.410614013672 // LScarniceriarescuelanding
+Zorgman: 2175.3779296875, -1828.8115234375, 16.140625, 182.59829711914 // LSMotelRescueped
+Zorgman: 2178.49609375, -1837.451171875, 16.140625, 87.680450439453 // LSMotelRescuelanding
+Zorgman: 2659.4453125, -2138.087890625, 23.969848632813, 90.789672851563 // LSdockhighwayrescuelanding
+Zorgman: 2666.806640625, -2135.875, 23.969848632813, 114.89404296875 // LSdockhighwayrescueped
+Zorgman: 2847.7739257813, -2507.9448242188, 32.748260498047, 354.67428588867 // LSdockshiprescuelanding
+Zorgman: 2840.6235351563, -2512.3413085938, 33.210231781006, 297.18746948242 // LSdockshiprescueped
+Zorgman: 1189.1630859375, -2079.34375, 69.0078125, 0.98605346679688 // LSrescuemissionheli!!!
+Zorgman: 1153.5, -2056.1669921875, 69.0078125, 87.482727050781 // rescuereturnpoint
+
+Zorgman: 1661.5302734375, 2406.9140625, 10.92001914978, 140.47607421875 // LVextractionscavcommslanding
+Zorgman: 1650.24609375, 2395.529296875, 10.874519348145, 318.2375793457 // LVextractionscavcommsped
+
+Zorgman: 2333.7109375, 1507.6279296875, 30.836273193359, 254.83451843262 // LVextractionabandparkingslanding
+Zorgman: 2346.6318359375, 1516.2255859375, 31.124568939209, 137.22406005859 // LVextractionabandparkingsped
+
+Zorgman: -1502.9619140625, 1373.8759765625, 3.6388397216797, 115.01489257813 // SFextractionlilislandlanding
+Zorgman: -1510.353515625, 1371.9970703125, 3.2309036254883, 296.34149169922 // SFextractionlilislandped
+
+Zorgman: -2282.3388671875, 645.390625, 73.866119384766, 251.33532714844 // SFextractionchinatownlanding
+Zorgman: -2292.5634765625, 655.06640625, 73.859375, 220.77638244629 // SFextractionchinatownped
+
+Zorgman: -2748.2646484375, -2274.6220703125, 7.6885986328125, 126.11676025391 // SFextractionangelpineped
+Zorgman: -2766.6640625, -2283.2470703125, 4.383472442627, 294.94073486328 // SFextractionangelpinelanding
+
+Zorgman: 2224.8291015625, -111.3369140625, 26.484375, 351.07623291016 // SFextractionlandingpalomino
+Zorgman: 2210.783203125, -110.8759765625, 25.806245803833, 279.08721923828 // SFextractionpedpalomino
+
+Zorgman: 536.4052734375, -467.09375, 41.587127685547, 185.59211730957 // SFextractionlandingdillimore
+Zorgman: 546.90234375, -475.6796875, 39.731979370117, 47.063385009766 // SFextractionpeddillimore
+
+Zorgman: 708.6513671875, 915.958984375, -18.648086547852, 104.36895751953 // SFextractionlandingquarry
+Zorgman: 715.33984375, 908.7490234375, -19.139516830444, 355.12475585938 // SFextractionpedquarry
+
+Zorgman: -1304.84375, -1528.45703125, 23.84246635437, 40.087005615234 // SFextractionlandingtraincrash
+Zorgman: -1309.7109375, -1523.7734375, 23.800832748413, 208.06500244141 // SFextractionpedtraincrash
+
+
+Zorgman: 148.0205078125, 1819.5869140625, 17.640625, 268.91918945313 // black heli location
+Zorgman: 122.2158203125, 1824.3291015625, 17.640625, 235.04235839844 // agent location
+Zorgman: 2487.6787109375, 1908.12109375, 9.765625, 156.32409667969 // cdfconstrlanding
+Zorgman: 2482.7216796875, 1902.333984375, 9.9183311462402, 339.39758300781 // cdfconstrped
+Zorgman: 2084.0810546875, -427.421875, 114.18435668945, 9.4346618652344 // antenna
+Zorgman: 2084.228515625, -428.259765625, 114.14374542236, 197.89700317383 // col
+Zorgman: 2083.814453125, -440.7841796875, 111.80662536621, 342.80337524414 // guard stone
+Zorgman: 2085.595703125, -433.52734375, 113.33610534668, 345.28634643555 // guard1
+Zorgman: 2087.7978515625, -429.5703125, 113.64836120605, 333.06387329102 // guard2
+Zorgman: 2089.853515625, -440.95703125, 111.35189819336, 1.2662048339844 // atv
+Zorgman: 2085.67578125, -441.05859375, 111.61602020264, 347.76928710938 // atv!
+Zorgman: 2603.9150390625, 248.5517578125, 64.646415710449, 147.27124023438 // esdad
+Zorgman: 2663.7978515625, 220.2392578125, 57.161201477051, 337.18380737305 // object
+Zorgman: 311.654296875, 2047.830078125, 17.359985351563, 161.36260986328 // ref camp mechanic marker
+Zorgman: -467.671875, 2177.6416015625, 46.872253417969, 274.50582885742 // water truck refil marker
+Zorgman: 199.6103515625, 2031.75390625, 17.333600997925, 270.10989379883 // water truck spawn point
+
+TectonicMarble77: 685.806640625, -454.7001953125, 16.532913208008, 264.91461181641 // cdf poker
+TectonicMarble77: 682.841796875, -479.4775390625, 16.3359375, 200.63262939453 // cdf poker
+TectonicMarble77: 119.2646484375, 1863.4267578125, 17.797166824341, 87.631042480469 // estab garrage
+TectonicMarble77: 304.2314453125, 2049.5478515625, 17.640625, 76.375366210938 // estab garrage2
+
+CHINA SHIP GATE:
+closed: -1378.7998046875,1492.2001953125,12.800000190735,0,0,0
+open: -1378.8000488281,1493.8000488281,12.800000190735
+--obj: 2930
+
+DILLIMORE
+--obj: 3036
+scale:1.2
+open:643.79998779297,-629.59997558594,21.799999237061,0,0.999755859375,1.2469482421875
+closed:643.79998779297,-629.59997558594,17.799999237061,0,0.999755859375,1.2469482421875Zorgman: 315.66015625, 1960.3837890625, 17.640625, 276.3515625 // rearmstat estab1
+Zorgman: 3189.484375, 159.8505859375, 17.18906211853, 257.99313354492 // refpointcarrier
+------------------
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="401.5263671875" posY="2541.7099609375" posZ="16.545169830322" rotX="0" rotY="0" rotZ="232.35064697266"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-376.763671875" posY="2260.8408203125" posZ="43.06192779541" rotX="0" rotY="0" rotZ="120.20050048828"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-1301.9853515625" posY="2546.9443359375" posZ="90.328125" rotX="0" rotY="0" rotZ="37.312896728516"></Scavenger_spawn>
+
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Quartermaster" botSkin="286" botDialogue="" botRange="50" posX="-2190.02734375" posY="2413.95703125" posZ="5.15625" rotX="0" rotY="0" rotZ="281.75692749023"></Establishment_spawn>
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Trader" botSkin="15" botDialogue="" botRange="50" posX="-2598.9443359375" posY="2365.73046875" posZ="9.8829956054688" rotX="0" rotY="0" rotZ="113.30648803711"></Establishment_spawn>
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Quartermaster" botSkin="286" botDialogue="" botRange="50" posX="-2601.7431640625" posY="2270.025390625" posZ="8.2841310501099" rotX="0" rotY="0" rotZ="123.18884277344"></Establishment_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-1377.8125" posY="1488.7109375" posZ="11.203125" rotX="0" rotY="0" rotZ="340.95764160156"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-1690.9636230469" posY="1240.9169921875" posZ="20.993984222412" rotX="0" rotY="0" rotZ="223.93499755859"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-1925.279296875" posY="152.310546875" posZ="26.28125" rotX="0" rotY="0" rotZ="119.30511474609"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-2176.7421875" posY="717.232421875" posZ="53.890625" rotX="0" rotY="0" rotZ="132.9228515625"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="250.8671875" posY="-51.146484375" posZ="1.578125" rotX="0" rotY="0" rotZ="341.94094848633"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="1641.34375" posY="2324.560546875" posZ="10.8203125" rotX="0" rotY="0" rotZ="63.433288574219"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavVendor" name="Trader" botSkin="" botDialogue="" botRange="50" posX="1635.7587890625" posY="2366.7978515625" posZ="10.84375" rotX="0" rotY="0" rotZ="122.35934448242"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="2206.595703125" posY="2045.533203125" posZ="16.322036743164" rotX="0" rotY="0" rotZ="55.715270996094"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavVendor" name="Trader" botSkin="" botDialogue="" botRange="50" posX="2177.646484375" posY="2035.2236328125" posZ="16.322036743164" rotX="0" rotY="0" rotZ="312.70037841797"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Mechanic" botSkin="50" botDialogue="" botRange="50" posX="2108.2158203125" posY="-1941.35546875" posZ="13.60000038147" rotX="0" rotY="0" rotZ="342.84732055664"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="1755.6962890625" posY="-1926.9951171875" posZ="13.575491905212" rotX="0" rotY="0" rotZ="300.5712890625"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="1116.796875" posY="-2044.93359375" posZ="74.4296875" rotX="0" rotY="0" rotZ="136.31219482422"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavVendor" name="Trader" botSkin="" botDialogue="" botRange="50" posX="1204.0654296875" posY="-977.55859375" posZ="43.4765625" rotX="0" rotY="0" rotZ="216.9585723877"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="2207.4775390625" posY="-1151.908203125" posZ="25.733341217041" rotX="0" rotY="0" rotZ="231.03227233887"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="2234.83203125" posY="-1444.3623046875" posZ="24.033918380737" rotX="0" rotY="0" rotZ="213.36599731445"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="2573.6071777344" posY="-1133.49609375" posZ="68.465217590332" rotX="0" rotY="0" rotZ="334.60195922852"></Scavenger_spawn>
+
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="2524.6982421875" posY="-1659.6787109375" posZ="15.493547439575" rotX="0" rotY="0" rotZ="99.771118164063"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="2130.05859375" posY="-2282.78125" posZ="20.664308547974" rotX="0" rotY="0" rotZ="324.69766235352"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="1290.7109375" posY="-806.5517578125" posZ="88.305015563965" rotX="0" rotY="0" rotZ="17.026306152344"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="286.4306640625" posY="-1194.4169921875" posZ="80.542045593262" rotX="0" rotY="0" rotZ="202.18173217773"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Trader" botDialogue="" botRange="50" posX="301.0185546875" posY="-1156.734375" posZ="80.909896850586" rotX="0" rotY="0" rotZ="142.65139770508"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="1329.4375" posY="392.0146484375" posZ="25.055511474609" rotX="0" rotY="0" rotZ="67.2236328125"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Trader" botDialogue="" botRange="50" posX="2363.4521484375" posY="-648.802734375" posZ="127.87414550781" rotX="0" rotY="0" rotZ="189.24513244629"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Mechanic" botSkin="50" botDialogue="" botRange="50" posX="203.6591796875" posY="-256.353515625" posZ="1.578125" rotX="0" rotY="0" rotZ="285.56924438477"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="193.8369140625" posY="-232.2705078125" posZ="1.778618812561" rotX="0" rotY="0" rotZ="271.49005126953"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-574.1162109375" posY="-921.046875" posZ="98.467185974121" rotX="0" rotY="0" rotZ="131.15405273438"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Trader" botDialogue="" botRange="50" posX="37.4462890625" posY="-2660.6669921875" posZ="40.539653778076" rotX="0" rotY="0" rotZ="359.87091064453"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-2186.8701171875" posY="-2415.3759765625" posZ="35.296875" rotX="0" rotY="0" rotZ="331.98168945313"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="1677.4338378906" posY="-2881.2626953125" posZ="33.092216491699" rotX="0" rotY="0" rotZ="206.06546020508"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-1646.10546875" posY="665.8564453125" posZ="-4.90625" rotX="0" rotY="0" rotZ="288.28839111328"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-576.56640625" posY="2613.80859375" posZ="53.515625" rotX="0" rotY="0" rotZ="309.78897094727"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-776.125" posY="2423.73828125" posZ="157.11067199707" rotX="0" rotY="0" rotZ="108.791015625"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Trader" botDialogue="" botRange="50" posX="2000.05078125" posY="2918.080078125" posZ="51.66215133667" rotX="0" rotY="0" rotZ="251.31335449219"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-346.65234375" posY="1544.1943359375" posZ="75.5625" rotX="0" rotY="0" rotZ="284.11901855469"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-683.93359375" posY="937.9033203125" posZ="13.6328125" rotX="0" rotY="0" rotZ="81.989471435547"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Trader" botDialogue="" botRange="50" posX="-707.6533203125" posY="941.1357421875" posZ="12.453674316406" rotX="0" rotY="0" rotZ="27.496459960938"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-1629.80078125" posY="-2239.2392578125" posZ="31.4765625" rotX="0" rotY="0" rotZ="76.276489257813"></Bandit_spawn>
+-----------------
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Quartermaster" botSkin="286" botDialogue="" botRange="50" posX="2875.9140625" posY="78.0068359375" posZ="16.853544235229" rotX="0" rotY="0" rotZ="311.32708740234"></Establishment_spawn>
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Quartermaster" botSkin="286" botDialogue="" botRange="50" posX="-2493.2802734375" posY="-712.3271484375" posZ="139.3203125" rotX="0" rotY="0" rotZ="2.7109069824219"></Establishment_spawn>
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Quartermaster" botSkin="286" botDialogue="" botRange="50" posX="2590.4379882813" posY="2807.4995117188" posZ="11.093982696533" rotX="0" rotY="0" rotZ="320.41290283203"></Establishment_spawn>
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Quartermaster" botSkin="286" botDialogue="" botRange="50" posX="3188.3701171875" posY="192.859375" posZ="10.106249809265" rotX="0" rotY="0" rotZ="112.3561706543"></Establishment_spawn>
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Quartermaster" botSkin="286" botDialogue="" botRange="50" posX="-1271.900390625" posY="41.767581939697" posZ="32.399879455566" rotX="0" rotY="0" rotZ="38.433502197266"></Establishment_spawn>
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Quartermaster" botSkin="286" botDialogue="" botRange="50" posX="-1388.1324462891" posY="-109.71601867676" posZ="6.3841309547424" rotX="0" rotY="0" rotZ="331.73999023438"></Establishment_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavQuest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="826.2763671875" posY="-1349.76953125" posZ="13.532817840576" rotX="0" rotY="0" rotZ="68.701293945313"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavQuest" name="Medic" botSkin="" botDialogue="" botRange="50" posX="826.2783203125" posY="-1349.49609375" posZ="13.532835006714" rotX="0" rotY="0" rotZ="126.96267700195"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavQuest" name="Mechanic" botSkin="50" botDialogue="" botRange="50" posX="820.0703125" posY="-1356.087890625" posZ="13.542775154114" rotX="0" rotY="0" rotZ="351.76837158203"></Scavenger_spawn>
+----------------------
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Trader" botDialogue="" botRange="50" posX="-2970.4501953125" posY="481.77734375" posZ="4.9003601074219" rotX="0" rotY="0" rotZ="166.12951660156"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Outfitter" botDialogue="" botRange="50" posX="-2132.4970703125" posY="252.9130859375" posZ="66.726722717285" rotX="0" rotY="0" rotZ="252.44494628906"></Bandit_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-2183.994140625" posY="-218.6181640625" posZ="36.515625" rotX="0" rotY="0" rotZ="32.671081542969"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Mechanic" botSkin="" botDialogue="" botRange="50" posX="-2157.76171875" posY="-242.5244140625" posZ="36.515625" rotX="0" rotY="0" rotZ="207.5101776123"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="-1349.3564453125" posY="497.216796875" posZ="11.1953125" rotX="0" rotY="0" rotZ="282.56991577148"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-1344.15234375" posY="490.3251953125" posZ="11.202690124512" rotX="0" rotY="0" rotZ="8.4238891601563"></Raider_spawn>
+
+Zorgman: -1384.5048828125, 502.908203125, 11.1953125, 345.04461669922 // raider BOSS carrier Cousin Skinface
+
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-1475.16015625" posY="2618.8408203125" posZ="58.78125" rotX="0" rotY="0" rotZ="221.95193481445"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="-1480.48046875" posY="2642.251953125" posZ="58.787948608398" rotX="0" rotY="0" rotZ="177.14349365234"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="-1892.435546875" posY="-1657.232421875" posZ="23.015625" rotX="0" rotY="0" rotZ="170.69445800781"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-1909.3251953125" posY="-1682.6787109375" posZ="23.02152633667" rotX="0" rotY="0" rotZ="330.76217651367"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="385.0341796875" posY="-2077.51953125" posZ="7.8359375" rotX="0" rotY="0" rotZ="322.18173217773"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="391.98828125" posY="-2052.88671875" posZ="13.835496902466" rotX="0" rotY="0" rotZ="135.59808349609"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="206.6220703125" posY="1433.490234375" posZ="10.5859375" rotX="0" rotY="0" rotZ="227.11558532715"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="504.0830078125" posY="806.93359375" posZ="-21.9453125" rotX="0" rotY="0" rotZ="232.8999786377"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Meat Trader" botSkin="" botDialogue="" botRange="50" posX="475.11581420898" posY="934.69201660156" posZ="-15.70255279541" rotX="0" rotY="0" rotZ="125.71569824219"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="505.0732421875" posY="947.4287109375" posZ="-15.156745910645" rotX="0" rotY="0" rotZ="204.36254882813"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="2794.400390625" posY="917.6845703125" posZ="10.75" rotX="0" rotY="0" rotZ="93.48681640625"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="2583.4208984375" posY="2312.32421875" posZ="17.822208404541" rotX="0" rotY="0" rotZ="204.263671875"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="1761.6923828125" posY="-1533.5888671875" posZ="9.4826135635376" rotX="0" rotY="0" rotZ="145.21124267578"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="2792.2421875" posY="-2394.1806640625" posZ="13.95600605011" rotX="0" rotY="0" rotZ="271.96795654297"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="2530.2705078125" posY="-1228.1669921875" posZ="43.65625" rotX="0" rotY="0" rotZ="332.65734863281"></Raider_spawn>
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="750.07421875" posY="380.408203125" posZ="23.171875" rotX="0" rotY="0" rotZ="311.25018310547"></Raider_spawn>
+---------
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Trader" botDialogue="" botRange="50" posX="-2819.2373046875" posY="-1517.5205078125" posZ="140.84375" rotX="0" rotY="0" rotZ="205.35682678223"></Bandit_spawn>
+Zorgman: <Bandit_spawn id="Bandit_spawn" BotType="Quest" name="Magnum Grey" botDialogue="" botRange="100" posX="-2817.2119140625" posY="-1517.30078125" posZ="140.84375" rotX="0" rotY="0" rotZ="162.11395263672"></Bandit_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavQuest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="680.220703125" posY="1940.4404296875" posZ="5.5390625" rotX="0" rotY="0" rotZ="317.94644165039"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavQuest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-935.3505859375" posY="-534.4521484375" posZ="25.953638076782" rotX="0" rotY="0" rotZ="87.455261230469"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavQuest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="-2503.447265625" posY="766.109375" posZ="35.171875" rotX="0" rotY="0" rotZ="269.16638183594"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavQuest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="820.5263671875" posY="-1095.697265625" posZ="25.796113967896" rotX="0" rotY="0" rotZ="97.650695800781"></Scavenger_spawn>
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="ScavQuest" name="Outfitter" botSkin="" botDialogue="" botRange="50" posX="1302.1728515625" posY="185.845703125" posZ="20.4609375" rotX="0" rotY="0" rotZ="64.537414550781"></Scavenger_spawn>
+-------------
+
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Quartermaster" botSkin="" botDialogue="" botRange="50" posX="-549.998046875" posY="-198.2548828125" posZ="78.40625" rotX="0" rotY="0" rotZ="319.88006591797"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Quartermaster" botSkin="" botDialogue="" botRange="50" posX="1566.666015625" posY="23.8095703125" posZ="24.1640625" rotX="0" rotY="0" rotZ="111.17510986328"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Quartermaster" botSkin="" botDialogue="" botRange="50" posX="616.583984375" posY="-591.3095703125" posZ="17.233013153076" rotX="0" rotY="0" rotZ="294.62213134766"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Bartender" botSkin="" botDialogue="" botRange="50" posX="681.5078125" posY="-462.599609375" posZ="16.540225982666" rotX="0" rotY="0" rotZ="178.71459960938"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Quartermaster" botSkin="" botDialogue="" botRange="50" posX="610.2705078125" posY="-597.921875" posZ="17.2265625" rotX="0" rotY="0" rotZ="208.62532043457"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Quartermaster" botSkin="" botDialogue="" botRange="50" posX="1009.1376953125" posY="-827.15234375" posZ="99.86646270752" rotX="0" rotY="0" rotZ="63.136627197266"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Quartermaster" botSkin="" botDialogue="" botRange="50" posX="936.6318359375" posY="-854.591796875" posZ="93.517112731934" rotX="0" rotY="0" rotZ="91.525756835938"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Quartermaster" botSkin="" botDialogue="" botRange="50" posX="1484.86328125" posY="-1423.978515625" posZ="39.054862976074" rotX="0" rotY="0" rotZ="33.561004638672"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Mikus Freemantle" botSkin="" botDialogue="" botRange="50" posX="1482.4501953125" posY="-1399.0234375" posZ="46.7421875" rotX="0" rotY="0" rotZ="149.32568359375"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="202.7138671875" posY="-1752.6201171875" posZ="4.3046875" rotX="0" rotY="0" rotZ="139.82788085938"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="-2241.501953125" posY="-1723.6630859375" posZ="480.4541015625" rotX="0" rotY="0" rotZ="233.20210266113"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="-1414.787109375" posY="-945.787109375" posZ="201.09375" rotX="0" rotY="0" rotZ="100.51818847656"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="-729.013671875" posY="1537.693359375" posZ="40.378421783447" rotX="0" rotY="0" rotZ="333.15725708008"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="269.650390625" posY="2895.521484375" posZ="10.158737182617" rotX="0" rotY="0" rotZ="25.870452880859"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Quartermaster" botSkin="" botDialogue="" botRange="50" posX="2376.76171875" posY="1945.56640625" posZ="6.015625" rotX="0" rotY="0" rotZ="227.75280761719"></CDF_spawn>
+-------------------
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Mechanic" botSkin="" botDialogue="" botRange="50" posX="715.849609375" posY="-465.88671875" posZ="16.072273254395" rotX="0" rotY="0" rotZ="274.23666381836"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Medic" botSkin="" botDialogue="" botRange="50" posX="664.51953125" posY="-500.7646484375" posZ="16.337488174438" rotX="0" rotY="0" rotZ="269.07849121094"></CDF_spawn>
+Zorgman: <CDF_spawn id="CDF_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="2135.0458984375" posY="-96.716796875" posZ="1.8951592445374" rotX="0" rotY="0" rotZ="24.848724365234"></CDF_spawn>
+----------------------Zorgman: 838.357421875, -1341.65234375, 7.171875, 168.82678222656 // spawn market
+Zorgman: <Scavenger_spawn id="Scavenger_spawn" BotType="Quest" name="Medic" botSkin="" botDialogue="" botRange="50" posX="839.900390625" posY="-1344.1123046875" posZ="7.171875" rotX="0" rotY="0" rotZ="41.158142089844"></Scavenger_spawn>
+---------
+Zorgman: <Raider_spawn id="Raider_spawn" BotType="Quest" name="Trader" botSkin="" botDialogue="" botRange="50" posX="2584.6845703125" posY="2375.3251953125" posZ="17.8203125" rotX="0" rotY="0" rotZ="66.218383789063"></Raider_spawn>
+
+Zorgman: <Establishment_spawn id="Establishment_spawn" BotType="Quest" name="Trader" botSkin="15" botDialogue="" botRange="50" posX="-1335.8779296875" posY="33.021484375" posZ="6" rotX="0" rotY="0" rotZ="89.009826660156"></Establishment_spawn>
+--------------

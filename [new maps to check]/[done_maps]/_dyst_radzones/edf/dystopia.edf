@@ -1,0 +1,151 @@
+<def name="dystopia_map">
+
+	<element name="Zombie_spawn" friendlyname="Zombie Spawnpoint" icon="edf/zombiespawn.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="209" rotation="!rotation!"/>
+		<!-- <object model="1254" posZ="1" rotation="!rotation!"/> -->
+		<data name="name" type="string" description="Bot name (optional)" required="false" default="" />
+		<data name="ZedType" type="selection:Walker,Runner,Brute,Special" description="Zed type" required="true" default="Walker" />
+		<data name="ZedSkinID" type="integer" description="Zed skin ID (optional)" required="false" default="" />
+		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
+	</element>
+	
+	<element name="Raider_spawn" friendlyname="Raider" icon="edf/raiders.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="181" rotation="!rotation!"/>
+		<object model="335" posZ="1" rotation="!rotation!"/>
+		<data name="BotType" type="selection:Guard,Hunter,Vendor,Slave,Meat,Quest" description="Bot role" required="true" default="Guard" />
+		<data name="name" type="string" description="Bot name (optional)" required="false" default="" />
+		<data name="botSkinID" type="integer" description="Bot skin ID (optional)" required="false" default="" />
+		<data name="botWeapon" type="integer" description="Bot weapon (optional)" required="false" default="" />
+		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
+		<data name="botDialogue" type="string" description="Bot dialogue pool (optional)" required="false" default="" />
+	</element>
+	
+	<element name="CDF_spawn" friendlyname="CDF" icon="edf/cdf.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="179" rotation="!rotation!"/>
+		<object model="353" posZ="1" rotation="!rotation!"/>
+		<data name="BotType" type="selection:Guard,Staff,Vendor,Quest,Hunter" description="Bot role" required="true" default="Guard" />
+		<data name="name" type="string" description="Bot name (optional)" required="false" default="" />
+		<data name="botSkinID" type="integer" description="Bot skin ID (optional)" required="false" default="" />
+		<data name="botWeapon" type="integer" description="Bot weapon (optional)" required="false" default="" />
+		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
+		<data name="botDialogue" type="string" description="Bot dialogue pool (optional)" required="false" default="" />
+	</element>
+
+	<element name="Establishment_spawn" friendlyname="Establishment" icon="edf/establishment.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="287" rotation="!rotation!"/>
+		<object model="356" posZ="1" rotation="!rotation!"/>		
+		<data name="BotType" type="selection:Grunt,Heavy,Rescue01,Rescue01Heavy,Spec,Peacekeeper,Refugee,Quest,Cleaner,Staff,Suit,ArmyPatrol,R01Patrol,PeacekePatrol,VIP" description="Bot role" required="true" default="Grunt" />				
+		<data name="name" type="string" description="Bot name (optional)" required="false" default="" />
+		<data name="botSkinID" type="integer" description="Bot skin ID (optional)" required="false" default="" />
+		<data name="botWeapon" type="integer" description="Bot weapon (optional)" required="false" default="" />
+		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
+		<data name="botDialogue" type="string" description="Bot dialogue pool (optional)" required="false" default="" />
+	</element>
+
+	<element name="Bandit_spawn" friendlyname="Bandit" icon="edf/bandits.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="144" rotation="!rotation!"/>
+		<object model="355" posZ="1" rotation="!rotation!"/>
+		<data name="BotType" type="selection:Guard,Hunter,Quest" description="Bot role" required="true" default="Guard" />
+		<data name="name" type="string" description="Bot name (optional)" required="false" default="" />
+		<data name="botSkinID" type="integer" description="Bot skin ID (optional)" required="false" default="" />
+		<data name="botWeapon" type="integer" description="Bot weapon (optional)" required="false" default="" />
+		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
+		<data name="botDialogue" type="string" description="Bot dialogue pool (optional)" required="false" default="" />
+	</element>
+	
+	<element name="Neutral_spawn" friendlyname="Neutral" icon="edf/neutral.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="81" rotation="!rotation!"/>
+		<object model="1276" posZ="1" rotation="!rotation!"/>	
+		<data name="BotType" type="selection:Goat,WildPig,Freelance,Bear" description="Bot role" required="true" default="Freelance" />
+		<data name="name" type="string" description="Bot name (optional)" required="false" default="" />
+		<data name="botSkinID" type="integer" description="Bot skin ID (optional)" required="false" default="" />
+		<data name="botWeapon" type="integer" description="Bot weapon (optional)" required="false" default="" />
+		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
+		<data name="botDialogue" type="string" description="Bot dialogue pool (optional)" required="false" default="" />
+	</element>
+
+	<element name="Scavenger_spawn" friendlyname="Scavenger" icon="edf/scavengers.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="143" rotation="!rotation!"/>
+		<object model="349" posZ="1" rotation="!rotation!"/>
+		<data name="BotType" type="selection:ScavGuard,Civ,ScavVendor,Freelance,WasteGuard,WasteCiv,WasteVendor,WasteFreelance,Nang,Triad,SyndVendor,SyndCiv,ScavQuest,WasteQuest,SyndQuest,Pig" description="Bot role" required="true" default="Guard" />
+		<data name="name" type="string" description="Bot name (optional)" required="false" default="" />
+		<data name="botSkinID" type="integer" description="Bot skin ID (optional)" required="false" default="" />
+		<data name="botWeapon" type="integer" description="Bot weapon (optional)" required="false" default="" />
+		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
+		<data name="botDialogue" type="string" description="Bot dialogue pool (optional)" required="false" default="" />
+	</element>
+
+	<element name="Water_Source" friendlyname="Water" icon="edf/water.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<marker type="checkpoint" size="1" color="#5d9afc"/>
+		<data name="WaterType" type="selection:Clean,Dirty" description="" required="true" default="Clean" />
+		<data name="ColType" type="selection:Sphere,Cube" description="" required="false" default="Sphere" />
+		<data name="SphereColSize" type="integer" description="Colsphere size in units (optional)" required="false" default="1" />
+		<data name="CubeColSize" type="integer" description="Colcube size in units (optional)" required="false" default="1" />
+	</element>
+	
+	<element name="Fuel_Source" friendlyname="Fuel" icon="edf/fuel.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<marker type="checkpoint" size="1" color="#ff9966"/>
+		<data name="FuelAmount" type="selection:Low,High" description="" required="false" default="Low"  />
+	</element>
+	
+	<element name="Radiation_Zone" friendlyname="Nuked" icon="edf/radiation.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<marker type="checkpoint" size="1" color="#99ff66"/>
+		<data name="RadiationStrenght" type="integer" description="The severity of rad/sec you get for standing in the zone" required="true" default="2" />
+		<data name="ColType" type="selection:Sphere,Cube" description="" required="false" default="Sphere" />
+		<data name="RadZoneSize" type="integer" description="Colsphere radius in units (optional)" required="false" default="10" />
+	</element>
+	
+	<element name="spawnpoint" friendlyname="Player Spawn" icon="edf/spawn.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="0" rotation="!rotation!"/>
+		<object model="3385" posZ="1" rotation="!rotation!"/>
+		<marker type="checkpoint" size="1" color="#ff5050"/>
+		<data name="SpawnFaction" type="selection:Scavengers,Raiders,Bandits,CDF,Establishment" description="" required="true" default="Scavengers" />
+		<data name="SpawnLevel" type="integer" description="Only 0,1,2 or 3 accepted" required="false" default="0" />
+		<data name="SpawnZone" type="selection:Whetstone,FlintCounty,RedCounty,LosSantos,SanFierro,TierraRobada,BoneCountry,LasVenturas" description="The general area of the spawn" required="false" default="LosSantos" />
+	</element>
+	
+	<element name="Quest_item" friendlyname="Quest Item" icon="edf/item.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<object model="1271" rotation="!rotation!"/>
+		<object model="1318" posZ="1" rotation="!rotation!"/>
+		<marker type="corona" size="1" color="#f4d942"/>
+		<data name="ItemName" type="string" description="Item name" required="true" default="Valuable goods" />
+		<data name="ObjectModel" type="integer" description="Object model used" required="true" default="1271" />
+	</element>
+	
+	<element name="Encounter_zone" friendlyname="Encounter zone" icon="edf/encounter.png">
+		<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="0" rotation="!rotation!"/>
+		<object model="1313" posZ="1" rotation="!rotation!"/>
+		<marker type="corona" size="2" color="#41f443"/>
+		<data name="ZoneType" type="selection:Zombies,Scavengers,Raiders,Bandits,CDF,Establishment,Looters" description="What type of NPCs will spawn?" required="true" default="Zombies" />
+		<data name="BotDensity" type="integer" description="How many bots should spawn when triggered?" required="false" default="0" />
+		<data name="ZoneRadius" type="integer" description="How large should the encounter zone be?" required="false" default="100" />		
+		<data name="EncounterChance" type="integer" description="The odds of spawning the encounter when triggered" required="false" default="50" />
+		<data name="100PercentChancer" type="string" description="Player elementData that always triggers the encounter" required="false" default="" />
+		<data name="OtherData" type="string" description="Any other elementData you want the encounter to have" required="false" default="" />
+	</element>
+
+	
+</def>

@@ -1,0 +1,6 @@
+<meta>
+	<info author="Zorgman" version="1.1" type="script" name="ladderclimb" description=" " />
+
+	<script src="ladders_c.lua" type="client" />
+	<script src="ladders_s.lua" type="server" />
+</meta>

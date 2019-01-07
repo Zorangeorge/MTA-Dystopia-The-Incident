@@ -1,0 +1,2 @@
+icons/xxx.png
+meta.xml

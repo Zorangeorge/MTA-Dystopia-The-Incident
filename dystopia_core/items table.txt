@@ -1,0 +1,104 @@
+{
+-- item name, item object id, fix z
+{"Pistol Ammo",  2039, 0}, -- ITEM ID: 1 
+{"Shotgun Ammo",  2038, 0}, -- ITEM ID: 2
+{"Assault Ammo",  2040, 0} , -- 3
+{"SMG Ammo",  2041, 0}, -- 4
+{"Chainsaw",  341, 0},  -- 5
+{"Raider Sword",  339, 0}, -- 6
+{"M4",  356, 0}, -- 7 
+{"AK 47",  355, 0}, -- 8
+{"Rocket Launcher",  359, 0}, -- 9
+{"Knife",  335, 0}, -- 10
+{"Hunting Rifle",  357, 0}, -- 11
+{"Crossbow",  347, 0}, -- 12  
+{"Sniper Rifle",  358, 0}, -- 13
+{"Minigun",  362, 0}, --14
+{"Uzi",  352, 0}, --15
+{"Vehicle Minigun",  372, 0}, --16
+{"Combat Shotgun",  351, 0}, --17
+{"Sawn-off Shotgun",  350, 0}, --18 
+{"Satchel Charge",  363, 0}, --19
+{"MP5",  353, 0}, --20
+{"Grenade",  342, 0}, --21
+{"Magnum Revolver",  348, 0}, --22
+{"Stinger Launcher",  360, 0}, --23
+{"Meat Can",2601, 0}, --24
+{"Water Bottle",1669, 0}, --25 
+{"Raw Meat", 2804, 0}, --26
+{"Machete",321, 0}, --27
+{"Kitchen Knife",322, 0}, --28
+{"Meatcleaver",323, 0}, --29
+{"Broken Bottle",325, 0}, --30
+{"Nail Bat",326, 0}, --31
+{"Crowbar",337, 0}, --32
+{"Sledgehammer",338, 0}, --33
+{"Pistol",346, 0}, --34
+{"Molotov",344, 0}, --35
+{"Nightstick",334, 0}, --36
+{"Baseball Bat",336, 0}, --37
+{"Tactical Shield",331, 0}, --38
+{"Axe",333, 0}, --39
+{"Binoculars",367, 0}, --40
+{"Spray Can",365, 0}, --41
+{"Pump Shotgun",349, 0}, --42
+{"Body Armor",373, 0}, --43
+{"Backpack",371, 0}, --44
+{"Medikit",327, 0}, --45
+{"Teargas",343, 0}, --46
+{"Flamethrower",361, 0}, --47
+{"Bolts",328, 0}, --48 
+{"Magnum Ammo",3082, 0}, --49  
+{"Painkillers",2709, 0}, --50
+{"Rifle Ammo",2042, 0}, --51 
+{"Fuel Canister",1650, 0},
+{"Empty Canister",1650, 0},
+{"Scrap Metal",850, 0},
+{"Ammo Box",3016, 0},
+{"Toolbox",2969, 0},
+{"Alcohol Bottle",2969, 0},
+{"Rags",2844, 0},
+{"Empty Bottle",1668, 0},
+{"Map",3017, 0},
+{"Survivor Map",3017, 0},
+{"Military Map",3017, 0},
+{"Raw Human Meat",2806, 0},
+{"Roasted Meat",2804, 0},
+{"Vehicle Parts",2711, 0},
+{"Roasted Human Meat",2804, 0},
+{"Plastic Foil",1901, 0},
+{"Wire",933, 0},
+{"Fish Can",2601, 0},
+{"Water Canister",1650, 0},
+{"Headlamp",15060, 0},
+{"Thermal Googles",369, 0},
+{"Wood",1463, 0},
+{"Laser Pointer",1463, 0},
+{"Lighter",2351, 0},
+{"Bandage",2384, 0},
+{"Night Vision Googles", 368, 0},
+{"Zip Line", 1955, 0},
+{"Dirty Water",1669, 0},
+{"Adrenaline",2709, 0},--
+{"ZomboKleen",2709, 0},--
+{"Splint",1279, 0},--
+{"Road Flare",1319, 0},--
+{"Hazmat Suit",1576, 0},--
+{"Camouflage Suit",1575, 0},--
+{"Scuba Gear", 1010, 0},--
+{"Watch", 2710, 0},--
+{"EM Scanner",1615, 0},--
+{"Radio",330, 0},--
+{"M37 Stomper",2033, 0},--
+{"Stomper Ammo",2972, 0},
+{"Minigun Ammo",2358, 0},--
+{"Stinger Missile", 3790, 0},--
+{"Spikestrip", 2899, 0},
+{"Timed Bomb",1654, 0},--
+{"Mine",1381, 0},--
+{"Incendiary Trap",2978, 0},--
+{"Shards Trap",2978, 0},--
+{"Agent Pale",366, 0},--
+{"Soup Can",2601, 0}
+
+}

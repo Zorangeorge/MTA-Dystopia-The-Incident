@@ -1,0 +1,43 @@
+***Chemical Creations***
+Never forget you have no limits, and even
+"Impossible" says "I'm possible".
+
+-------------------------------------------------------
+
+--- Chemical_Syncer (version: 1.0.0) ---
+
+Description:
+This resource adds the syncronisation of
+objects to MTA and extends the sync distance of peds
+and vehicles. It also fixes the bug that makes peds
+(and vehicles occasionally) warp when you get close to
+a certain posision (where they desynced).
+
+Features:
+(version: 1.0)
++ Objects are now synced for all clients.
++ Fix invincible Ped when desynced but actually in
+sync range.
++ Fix MTA desync warp back bug.
++ Elements now syncable as long as stramed in.
++ Low CPU and Bandwidth usage.
++ Add Element Data Syncer
++ Open source
+
+Upcomming Features:
+(version: 1.1)
++ A settings file to change sync distance etc.
+(version: 1.2)
++ Elements can be damaged outside of sync radious.
+
+* Please consider suggesting a feature or leave
+a comment. It's really appreciated.
+
+Known Issues:
+- May output error when a player exits (does not
+break script)
+
+CC Contacts:
+Facebook: fb.me/ChemicalCreationsMTA
+Discard: https://discord.gg/FxHCc7j
+MTA Community: https://community.multitheftauto.com/index.php?p=profile&id=463940

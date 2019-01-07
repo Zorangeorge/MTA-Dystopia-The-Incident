@@ -1,0 +1,423 @@
+<html>
+	<head>
+		<title>Drawtag script</title>
+	</head>
+	<body>
+		<h1 align="center">Drawtag script</h1>
+		<p>
+			Version: 1.1
+		</p>
+		<p>
+			Drawtag script is a resource for MTA San Andreas. This resource lets you
+			spray your own custom tags on objects and vehicles.
+		</p>
+		<p>
+			Archive which this file comes with has two MTA resources: drawtag and
+			drawtag_bc.
+		</p>
+		<ul>
+			<li>
+				<b>drawtag</b> is the main resource which provides various scripting
+				functions to change spraying mode, show/hide drawing window, etc.
+				It also triggers events when tags are sprayed and erased.
+			</li>
+			<li>
+				<b>drawtag_bc</b> (Drawtag basic control) is a resource which uses
+				those functions and events. It lets you open drawing window, switch
+				between drawing and erasing mode, change the tag size, copy tags,
+				edit their textures. It also saves and loads tags and shows when
+				events are triggered by drawtag. So it's an example of a script
+				using drawtag functionality. You need it if you're not going to
+				make your own script which accesses those functions.
+			</li>
+		</ul>
+		<h3>How to use Drawtag in a simple way:</h3>
+		<ol>
+			<li>Install drawtag and drawtag_bc (put them into
+				server/mods/deathmatch/resources)</li>
+			<li>Start them in your server (the easiest way is to type 'start
+				drawtag_bc' into server console)</li>
+			<li>Join the server</li>
+			<li>Get a spray can</li>
+			<li>Write '/draw', draw something, click 'Done' button and close the
+				window</li>
+			<li>Write '/drawtag' and spray onto some surface, such as wall or a car
+				</li>
+			<li>If you want to erase the tag, write '/erasetag' and spray onto the
+				tag</li>
+			<li>To change the size of the tag, use command '/tagsize new_tag_size'
+				</li>
+			<li>To copy the texture of the existing tag into your next tag, walk up
+				near the tag and write '/copytag'</li>
+			<li>To copy the texture of the existing tag into the tag editor, walk up
+				near the tag and write '/edittag'</li>
+		</ol>
+		<h3>Using drawing window:</h3>
+		<ul>
+			<li>The big checkered square is the drawing square. Left-click on it to
+				draw the selected color.</li>
+			<li>Colored squares under drawing window are colors palette. Left-click
+				on any color to select it.</li>
+			<li>Four horizontal bars on the right can be used to modify the selected
+				color or brush size. Pressing a mouse button changes the amount of
+				red, green or blue, or the size, depending on the bar which you
+				clicked on. Left mouse button changes it to the value under cursor.
+				Right mouse button snaps it to more rounded values.</li>
+			<li>The rectangle with the circle under the colour and size modifiers is
+				brush preview. Click on it to switch its background color between
+				black and white.</li>
+			<li>'Clear' button erases everything from drawing square.</li>
+			<li>'Done' button gets the image ready for spraying.</li>
+			<li>'Close' button closes the drawing window.</li>
+		</ul>
+		<p>
+			Keep in mind that surfaces of vehicles are analyzed in a different way
+			than surfaces of objects. That's because surfaces of vehicles seem not
+			to be flat enough, what would prevent you from spraying on vehicles.
+			Because of that, the script doesn't check if the surface of vehicle is	
+			flat and as a result, you can spray on the surface shaped in any way.
+			Sometimes that doesn't look nice.
+		</p>
+		<h2 align="center">Drawtag scripting functions and events</h2>
+		<p>
+			Below there's a list of functions exported by drawtag. When it is
+			running, other resources can call them in this way:<br/><br/>
+			<code>exports.drawtag:functionName(arguments)</code>
+		</p>
+		<table border="1">
+			<tr>
+				<td width="288">
+					<code>createTagFromExistingData(attached,<br/>&nbsp;&nbsp;&nbsp;&nbsp;x, y, z,<br/>&nbsp;&nbsp;&nbsp;&nbsp;x1, y1, z1,<br/>&nbsp;&nbsp;&nbsp;&nbsp;x2, y2, z2,<br/>&nbsp;&nbsp;&nbsp;&nbsp;nx, ny, nz,<br/>&nbsp;&nbsp;&nbsp;&nbsp;size, visibility, pngdata)</code><br/><br/>
+					(server-only function)
+				</td>
+				<td>
+					Creates a tag from the data passed as arguments.<br/>
+					<ul>
+						<li><b>attached:</b> the element which you want to attach
+							the tag to (<b>nil</b> if none).</li>
+						<li><b>x, y, z:</b> center position of the tag. Relative to
+							the element if attached.</li>
+						<li><b>x1, y1, z1:</b> the middle point of the top edge of
+							the tag. Relative to the element if attached.</li>
+						<li><b>x2, y2, z2:</b> the middle point of the bottom edge
+							of the tag. Relative to the element if attached.</li>
+						<li><b>nx, ny, nz:</b> vector pointing at the direction the
+							tag is facing (surface normal). Relative to the element
+							if attached.</li>
+						<li><b>size:</b> size of the tag.</li>
+						<li><b>visibility:</b> part of the tag drawn. Ranges from 1
+							(just created) to 90 (fully drawn).</li>
+						<li><b>pngdata:</b> a string containing tag texture data in
+							PNG format.</li>
+					</ul>
+					Return value: tag element.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getAllTags()</code><br/><br/>
+					(server and client function)
+				</td>
+				<td>
+					Gets all tags drawn in the server.<br/><br/>
+					Return value: table containing all tags.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getTagAttachedElement(tag)</code><br/><br/>
+					(server and client function)
+				</td>
+				<td>
+					Gets element which the tag is attached to.<br/>
+					<ul>
+						<li><b>tag:</b> the tag which you want to get the attached
+							element of.</li>
+					</ul>
+					Return value: element which the tag is attached to.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getTagPosition(tag)</code><br/><br/>
+					(server and client function)
+				</td>
+				<td>
+					Gets position of the tag.<br/>
+					<ul>
+						<li><b>tag:</b> the tag which you want to get the position
+							of.</li>
+					</ul>
+					Return values: coordinates of the tag. Relative to the attached
+					element if it exists.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getTagNormal(tag)</code><br/><br/>
+					(server and client function)
+				</td>
+				<td>
+					Gets the direction which the tag is facing.<br/>
+					<ul>
+						<li><b>tag:</b> the tag which you want to get the normal
+							of.</li>
+					</ul>
+					Return values: coordinates of the tag normal vector. Relative
+					to the attached element if it exists.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getTagSize(tag)</code><br/><br/>
+					(server and client function)
+				</td>
+				<td>
+					Gets the size of the tag.<br/>
+					<ul>
+						<li><b>tag:</b> the tag which you want to get the size
+							of.</li>
+					</ul>
+					Return value: size of the tag.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getTagTexture(tag)</code><br/><br/>
+					(server and client function)
+				</td>
+				<td>
+					Gets the texture of the tag.<br/>
+					<ul>
+						<li><b>tag:</b> the tag which you want to get the texture
+							of.</li>
+					</ul>
+					Return value: string containing the texture in PNG format.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getTagData(tag)</code><br/><br/>
+					(server-only function)
+				</td>
+				<td>
+					Gets all data of the tag.<br/>
+					<ul>
+						<li><b>tag:</b> the tag which you want to get the data
+							of.</li>
+					</ul>
+					Return values: element which the tag is attached to, tag center
+					position, middle point of top edge, middle point of bottom edge,
+					tag normal vector, tag size, part of the tag drawn and tag
+					texture data. In short, it returns the same values which you
+					can pass to createTagFromExistingData.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>setPlayerSprayMode(player, mode)</code><br/><br/>
+					(server-only function)
+				</td>
+				<td>
+					Changes the way the spray can works.<br/>
+					<ul>
+						<li><b>player:</b> the player element you want to change the
+							spraying mode for.</li>
+						<li><b>mode:</b> a string describing how spray can works.
+							"<b>draw</b>" makes it draw the tag on the surface which
+							is being sprayed on, "<b>erase</b>" makes it erase the
+							tag and "<b>none</b>" disables all effects.</li>
+					</ul>
+					Return value: returns <b>true</b> if spraying mode was changed
+					successfully and <b>false</b> otherwise.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getPlayerSprayMode(player)</code><br/><br/>
+					(server and client function)
+				</td>
+				<td>
+					Returns specified player's spraying mode.<br/>
+					<ul>
+						<li><b>player:</b> the player element you want to check the
+							spraying mode of.</li>
+					</ul>
+					Return value: returns "<b>none</b>" if spray can doesn't have
+					any effect, "<b>draw</b>" if drawing is enabled and
+					"<b>erase</b>" if erasing is enabled.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>setPlayerTagSize(player, size)</code><br/><br/>
+					(server-only function)
+				</td>
+				<td>
+					Changes the size of the player's next tag.<br/>
+					<ul>
+						<li><b>player:</b> the player element you want to change the
+							tag size for.</li>
+						<li><b>size:</b> size of the tag.</li>
+					</ul>
+					Return value: returns <b>true</b> if tag size was changed
+					successfully and <b>false</b> otherwise.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>getPlayerTagSize(player)</code><br/><br/>
+					(server and client function)
+				</td>
+				<td>
+					Returns the size of specified player's next tag.<br/>
+					<ul>
+						<li><b>player:</b> the player element you want to get the
+							tag size of.</li>
+					</ul>
+					Return value: tag size.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>setPlayerTagTexture(player, texture)</code><br/><br/>
+					(server-only function)
+				</td>
+				<td>
+					Changes the texture of the player's next tag.<br/>
+					<ul>
+						<li><b>player:</b> the player element you want to change the
+							tag texture for.</li>
+						<li><b>texture:</b> a string containing the texture data
+							in PNG format.</li>
+					</ul>
+					Return value: returns <b>true</b> if tag texture was changed
+					successfully and <b>false</b> otherwise.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>setEditorTexture(texture)</code><br/><br/>
+					(client-only function)
+				</td>
+				<td>
+					Changes the image in the drawing window.<br/>
+					<ul>
+						<li><b>texture:</b> a string containing the texture data
+							in PNG format.</li>
+					</ul>
+					Return value: returns <b>true</b> if image was changed
+					successfully and <b>false</b> otherwise.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>showDrawingWindow(show)</code><br/><br/>
+					(client-only function)
+				</td>
+				<td>
+					Shows or hides drawing window for local player.<br/>
+					<ul>
+						<li><b>show:</b> a boolean value determining if window should
+							be shown (<b>true</b>) or hidden (<b>false</b>)</li>
+					</ul>
+					Return value: returns <b>true</b> if visibility could be
+					set and <b>false</b> if wrong argument was passed.
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>isDrawingWindowVisible()</code><br/><br/>
+					(client-only function)
+				</td>
+				<td>
+					Checks if drawing window is visible for local player.<br/><br/>
+					Return value: returns <b>true</b> if drawing window is visible,
+					<b>false</b> otherwise.
+				</td>
+			</tr>
+		</table>
+		<p>
+			And this is a list of (server-side) events triggered by drawtag:
+		</p>
+		<table border="1">
+			<tr>
+				<td width="288">
+					<code>drawtag:onTagStartSpray(player)</code>
+				</td>
+				<td>
+					It gets triggered when a player starts spraying a new tag.
+					<ul>
+						<li><b>source:</b> the tag which was created.</li>
+						<li><b>player:</b> element of player who started spraying
+							the tag.</li>
+					</ul>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>drawtag:onTagFinishSpray(player)</code>
+				</td>
+				<td>
+					It gets triggered when a player fully draws the tag.
+					<ul>
+						<li><b>source:</b> the tag which was drawn.</li>
+						<li><b>player:</b> element of player who finished drawing
+							the tag.</li>
+					</ul>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>drawtag:onTagStartErase(player)</code>
+				</td>
+				<td>
+					It gets triggered when a player starts erasing a fully drawn tag.
+					<ul>
+						<li><b>source:</b> the tag which is being erased.</li>
+						<li><b>player:</b> element of player who started erasing
+							the tag.</li>
+					</ul>
+				</td>
+			</tr>
+
+			<tr>
+				<td width="288">
+					<code>drawtag:onTagFinishErase(player)</code>
+				</td>
+				<td>
+					It gets triggered when a player erases the tag and before tag
+					element gets destroyed.
+					<ul>
+						<li><b>source:</b> the tag which was erased.</li>
+						<li><b>player:</b> element of player who erased the
+							tag.</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+		<h3>Contact</h3>
+		<p>
+			You can contact me via e-mail (cmvg10@gmail.com) or MTA SA forum
+			(CrystalMV).
+		</p>
+	</body>
+</html>
+
