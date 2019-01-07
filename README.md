@@ -2,7 +2,7 @@
 # Dystopia:The Incident v0.75
 
 Dystopia: The Incident is my attempt at creating a story-driven post-apocalyptic MMO-RPG for the MTA San Andreas platform.
-Some of the code is original but huge amounts of it is code from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world.
+Some of the code is original but huge amounts of it is code from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world. 
 
 ### Test server:
 mtasa://37.187.171.204:22008
@@ -11,9 +11,9 @@ https://forum.mtasa.com/topic/98093-action-rpg-zombie-sandbox-dystopia-the-incid
 https://discord.gg/Zs5bWSX
 
 ## Installation:
-1.Copy all files in your 'Resources' folder. Some resources (like 'killmessages') might be already present in your MTA installation - make sure you delete the original resources and use those provided here.
+1. Copy all files in your 'Resources' folder. Some resources (like 'killmessages') might be already present in your MTA installation - make sure you delete the original resources and use those provided here.
 
-2.Edit the mtaserver.conf file for your server, and replace the <resource/> lines with the following:
+2. Edit the mtaserver.conf file for your server, and replace the < resource [...]> lines with the following:
 
     <resource src="admin" startup="1" protected="0" />
     <resource src="defaultstats" startup="1" protected="0" />
@@ -72,7 +72,7 @@ https://discord.gg/Zs5bWSX
     <resource src="missiletruck" startup="1" protected="0" />
     <resource src="fieldburner" startup="1" protected="0" />
     <resource src="siegetruck" startup="1" protected="0" />
-	  <resource src="alivetime" startup="1" protected="0" />
+    <resource src="alivetime" startup="1" protected="0" />
     <resource src="playtime" startup="1" protected="0" />
     <resource src="dystopia_zombies" startup="1" protected="0" />
     <resource src="dystopia_charger" startup="1" protected="0" />
