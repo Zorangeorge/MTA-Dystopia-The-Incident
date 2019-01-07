@@ -2,18 +2,24 @@
 # Dystopia:The Incident v0.75
 
 Dystopia: The Incident is my attempt at creating a story-driven post-apocalyptic MMO-RPG for the MTA San Andreas platform.
-Some of the code is original but huge amounts of it is code from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world. 
+Some of the code is original but huge amounts of it comes from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world, designed to be also enjoyable as a single-player experience.  
 
 ### Test server:
 mtasa://37.187.171.204:22008
+
 ### More details:
+
+On Dystopia:
 https://forum.mtasa.com/topic/98093-action-rpg-zombie-sandbox-dystopia-the-incident-en/
 https://discord.gg/Zs5bWSX
 
-## Installation:
-1. Copy all files in your 'Resources' folder. Some resources (like 'killmessages') might be already present in your MTA installation - make sure you delete the original resources and use those provided here.
+On MTA:
+https://www.multitheftauto.com/
 
-2. Edit the mtaserver.conf file for your server, and replace the < resource [...]> lines with the following:
+## Installation:
+1. Copy all files in your 'Resources' folder. 
+
+2. Edit your server's mtaserver.conf file and replace the resource lines with the following:
 
     <resource src="admin" startup="1" protected="0" />
     <resource src="defaultstats" startup="1" protected="0" />
@@ -57,7 +63,7 @@ https://discord.gg/Zs5bWSX
     <resource src="dystopia_core" startup="1" protected="0" />
     <resource src="dystopia_minigun" startup="1" protected="0" />
     <resource src="dystopia_poker" startup="1" protected="0" />
-	  <resource src="policecruiser" startup="1" protected="0" />
+    <resource src="policecruiser" startup="1" protected="0" />
     <resource src="roadwarrior" startup="1" protected="0" />
     <resource src="cdfpatroller" startup="1" protected="0" />
     <resource src="kamikaboom" startup="1" protected="0" />
@@ -82,5 +88,7 @@ https://discord.gg/Zs5bWSX
     <resource src="dystopia_sync" startup="1" protected="0" />
 
 3. You're all set up, run the server and have fun.
+
+_Note: Some resources (like 'killmessages') might be already present in your MTA installation - make sure you delete the original resources and use those provided here._
 
 
