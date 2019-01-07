@@ -10,7 +10,7 @@ _Explore a detailed post-apocalyptic map with many encounter zones. 2000+ NPCs, 
 Gamemode is already in playable state. Some aspects are still  not optimized, so you might experience low performance in certain map areas or when doing certain actions. There are still some bugs left (nothing that cannot be solved through a quick relog). You will find some unfinished features, but the gamemode will be updated on a regular basis at least until v 1.0. Keep an eye on the MTA forum topic or the Discord community provided below. Suggestions are welcome! If you plan to open a server using this gamemode, I'll provide support.
 
 ### For developers:
-*All contributions are welcome*, but be aware: this project was and still is a learning experience for me. The codebase follows few to no standards, is poorly organized and is un-optimized; you're likely to encounter dead code, oddities, unneedingly cloned scripts and other stupid stuff: just about any kind of mistake you would expect a beginner to make. To give you an idea, when I started this I had only a very vague notion of what a variable is. Nonetheless, the result itself is very much playable and enjoyable. First things on my list are de-cluttering, cleaning and attempt at standardising the code.
+*All contributions are welcome*, but be aware: this project was and still is a learning experience for me. The codebase follows few to no standards, is poorly organized and is un-optimized; you're likely to encounter dead code, oddities, unneedingly cloned scripts and other stupid stuff: just about any kind of mistake you would expect a beginner to make. To give you an idea, when I started this I had only a very vague notion of what a variable is. Nonetheless, the result itself is very much playable and enjoyable. First things on my list are de-cluttering, cleaning, documenting and attempting to standardise the code.
 
 ### Test server:
 mtasa://37.187.171.204:22008
@@ -96,7 +96,7 @@ About MTA:
     <resource src="dystopia_traffic" startup="1" protected="0" />
     <resource src="dystopia_sync" startup="1" protected="0" />
 ```
-3. You're all set up, run the server and have fun.
+3. You're all set up, now start the server and have fun.
 
 _Note: Some resources (like 'killmessages') might be already present in your MTA installation - make sure you delete the original resources and use those provided here._
 
