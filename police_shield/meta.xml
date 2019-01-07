@@ -1,9 +1,0 @@
-<meta>
-	<info author="Mr.Risk" type="script" version="1.0.1" />
-	<script src="shieldc.lua" type="client" />
-	<script src="shields.lua" type="server" />
-
-	<file 	src="riot_shield.col" />
-	<file 	src="riot_shield.dff" />
-	<file 	src="riot_shield.txd" />
-</meta>	

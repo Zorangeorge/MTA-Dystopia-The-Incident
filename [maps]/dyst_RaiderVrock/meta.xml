@@ -1,23 +1,6 @@
 <meta>
-    
-     <info type="map" name="Dystopia Map" author=" " version="0.75" description="A post-apocalyptic map for the Dystopia gamemod." edf:definition="edf/dystopia.edf"></info>
-    
-    <file src="edf/cdf.png" />
-    <file src="edf/establishment.png" />
-    <file src="edf/raiders.png" />
-    <file src="edf/neutral.png" />
-    <file src="edf/scavengers.png" />
-    <file src="edf/bandits.png" />
-    <file src="edf/zombiespawn.png" />
-    <file src="edf/spawn.png" />
-    <file src="edf/fuel.png" />
-    <file src="edf/water.png" />
-    <file src="edf/radiation.png" />
-    <file src="edf/item.png" />
-    <file src="edf/encounter.png" />
-    <map src="dystopia_map.map" dimension="0"></map>
-    <script src="propveh.lua" type="server"></script>
-
+    <info type="map" version="1.0.0"></info>
+    <map src="RaiderVrock.map" dimension="0"></map>
     <settings>
         <setting name="#maxplayers" value="[ 128 ]"></setting>
         <setting name="#useLODs" value="[ false ]"></setting>
@@ -31,5 +14,6 @@
     </settings>
     <script src="mapEditorScriptingExtension_s.lua" type="server"></script>
     <script src="mapEditorScriptingExtension_c.lua" type="client" validate="false"></script>
-	
+	<script src="propveh.lua" type="server"></script>
+
 </meta>
