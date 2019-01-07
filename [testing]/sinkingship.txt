@@ -1,7 +1,0 @@
-This resource has been uploaded by Ransom. I have changed authorship to Ratt:
-
-This is an old MTAQA resource by Ratt, shown on the MTAQA Youtube in 2007. http://www.youtube.com/watch?v=HMBUmDlUE5Y ... I have patched it for 1.0.4
-
-Simply start the resource and you will spawn in the water. Type /sink in chat or sink in the console and the ship will start sinking.
-
-This was mostly for demonstration purposes and it will not be updated. Feel free to modify it but give credit to Ratt. 

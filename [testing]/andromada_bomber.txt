@@ -1,7 +1,0 @@
-Hello,
-
-This is a bomber script that I wrote. This could be very useful for war servers. To use the script, get into the Andromada and hold down LMB (Left-Mouse-Button) when you're 10+ meters off the ground to drop bombs.
-
-Please rate and leave feedback.
-
-Thanks. 

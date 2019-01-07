@@ -1,9 +1,0 @@
-this is a quick script that allows you to drop bombs from airplanes. it works best with hydra or rustler. technically you can arm/drop a bomb from any vehicle, but that's because i'm a lazy coder.
-
-type /airstrike to load/arm a bomb and type /airstrike again to drop the bomb. type "/bind r airstrike" and you can just press R twice to drop a bomb.
-
-also, technically, it "unglues" any attached objects to the vehicle. so it will work strangely with glue scripts. (i think)
-
-
-
-this is not supposed to be an "official release" or anything, i'm just trying to get a working version uploaded somewhere. the script can easily be improved by any other scripter (in a short amount of time, even) 

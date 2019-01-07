@@ -1,6 +1,0 @@
-<meta>
-	<info author="Slothman and EvgeniZ" name="truefps" version="1" type="script"/>
-	<script src="fps.lua" type="client"/>
-	<script src="fps_server.lua" type="server"/>
-	<file src="160.txd" />
-</meta>
