@@ -4,6 +4,10 @@
 Dystopia: The Incident is my attempt at creating a story-driven post-apocalyptic MMO-RPG for the MTA San Andreas platform.
 Some of the code is original but huge amounts of it comes from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world, designed to be also enjoyable as a single-player experience.  
 
+### For server owners:
+Gamemode is in playable state. Some aspects are still unoptimized, so you might experience low performance in certain map areas or when doing certain actions. There are still some bugs left (none of them truly gamebreaking, at least nothing that cannot be solved through a quick relog). You will find some unfinished features, but the gamemode will be updated on a regular basis at least until v 1.0. 
+
+### For developers:
 *All contributions are welcome*, but be aware: this project was and still is a learning experience for me. The codebase follows few to no standards, is poorly organized and is unoptimized; you're likely to encounter dead code, oddities, stupid stuff and just about any kind of mistake you would expect a beginner to make. To give you an idea, when I started this I had only a very vague notion of what a variable is. Nonetheless, the result itself is very much playable and enjoyable.
 
 ### Test server:
