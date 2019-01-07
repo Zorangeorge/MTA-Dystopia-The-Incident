@@ -109,4 +109,5 @@ I tried to maintain a complete credits  list, but since development spanned over
 
 ### Contact:
 zoran_georgevici@yahoo.com
+
 _I reserve the rights for Dystopia: The Incident name, world setting and story elements - I intend to eventually develop it into a full game._
