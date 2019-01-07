@@ -1,5 +1,5 @@
 ## MTA:SA 
-# Dystopia:The Incident v0.75
+# Dystopia: The Incident v0.75
 
 Dystopia: The Incident is my attempt at creating a story-driven post-apocalyptic MMO-RPG for the MTA San Andreas platform.
 Some of the code is original but huge amounts of it comes from the MTA community, edited, re-purposed sometimes and patched together to power a seamless, feature rich game world, designed to be also enjoyable as a single-player experience.  
