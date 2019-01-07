@@ -12,6 +12,7 @@ mtasa://37.187.171.204:22008
 On Dystopia:
 - https://forum.mtasa.com/topic/98093-action-rpg-zombie-sandbox-dystopia-the-incident-en/
 - https://discord.gg/Zs5bWSX
+- https://imgur.com/user/DystopiaTheIncident
 
 On MTA:
 - https://www.multitheftauto.com/
@@ -91,4 +92,8 @@ On MTA:
 
 _Note: Some resources (like 'killmessages') might be already present in your MTA installation - make sure you delete the original resources and use those provided here._
 
+## Credits
+The following people contributed (most of them unknowingly) to Dystopia's code base or other assets:
+_Manawydan, Slothman, Ransom, Acorp, Neargreen, XX3, CrystalMV, KingGTA1997, Gothem, Daffy, Suerte, alex17, Sasuke, JasperNL, Woovie, Fedor_S, eXo|dragon, RiginOAL, JTPenn, yFletcher, Ren712, Rage, [CN]Honey, Tectron, LagParty, Bluethefurry, Rick, [GER]Rafael-KP_Lead, Gastonito, Mr.Loki, Zorrigas, NinjaThePooh, Falke, SimplyMods, Gamesnert, Earl.4life, Aiboforcen, Adrenaline, Redemtion, Dzsozi, Bonsai, Mike Koenig, Ijudman, 50p, TheLozza, Flower Power, Vick, Karim, Noah_Antilles, Tomas, Houdini, FEAR, freesfx.co.uk, HerbertBoland, MadSick, Chris, fridobeck, PrettySweetie, Eren, r1k3, specahawk, FreeLANMan, Rinke, Myrfin, Kieran, Dutchman101, KWKSND, Tipirodrigo, K1parik, Cordex, ShockWave_
 
+I tried to maintain a complete credits  list, but since development spanned over more than five years (up to this point) and it started as a personal server project, I might have omitted to add here some people whose work I used or I could not identify the author. If you believe you are in this position, I apologize. Please write me a note and I'll update the credits. Also, you may not want your name and/or work associated with this project - in this case let me know and I'll remove it.
