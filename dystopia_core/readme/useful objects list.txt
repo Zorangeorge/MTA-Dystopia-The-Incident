@@ -1,4 +1,0 @@
-3872, 8874 - light cones for spots
-1800, 1812, 1793 - low bed
-1808 - watercooler
-935 - CJ_drum

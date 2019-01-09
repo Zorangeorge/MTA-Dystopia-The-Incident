@@ -1,8 +1,0 @@
-vehicular combat
-
-vehicles
-layouts "blueprints"
-platforms
-weapon types
-added via map
-

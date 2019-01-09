@@ -1,2 +1,0 @@
-randommissionfarewells = {"Take care out there!","Watch out for the zeds!","Come back when it's done!","Don't get eaten!","Watch out for yourself!","Avoid the night!"}
-missionreturns = {"You're back!","Hey, you're back!", "Glad you're back!","Good to see you back!","What about the mission I gave you?","I hope you have good news!"}

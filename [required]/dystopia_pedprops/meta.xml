@@ -1,6 +1,6 @@
 <meta>
 
-	<info description="Dystopia: Ped Props" name="Dystopia: Ped Props" type="script" version="1.0" author="Zorgman, ShockWave"/>
+	<info description="A resource to add accessories to dystopia peds" name="Dystopia: Ped Props" type="script" version="1.0" author="Zorgman, ShockWave"/>
 	
 	<script src="client.lua" type="client" />
 	<script src="server.lua" type="server" />
