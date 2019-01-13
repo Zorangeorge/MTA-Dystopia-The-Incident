@@ -28,7 +28,7 @@ About MTA:
 
 ## Installation:
  
-1. Put `mtaserver.config` and `acl.xml` in `server\mods\deathmatch` folder.
+1. Put `mtaserver.conf` and `acl.xml` in `server\mods\deathmatch` folder.
 2. Put `[Dystopia]` folder in `server\mods\deathmatch\resources` folder. 
 3. You're all set up, now start the server and have fun.
 
