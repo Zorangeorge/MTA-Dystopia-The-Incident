@@ -1,8 +1,8 @@
 <meta>
-    <info author="BigBadButler" name="who cares" version="0.0.1" type="script"/>
+    <info author="BigBadButler" name="who cares" version="0.0.1" type="script" />
     <script src="Syncro_Client.lua" type="client"/>
     <script src="Syncro_Server.lua"/>
-
+	<min_mta_version client="1.5.6"/>
 
     <script src="damagedraw.lua" type="client"/>
 
