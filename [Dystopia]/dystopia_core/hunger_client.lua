@@ -94,6 +94,9 @@ local showAmmoRemaining = 1
 local boundKey = "m"
 
 function createHungText ( )
+	
+	if NO_HUD_MODE then return end
+	
 	local theTarget
 	local target = getCameraTarget()
 	
@@ -116,8 +119,6 @@ function createHungText ( )
 
 	end
 end
-
-
 
 function saveHungerProgress ()
 local s_hunger = guiProgressBarGetProgress(hungerProcess)

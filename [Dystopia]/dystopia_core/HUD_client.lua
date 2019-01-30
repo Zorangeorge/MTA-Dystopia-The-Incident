@@ -17,6 +17,24 @@ Credits goes to:
 And all the others who already tried to help me.]]
 
 
+NO_HUD_MODE = false
+function dys_hud_toggler()
+
+	if not NO_HUD_MODE then 
+	NO_HUD_MODE = true 
+	
+	else
+	NO_HUD_MODE = false
+	
+	end
+	toggleHUD() --toggles stamina display, great func name!
+	toggleChatBox() --hides chat
+	if helpAnimation then helpAnimation:remove() end --
+	setTimer ( function() helpText:color(255,255,255,0) end, 300, 1 )
+	hudChanger3() --hides rest of the hud
+end
+addCommandHandler("togghud",dys_hud_toggler)
+
 --Building objects table: move it to a shared location, it is doubled on server side
 BuildableObjectsData = {}
 --wooden
@@ -649,6 +667,7 @@ end)
 
 addEvent("showHelpMessageEvent",true)
 function showHelpMessage(message)
+	--if NO_HUD_MODE then return end
 	dys_helpText:text( "" )
 	dys_helpText:text( message )
 	currentHelpText = message
@@ -786,6 +805,7 @@ function checkTHEItem(butt,state,x,y)
 end
 
 function drawItemsOnFloor ()
+	if NO_HUD_MODE then return end
 	local items = getElementsWithinColShape(my_detection_col)
 	
 	if not isCursorShowing() then
@@ -895,7 +915,7 @@ building_buttons = { }
 function removeTheBuilding(butt,state,x,y)
 
 	if isElement(source) and getElementType(source) == "gui-button" then
-	outputDebugString("it's a button")
+	--outputDebugString("it's a button")
 
 		for i,v in pairs(building_buttons) do
 			if v == source then
@@ -910,6 +930,7 @@ function removeTheBuilding(butt,state,x,y)
 end
 
 function drawSurroundingObjects ()
+if NO_HUD_MODE then return end
 local items = getElementsWithinColShape(my_extended_detection_col,"object")
 local vehicles = getElementsWithinColShape(my_extended_detection_col,"vehicle")
 local message

@@ -101,6 +101,9 @@ local showAmmoCurrent = 1
 local showAmmoRemaining = 1
 local boundKey = "m"
 function createThirstText ( )
+
+	if NO_HUD_MODE then return end
+
     local theTarget
     local target = getCameraTarget()
 	

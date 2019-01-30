@@ -318,7 +318,7 @@ addEventHandler("onClientRender", getRootElement(),
   function()
   
   if LoginVisible then return end
-  
+  if NO_HUD_MODE then return end
     if radar.on and getElementData(lp, "bigradar") then
       local r,g,b,a = 255,255,255,200
     
