@@ -1,7 +1,7 @@
 <meta>
+    <script src="script.lua" type="server" />
     <info type="map" version="1.0.0"></info>
-    <map src="map.map" dimension="0"></map>
-	<script src="script.lua" type="server" />
+    <map src="cdftruck.map" dimension="0"></map>
     <settings>
         <setting name="#maxplayers" value="[ 128 ]"></setting>
         <setting name="#useLODs" value="[ false ]"></setting>
