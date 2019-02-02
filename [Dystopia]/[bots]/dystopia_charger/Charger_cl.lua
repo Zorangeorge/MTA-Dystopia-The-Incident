@@ -379,3 +379,12 @@ end
 addEventHandler( "onClientResourceStart", resourceRoot, onClientInitScript )]]
 
 
+function stopRammerProcess()
+triggerServerEvent( "onPlayerWinsRammer", getLocalPlayer(), currentRammerPedThatCaughtYou, target, "LOSE" )
+		unbindKey( "space", "down", key )
+		outputDebugString("RAMMER: Player escaped")
+		removeEventHandler("onClientRender", root, dxElements)
+		currentRammerPedThatCaughtYou = nil
+end
+
+addEventHandler("onClientPlayerWasted",localPlayer,stopRammerProcess)

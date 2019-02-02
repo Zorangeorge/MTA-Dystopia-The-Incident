@@ -105,7 +105,9 @@ addEventHandler("onPlayerWinsRammer", root,
 	outputDebugString(tostring(ped).." "..tostring(target))
 		if ( isElement( ped ) and isElement( target ) )  then 
 		outputDebugString(tostring(ped).." "..tostring(target))
-			if ( state == "WIN" ) then 
+			
+			if ( state == "WIN"  ) then 
+			
 				local elementAttacheds = getAttachedElements(ped)
 				for i, v in ipairs( elementAttacheds ) do 
 					detachElements( v )
@@ -119,11 +121,37 @@ addEventHandler("onPlayerWinsRammer", root,
 				setPedAnimation( ped, "ped", "handscower", 3000, false, false, false )
 				setTimer(setPedAnimation,3000,1, ped, "RAPPING", "Laugh_01", 4000, false, false, true, false  )
 				setTimer( setControlState, 10000, 1, target, "jump", false )
-				killTimer( chargerSpecialTimer[ped] )
+				if isTimer(chargerSpecialTimer[ped]) then killTimer( chargerSpecialTimer[ped] ) end
 				chargerSpecialTimer[ped] = nil
-				--killTimer( chargerCameraTimer[ped] )
-				--chargerCameraTimer[ped] = nil
-				--setCameraTarget( target )
+				chargerState[ped] = "sit"
+				setData( ped, "charger.attached", false )
+				
+				setTimer( function() 
+					if isElement( ped ) then
+						setPedAnimation( ped )
+						setElementFrozen( ped, false )
+						chargerState[ped] = "run"
+					end
+				end, 6000, 1)
+				playerSpecial[target] = nil
+			
+			elseif ( state == "LOSE"  ) then
+			
+				local elementAttacheds = getAttachedElements(ped)
+				for i, v in ipairs( elementAttacheds ) do 
+					detachElements( v )
+				end
+				setElementCollisionsEnabled( target, true )
+				toggleAllControls( target, true )
+				--setPedAnimation( target, "ped", "getup", 2000, false )
+				--setControlState(target,"jump",true)
+				--setPedAnimation( target)
+				setPedAnimation( ped)
+				--setPedAnimation( ped, "ped", "handscower", 3000, false, false, false )
+				setTimer(setPedAnimation,3000,1, ped, "RAPPING", "Laugh_01", 4000, false, false, true, false  )
+				--setTimer( setControlState, 10000, 1, target, "jump", false )
+				if isTimer(chargerSpecialTimer[ped]) then killTimer( chargerSpecialTimer[ped] ) end
+				chargerSpecialTimer[ped] = nil
 				chargerState[ped] = "sit"
 				setData( ped, "charger.attached", false )
 				
@@ -140,7 +168,6 @@ addEventHandler("onPlayerWinsRammer", root,
 		end
 		
 	end)
-
 
 
 -- FUNCTIONS 
@@ -176,7 +203,7 @@ if not skin then skin = table.random(rammerSkins) end
 	setElementData(ped,"rammer",true,true)
 	setElementHealth(ped,200)
 	setPedArmor(ped,100)
-	exports['extra_health']:setElementExtraHealth( ped, zpHealth )
+	--exports['extra_health']:setElementExtraHealth( ped, zpHealth )
 	chargersColShapes[ped] = createColSphere( ped.position, 100 )
 	attachElements( chargersColShapes[ped], ped )
 	chargers[ped] = true
@@ -427,11 +454,11 @@ addEventHandler("onResourceStop", resourceRoot, pauseScript)
 
 
 
-function spwnCharger( p )
+--[[function spwnCharger( p )
 	local x, y, z = getElementPosition( p )
 	spawnCharger( x, y, z )
 end
-addCommandHandler("spawnrammer", spwnCharger)
+addCommandHandler("spawnrammer", spwnCharger)]]
 
 
 
