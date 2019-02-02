@@ -30,7 +30,8 @@ function dys_hud_toggler()
 	toggleHUD() --toggles stamina display, great func name!
 	toggleChatBox() --hides chat
 	if helpAnimation then helpAnimation:remove() end --
-	setTimer ( function() helpText:color(255,255,255,0) end, 300, 1 )
+	--setTimer ( function() helpText:color(255,255,255,0) end, 300, 1 )
+	--setTimer ( function() dys_helpText:color(255,255,255,0) end, 300, 1 )
 	hudChanger3() --hides rest of the hud
 end
 addCommandHandler("togghud",dys_hud_toggler)

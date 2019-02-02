@@ -196,6 +196,7 @@ function miniSwitch()
     mini.on = true
     mini.bigsize = radar.size
     radar.size = mini.size
+	radar.range = 50
     rescaleRadar()
   end
 end
@@ -538,7 +539,7 @@ addEventHandler("onClientRender", getRootElement(),
                 local blipx = radar.xc+cblipx-blip.half
                 local blipy = radar.yc+cblipy-blip.half
                 local yoff = 0
-                if driver then
+                if driver and getElementType(driver)=="player" then
                   local team = setup.teamcolors and getPlayerTeam(driver) or false
                   if team then r,g,b = getTeamColor(team) end
                   name = getPlayerName(driver):gsub("#%x%x%x%x%x%x","").." ["..name.."]"
