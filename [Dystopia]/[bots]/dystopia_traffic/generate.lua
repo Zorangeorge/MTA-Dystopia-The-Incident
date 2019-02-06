@@ -1,5 +1,5 @@
 function initTrafficGenerator()
-	traffic_density = {peds = 0.0001,cars = 0.0001--[[0.00001]],boats = 0.000001,planes = 0.000001}
+	traffic_density = {peds = 0.0001,cars = 0.0.00001--[[default? 0.00001]],boats = 0.000001,planes = 0.000001}
 
 	population = {peds = {},cars = {},boats = {},planes = {}}
 	element_timers = {}
@@ -231,14 +231,14 @@ local banditteam = getTeamFromName("Bandits")
 local estabteam = getTeamFromName("Establishment")
 local scavteam = getTeamFromName("Scavengers")
 local cdfteam = getTeamFromName("CDF")
-local neutteam = getTeamFromName("Raiders")
+local neutteam = getTeamFromName("")
 
 local raiderr,raiderg,raiderb = getTeamColor(raiderteam)
 local banditr,banditg,banditb = getTeamColor(banditteam)
 local estabr,estabg,estabb = getTeamColor(estabteam)
 local scavr,scavg,scavb = getTeamColor(scavteam)
 local cdfr, cdfg, cfgb = getTeamColor(cdfteam)
-local neutr, neutg,neutb = getTeamColor(raiderteam)
+local neutr, neutg,neutb = getTeamColor(neutteam)
 
 local raiderMeleeWeapons = {2,4,8,5,10,11,12}--{ 33,25,24,30,27,31}
 local raiderGunnerWeapons = {25,30,33,24}--{ 33,25,24,30,27,31}
