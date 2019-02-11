@@ -65,8 +65,21 @@
 		   <script src="vehicles_server.lua" type="server" />
 		   <script src="vehicles_client.lua" type="client" cache="false" />
 		   <script src="spawn_system.lua" type="server" />
-		   <script src="login_client.lua" type="client"  cache="false"/>
-		   <script src="login_server.lua" type="server" />
+		    <!--NEW LOGIN SYSTEM -->
+		   	<script src="login/login_client.lua" type="client"/>
+			<script src="login/login_server.lua" type="server"/>
+			
+			<!-- HTML -->
+			<file src="login/index.html" />
+			<!-- FILES -->
+			<file src="login/css/style.css" />
+			<file src="login/img/logo.png" />
+			<!-- Exports -->
+			<export function="onPlayerPushButton" http="true" />
+		    <!-- OLD LOGIN -->
+		   <!-- <script src="login_client.lua" type="client"  cache="false"/>
+		   <script src="login_server.lua" type="server" /> -->
+
 		   <script src="tables.lua" type="server" />
 		   <script src="tables.lua" type="client"  cache="false"/>
 		   <script src="bots_spawn_server.lua" type="server" />
