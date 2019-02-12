@@ -703,12 +703,12 @@ local SHADING_PER_RENDER = 7.5
 local SCALE = 0.2
 
 local DRAW_CHECK_BUILDINGS = true
-local DRAW_CHECK_VEHICLES = false
+local DRAW_CHECK_VEHICLES = true
 local DRAW_CHECK_PEDS = false
-local DRAW_CHECK_OBJECTS = false
+local DRAW_CHECK_OBJECTS = true
 local DRAW_CHECK_DUMMIES = false
 local DRAW_SEE_THROUGH_STUFF = false
-local DRAW_IGNORE_CAMERA_OBJECTS = true
+local DRAW_IGNORE_CAMERA_OBJECTS = false
 
 function dxDrawNameOnElement(element, text, height, distance, R, G, B, alpha, size, font)
 	local x, y, z = getElementPosition(element)
@@ -716,7 +716,7 @@ function dxDrawNameOnElement(element, text, height, distance, R, G, B, alpha, si
 	local distance = distance or 20
 	local height = height or 1
 
-	if (isLineOfSightClear(x, y, z, x2, y2, z2, DRAW_CHECK_BUILDINGS, DRAW_CHECK_VEHICLES, DRAW_CHECK_PEDS, DRAW_CHECK_OBJECTS, DRAW_CHECK_DUMMIES, DRAW_SEE_THROUGH_STUFF, DRAW_IGNORE_CAMERA_OBJECTS,ignoredElement)) then
+	if (isLineOfSightClear(x, y, z, x2, y2, z2, DRAW_CHECK_BUILDINGS, DRAW_CHECK_VEHICLES, DRAW_CHECK_PEDS, DRAW_CHECK_OBJECTS, DRAW_CHECK_DUMMIES, DRAW_SEE_THROUGH_STUFF, DRAW_IGNORE_CAMERA_OBJECTS,element)) then
 		local sx, sy = getScreenFromWorldPosition(x, y, z+height)
 		if (sx and sy) then
 			local distanceBetweenPoints = getDistanceBetweenPoints3D(x, y, z, x2, y2, z2)
