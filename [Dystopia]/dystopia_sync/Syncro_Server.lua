@@ -256,7 +256,7 @@ function setOriginalValues()
 	
 	WeaponDamage[35]=70--35 -- RPG
 	WeaponDamage[36]=110--35 -- heatseeking RPG
-	WeaponDamage[37]=2 -- flamethrower
+	WeaponDamage[37]=10 -- flamethrower
 	WeaponDamage[38]=25 -- Minigun
 	WeaponDamage[39]=80--55 -- satchel charges
 	WeaponDamage[40]=0 -- detonator

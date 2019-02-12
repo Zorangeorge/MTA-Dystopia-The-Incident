@@ -185,7 +185,7 @@ fLastTouchedFloorz    = 0;
 LAST_SPEED            = 0;
 LAST_Z_SPEED          = 0;
 fCalcDistance         = 300;
-local iFrameCount     = 0;
+--local iFrameCount     = 0;
 local lastGameSpeed   = 0;
 local bGameSpeedIncreased = false;
 local iGameSpeedHacksDetected = 0;
@@ -255,10 +255,10 @@ function onClientPlayerWeaponFireFunc(weapon, ammo, ammoInClip, hitX, hitY, hitZ
 end
 
 function onClientPlayerWeaponFireFunc_CallBack(source, weapon, ammo, ammoInClip, hitX, hitY, hitZ, hitElement )
-	if isPedDead( source ) or iFrameCount < 1 then -- old function! new one: isPedDead( ped )
+	if isPedDead( source ) --[[or iFrameCount < 1]] then -- old function! new one: isPedDead( ped )
 		return; 
 	end
-	iFrameCount = 0;
+	--iFrameCount = 0;
 	local bodypart = "";
 	local lineHitElement = nil;
 	local PelletHits = 0;
@@ -354,7 +354,7 @@ function SYNCRO_SPAWN()
 	toggleControl( "enter_exit", true)
 end
 
-function SYNCRO_RENDERFRAME()
+--[[function SYNCRO_RENDERFRAME()
 
 	iFrameCount = iFrameCount + 1;
 	local vehicle = getPedOccupiedVehicle(getLocalPlayer());
@@ -396,7 +396,7 @@ function SYNCRO_RENDERFRAME()
 	LAST_Z_SPEED = fVz;
 -----run through walls
 end
-
+]]
 
 function SYNCRO_PROJECTILE ( creator )
 	projectile = source;
@@ -417,17 +417,23 @@ function SYNCRO_PEDWEAPONFIRE( weapon, ammo, ammoInClip, hitX, hitY, hitZ, hitEl
 	end
 end
 
+function SYNCRO_PED_WASTED ()
+setPedAnimation(source)
+end
+
 ---------------------------------------------------------------------------------------------
 
 addEventHandler ( "onClientPlayerDamage", getRootElement(), syncro )
 addEventHandler ( "onClientPedDamage", getRootElement(), syncro )
+
 addEventHandler ( "onClientPlayerWeaponFire", getLocalPlayer(), onClientPlayerWeaponFireFunc )
 addEventHandler ( "onClientWeaponFire", getLocalPlayer(), onClientPlayerWeaponFireFunc )
 addEventHandler ( "onClientResourceStart",getRootElement(), SYNCRO_INIT )					
 addEventHandler ( "onClientPlayerWasted", getLocalPlayer(), SYNCRO_WASTED )
+addEventHandler ( "onClientPedWasted", root, SYNCRO_PED_WASTED )
 addEventHandler ( "onClientExplosion", getRootElement(), SYNCRO_EXPLOSION )
 addEventHandler ( "onClientPlayerSpawn", getLocalPlayer(), SYNCRO_SPAWN )
-addEventHandler ( "onClientPreRender",getRootElement(), SYNCRO_RENDERFRAME )
+--addEventHandler ( "onClientPreRender",getRootElement(), SYNCRO_RENDERFRAME )
 addEventHandler ( "onClientProjectileCreation", getRootElement(), SYNCRO_PROJECTILE )
 addEventHandler ( "onClientPedWeaponFire" , getRootElement(), SYNCRO_PEDWEAPONFIRE )
 ---------------------------------------------------------------------------------------------
@@ -469,59 +475,26 @@ addEventHandler("S_EXPLOSION",getLocalPlayer(),syncAExplosion);
 
 ---------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
-function SYNC_MELEE_START ()
-	fire_stop = false;
-	SYNC_MELEE();
+function SYNC_MELEE_START (attacker, weap, bpart)
+	if attacker == localPlayer then
+		fire_stop = false;
+		SYNC_MELEE(source,attacker, weap, bpart);
+	end
 end
 
-function SYNC_MELEE ()
+function SYNC_MELEE (elemhit,attacker, weap, bpart)
 	local weapon    = getPedWeapon(getLocalPlayer());
-	if (weapon ~= -1 and (weapon < 16 or weapon == 37) and getTickCount() - lastShotTime > 400/getGameSpeed() and isControlEnabled ( "fire" )) or chainsawTimer then
-		if (weapon == 9 or weapon == 37) and not fire_stop then
-			chainsawTimer = setTimer(SYNC_MELEE,100/getGameSpeed(),1);
+	if weapon ~= -1 and weapon < 16 and (getTickCount() - lastShotTime) > (500/getGameSpeed()) and isControlEnabled ( "fire" ) or chainsawTimer then
+		if (weapon == 9) and not fire_stop then
+			chainsawTimer = setTimer(SYNC_MELEE,200/getGameSpeed(),1);--chainsawTimer = setTimer(SYNC_MELEE,100/getGameSpeed(),1);
 		end
+		
 		local pX, pY, pZ     = getElementPosition (getLocalPlayer())
-		local pR             = getPedRotation (getLocalPlayer()) -- getPedRotation();
-		pR = pR + 90;
-		pR =  (pR * 3.141592653 * 2)/360;
-		local calcMeleeRange = meleeRange;
-		local calcMeleeEffectiveRange = meeleeEffectiveRange;
-		local hitX,hitY,hitZ = pX + math.cos(pR)*meleeRange, pY + math.sin(pR)*meleeRange, pZ
-		if weapon == 37 then
-			hitX,hitY,hitZ = getPedTargetEnd ( getLocalPlayer() );
-			local hit2X,hit2Y,hit2Z = getPedTargetStart ( getLocalPlayer() );
-			calcMeleeEffectiveRange = getDistanceBetweenPoints3D(hitX,hitY,hitZ,hit2X,hit2Y,hit2Z);
-			calcMeleeRange = calcMeleeEffectiveRange * 2;
-			--outputDebugString("Flamethrower check! " .. calcMeleeEffectiveRange);
-			if calcMeleeEffectiveRange > 6 then
-				return;
-			end
-		end
-		for k,player in ipairs(getElementsByType("player")) do
-			if player ~= getLocalPlayer() then
-				vX,vY,vZ = getElementPosition(player);
-				if getDistanceBetweenPoints3D(pX, pY, pZ, vX, vY, vZ) < calcMeleeRange then
-					if getDistanceBetweenPoints3D(hitX, hitY, hitZ, vX, vY, vZ) < calcMeleeEffectiveRange then
-						if weapon == 37 then
-							triggerServerEvent("S_FLAMETHROWER",getLocalPlayer(),player);
-						else
-							triggerServerEvent("S_MELEE",getLocalPlayer(),player);
-						end
-					end
-				end
-			end
-		end
-		for k,ped in ipairs(getElementsByType("ped")) do
-			vX,vY,vZ = getElementPosition(ped);
-			if getDistanceBetweenPoints3D(pX, pY, pZ, vX, vY, vZ) < calcMeleeRange then
-				if weapon == 37 then
-					triggerServerEvent("S_FLAMETHROWER",getLocalPlayer(),ped);
-				else
-					triggerServerEvent("S_MELEE",getLocalPlayer(),ped);
-				end
-			end
-		end
+				
+		triggerServerEvent("S_MELEE",getLocalPlayer(),elemhit)
+		
 		lastShotTime = getTickCount();
+
 	end
 end
 
@@ -536,6 +509,9 @@ function SYNC_MELEE_STOP()
 		crouchWeaponTimer = nil;
 	end
 end
+
+addEventHandler ( "onClientPedDamage", getRootElement(), SYNC_MELEE_START )
+addEventHandler ( "onClientPlayerDamage", getRootElement(), SYNC_MELEE_START )
 
 function SYNC_AIMING()
 	playerIsAiming = true;
@@ -588,7 +564,7 @@ end
 
 ---------------------------------------------------------------------------------------------
 
-bindKey ("fire", "down", SYNC_MELEE_START)
+--bindKey ("fire", "down", SYNC_MELEE_START)
 bindKey ("fire", "up"  , SYNC_MELEE_STOP)
 bindKey ("aim_weapon", "down", SYNC_AIMING)
 bindKey ("aim_weapon", "up"  , SYNC_AIMING_STOP)
