@@ -243,7 +243,7 @@ function playerWasted( _, killer )
 
 	for thePed, theValue in pairs( chargers ) do 
 			local elementAttacheds = getAttachedElements(thePed)
-			--if #elementAttacheds == 0 then return end
+			if not elementAttacheds or #elementAttacheds == 0 then return end
 			for i, v in ipairs( elementAttacheds ) do 
 				if ( source == v ) then 
 					setCameraTarget( source )
@@ -419,6 +419,7 @@ outputDebugString("RAMMER: DETACH ATTACHED ENEMY")
 	if theCharger then 
 		setElementFrozen( theCharger, false )
 		local attachs = getAttachedElements( theCharger )
+		if not attachs or #attachs == 0 then return end
 		for key, value in ipairs( attachs ) do 
 			if ( value and getElementType( value ) == "player" ) then 
 				setPedAnimation( value )
