@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300); */
 @font-face {
 font-family: "Exo";
-src: url("http://mta/local/Exo.ttf");
+src: url("http://mta/local/login/Exo.ttf");
 }
 body{
 	overflow:hidden;
