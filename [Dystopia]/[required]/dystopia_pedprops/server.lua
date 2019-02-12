@@ -5,24 +5,14 @@ vestTable["khakivest"] = {1922, 3, 90}
 vestTable["estabvest"] = {1923, 3, 90} 
 vestTable["blackvest"] = {1924, 3, 90} 
 
-maskTable["devil"] = {1512, 1, 90} 
 maskTable["vendetta"] = {1455, 1, 90} 
-maskTable["darth"] = {1484, 1, 90} 
-maskTable["redberet"] = {1485, 1, 90} 
 maskTable["gasmask"] = {1487, 1, 90} 
 maskTable["cowboy"] = {1543, 1, 90} 
-maskTable["zombie"] = {1544, 1, 90} 
-maskTable["vampire"] = {1666, 1, 90} 
-maskTable["skull"] = {1667, 1, 90} 
-maskTable["raccoon"] = {1668, 1, 180} 
-maskTable["owl"] = {1950, 1, 180} 
 maskTable["bloodhokey"] = {1951, 1, 90} 
 maskTable["bag"] = {1551, 1, 90} 
-maskTable["dog"] = {1546, 1, 90} 
 maskTable["biomask"] = {1669, 1, 90} 
-maskTable["monster"] = {1853, 1, 90} 
 maskTable["respirator"] = {1854, 1, 90} 
-maskTable["admin"] = {1855, 1, 180} 
+
 
 obj = {}
 vest = {}

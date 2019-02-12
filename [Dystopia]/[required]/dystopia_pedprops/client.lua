@@ -6,22 +6,12 @@ vestTable["estabvest"] = {1923, 1, 90}
 vestTable["blackvest"] = {1924, 1, 90} 
 
 
-maskTable["devil"] = {1512, 1, 90} 
 maskTable["vendetta"] = {1455, 1, 90} 
-maskTable["darth"] = {1484, 1, 90} 
-maskTable["redberet"] = {1485, 1, 90} 
 maskTable["gasmask"] = {1487, 1, 90} 
 maskTable["cowboy"] = {1543, 1, 90} 
-maskTable["zombie"] = {1544, 1, 90} 
-maskTable["vampire"] = {1666, 1, 90} 
-maskTable["skull"] = {1667, 1, 90} 
-maskTable["raccoon"] = {1668, 1, 180} 
-maskTable["owl"] = {1950, 1, 180} 
 maskTable["bloodhokey"] = {1951, 1, 180} 
 maskTable["bag"] = {1551, 1, 90} 
-maskTable["dog"] = {1546, 1, 90} 
 maskTable["biomask"] = {1669, 1, 90} 
-maskTable["monster"] = {1853, 1, 90} 
 maskTable["respirator"] = {1854, 1, 90} 
 maskTable["admin"] = {1855, 1, 90} 
 
@@ -155,43 +145,6 @@ local nomadhead_tbl = {"none","gasmask","respirator","biomask","bag"}
 local bandithead_tbl = {"none","gasmask","respirator","biomask","cowboy"}
 local heavytrooperhead_tbl = {"none","cowboy","respirator","biomask"}
 
---[[function rigPeacekeepers ()
-local peds = getElementsByType("ped")
-	for _,ped in ipairs(peds) do
-	local name = getElementData(ped,"name")
-		if name == "Trooper" then
-			triggerServerEvent( "setmask", ped, table.random(trooperhead_tbl) )
-			triggerServerEvent( "setvest", ped, "khakivest")
-		elseif name == "Peacekeeper" then
-			triggerServerEvent( "setmask", ped, table.random(gasmasks_tbl) )
-			triggerServerEvent( "setvest", ped, "estabvest")
-		elseif name == "Heavy Trooper" then
-			triggerServerEvent( "setvest", ped, "estabvest")
-			triggerServerEvent( "setmask", ped, table.random(heavytrooperhead_tbl) )
-		elseif name == "R/01 Spec" then
-			triggerServerEvent( "setvest", ped, "estabvest")
-			triggerServerEvent( "setmask", ped, "biomask" )
-		elseif name == "R/01 Agent" then
-			triggerServerEvent( "setvest", ped, "estabvest")
-			triggerServerEvent( "setmask", ped, "biomask" )
-		elseif name == "R/01 Operator" then
-			triggerServerEvent( "setvest", ped, "estabvest")
-			triggerServerEvent( "setmask", ped, "biomask" )
-		elseif name == "Raider" then
-			triggerServerEvent( "setmask", ped, table.random(raiderhead_tbl) )
-			triggerServerEvent( "setvest", ped, table.random(civvests_tbl) )
-		elseif name == "Nomad" then
-			triggerServerEvent( "setmask", ped, table.random(nomadhead_tbl) )
-			triggerServerEvent( "setvest", ped, table.random(civvests_tbl) )
-		elseif name == "Militia" then
-			triggerServerEvent( "setmask", ped, table.random(militiahead_tbl) )
-			triggerServerEvent( "setvest", ped, table.random(civvests_tbl) )
-		end
-	end
-end
-
-addCommandHandler("rig",rigPeacekeepers)]]
-
 addEvent("PropPed",true)
 pedPropsEnabled = true
 addCommandHandler("pedprops",function() pedPropsEnabled = not pedPropsEnabled; outputDebugString(tostring(pedPropsEnabled))end)
@@ -309,5 +262,17 @@ if pedPropsEnabled then
 		end
 	end
 end
-
 addEventHandler("PropPed",root,addPropsToPed)
+
+function setPlayerProp(command,proptype,name)
+	if name then
+		if proptype == "vest" then
+		triggerServerEvent( "setvest", localPlayer, name)
+		elseif proptype == "mask" then
+		triggerServerEvent( "setmask", localPlayer, name)
+		else
+		return
+		end
+	end
+end
+addCommandHandler("giveprop",setPlayerProp)
