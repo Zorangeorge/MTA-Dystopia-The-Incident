@@ -62,7 +62,7 @@ body{
 
 .footer{
 	position: absolute;
-	top: calc(93%);
+	top: calc(90%);
 	left: calc(1%);
 	z-index: 2;
 	text-align: center;
