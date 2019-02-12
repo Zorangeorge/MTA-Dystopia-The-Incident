@@ -65,7 +65,7 @@ end)
                    {"Magnum Revolver",  348, 0}, --22 --Weight: 1
                    {"Stinger Launcher",  360, 0}, --23 --Weight: 4
                    {"Meat Can",2601, 0}, --24
-                   {"Water Bottle",1669, 0}, --25
+                   {"Water Bottle",1668, 0}, --25 --1668
                    {"Raw Meat", 2804, 0}, --26
                    {"Machete",321, 0}, --27 --Weight: 2
                    {"Kitchen Knife",322, 0}, --28 --Weight: 1
@@ -121,7 +121,7 @@ end)
 				   {"Night Vision Googles", 368, -0.1},
 				   {"Zip Line", 1955, -0.1},
 				   
-				   {"Dirty Water",1669, 0},
+				   {"Dirty Water",1668, 0},
 				   
 				   {"Adrenaline",2709, 0},
 				   {"ZomboKleen",2709, 0},
@@ -4598,7 +4598,7 @@ model = 360
 elseif(itemName=="Meat Can")then
 model = 2601
 elseif(itemName=="Water Bottle")then
-model = 1669
+model = 1668
 elseif(itemName=="Raw Meat")then
 model = 2804
 elseif(itemName=="Machete")then
@@ -4686,7 +4686,7 @@ model = 2601
 elseif(itemName=="Water Canister")then
 model = 1650
 elseif(itemName=="Dirty Water")then
-model = 1669
+model = 1668
 elseif(itemName=="Survivor Map")then
 model = 3017
 elseif(itemName=="Military Map")then

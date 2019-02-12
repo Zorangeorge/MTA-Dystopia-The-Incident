@@ -42,7 +42,7 @@ local itensTable =
                    {"Magnum Revolver",  348, 0}, --22
                    {"Stinger Launcher",  360, 0}, --23
                    {"Meat Can",2601, 0}, --24
-                   {"Water Bottle",1669, 0}, --25 
+                   {"Water Bottle",1668, 0}, --25 
 				   {"Raw Meat", 2804, 0}, --26
 				   {"Machete",321, 0}, --27
 				   {"Kitchen Knife",322, 0}, --28
@@ -96,7 +96,7 @@ local itensTable =
 				   {"Bandage",2384, 0},
 				   {"Night Vision Googles", 368, 0},
 				   {"Zip Line", 1955, 0},
-				   {"Dirty Water",1669, 0},
+				   {"Dirty Water",1668, 0},
 				   {"Adrenaline",2709, 0},--
 				   {"ZomboKleen",2709, 0},--
 				   {"Splint",1279, 0},--
