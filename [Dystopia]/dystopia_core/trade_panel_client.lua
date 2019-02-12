@@ -456,11 +456,11 @@ addEventHandler("OpenTrade",root,Open_CloseTrade)
 function getTradeValues(item)
 
 local sellvalue = getItemSellValue(item)
-local description = TradeItemDescription[item] or ""
+local tbldescription = TradeItemDescription[item] or " "
 local buyvalue = ItemTradeValues[item]
 local description
 if buyvalue then
-description = "Price: "..buyvalue.."$\n"..description
+description = "Price: "..buyvalue.."$\n"..tbldescription
 else
 description = " "
 end
