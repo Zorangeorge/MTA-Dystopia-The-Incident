@@ -476,7 +476,7 @@ addEventHandler("S_EXPLOSION",getLocalPlayer(),syncAExplosion);
 ---------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
 function SYNC_MELEE_START (attacker, weap, bpart)
-	if attacker == localPlayer then
+	if attacker == localPlayer and weap ~= -1 and weap < 16 then
 		fire_stop = false;
 		SYNC_MELEE(source,attacker, weap, bpart);
 	end
@@ -484,7 +484,7 @@ end
 
 function SYNC_MELEE (elemhit,attacker, weap, bpart)
 	local weapon    = getPedWeapon(getLocalPlayer());
-	if weapon ~= -1 and weapon < 16 and (getTickCount() - lastShotTime) > (500/getGameSpeed()) and isControlEnabled ( "fire" ) or chainsawTimer then
+	if (getTickCount() - lastShotTime) > (500/getGameSpeed()) and isControlEnabled ( "fire" ) or chainsawTimer then
 		if (weapon == 9) and not fire_stop then
 			chainsawTimer = setTimer(SYNC_MELEE,200/getGameSpeed(),1);--chainsawTimer = setTimer(SYNC_MELEE,100/getGameSpeed(),1);
 		end
