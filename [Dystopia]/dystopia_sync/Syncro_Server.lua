@@ -1,107 +1,3 @@
-MaxClipAmmo = {}
-MaxClipAmmo[0]=5 -- unarmed
-MaxClipAmmo[1]=5 -- knuckles
-MaxClipAmmo[2]=5 -- golf club
-MaxClipAmmo[3]=5 -- knite stick
-MaxClipAmmo[4]=5 -- knive
-MaxClipAmmo[5]=5 -- baseball bat
-MaxClipAmmo[6]=5 -- shovel
-MaxClipAmmo[7]=5 -- pool cue
-MaxClipAmmo[8]=5 -- kanta
-MaxClipAmmo[9]=5 -- chainsaw
-MaxClipAmmo[10]=5 -- purple dildo
-MaxClipAmmo[11]=5 -- short vibrator
-MaxClipAmmo[12]=5 -- loooong vibrator
-MaxClipAmmo[13]=5 -- white dildo
-MaxClipAmmo[14]=5 -- flowers
-MaxClipAmmo[15]=5 -- cane
-MaxClipAmmo[16]=2 -- grenades
-MaxClipAmmo[17]=2 -- tear gas
-MaxClipAmmo[18]=2 -- molotov cocktail
-MaxClipAmmo[19]=5 -- vehicle missile
-MaxClipAmmo[20]=5 -- hydra flare
-MaxClipAmmo[21]=5 -- jetpack
-MaxClipAmmo[22]=34 -- normal pistol, single
-MaxClipAmmo[23]=17 -- silenced 9mm
-MaxClipAmmo[24]=7 -- desert eagle
-MaxClipAmmo[25]=2 -- shotgun
-MaxClipAmmo[26]=4 -- sawnoff shotgun, single
-MaxClipAmmo[27]=7 -- combat shotgun
-MaxClipAmmo[28]=100 -- uzi MAC 10
-MaxClipAmmo[29]=30 -- MP5
-MaxClipAmmo[30]=30 -- AK47
-MaxClipAmmo[31]=50 -- M4
-MaxClipAmmo[32]=1000 -- TEC9
-MaxClipAmmo[33]=10 -- country rifle
-MaxClipAmmo[34]=10 -- sniper rifle
-MaxClipAmmo[35]=2 -- RPG
-MaxClipAmmo[36]=2 -- heatseeking RPG
-MaxClipAmmo[37]=500 -- flamethrower
-MaxClipAmmo[38]=100000 -- Minigun
-MaxClipAmmo[39]=2 -- sachtel charges
-MaxClipAmmo[40]=500 -- detonator
-MaxClipAmmo[41]=500 -- spray can
-MaxClipAmmo[42]=500 -- fire extinguisher
-MaxClipAmmo[43]=36 -- camera
-MaxClipAmmo[44]=2 -- NV Googles
-MaxClipAmmo[45]=2 -- Thermal Googles
-MaxClipAmmo[46]=2 -- Parachute
-MaxClipAmmo[47]=5 -- fake pistol
-
---always + one or two units to decrease the probability of fake warnings. Actually, the 2% are necessairy when you shoot in the sky. San Andreas is stupid.
---if i was you, i'd control these values in your weapon stats. Otherways there may be problems.
-
---maximum speed someone can shoot.
-MinTimeBetweenShots = {}
-MinTimeBetweenShots[0]=5 -- unarmed
-MinTimeBetweenShots[1]=7 -- knuckles
-MinTimeBetweenShots[2]=7 -- golf club
-MinTimeBetweenShots[3]=7 -- knite stick
-MinTimeBetweenShots[4]=5 -- knive
-MinTimeBetweenShots[5]=7 -- baseball bat
-MinTimeBetweenShots[6]=7 -- shovel
-MinTimeBetweenShots[7]=9 -- pool cue
-MinTimeBetweenShots[8]=7 -- kantana
-MinTimeBetweenShots[9]=12 -- chainsaw
-MinTimeBetweenShots[10]=7 -- purple dildo
-MinTimeBetweenShots[11]=5 -- short vibrator
-MinTimeBetweenShots[12]=5 -- loooong vibrator
-MinTimeBetweenShots[13]=5 -- white dildo
-MinTimeBetweenShots[14]=7 -- flowers
-MinTimeBetweenShots[15]=7 -- cane
-MinTimeBetweenShots[16]=10 -- grenades
-MinTimeBetweenShots[17]=10 -- tear gas
-MinTimeBetweenShots[18]=10 -- molotov cocktail
-MinTimeBetweenShots[19]=0 -- vehicle missile
-MinTimeBetweenShots[20]=0 -- hydra flare
-MinTimeBetweenShots[21]=0 -- jetpack
-MinTimeBetweenShots[22]=9 -- normal pistol, single
-MinTimeBetweenShots[23]=32 -- silenced 9mm
-MinTimeBetweenShots[24]=22 -- desert eagle
-MinTimeBetweenShots[25]=32 -- shotgun
-MinTimeBetweenShots[26]=6 -- sawnoff shotgun, single
-MinTimeBetweenShots[27]=10 -- combat shotgun
-MinTimeBetweenShots[28]=5 -- uzi MAC 10
-MinTimeBetweenShots[29]=20 -- MP5
-MinTimeBetweenShots[30]=7 -- AK47
-MinTimeBetweenShots[31]=7 -- M4
-MinTimeBetweenShots[32]=5 -- TEC9
-MinTimeBetweenShots[33]=50 -- country rifle
-MinTimeBetweenShots[34]=15 -- sniper rifle
-MinTimeBetweenShots[35]=11 -- RPG
-MinTimeBetweenShots[36]=11 -- heatseeking RPG
-MinTimeBetweenShots[37]=3 -- flamethrower
-MinTimeBetweenShots[38]=10 -- Minigun
-MinTimeBetweenShots[39]=11 -- sachtel charges
-MinTimeBetweenShots[40]=11 -- detonator
-MinTimeBetweenShots[41]=0 -- spray can
-MinTimeBetweenShots[42]=12 -- fire extinguisher
-MinTimeBetweenShots[43]=0 -- camera
-MinTimeBetweenShots[44]=0 -- NV Googles
-MinTimeBetweenShots[45]=0 -- Thermal Googles
-MinTimeBetweenShots[46]=0 -- Parachute
-MinTimeBetweenShots[47]=0 -- fake pistol
-
 --Weapondamage.
 WeaponDamage = {}
 WeaponDamage[0]=6 -- Unarmed
@@ -129,7 +25,7 @@ WeaponDamage[0]=6 -- Unarmed
 	WeaponDamage[21]=0 -- jetpack
 	
 	WeaponDamage[22]=5 -- Pistol
-	WeaponDamage[23]=5 -- Crossbow (+bleed)
+	WeaponDamage[23]=10 -- Crossbow (+bleed)
 	WeaponDamage[24]=7 -- Magnum
 	WeaponDamage[25]=9 -- Pump Shotgun
 	WeaponDamage[26]=11 -- Sawnoff
@@ -157,22 +53,22 @@ WeaponDamage[0]=6 -- Unarmed
 	WeaponDamage[47]=0 -- fake pistol
 
 ExplosionRange = {}
-	ExplosionRange[0]=2 -- Grenade
-	ExplosionRange[1]=2.5 -- Molotov
-	ExplosionRange[2]=3 -- Rocket
-	ExplosionRange[3]=2.5 -- Rocket Weak 
-	ExplosionRange[4]=4.5 -- Car
-	ExplosionRange[5]=4.0 -- Car Quick
+	ExplosionRange[0]=4 -- Grenade
+	ExplosionRange[1]=3 -- Molotov
+	ExplosionRange[2]=5 -- Rocket
+	ExplosionRange[3]=5 -- Rocket Weak 
+	ExplosionRange[4]=5 -- Car
+	ExplosionRange[5]=5 -- Car Quick
 	ExplosionRange[6]=5 -- Boat
 	ExplosionRange[7]=7 -- Heli
 	ExplosionRange[8]=2 -- Mine
-	ExplosionRange[9]=3 -- Object
-	ExplosionRange[10]=3 -- Tank Grenade
-	ExplosionRange[11]=2 -- Small
-	ExplosionRange[12]=1 -- Tiny
+	ExplosionRange[9]=2 -- Object
+	ExplosionRange[10]=5 -- Tank Grenade
+	ExplosionRange[11]=3 -- Small
+	ExplosionRange[12]=2 -- Tiny
 
 ExplosionDamage = {}
-	ExplosionDamage[0]=45 -- Grenade
+	ExplosionDamage[0]=95 -- Grenade
 	ExplosionDamage[1]=10 -- Molotov
 	ExplosionDamage[2]=35 -- Rocket
 	ExplosionDamage[3]=25 -- Rocket Weak 
@@ -196,17 +92,14 @@ PlayerGravityFactor                  = 1.0*0.008    -- standard is 1.0*0.008
 PlayerHeadshotMultiplier             = 3;
 PlayerFeetShotMultiplier             = 0.5;
 TeamKillingAllowed                   = true;
-RegenerationValue                    = 0;
+
 AimAccuracyFactor                    = 1.0;
 AimRecoilFactor                      = 2.0;
 GunPelletMultiplier                  = 4.0;
 
-maxHealth                            = 100;
-maxArmor                             = 100;
-maxSpawnHealth                       = 100;
+
+maxArmor                             = 200;
 maxSpawnArmor                        = 100;
-maxCarHealth                         = 1010;
-smokeRange                           = 25;
 
 BODY_HEAD = 0;
 BODY_TORSO = 1;
@@ -216,7 +109,9 @@ BODY_FEET = 3;
 --------------------------------------------------------------------------------------------------------
 function setOriginalValues()
 	
-	WeaponDamage[0]=6 -- Unarmed
+--Weapondamage.
+WeaponDamage = {}
+WeaponDamage[0]=6 -- Unarmed
 	WeaponDamage[1]=7 -- Tactical Shield
 	WeaponDamage[2]=13 -- Axe (+bleed)
 	WeaponDamage[3]=11 -- Nightstick
@@ -225,7 +120,7 @@ function setOriginalValues()
 	WeaponDamage[6]=13 -- Crowbar
 	WeaponDamage[7]=15 -- Sledgehammer
 	WeaponDamage[8]=13 -- Raider sword (+bleed)
-	WeaponDamage[9]=30 --  Brute zombie attack/Chainsaw really
+	WeaponDamage[9]=30 --  Chainsaw
 	WeaponDamage[10]=11 -- Machete (+bleed)
 	WeaponDamage[11]=8 -- Kitchen Knife (+bleed)
 	WeaponDamage[12]=9 -- Meatcleaver (+bleed)
@@ -233,15 +128,15 @@ function setOriginalValues()
 	WeaponDamage[14]=7 -- Broken Bottle (+bleed)
 	WeaponDamage[15]=9 -- Nail Bat (+bleed)
 	
-	WeaponDamage[16]=80--45 -- grenades
-	WeaponDamage[17]=6--3 -- tear gas
-	WeaponDamage[18]=30--20 -- molotov cocktail
+	WeaponDamage[16]=45 -- grenades
+	WeaponDamage[17]=6 -- tear gas
+	WeaponDamage[18]=20 -- molotov cocktail
 	WeaponDamage[19]=45 -- vehicle missile
 	WeaponDamage[20]=0 -- hydra flare
 	WeaponDamage[21]=0 -- jetpack
 	
 	WeaponDamage[22]=5 -- Pistol
-	WeaponDamage[23]=5 -- Crossbow (+bleed)
+	WeaponDamage[23]=10 -- Crossbow (+bleed)
 	WeaponDamage[24]=7 -- Magnum
 	WeaponDamage[25]=9 -- Pump Shotgun
 	WeaponDamage[26]=11 -- Sawnoff
@@ -250,17 +145,17 @@ function setOriginalValues()
 	WeaponDamage[29]=5 -- MP5
 	WeaponDamage[30]=7 -- AK47
 	WeaponDamage[31]=7 -- M4
-	WeaponDamage[32]=4 -- Auto Pistol
+	WeaponDamage[32]=50 -- Auto Pistol
 	WeaponDamage[33]=9 -- Hunting Rifle
 	WeaponDamage[34]=9 -- Sniper Rifle
 	
-	WeaponDamage[35]=70--35 -- RPG
-	WeaponDamage[36]=110--35 -- heatseeking RPG
-	WeaponDamage[37]=10 -- flamethrower
+	WeaponDamage[35]=35 -- RPG
+	WeaponDamage[36]=35 -- heatseeking RPG
+	WeaponDamage[37]=2 -- flamethrower
 	WeaponDamage[38]=25 -- Minigun
-	WeaponDamage[39]=80--55 -- satchel charges
+	WeaponDamage[39]=55 -- satchel charges
 	WeaponDamage[40]=0 -- detonator
-	WeaponDamage[41]=5--2 -- spray can
+	WeaponDamage[41]=2 -- spray can
 	WeaponDamage[42]=7 -- fire extinguisher
 	WeaponDamage[43]=0 -- camera
 	WeaponDamage[44]=0 -- NV Googles
@@ -268,53 +163,54 @@ function setOriginalValues()
 	WeaponDamage[46]=0 -- Parachute
 	WeaponDamage[47]=0 -- fake pistol
 
-	ExplosionRange[0]=4--2.5 -- Grenade
-	ExplosionRange[1]=3.5--2.5 -- Molotov
-	ExplosionRange[2]=4--3 -- Rocket
-	ExplosionRange[3]=3--2.5 -- Rocket Weak 
-	ExplosionRange[4]=4.5 -- Car
-	ExplosionRange[5]=4.0 -- Car Quick
+ExplosionRange = {}
+	ExplosionRange[0]=4 -- Grenade
+	ExplosionRange[1]=3 -- Molotov
+	ExplosionRange[2]=5 -- Rocket
+	ExplosionRange[3]=5 -- Rocket Weak 
+	ExplosionRange[4]=5 -- Car
+	ExplosionRange[5]=5 -- Car Quick
 	ExplosionRange[6]=5 -- Boat
 	ExplosionRange[7]=7 -- Heli
 	ExplosionRange[8]=2 -- Mine
-	ExplosionRange[9]=3 -- Object
-	ExplosionRange[10]=4--3 -- Tank Grenade
-	ExplosionRange[11]=2 -- Small
-	ExplosionRange[12]=1 -- Tiny
+	ExplosionRange[9]=2 -- Object
+	ExplosionRange[10]=5 -- Tank Grenade
+	ExplosionRange[11]=3 -- Small
+	ExplosionRange[12]=2 -- Tiny
 
-	ExplosionDamage[0]=80--45 -- Grenade
-	ExplosionDamage[1]=20--10 -- Molotov
-	ExplosionDamage[2]=60--35 -- Rocket
-	ExplosionDamage[3]=50--25 -- Rocket Weak 
-	ExplosionDamage[4]=60--35 -- Car
-	ExplosionDamage[5]=55--30 -- Car Quick
-	ExplosionDamage[6]=60--45 -- Boat
-	ExplosionDamage[7]=80--50 -- Heli
-	ExplosionDamage[8]=45--25 -- Mine
-	ExplosionDamage[9]=40--25 -- Object
+ExplosionDamage = {}
+	ExplosionDamage[0]=95 -- Grenade
+	ExplosionDamage[1]=10 -- Molotov
+	ExplosionDamage[2]=35 -- Rocket
+	ExplosionDamage[3]=25 -- Rocket Weak 
+	ExplosionDamage[4]=35 -- Car
+	ExplosionDamage[5]=30 -- Car Quick
+	ExplosionDamage[6]=45 -- Boat
+	ExplosionDamage[7]=50 -- Heli
+	ExplosionDamage[8]=25 -- Mine
+	ExplosionDamage[9]=25 -- Object
 	ExplosionDamage[10]=50 -- Tank Grenade
-	ExplosionDamage[11]=40--25 -- Small
-	ExplosionDamage[12]=35--20 -- Tiny
+	ExplosionDamage[11]=25 -- Small
+	ExplosionDamage[12]=20 -- Tiny
 
-	WeaponPlayerDamageFactor             = 1.5--1.21            -- standard damage mul this factor on humans.
-	WeaponVehicleDamageFactor            = 0.5            -- standard damage mul this factor on vehicles.
 
-	PlayerGameSpeedFactor                = 1.0          -- standard is 1.0
-	PlayerGravityFactor                  = 1.0*0.008    -- standard is 1.0*0.008
-	PlayerHeadshotMultiplier             = 4--3;
-	PlayerFeetShotMultiplier             = 0.8--0.7;
-	TeamKillingAllowed                   = true;
-	RegenerationValue                    = 0;
-	AimAccuracyFactor                    = 1.0;
-	AimRecoilFactor                      = 1.0;
-	GunPelletMultiplier                  = 4.0;
+WeaponPlayerDamageFactor             = 1            -- standard damage mul this factor on humans.
+WeaponVehicleDamageFactor            = 1            -- standard damage mul this factor on vehicles.
 
-	maxHealth                            = 200;
-	maxArmor                             = 200;
-	maxSpawnHealth                       = 100;
-	maxSpawnArmor                        = 100;
-	maxCarHealth                         = 1010;
+PlayerGameSpeedFactor                = 1.0          -- standard is 1.0
+PlayerGravityFactor                  = 1.0*0.008    -- standard is 1.0*0.008
 
+PlayerHeadshotMultiplier             = 3;
+PlayerFeetShotMultiplier             = 0.5;
+TeamKillingAllowed                   = true;
+
+AimAccuracyFactor                    = 1.0;
+AimRecoilFactor                      = 2.0;
+GunPelletMultiplier                  = 4.0;
+
+
+maxArmor                             = 200;
+maxSpawnArmor                        = 100;
 end
 
 -------------------------------------------------------------------------------------------------------
@@ -322,21 +218,6 @@ end
 aPlayerCheck = {}
 aPlayerBurning = {}
 aSmoke = {}
-
-function fShootLine(source, hitElement, offsetX, offsetY, offsetZ)
-	if not bHasFireworks then return; end
-	triggerClientEvent(getRootElement(),"NE_drawPedLine3D",getRootElement(),source, hitElement, offsetX, offsetY, offsetZ, -1, 255, 255, 255, 2);
-end
-
-function fSparkEffect(hitElement,offsetX,offsetY,offsetZ)
-	if not bHasFireworks then return; end
-	triggerClientEvent(getRootElement(),"NE_fxAddSparks",getRootElement(),hitElement,offsetX,offsetY,offsetZ,0,0,1,3,1);
-end
-
-function fBloodEffect(hitElement,offsetX,offsetY,offsetZ)
-	if not bHasFireworks then return; end
-	triggerClientEvent(getRootElement(),"NE_fxAddBlood",getRootElement(),hitElement,offsetX,offsetY,offsetZ,0,0,1,10,1);
-end
 
 function addSmokeBomb(player,time,x,y,z)
 	for i=1,10000,1 do
@@ -377,8 +258,8 @@ end
 
 function createLethalSmoke(x,y,z,attacker)
 	for k,player in ipairs(getAlivePlayers()) do
-		px,py,pz = getElementPosition(player);
-		fDistance = getDistanceBetweenPoints3D(px,py,pz,x,y,z);
+		local px,py,pz = getElementPosition(player);
+		local fDistance = getDistanceBetweenPoints3D(px,py,pz,x,y,z);
 		if not fDistance then
 			return;
 		end
@@ -511,14 +392,14 @@ function damagePlayer(player,damage,weapon,bodypart,attacker)
 		--playSoundFrontEnd ( player , 14 )
 		if attacker ~= player and attacker and isElement(attacker) and getElementType(attacker) == "player" then
 			if bodypart == BODY_HEAD then
-				playSoundFrontEnd ( attacker, 45 );
+				--playSoundFrontEnd ( attacker, 45 );
 			else
-				playSoundFrontEnd ( attacker, 101 );
+				--playSoundFrontEnd ( attacker, 101 );
 			end
 		end
 		
 		if player and getElementType(player)~= "object" and getElementType(player)~= "vehicle" and getPedArmor(player) <= damage then
-			playSoundFrontEnd ( player , 30 )
+			--playSoundFrontEnd ( player , 30 )
 			setPedArmor(player,0); 
 			--needs more calc to detract the hp damage that was not absorbed by armor, but will do for now
 		else
@@ -539,7 +420,7 @@ function damagePlayer(player,damage,weapon,bodypart,attacker)
 				bodypart = 3;
 				damagemessage = "KILL!"
 			end
-			playSoundFrontEnd ( player , 30 )
+			--playSoundFrontEnd ( player , 30 )
 			secureKillPlayer(player,attacker,weapon, bodypart);
 		else
 			actualHealth = getElementHealth(player);
@@ -556,20 +437,13 @@ end
 function calcPlayerShots(attacker,weapon,ammo,ammoInClip,aHits)
 	for i, elm in pairs(aHits) do
 		hitElement = elm.element;
+		if not hitElement then return end
 		hitX = elm.hitX;
 		hitY = elm.hitY;
 		hitZ = elm.hitZ;
 		offsetX  = elm.offX;
 		offsetY  = elm.offY;
 		offsetZ  = elm.offZ;
-		
-		if isElement(hitElement) then
-			fShootLine(source, hitElement, offsetX, offsetY, offsetZ);
-		else
-			fShootLine(source, hitElement, offsetX, offsetY, offsetZ);
-			fSparkEffect(hitElement,offsetX,offsetY,offsetZ);
-			break;
-		end
 		
 		
 		eX,eY,eZ = getElementPosition(hitElement);
@@ -599,7 +473,6 @@ function calcPlayerShots(attacker,weapon,ammo,ammoInClip,aHits)
 		
 		  if source and hitElement then
 			if getElementType(hitElement) == "vehicle" then
-				fSparkEffect(hitElement,offsetX,offsetY,offsetZ);
 				if weapon>-1 and weapon <48 then
 					vehicleID = getElementModel (hitElement);
 					if vehicleID == 509 or  vehicleID == 510 or  vehicleID == 481 then
@@ -667,8 +540,6 @@ function calcPlayerShots(attacker,weapon,ammo,ammoInClip,aHits)
 						if bodypart ~= BODY_TORSO and bodypart ~= BODY_HEAD then
 							healthloss = healthloss * PlayerFeetShotMultiplier;
 						end
-						fBloodEffect(hitElement,offsetX,offsetY,offsetZ);
-						fSparkEffect(hitElement,offsetX,offsetY,offsetZ);
 						damagePlayer(hitElement,healthloss,weapon,bodypart,source);
 						
 					end
@@ -811,8 +682,7 @@ function onPlayerMeeleeHit(hitElement,stomp)
 	end
 	if getElementType(hitElement) == "player" then
 		damagePlayer(hitElement,healthloss,weapon,bodypart,attacker);
-		
-		fBloodEffect(hitElement,eX,eY,eZ);
+
 	elseif getElementType(hitElement) == "vehicle" then
 		setElementHealth(hitElement,getElementHealth(hitElement)-healthloss);
 		triggerClientEvent(root, "sync.message", root, hitElement, 125, 125, 125, "HIT!")--healthloss)
@@ -821,11 +691,9 @@ function onPlayerMeeleeHit(hitElement,stomp)
 		if health < healthloss then
 			killPed(hitElement,attacker,weapon);
 			triggerClientEvent(root, "sync.message", root, hitElement, 255, 0, 0, "KILL!")--healthloss)
-			fBloodEffect(hitElement,eX,eY,eZ);
 		else
 			setElementHealth(hitElement,getElementHealth(hitElement)-healthloss);
 			triggerClientEvent(root, "sync.message", root, hitElement, 255, 50, 0, "HIT!")--healthloss)
-			fBloodEffect(hitElement,eX,eY,eZ);
 		end
 	end
 end
@@ -874,7 +742,6 @@ function onPlayerFlamethrowerHit(hitElement)
 	end
 	if getElementType(hitElement) == "player" then
 		damagePlayer(hitElement,healthloss,weapon,bodypart,attacker);
-		fBloodEffect(hitElement,eX,eY,eZ);
 		if not aPlayerBurning[hitElement] then
 			aPlayerBurning[hitElement] = {};
 		end
@@ -888,18 +755,15 @@ function onPlayerFlamethrowerHit(hitElement)
 		if health < healthloss then
 			killPed(hitElement,attacker,weapon);
 			triggerClientEvent(root, "sync.message", root, hitElement, 255, 0, 0, "CREMATED!")--healthloss)
-			fBloodEffect(hitElement,eX,eY,eZ);
 		else
 			setElementHealth(hitElement,getElementHealth(hitElement)-healthloss);
 			triggerClientEvent(root, "sync.message", root, hitElement, 255, 0, 0, "BURNED!")--healthloss)
-			fBloodEffect(hitElement,eX,eY,eZ);
 		end
 	end
 end
 
 function onPlayerDamage ( damage , damage_source )
-	player = source;
-	
+	local player = source;
 	damagePlayer(player,damage,-1,BODY_TORSO,damage_source);
 	
 end
@@ -920,8 +784,6 @@ function onClientSideExplosion(explosion_source,x,y,z,type)
 	for k,ped in ipairs(getElementsByType("ped")) do
 		local px,py,pz = getElementPosition(ped);
 		local health = getElementHealth(ped);
-		--outputDebugString("initial ped health: "..health)
-		--outputDebugString("damage done: "..tostring(health-ExplosionDamage[type]*WeaponPlayerDamageFactor))
 		
 		if getDistanceBetweenPoints3D(px,py,pz,x,y,z) <= ExplosionRange[type]+0.5--[[+10]] then
 			setElementVelocity(ped,ExplosionRange[type]/(px-x)/12,ExplosionRange[type]/(py-y)/12,ExplosionRange[type]/(pz-z)/12); --/6 ZZZZ
@@ -933,20 +795,15 @@ function onClientSideExplosion(explosion_source,x,y,z,type)
 			if health <= ExplosionDamage[type]*WeaponPlayerDamageFactor then
 				killPed(ped,explosion_source);
 				triggerClientEvent(root, "sync.message", root, ped, 255, 0, 0, "SHATTERED!")--ExplosionDamage[type]*WeaponPlayerDamageFactor)
-				fBloodEffect(ped,px,py,pz);
-				--outputDebugString("case 1")
-				--outputDebugString("new health: "..getElementHealth(ped))
+
 			else
 			local healthloss = health-(ExplosionDamage[type]*WeaponPlayerDamageFactor)
 				damagePlayer(ped,healthloss)
 				--setElementHealth(ped, health-ExplosionDamage[type]*WeaponPlayerDamageFactor);
 				triggerClientEvent(root, "sync.message", root, ped, 255, 50, 0, "BLASTED!")--health-ExplosionDamage[type]*WeaponPlayerDamageFactor)
-				fBloodEffect(ped,px,py,pz);
-				--outputDebugString("case 2")
-				--outputDebugString("new health: "..getElementHealth(ped))
 				setPedAnimation(ped,"SWEET", "Sweet_injuredloop", math.random(3500,6500), true,true,false,false )
 			end
-			--killPed(ped,explosion_source);
+
 		end
 	end
 end
@@ -963,20 +820,6 @@ function onShotByPed(player,ped,weapon)
 			damagePlayer(player,WeaponDamage[weapon],weapon,BODY_TORSO,ped);
 	end
 end
-
---[[function onShotByVeh (attacker,weap,bodyp,loss)
-outputDebugString(getElementType(attacker))
-	if getElementType(attacker) ~= "vehicle" then 
-	return 
-	else
-	if getElementType(source) == "player" then
-	damagePlayer(source,25,31,BODY_TORSO,attacker)
-	else
-	setElementHealth(source,getElementHealth(source)-25)
-	end
-	end
-
-end]]
 
 -----------------------------------------------------------------------------------------------------------
 

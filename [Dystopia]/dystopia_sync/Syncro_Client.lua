@@ -72,15 +72,15 @@ WeaponRecoil[18]=0 -- molotov cocktail
 WeaponRecoil[19]=0 -- vehicle missile
 WeaponRecoil[20]=0 -- hydra flare
 WeaponRecoil[21]=0 -- jetpack
-WeaponRecoil[22]=40 -- normal pistol, single
+WeaponRecoil[22]=10 -- normal pistol, single
 WeaponRecoil[23]=5 -- silenced 9mm
-WeaponRecoil[24]=100 -- desert eagle
+WeaponRecoil[24]=10 -- desert eagle
 WeaponRecoil[25]=20 -- shotgun
-WeaponRecoil[26]=40 -- sawnoff shotgun, single
-WeaponRecoil[27]=40 -- combat shotgun
-WeaponRecoil[28]=70 -- uzi MAC 10
+WeaponRecoil[26]=25 -- sawnoff shotgun, single
+WeaponRecoil[27]=20 -- combat shotgun
+WeaponRecoil[28]=20 -- uzi MAC 10
 WeaponRecoil[29]=20 -- MP5
-WeaponRecoil[30]=25 -- AK47
+WeaponRecoil[30]=20 -- AK47
 WeaponRecoil[31]=20 -- M4
 WeaponRecoil[32]=0 -- TEC9
 WeaponRecoil[33]=30 -- country rifle
@@ -98,7 +98,6 @@ WeaponRecoil[44]=0 -- NV Googles
 WeaponRecoil[45]=0 -- Thermal Googles
 WeaponRecoil[46]=0 -- Parachute
 WeaponRecoil[47]=100 -- fake pistol
-
 
 --weapon inaccuracy
 WeaponInaccuracy = {}
@@ -124,23 +123,23 @@ WeaponInaccuracy[18]=0 -- molotov cocktail
 WeaponInaccuracy[19]=0 -- vehicle missile
 WeaponInaccuracy[20]=0 -- hydra flare
 WeaponInaccuracy[21]=0 -- jetpack
-WeaponInaccuracy[22]=50 -- normal pistol, single
-WeaponInaccuracy[23]=20 -- silenced 9mm
-WeaponInaccuracy[24]=50 -- desert eagle
-WeaponInaccuracy[25]=200 -- shotgun
-WeaponInaccuracy[26]=250 -- sawnoff shotgun, single
-WeaponInaccuracy[27]=180 -- combat shotgun
-WeaponInaccuracy[28]=50 -- uzi MAC 10
-WeaponInaccuracy[29]=40 -- MP5
-WeaponInaccuracy[30]=20 -- AK47
-WeaponInaccuracy[31]=20 -- M4
-WeaponInaccuracy[32]=5 -- TEC9
-WeaponInaccuracy[33]=5 -- country rifle
+WeaponInaccuracy[22]=0 -- normal pistol, single 50
+WeaponInaccuracy[23]=0 -- silenced 9mm 20
+WeaponInaccuracy[24]=0 -- desert eagle 50
+WeaponInaccuracy[25]=0 -- shotgun 200
+WeaponInaccuracy[26]=0 -- sawnoff shotgun, single 250
+WeaponInaccuracy[27]=0 -- combat shotgun 180
+WeaponInaccuracy[28]=0 -- uzi 50
+WeaponInaccuracy[29]=0 -- MP5 40
+WeaponInaccuracy[30]=0 -- AK47 20
+WeaponInaccuracy[31]=0 -- M4 20
+WeaponInaccuracy[32]=0 -- TEC9 5
+WeaponInaccuracy[33]=0 -- country rifle 5
 WeaponInaccuracy[34]=0 -- sniper rifle
 WeaponInaccuracy[35]=0 -- RPG
 WeaponInaccuracy[36]=0 -- heatseeking RPG
 WeaponInaccuracy[37]=0 -- flamethrower
-WeaponInaccuracy[38]=5 -- Minigun
+WeaponInaccuracy[38]=0 -- Minigun 5
 WeaponInaccuracy[39]=0 -- sachtel charges
 WeaponInaccuracy[40]=0 -- detonator
 WeaponInaccuracy[41]=0 -- spray can
@@ -149,57 +148,22 @@ WeaponInaccuracy[43]=0 -- camera
 WeaponInaccuracy[44]=0 -- NV Googles
 WeaponInaccuracy[45]=0 -- Thermal Googles
 WeaponInaccuracy[46]=0 -- Parachute
-WeaponInaccuracy[47]=1000 -- fake pistol
+WeaponInaccuracy[47]=0 -- fake pistol
 
 ---------------------------------------------------------------------------------------------
-
-
-lastPlayerSpeed       = 0;
 lastShotTime          = 1;
-lastRenderTime        = 0;
-SPEED_lastRenderTime        = 0;
 lastRecoil            = 0;
-timeInAir             = 0;
-bRanThroughWall       = false;
-playerHealth          = 100;
-playerArmor           = 100;
-meleeRange            = 1.7;
-meeleeEffectiveRange  = 2.0;
-bLastShot             = false;
 chainsawTimer         = nil;
-crouchWeaponTimer     = nil;
 fire_stop             = true;
-last_time             = false;
-LAST_X                = 0;
-LAST_Y                = 0;
-LAST_Z                = 0;
-SPEED_LAST_X          = 0;
-SPEED_LAST_Y          = 0;
-SPEED_LAST_Z          = 0;
-LASTHEAD_X            = 0;
-LASTHEAD_Y            = 0;
-LASTHEAD_Z            = 0;
-fLastTouchedFloorx    = 0;
-fLastTouchedFloory    = 0;
-fLastTouchedFloorz    = 0;
-LAST_SPEED            = 0;
-LAST_Z_SPEED          = 0;
 fCalcDistance         = 300;
---local iFrameCount     = 0;
-local lastGameSpeed   = 0;
-local bGameSpeedIncreased = false;
-local iGameSpeedHacksDetected = 0;
-
 ---------------------------------------------------------------------------------------------
 bAcceptGasGrenade = true
-
 function SYNCRO_GASGRENADE(element)
 	if bAcceptGasGrenade == true then
-		fPx,fPy,fPz = getElementPosition(element);
+		local fPx,fPy,fPz = getElementPosition(element);
 		triggerServerEvent("S_GASGRENADE",getLocalPlayer(),fPx,fPy,fPz);
 	end
 end
-
 ---------------------------------------------------------------------------------------------
 function SYNCRO_INIT()
 	if source == getThisResource() then
@@ -349,54 +313,10 @@ end
 
 function SYNCRO_SPAWN()
 	setTimer(setSpawned,4000,1)
-	bRanThroughWall = false;
+	
 	toggleControl( "fire", true)
 	toggleControl( "enter_exit", true)
 end
-
---[[function SYNCRO_RENDERFRAME()
-
-	iFrameCount = iFrameCount + 1;
-	local vehicle = getPedOccupiedVehicle(getLocalPlayer());
-	
-	fPx, fPy, fPz = getElementPosition(getLocalPlayer());
-	fVx, fVy, fVz = getElementVelocity(getLocalPlayer());
-	time = getTickCount() - lastRenderTime;
-	fmVz = (fPz - LAST_Z) / time;
-	fMSpeed = getDistanceBetweenPoints3D(LAST_X,LAST_Y,LAST_Z,fPx,fPy,fPz) / time;
-	fVelocity = getDistanceBetweenPoints3D(0,0,0, fVx, fVy, fVz);
-	fAcceleration = getDistanceBetweenPoints2D(0,fVelocity,0,LAST_SPEED);
-	fZAcceleration = getDistanceBetweenPoints2D(0,fVz,0,LAST_Z_SPEED);
-	
-	if (getCameraTarget() ~= getLocalPlayer()) 
-		or getElementHealth(getLocalPlayer()) < 1 
-		or getElementAttachedTo(getLocalPlayer()) 
-		or isPedWearingJetpack(getLocalPlayer())
-	then
-		return;
-	end
-
-	headx,heady,headz = getPedBonePosition ( getLocalPlayer(), 4 )
-	local bRanThroughWall = false;
-		
-	if not getElementData(getLocalPlayer(),"S_MIN_DAMAGE_ACCELERATION") then
-		setElementData(getLocalPlayer(),"S_MIN_DAMAGE_ACCELERATION",0.30);
-	end
-	if LAST_Z > fPz+(0.01/time) and fZAcceleration > getElementData(getLocalPlayer(),"S_MIN_DAMAGE_ACCELERATION") then
-		damage = (fZAcceleration) * (fZAcceleration) *300;
-		triggerServerEvent("S_NORMALDAMAGE",getLocalPlayer(),damage);
-	end
-
-	lastRenderTime = getTickCount();
-	if not bRanThroughWall then
-		LASTHEAD_X, LASTHEAD_Y, LASTHEAD_Z = headx,heady,headz;
-		LAST_X,LAST_Y,LAST_Z = fPx,fPy,fPz;
-	end
-	LAST_SPEED = fVelocity;
-	LAST_Z_SPEED = fVz;
------run through walls
-end
-]]
 
 function SYNCRO_PROJECTILE ( creator )
 	projectile = source;
@@ -422,10 +342,8 @@ setPedAnimation(source)
 end
 
 ---------------------------------------------------------------------------------------------
-
 addEventHandler ( "onClientPlayerDamage", getRootElement(), syncro )
 addEventHandler ( "onClientPedDamage", getRootElement(), syncro )
-
 addEventHandler ( "onClientPlayerWeaponFire", getLocalPlayer(), onClientPlayerWeaponFireFunc )
 addEventHandler ( "onClientWeaponFire", getLocalPlayer(), onClientPlayerWeaponFireFunc )
 addEventHandler ( "onClientResourceStart",getRootElement(), SYNCRO_INIT )					
@@ -433,19 +351,14 @@ addEventHandler ( "onClientPlayerWasted", getLocalPlayer(), SYNCRO_WASTED )
 addEventHandler ( "onClientPedWasted", root, SYNCRO_PED_WASTED )
 addEventHandler ( "onClientExplosion", getRootElement(), SYNCRO_EXPLOSION )
 addEventHandler ( "onClientPlayerSpawn", getLocalPlayer(), SYNCRO_SPAWN )
---addEventHandler ( "onClientPreRender",getRootElement(), SYNCRO_RENDERFRAME )
 addEventHandler ( "onClientProjectileCreation", getRootElement(), SYNCRO_PROJECTILE )
 addEventHandler ( "onClientPedWeaponFire" , getRootElement(), SYNCRO_PEDWEAPONFIRE )
----------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------
 
 function setPlayerExplosionDamage(damage,explosion_source)
 	triggerServerEvent("S_NORMALDAMAGE",getLocalPlayer(),damage,explosion_source);
 end
 
-function destroySomething(element)
-	destroyElement(element);
-end
 
 function syncAExplosion(explosion_source,x,y,z,damage,range)
 	--outputDebugString("EXPLOSION!");
@@ -468,13 +381,11 @@ function syncAExplosion(explosion_source,x,y,z,damage,range)
 	end
 end
 
-
 ---------------------------------------------------------------------------------------------
 addEvent("S_EXPLOSION",true)
 addEventHandler("S_EXPLOSION",getLocalPlayer(),syncAExplosion);
+---------------------------------------------------------------------------------------------
 
----------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------
 function SYNC_MELEE_START (attacker, weap, bpart)
 	if attacker == localPlayer and weap ~= -1 and weap < 16 then
 		fire_stop = false;
@@ -486,15 +397,10 @@ function SYNC_MELEE (elemhit,attacker, weap, bpart)
 	local weapon    = getPedWeapon(getLocalPlayer());
 	if (getTickCount() - lastShotTime) > (500/getGameSpeed()) and isControlEnabled ( "fire" ) or chainsawTimer then
 		if (weapon == 9) and not fire_stop then
-			chainsawTimer = setTimer(SYNC_MELEE,200/getGameSpeed(),1);--chainsawTimer = setTimer(SYNC_MELEE,100/getGameSpeed(),1);
+			chainsawTimer = setTimer(SYNC_MELEE,200/getGameSpeed(),1)
 		end
-		
-		local pX, pY, pZ     = getElementPosition (getLocalPlayer())
-				
 		triggerServerEvent("S_MELEE",getLocalPlayer(),elemhit)
-		
-		lastShotTime = getTickCount();
-
+		lastShotTime = getTickCount()
 	end
 end
 
@@ -503,10 +409,6 @@ function SYNC_MELEE_STOP()
 	if weapon == 9 and isControlEnabled ( "fire" ) then
 		killTimer(chainsawTimer);
 		chainsawTimer = nil;
-	end
-	if (weapon == 26 or weapon == 28 or weapon == 32 or weapon == 22) and isControlEnabled ( "fire" ) then
-		killTimer(crouchWeaponTimer);
-		crouchWeaponTimer = nil;
 	end
 end
 
@@ -521,55 +423,30 @@ function SYNC_AIMING_STOP()
 	playerIsAiming = false;
 end
 
---[[function SYNC_STOMP()
-	if (playerIsAiming and  isControlEnabled ( "enter_exit" )) then
-		SYNC_MELEE();
-	end
-end]]
-
-
 stomp_tick = getTickCount ()
 
 function SYNC_STOMP()
 	local weapon = getPedWeapon(localPlayer)
 	if (playerIsAiming and  isControlEnabled ( "enter_exit" )) then
-		
 		local grab = isPedDucked(localPlayer)
-				
-		if (weapon ~= -1 and (weapon < 16 or weapon == 37)) then
-			if grab then triggerServerEvent("SyncWeapStomp",localPlayer,grab)
-			else
-			SYNC_MELEE();
-			--outputDebugString("melee STOMP!")
-			end
+		if grab and (weapon ~= -1 and (weapon < 16 or weapon == 37)) then
+			triggerServerEvent("SyncWeapStomp",localPlayer,grab)
 		elseif (weapon ~= -1 and (weapon > 16 and weapon ~= 37)) then
 			local new_tick = getTickCount ()
 			if new_tick >= stomp_tick + 2500 then
-			
-			--if grab then
-			--setPedAnimation(localPlayer, "knife","KILL_Knife_Player",3200,false,true,false,false)
-			--else
-			--setPedAnimation(localPlayer, "POLICE","Door_Kick",1000,false,true,true,false)
-			--end
-
 			triggerServerEvent("SyncWeapStomp",localPlayer,grab)
 			stomp_tick = new_tick
-			else
-			--outputDebugString("Stomp NOT ready")
 			end
-						
 		end
 	end
 end
 
 ---------------------------------------------------------------------------------------------
 
---bindKey ("fire", "down", SYNC_MELEE_START)
 bindKey ("fire", "up"  , SYNC_MELEE_STOP)
 bindKey ("aim_weapon", "down", SYNC_AIMING)
 bindKey ("aim_weapon", "up"  , SYNC_AIMING_STOP)
 bindKey ("enter_exit", "down", SYNC_STOMP)
-
 
 armedVehicles = {[425]=true, [520]=true, [476]=true, [447]=true, [430]=true, [432]=true, [464]=true, [407]=true, [601]=true}
 function vehicleWeaponFire(key, keyState, vehicleFireType)
