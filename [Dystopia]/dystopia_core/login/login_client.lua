@@ -131,7 +131,7 @@ addEventHandler("onPlayerLogged", root,
 		guiSetInputMode ( "allow_binds" )
 	end
 )
-function onPlayerPushButton(login, password, command)
+function onPlayerPushButton(login, password, command, remember)
 	if (command == "login") then
 		triggerServerEvent("onPlayerRequestLogin", getLocalPlayer(), login, password)
 	elseif (command == "register") then

@@ -59,8 +59,8 @@ body{
 
 .footer{
 	position: absolute;
-	top: calc(90% - 75px);
-	left: calc(20% - 225px);
+	top: calc(93%);
+	left: calc(1%);
 	z-index: 2;
 	text-align: center;
 }
@@ -68,11 +68,8 @@ body{
 	float: left;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
-	font-size: 25px;
-	font-weight: 200;
-}
-.footer div span{
-	color: brown !important;
+	font-size: 15px;
+	font-weight: 100;
 }
 
 .login{
@@ -89,12 +86,12 @@ body{
 	width: 250px;
 	height: 30px;
 	background: transparent;
-	border: 1px solid rgba(255,255,255,0.6);
+	border: 2px solid rgba(255,255,255,0.6);
 	border-radius: 2px;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 600;
 	padding: 4px;
 }
 
@@ -102,12 +99,12 @@ body{
 	width: 250px;
 	height: 30px;
 	background: transparent;
-	border: 1px solid rgba(255,255,255,0.6);
+	border: 2px solid rgba(255,255,255,0.6);
 	border-radius: 2px;
 	color: #fff;
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 600;
 	padding: 4px;
 	margin-top: 10px;
 }
@@ -116,13 +113,13 @@ body{
 	width: 260px;
 	height: 35px;
 	background: #fff;
-	border: 1px solid #fff;
+	border: 2px solid #fff;
 	cursor: pointer;
 	border-radius: 2px;
-	color: #a18d6c;
+	color: #10100a;
 	font-family: 'Exo', sans-serif;
 	font-size: 16px;
-	font-weight: 400;
+	font-weight: 800;
 	padding: 6px;
 	margin-top: 10px;
 }
@@ -137,12 +134,12 @@ body{
 
 .login input[type=text]:focus{
 	outline: none;
-	border: 1px solid rgba(255,255,255,0.9);
+	border: 2px solid rgba(255,255,255,0.9);
 }
 
 .login input[type=password]:focus{
 	outline: none;
-	border: 1px solid rgba(255,255,255,0.9);
+	border: 2px solid rgba(255,255,255,0.9);
 }
 
 .login input[type=button]:focus{
