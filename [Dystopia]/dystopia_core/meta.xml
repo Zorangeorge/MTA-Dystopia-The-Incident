@@ -74,6 +74,7 @@
 			<!-- FILES -->
 			<file src="login/css/style.css" />
 			<file src="login/img/logo.png" />
+			<file src="login/Exo.ttf" />
 			<!-- Exports -->
 			<export function="onPlayerPushButton" http="true" />
 		    <!-- OLD LOGIN -->
