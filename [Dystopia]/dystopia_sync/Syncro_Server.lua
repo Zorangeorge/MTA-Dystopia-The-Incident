@@ -636,6 +636,13 @@ function onPlayerMeeleeHit(hitElement,stomp)
 	attacker = source;
 	weapon = getPedWeapon(attacker);
 	bodypart = BODY_TORSO;
+
+	if (getElementType( attacker ) == "ped") then
+		if (getElementData (attacker, "zombie") == true) then
+			-- outputChatBox( "Zombie melee attack debug", hitElement)
+			return;
+		end
+	end
 	
 	if not stomp and not(weapon ~= -1 and weapon < 16) then
 		return;
