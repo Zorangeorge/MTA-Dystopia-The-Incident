@@ -636,6 +636,13 @@ function onPlayerMeeleeHit(hitElement,stomp)
 	attacker = source;
 	weapon = getPedWeapon(attacker);
 	bodypart = BODY_TORSO;
+
+	if (getElementType( attacker ) == "ped") then
+		if (getElementData (attacker, "zombie") == true) then
+			triggerClientEvent(root, "sync.message", root, hitElement, 255, 50, 0, "HIT!")--healthloss)
+			return;
+		end
+	end
 	
 	if not stomp and not(weapon ~= -1 and weapon < 16) then
 		return;
