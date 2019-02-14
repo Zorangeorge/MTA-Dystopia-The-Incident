@@ -639,7 +639,7 @@ function onPlayerMeeleeHit(hitElement,stomp)
 
 	if (getElementType( attacker ) == "ped") then
 		if (getElementData (attacker, "zombie") == true) then
-			-- outputChatBox( "Zombie melee attack debug", hitElement)
+			triggerClientEvent(root, "sync.message", root, hitElement, 255, 50, 0, "HIT!")--healthloss)
 			return;
 		end
 	end
