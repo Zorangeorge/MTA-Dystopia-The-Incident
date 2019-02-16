@@ -127,7 +127,8 @@ addEventHandler("onPlayerLogged", root,
 		showCursor(false)
 		fadeCamera(true)
 		LoginVisible = false
-		setCameraTarget(localPlayer)		
+		setCameraTarget(localPlayer)
+		toggleHUD()		
 		guiSetInputMode ( "allow_binds" )
 	end
 )
