@@ -209,6 +209,7 @@ function hideLogin()
 	showCursor(false)
 	LoginVisible = false			
 	guiSetInputMode ( "allow_binds" )
+	toggleHUD()
 	
 
 end
