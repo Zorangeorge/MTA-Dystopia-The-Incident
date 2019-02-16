@@ -114,4 +114,12 @@ function forgetNonExistingPeds()
 	end
 end
 clearing_nonexisting_peds = coroutine.create(forgetNonExistingPeds)
-setTimer(function()	coroutine.resume(clearing_nonexisting_peds) end,1000,0)
+
+setTimer(
+  function()
+    if not clearing_nonexisting_peds or coroutine.status (clearing_nonexisting_peds) == "dead" then
+      clearing_nonexisting_peds = coroutine.create(forgetNonExistingPeds)
+    end
+    coroutine.resume(clearing_nonexisting_peds)
+  end, 1000, 0
+)
