@@ -53,7 +53,7 @@ function putAttachedElementsOnBones()
 	for element,ped in pairs(attached_ped) do
 		if not isElement(element) then
 			clearAttachmentData(element)
-		elseif isElementStreamedIn(ped) then
+		elseif isElement(ped) and isElementStreamedIn(ped) then
 			local bone = attached_bone[element]
 			local x,y,z = getPedBonePosition(ped,bone_0[bone])
 			local xx,xy,xz,yx,yy,yz,zx,zy,zz = getBoneMatrix(ped,bone)
@@ -76,12 +76,16 @@ function putAttachedElementsOnBones()
 			offrx,offry,offrz = getEulerAnglesFromMatrix(txx,txy,txz,tyx,tyy,tyz,tzx,tzy,tzz)
 			
 			if ped and element and isElement(ped) and isElement(element) and tonumber(objx) and tonumber(objy) and tonumber(objz)  and tonumber(offrx) and tonumber(offry) and tonumber(offrz) then
+				if element and isElement(element) then
 				setElementPosition(element,objx,objy,objz)
 				setElementRotation(element,offrx,offry,offrz,"ZXY")
+				end
 			end
 			
 		else
-			setElementPosition(element,getElementPosition(ped))
+			if element and isElement(element) and ped and isElement(ped) then 
+			setElementPosition(element,getElementPosition(ped)) 
+			end
 		end
 	end
 end
