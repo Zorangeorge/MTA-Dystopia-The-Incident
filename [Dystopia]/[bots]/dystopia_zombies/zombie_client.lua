@@ -336,12 +336,10 @@ addEventHandler( "Zomb_Jump", getRootElement(), Zjump )
 --MAKES A ZOMBIE PUNCH
 addEvent( "Zomb_Punch", true )
  function Zpunch ( ped )
-    if (isElement(ped)) then
+    if isElement(ped) and not isPedDead(ped) then
 	
-		if getElementData(ped,"brute") == true then
+		if  getElementData(ped,"brute") == true then
 		triggerServerEvent("BruteStomp",ped,ped)
-		
-		--givePedWeapon(ped,9,1,true)
 		end
 	
     setPedControlState( ped, "fire", true )
