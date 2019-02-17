@@ -1,4 +1,6 @@
 
+botspawnlimiter = true --enforces a 100 bots max spawned at a time; vendors and quest npcs are extempt
+
 function createCDFHunter(x,y,z,r,team,name,botSkinID)
 
 if not botSkinID then botSkinID = table.random(CDFMilitiaskins) end
@@ -697,15 +699,29 @@ addEventHandler("onResourceStart",resourceRoot,setupBotSpawnCols)
 
 function onHitF(hitElem,dim)
 
-	local playersonline = getElementsByType("player")
-	local allpeds = getElementsByType("ped")
-	local numbotsspawned = (#allpeds-#playersonline)
-
-	if numbotsspawned >= 100 then return end -- Nếu hơn 100 bot thì sẽ không cho spawn nữa.
-		
 	if not getElementData(source,"botToSpawn") then return end --if it ain't a spawncol then return
 
 	if getElementType(hitElem) ~= "player" then return end --if it ain't a player involved then return
+
+	local playersonline = getElementsByType("player")
+	local allpeds = getElementsByType("ped")
+	local numbotsspawned = (#allpeds-#playersonline)
+	local typecheck = getElementData(source,"BotType")
+	local forcedSpawn = false
+	
+	if typecheck == "Vendor" 
+		or typecheck == "ScavVendor"
+		or typecheck == "WasteVendor"
+		or typecheck == "SyndVendor"
+		or typecheck == "Quest"
+		or typecheck == "ScavQuest"
+		or typecheck == "SyndQuest"
+		or typecheck == "WasteQuest"
+	then
+		forcedSpawn = true
+	end
+
+	if botspawnlimiter and numbotsspawned >= 100 and not forcedSpawn then return end -- 100 bots spawned limit, unless they are traders or quest NPCs
 
 	if isTimer(getElementData(source,"respawnTimer")) then return end --if there is a respawntimer active on the bot
 
