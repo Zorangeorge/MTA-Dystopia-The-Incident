@@ -697,11 +697,17 @@ addEventHandler("onResourceStart",resourceRoot,setupBotSpawnCols)
 
 function onHitF(hitElem,dim)
 
-if not getElementData(source,"botToSpawn") then return end --if it ain't a spawncol then return
+	local playersonline = getElementsByType("player")
+	local allpeds = getElementsByType("ped")
+	local numbotsspawned = (#allpeds-#playersonline)
 
-if getElementType(hitElem) ~= "player" then return end --if it ain't a player involved then return
+	if numbotsspawned >= 100 then return end -- Nếu hơn 100 bot thì sẽ không cho spawn nữa.
+		
+	if not getElementData(source,"botToSpawn") then return end --if it ain't a spawncol then return
 
-if isTimer(getElementData(source,"respawnTimer")) then return end --if there is a respawntimer active on the bot
+	if getElementType(hitElem) ~= "player" then return end --if it ain't a player involved then return
+
+	if isTimer(getElementData(source,"respawnTimer")) then return end --if there is a respawntimer active on the bot
 
 	if getElementData (source,"botWasSpawned") == true then -- if the bot is already spawned then return
 		return
