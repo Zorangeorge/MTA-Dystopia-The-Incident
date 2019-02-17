@@ -1,6 +1,8 @@
-NPC HLC traffic editor documentation; by CrystalMV
+Author: CrystalMV 
+https://web.archive.org/web/20150519021933/http://crystalmv.net84.net/pages/scripts.php
 
-NPC HLC traffic editor is a tool used to create paths for NPC HLC traffic editor.
+NPC HLC traffic editor documentation; 
+NPC HLC traffic editor is a tool used to create paths for NPC HLC traffic editor. 
 Path description
 
 Paths are made of path elements: nodes and connections and forbidden turns.
