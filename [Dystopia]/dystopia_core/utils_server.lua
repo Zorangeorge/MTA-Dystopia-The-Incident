@@ -362,3 +362,5 @@ function isPlayerInACL(player, acl)
    end
    return false
 end
+
+setGarageOpen(15, true) --SF archangel door
