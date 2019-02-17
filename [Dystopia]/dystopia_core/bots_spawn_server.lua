@@ -1,5 +1,5 @@
 
-botspawnlimiter = true --enforces a 100 bots max spawned at a time; vendors and quest npcs are extempt
+MAX_NO_BOTS_SPAWNED = 100 --enforces a max of 100 bots spawned at a time; vendors and quest npcs are extempt; nil variable for no limit; TODO: move this in a settings file TODO: make a settings file
 
 function createCDFHunter(x,y,z,r,team,name,botSkinID)
 
@@ -703,13 +703,24 @@ function onHitF(hitElem,dim)
 
 	if getElementType(hitElem) ~= "player" then return end --if it ain't a player involved then return
 
-	local playersonline = getElementsByType("player")
-	local allpeds = getElementsByType("ped")
-	local numbotsspawned = (#allpeds-#playersonline)
-	local typecheck = getElementData(source,"BotType")
-	local forcedSpawn = false
+	if isTimer(getElementData(source,"respawnTimer")) then return end --if there is a respawntimer active on the bot then return
+
+	if getElementData (source,"botWasSpawned") == true then -- if the bot is already spawned then return
+		
+	return
 	
-	if typecheck == "Vendor" 
+	elseif getElementData (source,"botWasSpawned") == false then -- it's a spawn col and the bot has not spawned yet; we proceed with spawning
+
+	spawnpoint = getElementData(source,"botToSpawn")
+
+	if MAX_NO_BOTS_SPAWNED then 
+		local playersonline = getElementsByType("player")
+		local allpeds = getElementsByType("ped")
+		local numbotsspawned = (#allpeds-#playersonline)
+		local typecheck = getElementData(spawnpoint,"BotType") or false
+		local forcedSpawn = false
+		
+		if typecheck == "Vendor" 
 		or typecheck == "ScavVendor"
 		or typecheck == "WasteVendor"
 		or typecheck == "SyndVendor"
@@ -717,19 +728,13 @@ function onHitF(hitElem,dim)
 		or typecheck == "ScavQuest"
 		or typecheck == "SyndQuest"
 		or typecheck == "WasteQuest"
-	then
+		then
 		forcedSpawn = true
+		end
+		
+		if numbotsspawned >= MAX_NO_BOTS_SPAWNED and forcedSpawn == false then return end -- if max bot number is set and reached then return, unless they are traders or quest NPCs
+		
 	end
-
-	if botspawnlimiter and numbotsspawned >= 100 and not forcedSpawn then return end -- 100 bots spawned limit, unless they are traders or quest NPCs
-
-	if isTimer(getElementData(source,"respawnTimer")) then return end --if there is a respawntimer active on the bot
-
-	if getElementData (source,"botWasSpawned") == true then -- if the bot is already spawned then return
-		return
-	elseif getElementData (source,"botWasSpawned") == false then -- it's a spawn col and the bot has not spawned yet; we proceed with spawning
-
-	spawnpoint = getElementData(source,"botToSpawn")
 
 	local x = getElementData(spawnpoint, "posX") 
 	local y = getElementData(spawnpoint, "posY") 
