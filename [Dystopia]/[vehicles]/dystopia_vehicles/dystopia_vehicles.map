@@ -378,5 +378,7 @@
     <vehicle id="360" sirens="false" paintjob="3" interior="0" alpha="255" model="576" plate="E9LP6N1" dimension="0" color="169,38,3,189,190,198,0,0,0,0,0,0" posX="2822.6006" posY="899.2002" posZ="10.5" rotX="0" rotY="0" rotZ="0"></vehicle>
 	<vehicle id="361" sirens="false" paintjob="3" interior="0" alpha="255" model="472" plate="PNGFKPD" dimension="0" color="158,164,171,156,161,163,0,0,0,0,0,0" posX="1712.5" posY="-2820.7" posZ="0" rotX="0" rotY="0" rotZ="0"></vehicle>
 	<vehicle id="362" sirens="false" paintjob="3" interior="0" alpha="255" model="568" plate="81LLZ05" dimension="0" color="158,164,171,151,149,146,0,0,0,0,0,0" posX="2583.7" posY="2296.3" posZ="10.8" rotX="0" rotY="0" rotZ="270"></vehicle>
+	LV Phoenix:<vehicle id="363" sirens="false" paintjob="3" interior="0" alpha="255" model="603" plate="5M2K4J8" dimension="0" color="169,0,0,254,234,234,0,0,0,0,0,0" posX="2005.8" posY="2311.5" posZ="10.8" rotX="0" rotY="0" rotZ="0" upgrades="1023"></vehicle>
+	SF Elegy:<vehicle id="364" sirens="false" paintjob="0" interior="0" alpha="255" model="562" plate="ARCHANGL" dimension="0" posX="-2724.3" posY="217.5" posZ="4.2" rotX="0" rotY="0" rotZ="270" upgrades="1146,1039,1035,1010,1073,1172,1148" color="32,75,0,245,244,244,0,0,0,0,0,0"></vehicle>
 
 </map>
