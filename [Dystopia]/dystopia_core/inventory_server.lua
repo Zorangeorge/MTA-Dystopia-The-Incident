@@ -51,7 +51,7 @@ end)
                    {"AK 47",  355, 0}, -- 8 --Weight: 3 
                    {"Rocket Launcher",  359, 0}, -- 9 --Weight: 4
                    {"Knife",  335, 0}, -- 10 --Weight: 1
-                   {"Hunting Rifle",  357, 0}, -- 11 --Weight: 3
+                   {"Rifle",  357, 0}, -- 11 --Weight: 3
                    {"Crossbow",  347, 0}, -- 12  --Weight: 3 
                    {"Sniper Rifle",  358, 0}, -- 13  --Weight: 3
                    {"Minigun",  362, 0}, --14  --Weight: 4
@@ -876,7 +876,7 @@ setPedWeaponSlot(client,5)
 
 --SLOT 6-- RIFLES
 
-elseif(id=="Hunting Rifle") and playerHasFreeEquipmentSlots then --weight: 3 
+elseif(id=="Rifle") and playerHasFreeEquipmentSlots then --weight: 3 
 setPedWeaponSlot(client,6)
 	if weight > 3 and getPedWeapon (client,6) == 0 then 
 
@@ -888,7 +888,7 @@ setPedWeaponSlot(client,6)
 	used=true
 	if rifleammo >= 1 then giveWeapon(client,33,rifleammo,true) else giveWeapon(client,33,1,true) ; setElementData(client,"rifleammo",1) end
 	setWeaponAmmo(client,weapon6,rifleammo)
-	outputInteractInfo("> Hunting Rifle", client, 255,200,0, 3000)
+	outputInteractInfo("> Rifle", client, 255,200,0, 3000)
 	end
 
 elseif(id=="Sniper Rifle") and playerHasFreeEquipmentSlots then --weight: 3 
@@ -898,7 +898,7 @@ setPedWeaponSlot(client,6)
 		outputInteractInfo("[ overweight! ]", client, 255,200,0, 3000)
 	else
 	local weapon = getPedWeapon(client,6)
-		if weapon == 33 and isInventoryFull(client) == false then addPlayerItem(client, "Hunting Rifle") elseif weapon == 33 and isInventoryFull(client) == true then createObjectItem("Hunting Rifle", x, y, z-0.95, 97.3,120, 0) end 
+		if weapon == 33 and isInventoryFull(client) == false then addPlayerItem(client, "Rifle") elseif weapon == 33 and isInventoryFull(client) == true then createObjectItem("Rifle", x, y, z-0.95, 97.3,120, 0) end 
 		if weapon == 34 then outputInteractInfo("[ already equipped! ]", client, 255,230,0)  return end
 	used=true
 	if rifleammo >= 1 then giveWeapon(client,34,rifleammo,true) else giveWeapon(client,34,1,true) ; setElementData(client,"rifleammo",1) end
@@ -3037,11 +3037,11 @@ if itemname == "Stomper Ammo" then
 	end	
 	end
 	
-	if itemname == "Hunting Rifle" then
+	if itemname == "Rifle" then
 	
 			if isInventoryFull(client) == true then -- drop item if inventory is full
 					 takeWeapon(client, 33)
-					 createObjectItem("Hunting Rifle",x,y,z-0.95, 97.3,120, 0)
+					 createObjectItem("Rifle",x,y,z-0.95, 97.3,120, 0)
 					 outputInteractInfo("- "..itemname, client, 255, 92, 38)
 					
 			elseif isInventoryFull(client) == false then 
@@ -4569,7 +4569,7 @@ elseif(itemName=="Rocket Launcher")then
 model = 359
 elseif(itemName=="Knife")then
 model = 335
-elseif(itemName=="Hunting Rifle")then
+elseif(itemName=="Rifle")then
 model = 357
 elseif(itemName=="Crossbow")then
 model = 347
@@ -4912,7 +4912,7 @@ function getObjCoronaColor(itemName) --determines item corona color based on ite
 local r,g,b 
 if itemName == "Water Bottle" or itemName == "Alcohol Bottle" or itemName == "Dirty Water" or itemName == "Water Canister" 
 then r,g,b = 33,163,181
-elseif itemName == "Pistol" or itemName == "Magnum Revolver" or itemName == "Pump Shotgun" or itemName == "Sawn-off Shotgun" or itemName == "Combat Shotgun" or itemName == "MP5" or itemName == "Uzi" or itemName == "Vehicle Minigun" or itemName == "M4" or itemName == "AK 47" or itemName == "Hunting Rifle" or itemName == "Sniper Rifle" or itemName == "Crossbow" or itemName == "Minigun" or itemName == "Laser Pointer" or itemName == "Zip Line" or itemName == "M37 Stomper" 
+elseif itemName == "Pistol" or itemName == "Magnum Revolver" or itemName == "Pump Shotgun" or itemName == "Sawn-off Shotgun" or itemName == "Combat Shotgun" or itemName == "MP5" or itemName == "Uzi" or itemName == "Vehicle Minigun" or itemName == "M4" or itemName == "AK 47" or itemName == "Rifle" or itemName == "Sniper Rifle" or itemName == "Crossbow" or itemName == "Minigun" or itemName == "Laser Pointer" or itemName == "Zip Line" or itemName == "M37 Stomper" 
 then r,g,b = 214,54,54 
 elseif itemName == "Knife" or itemName == "Raider Sword" or itemName == "Baseball Bat" or itemName == "Chainsaw" or itemName == "Crowbar" or itemName == "Kitchen Knife" or itemName == "Machete" or itemName == "Axe" or itemName == "Meatcleaver" or itemName == "Nail Bat" or itemName == "Nightstick" or itemName == "Broken Bottle" or itemName == "Sledgehammer" 
 then r,g,b = 247,105,27  
@@ -5489,7 +5489,7 @@ local x,y,z = getElementPosition(player)
     itemName = "Vehicle Minigun"
 	setElementData(player,"smgammo",ammo)
     elseif weapon == 33 then
-    itemName = "Hunting Rifle"
+    itemName = "Rifle"
 	setElementData(player,"rifleammo",ammo)
     elseif weapon == 34 then
     itemName = "Sniper Rifle"

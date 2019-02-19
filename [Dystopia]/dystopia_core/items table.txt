@@ -10,7 +10,7 @@
 {"AK 47",  355, 0}, -- 8
 {"Rocket Launcher",  359, 0}, -- 9
 {"Knife",  335, 0}, -- 10
-{"Hunting Rifle",  357, 0}, -- 11
+{"Rifle",  357, 0}, -- 11
 {"Crossbow",  347, 0}, -- 12  
 {"Sniper Rifle",  358, 0}, -- 13
 {"Minigun",  362, 0}, --14

@@ -253,7 +253,7 @@ ItemTradeValues["Uzi"] = 80
 ItemTradeValues["MP5"] = 120
 ItemTradeValues["M4"] = 150
 ItemTradeValues["AK 47"] = 150
-ItemTradeValues["Hunting Rifle"] = 130
+ItemTradeValues["Rifle"] = 130
 ItemTradeValues["Sniper Rifle"] = 150
 
 ItemTradeValues["Rocket Launcher"] = 200

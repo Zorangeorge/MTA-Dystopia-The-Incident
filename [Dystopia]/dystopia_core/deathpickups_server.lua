@@ -166,7 +166,7 @@ addEventHandler ( "onPlayerWasted", getRootElement (),
 					if weaponid == 32 then weapon = "Vehicle Minigun" end
 					if weaponid == 32 then ammo = "SMG Ammo" end
 					
-					if weaponid == 33 then weapon = "Hunting Rifle" end
+					if weaponid == 33 then weapon = "Rifle" end
 					if weaponid == 33 then ammo = "Rifle Ammo" end
 					
 					if weaponid == 34 then weapon = "Sniper Rifle" end
@@ -296,7 +296,7 @@ addEventHandler ( "onPedWasted", getRootElement (),
 					if weaponid == 32 then weapon = "Vehicle Minigun" end
 					if weaponid == 32 then ammo = "SMG Ammo" end
 					
-					if weaponid == 33 then weapon = "Hunting Rifle" end
+					if weaponid == 33 then weapon = "Rifle" end
 					if weaponid == 33 then ammo = "Rifle Ammo" end
 					
 					if weaponid == 34 then weapon = "Sniper Rifle" end

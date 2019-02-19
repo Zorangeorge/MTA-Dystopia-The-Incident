@@ -159,7 +159,7 @@ local weaponiconname
 	elseif id == 30 then weaponiconname = "AK 47"
 	elseif id == 31 then weaponiconname = "M4"
 	elseif id == 32 then weaponiconname = "Vehicle Minigun"
-	elseif id == 33 then weaponiconname = "Hunting Rifle"
+	elseif id == 33 then weaponiconname = "Rifle"
 	elseif id == 34 then weaponiconname = "Sniper Rifle"
 	elseif id == 35 then weaponiconname = "Rocket Launcher"
 	elseif id == 36 then weaponiconname = "Stinger Launcher"
@@ -739,7 +739,7 @@ function getObjCoronaColor(itemName) --determines item corona color based on ite
 local r,g,b 
 if itemName == "Water Bottle" or itemName == "Alcohol Bottle" or itemName == "Dirty Water" or itemName == "Water Canister" 
 then r,g,b = 33,163,181
-elseif itemName == "Pistol" or itemName == "Magnum Revolver" or itemName == "Pump Shotgun" or itemName == "Sawn-off Shotgun" or itemName == "Combat Shotgun" or itemName == "MP5" or itemName == "Uzi" or itemName == "Auto Pistol" or itemName == "M4" or itemName == "AK 47" or itemName == "Hunting Rifle" or itemName == "Sniper Rifle" or itemName == "Crossbow" or itemName == "Minigun" or itemName == "Laser Pointer" or itemName == "Zip Line" or itemName == "M37 Stomper" 
+elseif itemName == "Pistol" or itemName == "Magnum Revolver" or itemName == "Pump Shotgun" or itemName == "Sawn-off Shotgun" or itemName == "Combat Shotgun" or itemName == "MP5" or itemName == "Uzi" or itemName == "Auto Pistol" or itemName == "M4" or itemName == "AK 47" or itemName == "Rifle" or itemName == "Sniper Rifle" or itemName == "Crossbow" or itemName == "Minigun" or itemName == "Laser Pointer" or itemName == "Zip Line" or itemName == "M37 Stomper" 
 then r,g,b = 214,54,54 
 elseif itemName == "Knife" or itemName == "Raider Sword" or itemName == "Baseball Bat" or itemName == "Chainsaw" or itemName == "Crowbar" or itemName == "Kitchen Knife" or itemName == "Machete" or itemName == "Axe" or itemName == "Meatcleaver" or itemName == "Nail Bat" or itemName == "Nightstick" or itemName == "Broken Bottle" or itemName == "Sledgehammer" 
 then r,g,b = 247,105,27  

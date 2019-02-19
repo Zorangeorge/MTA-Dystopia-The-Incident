@@ -28,7 +28,7 @@ local itensTable =
                    {"AK 47",  355, 0}, -- 8
                    {"Rocket Launcher",  359, 0}, -- 9
                    {"Knife",  335, 0}, -- 10
-                   {"Hunting Rifle",  357, 0}, -- 11
+                   {"Rifle",  357, 0}, -- 11
                    {"Crossbow",  347, 0}, -- 12  
                    {"Sniper Rifle",  358, 0}, -- 13
                    {"Minigun",  362, 0}, --14
@@ -598,7 +598,7 @@ elseif item == "Raider Sword" then description =  "Lethal improvised weapon,\nma
 elseif item == "AK 47" then description = "The favourite weapon of guerrillas\nall around the world, the AK 47\nneeds no more presentation."
 elseif item == "Rocket Launcher" then description = "A portable one-shot unguided\nanti-vehicle weapon. Dispose after use.\nNotoriously inaccurate."
 elseif item == "Knife" then description = "A sharp, full-tang combat knife.\nCan inflict bleeding."
-elseif item == "Hunting Rifle" then description = "Powerful semi-automatic rifle,\nwith superior range and accuracy."
+elseif item == "Rifle" then description = "Powerful semi-automatic rifle,\nwith superior range and accuracy."
 elseif item == "Crossbow" then description = "Wooden crossbow, popular with hunters\nbefore The Incident. It's low noise profile\nmakes it perfect for stealthy individuals."
 elseif item == "Sniper Rifle" then description = "Long range scoped rifle, a favourite\nof bandits and other cautious people."
 elseif item == "Minigun" then description = "Heavy multi-barrel rotary machinegun. Mount it\non vehicles for added firepower\nor use in stationary positions to cover choke-points."
@@ -717,7 +717,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d1))
 	if d1 == "Pistol" or d1 == "Crossbow" or d1 == "Magnum Revolver" or d1 == "Pistol Ammo" or d1 == "Bolts" or d1 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d1 == "Uzi" or d1 == "Vehicle Minigun" or d1 == "MP5" or d1 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d1 == "Pump Shotgun" or d1 == "Sawn-off Shotgun" or d1 == "Combat Shotgun" or d1 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d1 == "Hunting Rifle" or d1 == "Sniper Rifle" or d1 == "Rifle Ammo" or d1 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d1 == "Rifle" or d1 == "Sniper Rifle" or d1 == "Rifle Ammo" or d1 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d1 == "Axe" or d1 == "Nightstick" or d1 == "Knife" or d1 == "Crowbar" or d1 == "Sledgehammer" or d1 == "Raider Sword" or d1 == "Chainsaw" or d1 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d1 == "Rocket Launcher" or d1 == "Stinger Launcher" or d1 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d1 == "Grenade" or d1 == "Molotov" or d1 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -734,7 +734,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d2))
 	if d2 == "Pistol" or d2 == "Crossbow" or d2 == "Magnum Revolver" or d2 == "Pistol Ammo" or d2 == "Bolts" or d2 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d2 == "Uzi" or d2 == "Vehicle Minigun" or d2 == "MP5" or d2 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d2 == "Pump Shotgun" or d2 == "Sawn-off Shotgun" or d2 == "Combat Shotgun" or d2 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d2 == "Hunting Rifle" or d2 == "Sniper Rifle" or d2 == "Rifle Ammo" or d2 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d2 == "Rifle" or d2 == "Sniper Rifle" or d2 == "Rifle Ammo" or d2 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d2 == "Axe" or d2 == "Nightstick" or d2 == "Knife" or d2 == "Crowbar" or d2 == "Sledgehammer" or d2 == "Raider Sword" or d2 == "Chainsaw" or d2 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d2 == "Rocket Launcher" or d2 == "Stinger Launcher" or d2 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d2 == "Grenade" or d2 == "Molotov" or d2 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -751,7 +751,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d3))
 	if d3 == "Pistol" or d3 == "Crossbow" or d3 == "Magnum Revolver" or d3 == "Pistol Ammo" or d3 == "Bolts" or d3 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d3 == "Uzi" or d3 == "Vehicle Minigun" or d3 == "MP5" or d3 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d3 == "Pump Shotgun" or d3 == "Sawn-off Shotgun" or d3 == "Combat Shotgun" or d3 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d3 == "Hunting Rifle" or d3 == "Sniper Rifle" or d3 == "Rifle Ammo" or d3 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d3 == "Rifle" or d3 == "Sniper Rifle" or d3 == "Rifle Ammo" or d3 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d3 == "Axe" or d3 == "Nightstick" or d3 == "Knife" or d3 == "Crowbar" or d3 == "Sledgehammer" or d3 == "Raider Sword" or d3 == "Chainsaw" or d3 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d3 == "Rocket Launcher" or d3 == "Stinger Launcher" or d3 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d3 == "Grenade" or d3 == "Molotov" or d3 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -768,7 +768,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d4))
 	if d4 == "Pistol" or d4 == "Crossbow" or d4 == "Magnum Revolver" or d4 == "Pistol Ammo" or d4 == "Bolts" or d4 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d4 == "Uzi" or d4 == "Vehicle Minigun" or d4 == "MP5" or d4 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d4 == "Pump Shotgun" or d4 == "Sawn-off Shotgun" or d4 == "Combat Shotgun" or d4 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d4 == "Hunting Rifle" or d4 == "Sniper Rifle" or d4 == "Rifle Ammo" or d4 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d4 == "Rifle" or d4 == "Sniper Rifle" or d4 == "Rifle Ammo" or d4 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d4 == "Axe" or d4 == "Nightstick" or d4 == "Knife" or d4 == "Crowbar" or d4 == "Sledgehammer" or d4 == "Raider Sword" or d4 == "Chainsaw" or d4 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d4 == "Rocket Launcher" or d4 == "Stinger Launcher" or d4 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d4 == "Grenade" or d4 == "Molotov" or d4 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -785,7 +785,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d5))
 	if d5 == "Pistol" or d5 == "Crossbow" or d5 == "Magnum Revolver" or d5 == "Pistol Ammo" or d5 == "Bolts" or d5 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d5 == "Uzi" or d5 == "Vehicle Minigun" or d5 == "MP5" or d5 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d5 == "Pump Shotgun" or d5 == "Sawn-off Shotgun" or d5 == "Combat Shotgun" or d5 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d5 == "Hunting Rifle" or d5 == "Sniper Rifle" or d5 == "Rifle Ammo" or d5 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d5 == "Rifle" or d5 == "Sniper Rifle" or d5 == "Rifle Ammo" or d5 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d5 == "Axe" or d5 == "Nightstick" or d5 == "Knife" or d5 == "Crowbar" or d5 == "Sledgehammer" or d5 == "Raider Sword" or d5 == "Chainsaw" or d5 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d5 == "Rocket Launcher" or d5 == "Stinger Launcher" or d5 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d5 == "Grenade" or d5 == "Molotov" or d5 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -802,7 +802,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d6))
 	if d6 == "Pistol" or d6 == "Crossbow" or d6 == "Magnum Revolver" or d6 == "Pistol Ammo" or d6 == "Bolts" or d6 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d6 == "Uzi" or d6 == "Vehicle Minigun" or d6 == "MP5" or d6 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d6 == "Pump Shotgun" or d6 == "Sawn-off Shotgun" or d6 == "Combat Shotgun" or d6 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d6 == "Hunting Rifle" or d6 == "Sniper Rifle" or d6 == "Rifle Ammo" or d6 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d6 == "Rifle" or d6 == "Sniper Rifle" or d6 == "Rifle Ammo" or d6 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d6 == "Axe" or d6 == "Nightstick" or d6 == "Knife" or d6 == "Crowbar" or d6 == "Sledgehammer" or d6 == "Raider Sword" or d6 == "Chainsaw" or d6 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d6 == "Rocket Launcher" or d6 == "Stinger Launcher" or d6 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d6 == "Grenade" or d6 == "Molotov" or d6 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -819,7 +819,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d7))
 	if d7 == "Pistol" or d7 == "Crossbow" or d7 == "Magnum Revolver" or d7 == "Pistol Ammo" or d7 == "Bolts" or d7 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d7 == "Uzi" or d7 == "Vehicle Minigun" or d7 == "MP5" or d7 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d7 == "Pump Shotgun" or d7 == "Sawn-off Shotgun" or d7 == "Combat Shotgun" or d7 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d7 == "Hunting Rifle" or d7 == "Sniper Rifle" or d7 == "Rifle Ammo" or d7 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d7 == "Rifle" or d7 == "Sniper Rifle" or d7 == "Rifle Ammo" or d7 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d7 == "Axe" or d7 == "Nightstick" or d7 == "Knife" or d7 == "Crowbar" or d7 == "Sledgehammer" or d7 == "Raider Sword" or d7 == "Chainsaw" or d7 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d7 == "Rocket Launcher" or d7 == "Stinger Launcher" or d7 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d7 == "Grenade" or d7 == "Molotov" or d7 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -836,7 +836,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d8))--**
 	if d8 == "Pistol" or d8 == "Crossbow" or d8 == "Magnum Revolver" or d8 == "Pistol Ammo" or d8 == "Bolts" or d8 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d8 == "Uzi" or d8 == "Vehicle Minigun" or d8 == "MP5" or d8 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d8 == "Pump Shotgun" or d8 == "Sawn-off Shotgun" or d8 == "Combat Shotgun" or d8 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d8 == "Hunting Rifle" or d8 == "Sniper Rifle" or d8 == "Rifle Ammo" or d8 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d8 == "Rifle" or d8 == "Sniper Rifle" or d8 == "Rifle Ammo" or d8 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d8 == "Axe" or d8 == "Nightstick" or d8 == "Knife" or d8 == "Crowbar" or d8 == "Sledgehammer" or d8 == "Raider Sword" or d8 == "Chainsaw" or d8 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d8 == "Rocket Launcher" or d8 == "Stinger Launcher" or d8 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d8 == "Grenade" or d8 == "Molotov" or d8 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -853,7 +853,7 @@ guiSetText(InventoryGui.label[2],getItemDescription(d9))
 	if d9 == "Pistol" or d9 == "Crossbow" or d9 == "Magnum Revolver" or d9 == "Pistol Ammo" or d9 == "Bolts" or d9 == "Magnum Ammo" then setPedWeaponSlot(localPlayer,2) end
 	if d9 == "Uzi" or d9 == "Vehicle Minigun" or d9 == "MP5" or d9 == "SMG Ammo" then setPedWeaponSlot(localPlayer,4) end
 	if d9 == "Pump Shotgun" or d9 == "Sawn-off Shotgun" or d9 == "Combat Shotgun" or d9 == "Shotgun Ammo" then setPedWeaponSlot(localPlayer,3) end
-	if d9 == "Hunting Rifle" or d9 == "Sniper Rifle" or d9 == "Rifle Ammo" or d9 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
+	if d9 == "Rifle" or d9 == "Sniper Rifle" or d9 == "Rifle Ammo" or d9 == "Rifle Clip" then setPedWeaponSlot(localPlayer,6) end
 	if d9 == "Axe" or d9 == "Nightstick" or d9 == "Knife" or d9 == "Crowbar" or d9 == "Sledgehammer" or d9 == "Raider Sword" or d9 == "Chainsaw" or d9 == "Baseball Bat" then setPedWeaponSlot(localPlayer,1) end
 	if d9 == "Rocket Launcher" or d9 == "Stinger Launcher" or d9 == "Flamethrower" then setPedWeaponSlot(localPlayer,7) end
 	if d9 == "Grenade" or d9 == "Molotov" or d9 == "Teargas" then setPedWeaponSlot(localPlayer,8) end
@@ -2062,7 +2062,7 @@ local tempPlayersEquippedItems = {}
 			elseif wep and  wep ~= 0 and i == 6 then
 			
 				if wep == 33 then
-				table.insert(tempPlayersEquippedItems,"Hunting Rifle")
+				table.insert(tempPlayersEquippedItems,"Rifle")
 				elseif wep == 34 then
 				table.insert(tempPlayersEquippedItems,"Sniper Rifle")
 				end
@@ -2912,7 +2912,7 @@ elseif  item == "Night Vision Googles" or item == "Thermal Googles" then setPedW
 elseif  item == "Uzi" or item == "Vehicle Minigun" or item == "MP5" then setPedWeaponSlot(localPlayer,4)
 elseif  item == "Pump Shotgun" or item == "Sawn-off Shotgun" or item == "Combat Shotgun" then setPedWeaponSlot(localPlayer,3)
 elseif  item == "Rocket Launcher" or item == "Stinger Launcher" or item == "Flamethrower" then setPedWeaponSlot(localPlayer,7)
-elseif  item == "Hunting Rifle" or item == "Sniper Rifle" then setPedWeaponSlot(localPlayer,6)
+elseif  item == "Rifle" or item == "Sniper Rifle" then setPedWeaponSlot(localPlayer,6)
 elseif  item == "Axe" or item == "Nightstick" or item == "Knife" or item == "Crowbar" or item == "Sledgehammer" or item == "Raider Sword" or item == "Chainsaw" or item == "Baseball Bat" then setPedWeaponSlot(localPlayer,1)
 elseif item == "Grenade" or item == "Molotov" or item == "Teargas" then setPedWeaponSlot(localPlayer,8)
 elseif item == "Agent Pale" or item == "Spray Can" or item == "Binoculars" then setPedWeaponSlot(localPlayer,9) 
@@ -3264,7 +3264,7 @@ elseif item == "Raider Sword" then tooltiptext = type2
 elseif item == "AK 47" then tooltiptext = type2 
 elseif item == "Rocket Launcher" then tooltiptext = type2 
 elseif item == "Knife" then tooltiptext = type2 
-elseif item == "Hunting Rifle" then tooltiptext = type2 
+elseif item == "Rifle" then tooltiptext = type2 
 elseif item == "Crossbow" then tooltiptext = type2 
 elseif item == "Sniper Rifle" then tooltiptext = type2 
 elseif item == "Minigun" then tooltiptext = type14 
@@ -3454,7 +3454,7 @@ local type5 = "[LMB] Deploy\n[RMB] Unequip" --traps
 
 if item == "Empty" then return 
 
-elseif item == "Pistol" or item == "M4"  or item == "AK 47"  or item == "Hunting Rifle"  or item == "Vehicle Minigun" or item == "Crossbow"  or item == "Sniper Rifle"  or item == "Uzi"  or item == "Combat Shotgun"  or item == "Sawn-off Shotgun"  or item == "Magnum Revolver" or item == "Pump Shotgun" then tooltiptext = type1 
+elseif item == "Pistol" or item == "M4"  or item == "AK 47"  or item == "Rifle"  or item == "Vehicle Minigun" or item == "Crossbow"  or item == "Sniper Rifle"  or item == "Uzi"  or item == "Combat Shotgun"  or item == "Sawn-off Shotgun"  or item == "Magnum Revolver" or item == "Pump Shotgun" then tooltiptext = type1 
 
 elseif item == "Medikit" or item == "Toolbox" then tooltiptext = type4 
 

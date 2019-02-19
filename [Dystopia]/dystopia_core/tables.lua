@@ -223,7 +223,7 @@ dispenseritems = {"Water Bottle","Scrap Metal","Wire"}
 ammoBoxContents = {"Pistol Ammo","SMG Ammo","Shotgun Ammo","Assault Ammo","Rifle Ammo","Magnum Ammo"}
 	
 allweap = {"Knife", "Raider Sword", "Meat Can", "Water", "SMG Ammo","SMG Ammo", "MP5","Combat Shotgun","Pistol Ammo", "Magnum Revolver", "Magnum Ammo", 
-			"Crossbow", "Bolts","Assault Ammo","Assault Ammo", "M4","Hunting Rifle","Sniper Rifle","AK 47", "Uzi", "Shotgun Ammo", "Sawn-off Shotgun", "Crowbar", 
+			"Crossbow", "Bolts","Assault Ammo","Assault Ammo", "M4","Rifle","Sniper Rifle","AK 47", "Uzi", "Shotgun Ammo", "Sawn-off Shotgun", "Crowbar", 
 			"Sledgehammer", "Pistol", "Molotov", "Nightstick","Baseball Bat", "Axe","Binoculars","Spray Can","Pump Shotgun","Body Armor","Backpack", "Medikit", 
 			"Painkillers", "Rifle Ammo", "Rifle Ammo","Stinger Launcher", "Rocket Launcher", "Flamethrower","Kitchen Knife", "Machete", "Nail Bat","Broken Bottle" }
 
@@ -232,7 +232,7 @@ randomStartItemsTable = {"Water Bottle","Meat Can","Kitchen Knife","Baseball Bat
 residentialhousehold = {"Kitchen Knife", "Water Bottle", "Meat Can", "Baseball Bat", "Alcohol Bottle","Plastic Foil","Empty Bottle","Rags","Map","Meatcleaver","Headlamp","Fish Can","Lighter","Bandage","Watch","Painkillers","Pistol","Pistol Ammo"}
 residentialgarage = {"Crossbow", "Crowbar", "Bolts", "Axe","Sledgehammer","Toolbox","Empty Canister","Fuel Canister","Broken Bottle","Plastic Foil","Wire","Map","Knife","Scrap Metal","Water Canister","Spray Can","Binoculars", "Alcohol Bottle","Empty Bottle","Rags","Headlamp","Wood","Lighter","Backpack","Road Flare","Radio","Magnum Revolver","Magnum Ammo"}
 residentialweapons = {"Pistol","Pistol Ammo","Magnum Revolver","Magnum Ammo","Pump Shotgun","Shotgun Ammo","Sawn-off Shotgun","Machete","Uzi","SMG Ammo","Backpack","Ammo Box"}
-ammunitionweapons = {"Pistol","Pistol Ammo","Pump Shotgun","Hunting Rifle","Rifle Ammo","Shotgun Ammo","Machete","Uzi","SMG Ammo","MP5","Binoculars","AK 47","Assault Ammo","Backpack","Knife","Ammo Box","Ammo Box","Laser Pointer","Night Vision Googles","Spikestrip","Magnum Revolver","Magnum Ammo","Body Armor","Teargas"}
+ammunitionweapons = {"Pistol","Pistol Ammo","Pump Shotgun","Rifle","Rifle Ammo","Shotgun Ammo","Machete","Uzi","SMG Ammo","MP5","Binoculars","AK 47","Assault Ammo","Backpack","Knife","Ammo Box","Ammo Box","Laser Pointer","Night Vision Googles","Spikestrip","Magnum Revolver","Magnum Ammo","Body Armor","Teargas"}
 policeweapons ={"Pump Shotgun","Shotgun Ammo","Pistol","Pistol Ammo","MP5","SMG Ammo","Nightstick","Magnum Revolver","Magnum Ammo","Body Armor","Headlamp","Laser Pointer","Night Vision Googles","Ammo Box","Spikestrip","Road Flare","Radio","Agent Pale","Teargas"}
 heavyduty = {"Sledgehammer","Toolbox","Empty Canister","Fuel Canister","Axe","Scrap Metal","Crowbar","Vehicle Parts","Wire","Headlamp","Wood","Road Flare"}
 foodandwater = {"Water Bottle","Meat Can","Fish Can","Water Bottle","Empty Bottle","Broken Bottle","Soup Can"}
