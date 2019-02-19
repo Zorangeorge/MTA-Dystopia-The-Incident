@@ -1,5 +1,12 @@
-addEventHandler("onClientPlayerWeaponFire", root, function(weapon, ammo, ammoInClip, hitX, hitY, hitZ, hitElement) --visible bullet impacts, needs tuning to eliminate weird impacts, e.g. for spray or rocket launcher
-    if (weapon >= 0 and weapon < 19) or weapon ~= 35 or weapon ~= 36 or weapon ~= 37 or weapon ~= 39 or weapon ~= 41 or weapon ~= 42 or weapon ~= 43 or weapon ~= 44 or weapon ~= 45 then return end -- If the player does not wield a fireweapon, return
+addEventHandler("onClientPlayerWeaponFire", root, function(weapon, ammo, ammoInClip, hitX, hitY, hitZ, hitElement) --visible bullet impacts for players
+    if weapon < 19 or (weapon >= 35 and weapon ~= 38) then return end -- If the player does not wield a fireweapon, return
+	
+	--if ammo == 1 and ammoInClip < 1 then playSound3D("sounds/empty_gun.wav",getElementPosition(localPlayer))end	-- this needs only a 'click' sound file added and can be enabled; add file to meta too 
+    fxAddBulletImpact(hitX, hitY, hitZ, 0, 0, 0, math.random(1, 2), math.random(2, 5), 1.0)
+end)
+
+addEventHandler("onClientPedWeaponFire", root, function(weapon, ammo, ammoInClip, hitX, hitY, hitZ, hitElement) --visible bullet impacts for peds
+    if weapon < 19 or (weapon >= 35 and weapon ~= 38) then return end -- If the ped does not wield a fireweapon, return
     fxAddBulletImpact(hitX, hitY, hitZ, 0, 0, 0, math.random(1, 2), math.random(2, 5), 1.0)
 end)
 
