@@ -321,6 +321,8 @@ allplayerblips = {}
 
 local housesize = 24 --spawn/camp icon size
 
+PLAYER_BLIPS_VISIBLE = false --TODO: put this in a settings file; TODO: 
+
 function addPlayerMapBlips ()
 
 	for _,blip in ipairs(allplayerblips) do
@@ -526,23 +528,25 @@ end
 			
 		end	
 --PLAYERS	
-for _,player in ipairs(players) do
-	if player == localPlayer then 
-	--nothing, solved separately above
-	else	
-		local targetgroup = getElementData ( player, "Group" ) or "N/A"
-		local localgroup =  getElementData ( localPlayer, "Group" ) or "N/A"
-		local color = nil
-		
-		if localgroup and localgroup ~= "--" and localgroup ~= "N/A" then 
-			if localgroup == targetgroup then
-				color = tocolor(51, 204, 255,255) --light blue
+if PLAYER_BLIPS_VISIBLE == true then
+	for _,player in ipairs(players) do
+		if player == localPlayer then 
+		--nothing, solved separately above
+		else	
+			local targetgroup = getElementData ( player, "Group" ) or "N/A"
+			local localgroup =  getElementData ( localPlayer, "Group" ) or "N/A"
+			local color = nil
+			
+			if localgroup and localgroup ~= "--" and localgroup ~= "N/A" then 
+				if localgroup == targetgroup then
+					color = tocolor(51, 204, 255,255) --light blue blips for group members
+				end
 			end
+			
+			plblip = dxCreateBlipAttachedTo( player, 2, width, height, color )
+			table.insert(allplayerblips,plblip)
+			plblip = nil
 		end
-		
-		plblip = dxCreateBlipAttachedTo( player, 2, width, height, color )
-		table.insert(allplayerblips,plblip)
-		plblip = nil
 	end
 end
 --LOCAL PLAYER

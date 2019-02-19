@@ -315,11 +315,14 @@ addEventHandler("onClientResourceStart", rRoot,
 	end
 )  
 
+MINIMAP_PLAYERS = false -- TODO: move to settings file
+
 addEventHandler("onClientRender", getRootElement(), 
   function()
   
   if LoginVisible then return end
   if NO_HUD_MODE then return end
+  
     if radar.on and getElementData(lp, "bigradar") then
       local r,g,b,a = 255,255,255,200
     
@@ -519,7 +522,7 @@ addEventHandler("onClientRender", getRootElement(),
       
 	  
       -- vehicles (players in vehicles)
-      if setup.players or setup.vehicles then
+      if (setup.players or setup.vehicles) and MINIMAP_PLAYERS then
         for _, e in ipairs(getElementsByType("vehicle", getRootElement(), true)) do   
 			
           if e ~= getPedOccupiedVehicle(lp) and (getElementHealth(e) > 0 or setup.deadvehicles) then
@@ -572,7 +575,7 @@ addEventHandler("onClientRender", getRootElement(),
       end
 
       --players (players in vehicles rendered in vehicles loop, not here)
-      if setup.players then
+      if setup.players and MINIMAP_PLAYERS then
         for _, e in ipairs(getElementsByType("player", getRootElement(), true)) do    
           if e ~= lp and not isPedInVehicle(e) then
             local ex, ey, ez = getElementPosition(e)
