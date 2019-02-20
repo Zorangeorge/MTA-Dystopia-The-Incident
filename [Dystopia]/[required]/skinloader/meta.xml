@@ -13,8 +13,6 @@
     <file src="vehicles/sabre.dff"></file>
     <file src="vehicles/yankee.txd"></file>
     <file src="vehicles/yankee.dff"></file>
-    <file src="vehicles/shamal.txd"></file>
-    <file src="vehicles/shamal.dff"></file>
     <file src="vehicles/bravura.txd"></file>
     <file src="vehicles/bravura.dff"></file>
     <file src="vehicles/buffalo.txd"></file>
@@ -26,8 +24,6 @@
     <file src="vehicles/alpha.dff"></file>
     <file src="vehicles/fbiranch.txd"></file>
     <file src="vehicles/fbiranch.dff"></file>
-    <file src="vehicles/fbitruck.txd"></file>
-    <file src="vehicles/fbitruck.dff"></file>
     <file src="vehicles/topfun.txd"></file>
     <file src="vehicles/topfun.dff"></file>
     <file src="vehicles/androm.txd"></file>
@@ -62,8 +58,6 @@
     <file src="vehicles/bullet.dff"></file>
     <file src="vehicles/seaspar.txd"></file>
     <file src="vehicles/seaspar.dff"></file>
-    <file src="vehicles/squalo.txd"></file>
-    <file src="vehicles/squalo.dff"></file>
     <file src="vehicles/cadrona.txd"></file>
     <file src="vehicles/cadrona.dff"></file>
     <file src="vehicles/rumpo.txd"></file>
@@ -75,6 +69,9 @@
     <file src="vehicles/oceanic.txd"></file>
     <file src="vehicles/oceanic.dff"></file>
     <file src="vehicles/barracks.dff"></file>
-    <file src="vehicles/swatvan.txd"></file>
-    <file src="vehicles/swatvan.dff"></file>
+    <file src="vehicles/mule.txd"></file>
+    <file src="vehicles/mule.dff"></file>
+    <file src="vehicles/flatbed.txd"></file>
+    <file src="vehicles/flatbed.dff"></file>
+    <file src="vehicles/barracks.txd"></file>
 </meta>
