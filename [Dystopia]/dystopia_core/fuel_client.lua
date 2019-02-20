@@ -76,7 +76,7 @@ addEventHandler("onPedReFuel",getRootElement(),fillHerUp);
 
 function drawGUI()
 	local vehicle = getPedOccupiedVehicle(localPlayer);
-	if vehicle then
+	if vehicle and getVehicleType(vehicle) ~= "BMX" then
 		local x,y = guiGetScreenSize();
 		--if getVehicleType(vehicle) ~= 'Automobile' and getVehicleType(vehicle) ~= 'Bike' and getVehicleType(vehicle) ~= 'Monster Truck' and getVehicleType(vehicle) ~= 'Quad' then return end
 		local driver = getVehicleController(vehicle);

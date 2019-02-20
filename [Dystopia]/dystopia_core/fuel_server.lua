@@ -27,7 +27,7 @@ addEventHandler("onResourceStart", getResourceRootElement(getThisResource()),
 )
 
 function fuelUse(p)
-if not p or not isElement(p) or not (getElementType(p) == "ped" or getElementType(p) == "player") or not getPedOccupiedVehicle(p) then return end
+if not p or not isElement(p) or not (getElementType(p) == "ped" or getElementType(p) == "player") or not getPedOccupiedVehicle(p) or getVehicleType(getPedOccupiedVehicle(p)) == "BMX" then return end
 --if p and isElement(p) and (getElementType(p) == "ped" or getElementType(p) == "player") and not getPedOccupiedVehicle(p) then return end
 	local vehicle = getPedOccupiedVehicle(p);
 	if vehicle then
