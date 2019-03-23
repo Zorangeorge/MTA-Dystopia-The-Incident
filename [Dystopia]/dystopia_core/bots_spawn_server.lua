@@ -1,5 +1,14 @@
 
 MAX_NO_BOTS_SPAWNED = 100 --enforces a max of 100 bots spawned at a time; vendors and quest npcs are extempt; nil variable for no limit; TODO: move this in a settings file TODO: make a settings file
+PROP_CHANCE = 300 --the largest the number, the smaller the chance for the ped to get any accessories; setting this number too low can lag the server, as most of the peds will have props attached, setting it too high will make special peds to almost never appear; best value will be determined by testing
+
+function propPedCheck (ped)
+local proprand = math.random(1,PROP_CHANCE)
+	if proprand == 1 then
+		triggerClientEvent("PropPed",root,ped)
+		outputDebugString("Ped props added to "..getElementData(ped, "name"))
+	end
+end
 
 function createCDFHunter(x,y,z,r,team,name,botSkinID)
 
@@ -11,7 +20,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, botSkinID, int, int,
 				setElementData(ped, "type", "civilian")
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "cdf", true)
-				triggerClientEvent("PropPed",root,ped) 
+				propPedCheck (ped) 
 		return ped
 end
 
@@ -23,7 +32,7 @@ local ped = createPed(table.random(CDFStaffSkins), x, y, z)
 				setElementData(ped, "name", "Citizen")
                 setElementData(ped, "BotTeam", CDF)
 				setElementData(ped, "cdf", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end	
 
@@ -33,7 +42,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(CDFVend
                	setElementData(ped, "name", "Quartermaster")
 				setElementData(ped, "cdf", true)
 				setElementData(ped, "vendor", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end	
 
@@ -48,7 +57,7 @@ if not skin then skin = table.random(CDFVendorSkins) end
 					setElementData(ped, "cdf", true)
 					setElementData(ped, "questgiver", true,true)
 					setElementData(ped, "name", name)
-					triggerClientEvent("PropPed",root,ped)
+					propPedCheck (ped)
 			return ped
 	else
 
@@ -56,7 +65,7 @@ if not skin then skin = table.random(CDFVendorSkins) end
 					setElementData(ped, "cdf", true)
 					setElementData(ped, "questgiver", true,true)
 					setElementData(ped, "name", name)
-					triggerClientEvent("PropPed",root,ped)
+					propPedCheck (ped)
 			return ped
 	end
 	
@@ -70,7 +79,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(raiderS
 				setElementData(ped, "name", "Raider Barker")
 				setElementData(ped, "raider", true)
 		
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end
 
@@ -79,7 +88,7 @@ function createCDFGuard (x,y,z,r,team)
 local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(CDFMilitiaskins), int, int, CDF, table.random(CampGuardWeapons), "guarding", nil)
 				setElementData(ped, "name", "Militia")
 				setElementData(ped, "cdf", true)
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end	
 
@@ -92,7 +101,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(raiderS
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "raider", true)
 				
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end
 
@@ -112,7 +121,7 @@ local ped = createPed(table.random(meatSkin), x, y, z)
 							setPedAnimation(ped, "GRAVEYARD", "mrnF_loop", -1, true, false, true, false)
 				end
 				setElementData (ped,"raidermeat",true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 return ped
 						
 end
@@ -125,7 +134,7 @@ local ped = createPed(table.random(slaveSkin), x, y, z)
                 setElementData(ped, "name", "Slave")
                 setElementData(ped, "BotTeam", Raiders)
 				setElementData (ped,"raiderslave",true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 				return ped
 		
 end		
@@ -136,7 +145,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(raiderS
                	setElementData(ped, "name", "Trader")
 				setElementData(ped, "raider", true)
 				setElementData(ped, "vendor", true)
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end	
 	
@@ -151,7 +160,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, skin, int, int, Raid
 				setElementData(ped, "raider", true)
 				setElementData(ped, "questgiver", true,true)
 		
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end	
 
@@ -161,7 +170,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Scaveng
                	setElementData(ped, "name", "Trader")
 				setElementData(ped, "scavenger", true)
 				setElementData(ped, "vendor", true)
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end	
 
@@ -172,7 +181,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Syndica
 				setElementData(ped, "name", "Guard")
                 setElementData(ped, "syndicate", true)
 
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end
 
@@ -185,7 +194,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Syndica
 				setElementData(ped, "name", "Guard")
 				setElementData(ped, "syndicate", true)
 
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end
 
@@ -197,7 +206,7 @@ local ped = createPed(table.random(SyndicateCivSkin), x, y, z)
                 setElementData(ped, "type", "civilian")
 				setElementData(ped, "name", "Survivor")
                 setElementData(ped, "syndicate", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 		
 end	
@@ -242,7 +251,7 @@ local ped = createPed(table.random(dumpSkins), x, y, z)
                 setElementData(ped, "type", "civilian")
 				setElementData(ped, "name", "Survivor")
 				setElementData(ped, "scavenger", true)
-		triggerClientEvent("PropPed",root,ped)
+		propPedCheck (ped)
 		return ped
 end	
 
@@ -254,7 +263,7 @@ local ped = createPed(table.random(refugeeSkins), x, y, z)
 				setElementData(ped, "name", "Refugee")
                 setElementData(ped, "BotTeam", Establishment)
 				setElementData(ped, "refugee", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 
 		return ped
 end	
@@ -265,7 +274,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, 287, int, int, Estab
 				setElementData(ped, "name", "Trooper")
 				setElementData(ped, "establishment", true)
 				setPedArmor(ped,25)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 
 		return ped
 end	
@@ -277,7 +286,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, 277, int, int, Estab
 				setElementData(ped, "heavy", true)
 				setElementData(ped, "establishment", true)
 				setPedArmor(ped,50)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 				setElementData(ped, "laser.on",true,true)
 
 		return ped
@@ -289,7 +298,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, 265, int, int, Estab
 				setElementData(ped, "name", "R/01 Grunt")
 				setElementData(ped, "establishment", true)
 				setPedArmor(ped,50)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 				setElementData(ped, "laser.on",true,true)
 
 		return ped
@@ -302,7 +311,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, 279, int, int, Estab
 				setElementData(ped, "heavy", true)
 				setPedArmor(ped,75)
 				setElementData(ped, "establishment", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 				setElementData(ped, "laser.on",true,true)
 		return ped
 end	
@@ -314,7 +323,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, 285, int, int, Estab
 				setElementData(ped, "spec", true)
 				setPedArmor(ped,50)
 				setElementData(ped, "establishment", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -328,7 +337,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, skin, int, int, Esta
 				setElementData(ped, "type", "civilian")
 				setElementData(ped, "cleaner", true)
 				setPedArmor(ped,25)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 			return ped
 end	
 
@@ -339,7 +348,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Establi
 				setElementData(ped, "name", "Peacekeeper")
 				setElementData(ped, "establishment", true)
 				setElementData(ped, "peacekeeper", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -349,7 +358,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, skin, int, int, Esta
 				setElementData(ped,"name",name)
 				setElementData(ped, "establishment", true)
 				setElementData(ped, "questgiver", true,true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end	
 
@@ -364,7 +373,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, botSkinID, int, int,
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "armypatrol", true)
 				setElementData(ped, "establishment", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -380,7 +389,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, botSkinID, int, int,
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "R01patrol", true)
 				setElementData(ped, "establishment", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 				
 				setElementData(ped, "laser.on",true,true)
 				
@@ -398,7 +407,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, botSkinID, int, int,
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "peacekeeper", true)
 				setElementData(ped, "establishment", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -414,7 +423,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, botSkinID, int, int,
 				setElementData(ped, "suit", true)
 				setElementData(ped, "establishment", true)
 				setPedArmor(ped,25)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -430,7 +439,7 @@ local ped = createPed(botSkinID, x, y, z)
 				setElementData(ped, "name", name)
                 setElementData(ped, "BotTeam", Establishment)
 				setElementData(ped, "establishment", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end	
 
@@ -445,7 +454,7 @@ local ped = createPed(botSkinID, x, y, z)
 				setElementData(ped, "name", name)
                 setElementData(ped, "BotTeam", Establishment)
 				setElementData(ped, "establishment", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -454,7 +463,7 @@ function createBanditGuard(x,y,z,r,team)
 local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(banditSkin), int, int, Bandits, table.random(banditWeapons), "guarding", nil)
 				setElementData(ped, "name", "Bandit")
 				setElementData(ped, "bandit", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -465,7 +474,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(banditS
 				setElementData(ped, "type", "civilian")
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "bandit", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -479,7 +488,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, skin, int, int, Band
 				setElementData(ped, "bandit", true)
 				setElementData(ped, "questgiver", true,true)
 
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -492,7 +501,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Neutral
 				setElementData(ped, "type", "civilian")
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "neutralfreelancer", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -515,7 +524,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Scaveng
 
 				setElementData(ped, "name", "Guard")
 				setElementData(ped, "scavenger", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -526,7 +535,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Scaveng
 				setElementData(ped, "type", "civilian")
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "freelancer", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -537,7 +546,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(wastela
 				setElementData(ped, "name", "Wastelander")
 				setElementData(ped, "wastelander", true)
 
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -549,7 +558,7 @@ local ped = createPed(table.random(wastelanderCivSkin), x, y, z)
 				setElementData(ped, "name", "Wastelander")
                 setElementData(ped, "BotTeam", Scavengers)
 				setElementData(ped, "wastelander", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 
 		return ped
 end	
@@ -561,7 +570,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(wastela
 				setElementData(ped, "wastelander", true)
 				setElementData(ped, "vendor", true)
 		
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end	
 
@@ -572,7 +581,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Wastela
 				setElementData(ped, "type", "civilian")
 				setElementData(ped, "sex", "male")
 				setElementData(ped, "freelancer", true)
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -583,7 +592,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, table.random(Syndica
 				setElementData(ped, "syndicate", true)
 				setElementData(ped, "vendor", true)
 		
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -598,7 +607,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, skin, int, int, Scav
 				setElementData(ped, "scavenger", true)
 				setElementData(ped, "questgiver", true,true)
 		
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -613,7 +622,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, skin, int, int, Scav
 				setElementData(ped, "wastelander", true)
 				setElementData(ped, "questgiver", true,true)
 		
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
@@ -628,7 +637,7 @@ local ped = exports["dystopia_slothbot"]:spawnBot (x,y,z,r, skin, int, int, Scav
 				setElementData(ped, "syndicate", true)
 				setElementData(ped, "questgiver", true,true)
 		
-				triggerClientEvent("PropPed",root,ped)
+				propPedCheck (ped)
 		return ped
 end
 
