@@ -1,26 +1,4 @@
-﻿maskTable = {}   
-vestTable = {} 
-
-vestTable["khakivest"] = {1922, 1, 90} 
-vestTable["estabvest"] = {1923, 1, 90} 
-vestTable["blackvest"] = {1924, 1, 90} 
-
-
-maskTable["vendetta"] = {1455, 1, 90} 
-maskTable["gasmask"] = {1487, 1, 90} 
-maskTable["cowboy"] = {1543, 1, 90} 
-maskTable["bloodhokey"] = {1951, 1, 180} 
-maskTable["bag"] = {1551, 1, 90} 
-maskTable["biomask"] = {1669, 1, 90} 
-maskTable["respirator"] = {1854, 1, 90} 
-maskTable["admin"] = {1855, 1, 90} 
-
-mask = {}
-vest = {}
-obj = {}
-
-function importqqqures2()
-		
+﻿function importqqqures2()
 	mask_guyfawkes_txd = engineLoadTXD ( "object/mask_guyfawkes.txd" ) 
 	engineImportTXD ( mask_guyfawkes_txd, 1455 )
 	mask_guyfawkes_dff = engineLoadDFF ( "object/mask_guyfawkes.dff", 0 )
@@ -80,15 +58,11 @@ function importqqqures2()
 	vest3_dff = engineLoadDFF ( "object/vest3.dff", 0 )
 	engineReplaceModel ( vest3_dff, 1924 )
 	engineSetModelLODDistance(1924, 2000)
-
 end
-
 setTimer ( importqqqures2, 1000, 1)
 
 addEventHandler("onClientResourceStop", getResourceRootElement(getThisResource()),
 	function()
-
-		
 		engineRestoreModel(1669)
 		destroyElement(gasmask2_txd)
 		destroyElement(gasmask2_dff)
@@ -117,9 +91,9 @@ addEventHandler("onClientResourceStop", getResourceRootElement(getThisResource()
 		destroyElement(mask_guyfawkes_txd)
 		destroyElement(mask_guyfawkes_dff)
 		
-		engineRestoreModel(1485)
-		destroyElement(mask_terrorist_txd)
-		destroyElement(mask_terrorist_dff)
+		engineRestoreModel(1854)
+		destroyElement(hat_airborne_txd)
+		destroyElement(hat_airborne_dff)
 		
 		engineRestoreModel(1487)
 		destroyElement(gasmask1_txd)
@@ -128,151 +102,5 @@ addEventHandler("onClientResourceStop", getResourceRootElement(getThisResource()
 		engineRestoreModel(1543)
 		destroyElement(hat_cowboy_txd)
 		destroyElement(hat_cowboy_dff)		
-		
 	end
 )
-
-function table.random ( theTable )
-    return theTable[math.random ( #theTable )]
-end
-
-local gasmasks_tbl = {"none","gasmask","respirator","biomask"}
---local trooperhead_tbl = {"respirator"}
-local civvests_tbl = {"none","khakivest","blackvest"}
-local raiderhead_tbl = {"none","gasmask","respirator","biomask","bloodhokey"}
-local militiahead_tbl = {"none","respirator","biomask","cowboy","gasmask"}
-local nomadhead_tbl = {"none","gasmask","respirator","biomask","bag"}
-local bandithead_tbl = {"none","gasmask","respirator","biomask","cowboy"}
-local heavytrooperhead_tbl = {"none","cowboy","respirator","biomask"}
-
-addEvent("PropPed",true)
-pedPropsEnabled = true
-addCommandHandler("pedprops",function() pedPropsEnabled = not pedPropsEnabled; outputDebugString(tostring(pedPropsEnabled))end)
-function addPropsToPed (ped)
-
-if pedPropsEnabled then 
-
-	local rand1 = math.random(0,1)
-	local rand2 = math.random(0,1)
-	local rand3 = math.random(0,1)
-
-	local name = getElementData(ped,"name")
-
-		if name == "Trooper" then
-			if rand1>0 then
-			triggerServerEvent( "setvest", ped, "khakivest")
-			end
-		elseif name == "Peacekeeper" then
-			if rand1>0 then
-			triggerServerEvent( "setmask", ped, table.random(gasmasks_tbl) )
-			end
-			triggerServerEvent( "setvest", ped, "estabvest")
-		elseif name == "Heavy Trooper" then
-			triggerServerEvent( "setvest", ped, "khakivest")
-			if rand1>0 then
-				local mask = table.random(heavytrooperhead_tbl)
-			triggerServerEvent( "setmask", ped, mask )
-			end
-		elseif name == "R/01 Spec" then
-			triggerServerEvent( "setvest", ped, "estabvest")
-			if rand1>0 then
-			triggerServerEvent( "setmask", ped, "biomask" )
-			end
-		elseif name == "R/01 Agent" then
-			if rand1>0 then
-			triggerServerEvent( "setvest", ped, "estabvest")
-			end
-			if rand2>0 then
-			triggerServerEvent( "setmask", ped, "biomask" )
-			end
-		elseif name == "R/01 Operator" then
-			triggerServerEvent( "setvest", ped, "estabvest")
-			if rand1>0 then
-			triggerServerEvent( "setmask", ped, "biomask" )	
-			end
-		elseif name == "R/01 Grunt" then
-			if rand1>0 then
-			triggerServerEvent( "setvest", ped, "estabvest")
-			end
-			if rand2>0 then
-			triggerServerEvent( "setmask", ped, "biomask" )
-			end
-		elseif name == "Raider Barker" or name == "Raider Mongrel" then
-			if rand1>0 then
-				local mask = table.random(raiderhead_tbl)
-				if mask ~= "none" then 
-					triggerServerEvent( "setmask", ped, mask )
-					setElementData(ped,"name","Raider Hound",true)
-					setElementHealth(ped,130)
-				end
-			end
-			if rand2>0 then
-				local vest = table.random(civvests_tbl)
-				if vest ~= "none" then 
-				triggerServerEvent( "setvest", ped, vest )
-				setElementData(ped,"name","Raider Pitdog",true)
-				setElementHealth(ped,160)
-				end
-			end
-		elseif name == "Nomad" or name == "Thug" or name == "Robber" then
-			if rand1>0 then
-				triggerServerEvent( "setmask", ped, table.random(nomadhead_tbl) )
-			end
-			if rand2>0 then
-				triggerServerEvent( "setvest", ped, table.random(civvests_tbl) )
-			end
-		elseif name == "Bandit" then
-			if rand1>0 then
-					local mask = table.random(raiderhead_tbl)
-					if mask ~= "none" then 
-						triggerServerEvent( "setmask", ped, mask )
-						--setElementData(ped,"name","Bandit Heavy",true)
-						setElementHealth(ped,130)
-					end
-			end
-			if rand2>0 then
-					local vest = table.random(civvests_tbl)
-					if vest ~= "none" then 
-						triggerServerEvent( "setvest", ped, vest )
-						setElementData(ped,"name","Bandit Veteran",true)
-						setElementHealth(ped,160)
-					end
-			end
-		elseif name == "Militia" then
-			if rand1>0 then
-				triggerServerEvent( "setmask", ped, table.random(militiahead_tbl) )
-			end
-			if rand2>0 then
-					local vest = table.random(civvests_tbl)
-					if vest ~= "none" then
-						triggerServerEvent( "setvest", ped, vest )
-						setElementData(ped,"name","Militia Ranger",true)
-						setElementHealth(ped,180)
-					end
-			end
-		elseif name == "Guard" or name == "Scavenger" then
-			if rand1>0 then
-				triggerServerEvent( "setvest", ped, table.random(civvests_tbl) )
-			end
-		elseif name == "Wastelander" then
-			if rand1>0 then
-				triggerServerEvent( "setmask", ped, "cowboy" )
-				triggerServerEvent( "setvest", ped, table.random(civvests_tbl) )
-			end
-		end
-	end
-end
-addEventHandler("PropPed",root,addPropsToPed)
-
-function setPlayerProp(command,proptype,name)
-	if name then
-		if proptype == "vest" then
-		triggerServerEvent( "setvest", localPlayer, name)
-		elseif proptype == "mask" then
-		triggerServerEvent( "setmask", localPlayer, name)
-		else
-		return
-		end
-	end
-end
-addCommandHandler("giveprop",setPlayerProp)
