@@ -3,9 +3,9 @@ MAX_NO_BOTS_SPAWNED = 100 --enforces a max of 100 bots spawned at a time; vendor
 PROP_CHANCE = 300 --the largest the number, the smaller the chance for the ped to get any accessories; setting this number too low can lag the server, as most of the peds will have props attached, setting it too high will make special peds to almost never appear; best value will be determined by testing
 
 function propPedCheck (ped)
-local proprand = math.random(1,PROP_CHANCE)
+	local proprand = math.random(1,PROP_CHANCE)
 	if proprand == 1 then
-		triggerClientEvent("PropPed",root,ped)
+		triggerEvent("PropPed", ped)
 		outputDebugString("Ped props added to "..getElementData(ped, "name"))
 	end
 end
