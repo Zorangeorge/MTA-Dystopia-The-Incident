@@ -82,87 +82,81 @@ end
 addCommandHandler ( "ccol", processVehiclesOnStart )
 
 function fuel_interact(hitElement)
-	
-local elemType = getElementType(hitElement)
-local objectBarrel = getElementData(source,"fuelcolshape_barrel") or false
-	
-	if elemType == "player" and isPedInVehicle(hitElement) then -- don't trigger for players inside vehicles
-		return
-	elseif not objectBarrel then
+	local elemType = getElementType(hitElement)
+	if (elemType ~= "player") or isPedInVehicle(hitElement) then
 		return
 	end
-	if getElementData(objectBarrel,"destroyed") == true then return end --check if the barrel is exploded
 	
-	if elemType == "player" and ( getElementModel(objectBarrel) == 1217 or getElementModel(objectBarrel) == 1225 ) then  -- if a player hits a fuel barrel colshape
-		
-		setElementData(hitElement,"insideFuelCol", source)
-		
-		local fuelQuant = getElementData(source,"fuel") or 0
-		local friendlyFuel 
-		
-		if fuelQuant == 0 then friendlyFuel = "empty"
-		else friendlyFuel = ""..(fuelQuant * 10).." l"
-		end
-		
-		if fuelQuant == 0 then
-			outputInteractInfo("[empty]", hitElement, 240,240,240)
-		elseif fuelQuant ~= 0 then
-			outputInteractInfo("Take fuel\n("..friendlyFuel..")\n[E]", hitElement, 240,240,240)
-			bindKey(hitElement,"e","down",triggerRefillCanister)
-			triggerClientEvent(hitElement,"showHelpMessageEvent",hitElement,fuel_help_messsage)
-		end
-	else 
-	return
-	end	
+	local objectBarrel = getElementData(source, "fuelcolshape_barrel")
+	if not (objectBarrel) then
+		return
+	end
+	
+	if getElementData(objectBarrel, "destroyed") then -- check if the barrel is exploded
+		return
+	end
+	
+	setElementData(hitElement, "insideFuelCol", source)
+	
+	local fuelQuant = getElementData(source, "fuel") or 0
+	if (fuelQuant == 0) then
+		outputInteractInfo("[empty]", hitElement, 240, 240, 240)
+	else
+		local friendlyFuel = (fuelQuant * 10).." l"
+		outputInteractInfo("Take fuel\n("..friendlyFuel..")\n[E]", hitElement, 240, 240, 240)
+		bindKey(hitElement, "e", "down", triggerRefillCanister)
+		triggerClientEvent(hitElement, "showHelpMessageEvent", hitElement, fuel_help_messsage)
+	end
 end
-addEventHandler("onColShapeHit", root, fuel_interact) 
+addEventHandler("onColShapeHit", root, fuel_interact)
 
 function clear_fuel_interact(leaveElement)
-local objectBarrel = getElementAttachedTo(source) or false
-local elemType = getElementType(leaveElement)
-	if not objectBarrel then return	end
-	
-	if elemType == "player" and ( getElementModel(objectBarrel) == 1217 or getElementModel(objectBarrel) == 1225 ) then  -- if a player leaves a fuel barrel colshape
-		setElementData(leaveElement,"insideFuelCol", nil)
-		unbindKey(leaveElement,"e","down",triggerRefillCanister)
+	local elemType = getElementType(leaveElement)
+	if (elemType ~= "player") then
+		return
 	end
+		
+	local objectBarrel = getElementData(source, "fuelcolshape_barrel")
+	if not (objectBarrel) then
+		return
+	end
+	
+	setElementData(leaveElement, "insideFuelCol", nil)
+	unbindKey(leaveElement, "e", "down", triggerRefillCanister)
 end
 addEventHandler("onColShapeLeave", root, clear_fuel_interact)
 
-function triggerRefillCanister (player)
-local itemcount, slot = hasPlayerItem("Empty Canister", player)
-	if itemcount and itemcount>0 then
-		if getElementData(player,"insideFuelCol") ~= nil then
-				local barrel = getElementData(player,"insideFuelCol")
-				local fuelQuant = getElementData(barrel,"fuel")
+function triggerRefillCanister(player)
+	local itemcount, slot = hasPlayerItem("Empty Canister", player)
+	if (itemcount) and (itemcount > 0) then
+		local barrel = getElementData(player, "insideFuelCol")
+		if (barrel) then
+			local fuelQuant = getElementData(barrel, "fuel")
+			if (fuelQuant >= 1) then
+				setPedWeaponSlot(player,0)
+				used = true
+				local x,y,z = getElementPosition( barrel )
+				local px, py, pz = getElementPosition( player )
+				local pedangle = ( 360 - math.deg ( math.atan2 ( ( x - px ), ( y - py ) ) ) ) % 360
+				setPedRotation( player, pedangle )
+				setPedAnimation ( player, "INT_HOUSE", "wash_up", 4000, true, false, false, false)
+				triggerClientEvent(player, "sleep:drawDXProgress", player, 4000,4000)
+				setTimer(triggerClientEvent,4000,1,player, "sleep:stopDXProgress", player)
+				setTimer(createwateritsamiracle, 4500, 1, "Fuel Canister", player)
+				setElementData(barrel, "fuel", fuelQuant-1)
+				local xp = getPlayerExp(player)
+				setPlayerExp(player,xp+1)
+				outputStatusInfo("+1 xp",player, 240,240,240 )
 				
-				if fuelQuant >= 1 then
-					setPedWeaponSlot(player,0)
-					used = true
-					local x,y,z = getElementPosition( barrel )
-					local px, py, pz = getElementPosition( player )
-					local pedangle = ( 360 - math.deg ( math.atan2 ( ( x - px ), ( y - py ) ) ) ) % 360
-					setPedRotation( player, pedangle )
-					setPedAnimation ( player, "INT_HOUSE", "wash_up", 4000, true, false, false, false)
-					triggerClientEvent(player, "sleep:drawDXProgress", player, 4000,4000)
-					setTimer(triggerClientEvent,4000,1,player, "sleep:stopDXProgress", player)
-					setTimer(createwateritsamiracle, 4500, 1, "Fuel Canister", player)
-					setElementData(barrel,"fuel", fuelQuant-1 )
-					local xp = getPlayerExp(player)
-					setPlayerExp(player,xp+1)
-					outputStatusInfo("+1 xp",player, 240,240,240 )
-					
-					PlayersItens[player][slot]="Empty"
-					triggerClientEvent(player,"RefreshDraw",player)
-					triggerClientEvent("synchronizeTables",player,PlayersItens)
-				else
-					outputInteractInfo("[ barrel empty! ]", player, 240,240,240)
-				end
-		else
-			return
+				PlayersItens[player][slot]="Empty"
+				triggerClientEvent(player,"RefreshDraw",player)
+				triggerClientEvent("synchronizeTables",player,PlayersItens)
+			else
+				outputInteractInfo("[ barrel empty! ]", player, 240,240,240)
+			end
 		end
 	else
-	outputInteractInfo("[ empty canister required! ]",player,255,255,255,255)
+		outputInteractInfo("[ empty canister required! ]",player,255,255,255,255)
 	end
 end
 
