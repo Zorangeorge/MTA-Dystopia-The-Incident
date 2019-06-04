@@ -11,6 +11,31 @@
 		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
 	</element>
 	
+		<element name="Bot_spawn" friendlyname="Bot" icon="edf/scavengers.png">
+	<data name="position" type="coord3d" default="0,0,0" />
+		<data name="rotation" type="coord3d" default="0,0,0" />
+		<ped model="0" rotation="!rotation!"/>
+		<object model="1314" posZ="1" rotation="!rotation!"/>
+		<data name="botPreset" type="selection:Civilian,Police,Peacekeeper,GeneralTrader,AmmuTrader,FoodTrader,Criminal" description="Bot preset" required="true" default="Civilian" />
+		<data name="botType" type="selection:Civilian,Slothbot,Animal" description="Bot type" required="true" default="Civilian" />
+		<data name="botFaction" type="selection:Civilians,Establishment,Criminals,CDF" description="Bot faction" required="true" default="Civilians" />
+		<data name="botBehavior" type="selection:guarding,hunting,waiting,passive" description="Bot behaviour" required="true" default="guarding" />
+		<data name="botName" type="string" description="Bot name (optional)" required="false" default="Civilian" />
+		<data name="botSkinID" type="integer" description="Bot skin ID (optional)" required="false" default="0" />
+		<data name="botWeapon" type="integer" description="Bot weapon (optional)" required="false" default="0" />
+		<data name="botLawfullnes" type="integer" description="How likely is the bot to respect the law? (-100 to 100)(optional)" required="true" default="100" />
+		<data name="botRange" type="integer" description="Bot spawning range" required="true" default="100" />
+		<data name="botAnimationBlock" type="string" description="" required="false" default="" />
+		<data name="botAnimationName" type="string" description="" required="false" default="" />
+		<data name="botTarget" type="string" description="The element name of the bot that should be the targeted" required="false" default="" />
+		<data name="botSpecialty" type="selection:none,thrower,shield,barrel" description="Bot special ability" required="true" default="none" />
+		<data name="botSecondaryWeapon" type="integer" description="Bot secondary weapon (optional)" required="false" default="0" />
+		<data name="hasLaser" type="selection:false,true" description="Should this bot use laser targetting?" required="true" default="false" />
+		<data name="botDialogue" type="string" description="Bot dialogue identifier" required="false" default="" />
+		<data name="isEssential" type="selection:false,true" description="Should this bot spawn even if bot limit was hit? (e.g. traders, mission peds)" required="true" default="false" />
+		<data name="OtherData" type="string" description="Any other elementData you want the bot to have" required="false" default="" />
+	</element>
+	
 	<element name="Raider_spawn" friendlyname="Raider" icon="edf/raiders.png">
 		<data name="position" type="coord3d" default="0,0,0" />
 		<data name="rotation" type="coord3d" default="0,0,0" />
