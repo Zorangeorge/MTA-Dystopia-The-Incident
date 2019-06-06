@@ -21,7 +21,7 @@
     <map src="dystopia_map.map" dimension="0"></map>
     <settings>
         <setting name="#maxplayers" value="[ 128 ]"></setting>
-        <setting name="#useLODs" value="[ true ]"></setting>
+        <setting name="#useLODs" value="[ false ]"></setting>
         <setting name="#gamespeed" value="[ 1 ]"></setting>
         <setting name="#minplayers" value="[ 0 ]"></setting>
         <setting name="#gravity" value="[ 0.0080000004 ]"></setting>
