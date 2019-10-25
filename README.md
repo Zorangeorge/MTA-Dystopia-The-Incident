@@ -19,6 +19,7 @@ mtasa://37.187.171.204:22008
 ### More details:
 
 About Dystopia:
+- https://mta-dystopia.fandom.com/wiki/About
 - https://forum.mtasa.com/topic/98093-action-rpg-zombie-sandbox-dystopia-the-incident-en/
 - https://discord.gg/Zs5bWSX
 - https://dystopiatheincident.imgur.com/
