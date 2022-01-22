@@ -41,9 +41,9 @@ function spawn(player)
 	local z = getAccountData(acc,"positionz") or false
 	local rotation = getAccountData(acc,"rotation") or false
 	
-	iprint(getAccountData(acc, "bedspawnx"))
-	iprint(getAccountData(acc, "bedspawny"))
-	iprint(getAccountData(acc, "bedspawnz"))
+	--iprint(getAccountData(acc, "bedspawnx"))
+	--iprint(getAccountData(acc, "bedspawny"))
+	--iprint(getAccountData(acc, "bedspawnz"))
 	
 	if getAccountData(acc, "bedspawnx") then
 	x = getAccountData(acc, "bedspawnx")
@@ -52,7 +52,7 @@ function spawn(player)
 	rotation = math.random(0,360)
 	end
 
-	if getAccountData(acc, "bedspawnx") == x then iprint("coordinates are good") end
+	--if getAccountData(acc, "bedspawnx") == x then iprint("coordinates are good") end
 
 	if x and y and z and rotation then 
 	
@@ -61,7 +61,7 @@ function spawn(player)
 	else	
 	
 	spawnpoint = getSpawnPoint(player)
-	iprint("spawning at normal spawnpoint")
+	--iprint("spawning at normal spawnpoint")
 	exports.spawnmanager:spawnPlayerAtSpawnpoint(player,spawnpoint,false)	
 	end
 	
