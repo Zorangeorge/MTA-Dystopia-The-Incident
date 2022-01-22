@@ -40,13 +40,29 @@ function spawn(player)
 	local y = getAccountData(acc,"positiony") or false
 	local z = getAccountData(acc,"positionz") or false
 	local rotation = getAccountData(acc,"rotation") or false
-		
+	
+	iprint(getAccountData(acc, "bedspawnx"))
+	iprint(getAccountData(acc, "bedspawny"))
+	iprint(getAccountData(acc, "bedspawnz"))
+	
+	if getAccountData(acc, "bedspawnx") then
+	x = getAccountData(acc, "bedspawnx")
+	y = getAccountData(acc, "bedspawny")
+	z = getAccountData(acc, "bedspawnz")
+	rotation = math.random(0,360)
+	end
+
+	if getAccountData(acc, "bedspawnx") == x then iprint("coordinates are good") end
+
 	if x and y and z and rotation then 
 	
 	spawnPlayer(player,x,y,z,rotation,0)
 	
-	else	spawnpoint = getSpawnPoint(player)
-		exports.spawnmanager:spawnPlayerAtSpawnpoint(player,spawnpoint,false)	
+	else	
+	
+	spawnpoint = getSpawnPoint(player)
+	iprint("spawning at normal spawnpoint")
+	exports.spawnmanager:spawnPlayerAtSpawnpoint(player,spawnpoint,false)	
 	end
 	
 	local acc = getPlayerAccount(player)
@@ -265,7 +281,10 @@ function getSpawnPoint (player)
 		end
 	
 	local lives = getElementData(player,"lives")
-	if lives == 3 or lives < 1 then spawnarea = "LosSantos"; setPlayerTeam(player,Scavengers) end --if your char is a new one or is dead-dead, you're back to LS
+	if lives == 3 or lives < 1 then 
+	spawnarea = "LosSantos"
+	setPlayerTeam(player,Scavengers) 
+	end --if your char is a new one or is dead-dead, you're back to LS
 	
 	local allspawnpoints = getElementsByType("spawnpoint") 
 	local teamspawnpoints = {}
@@ -360,7 +379,15 @@ addEventHandler("onPlayerWasted", root,
 		setElementData(source,"lives",lives-1)
 		setAccountData(acc,"lives", lives-1)
 		
-		if lives-1<1 then setPlayerLevel(source,1); setAccountData(acc,"level", 1) end
+		--if player is dead-dead
+		if lives-1<1 then 
+			setPlayerLevel(source,1)
+			setAccountData(acc,"level", 1) 
+			--##HERE##### reset spawn position
+			setAccountData(acc,"bedspawnx",false) 
+			setAccountData(acc,"bedspawny",false) 
+			setAccountData(acc,"bedspawnz",false)
+		end
 		
 		
 		if getElementData(source, "headlampequipped") == true then

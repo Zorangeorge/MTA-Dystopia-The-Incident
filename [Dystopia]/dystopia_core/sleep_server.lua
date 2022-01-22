@@ -22,13 +22,13 @@ local BEDS_COLSHAPE_OFFSET = {
 --local WALKING_TO_BED = 0.35 -- ms/unit
 local ENTER_TO_BED_KEY = "e"
 
-local REPLENISH_HP_EACH = 5 -- seconds
-local REPLENISH_LIVE_EACH = 60 -- seconds
+local REPLENISH_HP_EACH = 0.5 -- seconds
+local REPLENISH_LIVE_EACH = 10 -- seconds
 
 local REPLENISH_UP_TO_X_HP = 12
 local REPLENISH_UP_TO_X_LIVES = 1
 
-local SLEEPING_COOLDOWN = 10 -- minutes
+local SLEEPING_COOLDOWN = 5 -- minutes
 
 current_beds = {}
 col_to_bed = {}
@@ -77,6 +77,7 @@ end
 
 function getInBed(_, _, _, player, bed)
 	unbindKey(player, ENTER_TO_BED_KEY, "down", getInBed)
+		
 	if bed_warming[bed] then
 		return
 	end
@@ -198,6 +199,7 @@ function wakeUp(player, _, _, kick_anim)
 			2500, 1)
 		else
 			setPedAnimation(player, "int_house", "bed_out_r", -1, false, true, true, false)
+			setTimer(saveBedRespawnPosition(player),1500,1)
 		end
 	end
 	if isElement(player_in_bed[player]) then
@@ -316,4 +318,11 @@ function getPedMaxHealth(ped)
     return math.max(1, 100 + (getPedStat(ped, 24) - 569) / 4.31)
 end
 
-
+function saveBedRespawnPosition(player)
+local x,y,z = getElementPosition(player)
+local acc = getPlayerAccount(player)
+setAccountData(acc,"bedspawnx",x) 
+setAccountData(acc,"bedspawny",y) 
+setAccountData(acc,"bedspawnz",z)
+outputTopBar( "Respawn location saved!", player, 0, 240, 0 )
+end
