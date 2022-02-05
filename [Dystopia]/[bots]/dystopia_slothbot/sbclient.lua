@@ -1313,19 +1313,23 @@ function panicCiviliansAround (theElement)
 	local Px,Py,Pz = getElementPosition( theElement )
 	local aipeds = getElementsByType ( "ped" )
 	for theKey,thePed in ipairs(aipeds) do
-			if ( getElementData ( thePed, "type" ) == "civilian" ) and (getElementData (thePed, "slothbot") ~= true) then
-				if getElementHealth(thePed)>0  then
-					local Ax,Ay,Az = getElementPosition( thePed )
-					local distance = (getDistanceBetweenPoints3D (Px, Py, Pz, Ax, Ay, Az))
-					if (distance < 30) then -- distance where where somebody triggers civilian panic around
-						if isElement(thePed) then setElementData(thePed,"panic",true,true) end
-						triggerEvent("sync.message", root, thePed, 255, 50, 0, "PANIC")
-						if isElement(thePed) then setTimer(setElementData,60000,1,thePed,"panic",false,true) end
-					end
+		if ( getElementData ( thePed, "type" ) == "civilian" ) and (getElementData (thePed, "slothbot") ~= true) then
+			if getElementHealth(thePed)>0  then
+				local Ax,Ay,Az = getElementPosition( thePed )
+				local distance = (getDistanceBetweenPoints3D (Px, Py, Pz, Ax, Ay, Az))
+				if (distance < 30) then -- distance where where somebody triggers civilian panic around
+					setElementData(thePed,"panic",true,true)
+					triggerEvent("sync.message", root, thePed, 255, 50, 0, "PANIC")
+					setTimer(
+						function()
+							if isElement(thePed) then
+								setElementData(thePed, "panic", false, true)
+							end
+						end, 60000, 1
+					)
 				end
 			end
-			
-		
+		end
 	end
 end
 
