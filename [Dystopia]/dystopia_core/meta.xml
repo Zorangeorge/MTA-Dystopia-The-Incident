@@ -10,6 +10,7 @@
 <!-- <include resource="dystopia_zombies"/> -->
 <!-- <include resource="drawtag_bc"/>		 -->
 <include resource="dgs"/>
+<include resource="scoreboard"/>
 <!-- <include resource="msgbox" />		 -->
   
   <settings>

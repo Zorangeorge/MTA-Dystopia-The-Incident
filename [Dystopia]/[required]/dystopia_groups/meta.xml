@@ -3,4 +3,5 @@
 	<script src="group_client.lua" type="client" cache="false"/>
 	<script src="group_server.lua" type="server"/>
 	<file src="fonts/Chunkfive.otf" />
+	<include resource="scoreboard"/>
 </meta>
