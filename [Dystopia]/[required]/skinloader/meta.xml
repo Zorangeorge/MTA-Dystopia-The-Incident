@@ -74,4 +74,6 @@
     <file src="vehicles/flatbed.txd"></file>
     <file src="vehicles/flatbed.dff"></file>
     <file src="vehicles/barracks.txd"></file>
+    <file src="vehicles/fbitruck.txd"></file>
+    <file src="vehicles/fbitruck.dff"></file>
 </meta>
