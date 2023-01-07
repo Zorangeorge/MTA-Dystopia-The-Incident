@@ -261,6 +261,7 @@ end]]
 addEvent("sync.message", true)
 addEventHandler("sync.message", root,
 	function (player, r, g, b, message)
+		outputDebugString(message)
 	
 	if not isElement(player) then return end
 		
@@ -296,15 +297,19 @@ addEventHandler("sync.message", root,
 addEventHandler ( "onClientRender", root, function ( ) --STATUSINFO RENDER  
     for player in pairs ( messages ) do
     	for sindex, sdata in ipairs(messages[player]) do
-	        local v1 = sdata[1]
-	        local v2 = sdata[2]
-	        local v3 = sdata[3]
-	        local v4 = sdata[4]
-	        local v5 = sdata[5]
-	        local v6 = sdata[6]
-	        local v7 = sdata[7]
-	        local v8 = player
+	        local v1 = sdata[1] -- message
+	        local v2 = sdata[2] -- bool (?)
+	        local v3 = sdata[3] -- expire time
+	        local v4 = sdata[4] -- alpha
+	        local v5 = sdata[5] -- r
+	        local v6 = sdata[6] -- g
+	        local v7 = sdata[7] -- b
+	        local v8 = player -- player
 			
+			if not isElement(v8) then
+				messages[player] = nil
+				return
+			end
 --[[	        if sindex == 1 then
 	        	--y = 2
 	        	SCALE = .25
