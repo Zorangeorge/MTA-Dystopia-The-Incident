@@ -57,6 +57,9 @@ end
 
 local timer = nil
 function outputTopBar( message, red, green, blue )
+	if type(message) ~= "string" then
+		error("Invalid message", 3)
+	end
 	text = message
 	r = red
 	g = green
@@ -70,6 +73,9 @@ end
 
 local statustimer = nil
 function outputStatusInfo( message, red, green, blue )
+	if type(message) ~= "string" then
+		error("Invalid message", 3)
+	end
 	status = message
 	r = red
 	g = green
@@ -83,6 +89,9 @@ end
 
 local interacttimer = nil
 function outputInteractInfo( message, red, green, blue )
+	if type(message) ~= "string" then
+		error("Invalid message", 3)
+	end
 	interact = message
 	r = red
 	g = green
