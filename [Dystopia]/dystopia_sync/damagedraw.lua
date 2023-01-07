@@ -261,7 +261,6 @@ end]]
 addEvent("sync.message", true)
 addEventHandler("sync.message", root,
 	function (player, r, g, b, message)
-		outputDebugString(message)
 	
 	if not isElement(player) then return end
 		
