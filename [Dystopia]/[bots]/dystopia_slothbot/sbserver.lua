@@ -140,8 +140,8 @@ function assigntarget ( player )
 					
 			if not getElementData(source,"talking") and not isPedDead(source) then
 				setTimer(
-					function(source)
-						if isElement(source) then
+					function(source, player)
+						if isElement(source) and isElement(player) then
 							triggerClientEvent(player,"onChatIncome", source,table.random(alertstable))
 						end
 					end, rand2, 1, source
@@ -467,7 +467,12 @@ function chase_move (ped, oldTx, oldTy, oldTz, oldPx, oldPy, oldPz)
 										local slot = getPedWeaponSlot(ped)
 										setPedWeaponSlot(ped, 0 )
 										triggerClientEvent ( "bot_Jump", ped )
-										if isElement(ped) then setTimer ( setPedWeaponSlot, 850, 1, ped, slot) end
+										if isElement(ped) then 
+												setTimer ( function(ped, slot)
+													if not isElement(ped) then return end
+													setPedWeaponSlot(ped, slot)
+												end, 850, 1, ped, slot) 
+										end
 									else
 										triggerClientEvent ( "bot_Jump", ped )
 									end
