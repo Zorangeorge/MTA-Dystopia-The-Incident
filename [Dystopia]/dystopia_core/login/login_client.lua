@@ -139,6 +139,10 @@ end
 addEvent("onPlayerLogged", true)
 addEventHandler("onPlayerLogged", root,
 	function()
+		if not isElement(initBrowser) then 
+			return
+		end
+
 		removeEventHandler("onClientRender",root,forceShowCursor)
 		destroyElement(initBrowser)
 		showCursor(false)
