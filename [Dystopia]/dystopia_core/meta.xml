@@ -8,6 +8,7 @@
 <!-- <include resource="bone_attach"/> -->
 <include resource="dystopia_slothbot"/>		
 <!-- <include resource="dystopia_zombies"/> -->
+<include resource="dystopia_killmessages"/>
 <!-- <include resource="drawtag_bc"/>		 -->
 <include resource="dgs"/>
 <include resource="scoreboard"/>
