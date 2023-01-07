@@ -3,64 +3,57 @@ local colorizePed={1,0.5,0,1};
 local specularPower=2;
 local effectMaxDistance=20
 -- don't touch
-local wallShader={}
-local effectOn=false
+local wallShaders = {}
 
-addEventHandler( "onClientResourceStart", resourceRoot,
-    function()
-        -- Version check
-        if getVersion ().sortable < "1.3.1-9.04939" then
-            outputChatBox( "Resource is not compatible with this client." )
-            outputChatBox( "Please update MTA:SA." )
-            return
-        end
-            effectOn=true;  
+local function createWallEffectForPed(ped)
+    if wallShaders[ped] then
+        return
     end
-)
-
-addEventHandler( "onClientResourceStop", resourceRoot,
-    function()
-            effectOn=false;
-            wallShader=nil;
+    if not isPedDucked(ped) then
+        return
     end
-)
 
-function createWallEffectForPlayer(thisPlayer)
-    if not wallShader[thisPlayer] and isPedDucked(localPlayer) == true then
-        wallShader[thisPlayer] = dxCreateShader ( "shaders/ped_wall.fx", 1, 0, true, "ped" )
-        if not wallShader then return false
+    wallShaders[ped] = dxCreateShader ( "shaders/ped_wall.fx", 1, 0, true, "ped" )
+    if not wallShaders[ped] then 
+        outputDebugString("Failed to create wall effect shader for ped "..tostring(ped), 1)
+        return
+    end
+
+    dxSetShaderValue( wallShaders[ped], "sColorizePed",colorizePed )
+    dxSetShaderValue( wallShaders[ped], "sSpecularPower",specularPower )
+    engineApplyShaderToWorldTexture ( wallShaders[ped], "*" , ped )
+    engineRemoveShaderFromWorldTexture( wallShaders[ped],"muzzle_texture*" , ped )
+    if getElementAlpha(ped) == 255 then 
+        setElementAlpha( ped, 254 ) 
+    end
+end
+
+local function destroyWallEffectForPed(ped)
+    if wallShaders[ped] then
+        engineRemoveShaderFromWorldTexture(wallShaders[ped], "*" , ped)
+        destroyElement(wallShaders[ped])
+        wallShaders[ped] = nil
+    end
+end
+
+local function processEffects()
+    local peds = getElementsByType("ped", root, true)
+    for i=1,#peds do
+        if isElementStreamedIn(peds[i]) then
+            if peds[i] ~= localPlayer then
+                local x, y, z = getElementPosition(peds[i])            
+                local cx, cy, cz = getCameraMatrix()
+                local distance = getDistanceBetweenPoints3D(cx, cy, cz, x, y, z)
+                local hasLOS = isLineOfSightClear(cx, cy, cz, x, y, z, true, false, false, true, false, true, false, peds[i])
+                if (distance < effectMaxDistance) and not hasLOS then 
+                    createWallEffectForPed(peds[i])
+                elseif (distance > effectMaxDistance) or hasLOS then
+                    destroyWallEffectForPed(peds[i])
+                end
+            end
         else
-        dxSetShaderValue( wallShader[thisPlayer], "sColorizePed",colorizePed )
-        dxSetShaderValue( wallShader[thisPlayer], "sSpecularPower",specularPower )
-        engineApplyShaderToWorldTexture ( wallShader[thisPlayer], "*" , thisPlayer )
-        engineRemoveShaderFromWorldTexture( wallShader[thisPlayer],"muzzle_texture*" , thisPlayer )
-        if getElementAlpha(thisPlayer)==255 then setElementAlpha( thisPlayer, 254 ) end
-        return true
+            destroyWallEffectForPed(peds[i])
         end
     end
 end
-
-function destroyShaderForPlayer(thisPlayer)
-    if wallShader[thisPlayer] then
-        engineRemoveShaderFromWorldTexture( wallShader[thisPlayer], "*" , thisPlayer)
-        destroyElement(wallShader[thisPlayer])
-        wallShader[thisPlayer]=nil
-    end
-end
-
-addEventHandler("onClientRender",getRootElement(),
-    function() 
-    if not effectOn then return end 
-    for index,thisPlayer in ipairs(getElementsByType("ped")) do
-      if isElementStreamedIn(thisPlayer) and thisPlayer~=localPlayer then
-        local hx,hy,hz = getElementPosition(thisPlayer)            
-        local cx,cy,cz,clx,cly,clz,crz,cfov = getCameraMatrix()
-        local dist = getDistanceBetweenPoints3D(cx,cy,cz,hx,hy,hz)
-        local isItClear = isLineOfSightClear (cx,cy,cz, hx,hy, hz, true, false, false, true, false, true, false, thisPlayer )
-        if (dist<effectMaxDistance ) and not isItClear then createWallEffectForPlayer(thisPlayer) end 
-        if (dist>effectMaxDistance ) or  isItClear then destroyShaderForPlayer(thisPlayer)  end
-      end
-      if not isElementStreamedIn(thisPlayer) then destroyShaderForPlayer(thisPlayer) end
-    end
-end
-)
+addEventHandler("onClientRender", root, processEffects)
