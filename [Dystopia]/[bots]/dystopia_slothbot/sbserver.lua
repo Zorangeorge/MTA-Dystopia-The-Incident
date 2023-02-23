@@ -119,7 +119,7 @@ function assigntarget ( player )
 		local foundTargetAnims = {"point_loop","shout_in"} 
 		setPedRotation(source,pedangle)
 		setPedAnimation(source,"ON_LOOKERS", table.random(foundTargetAnims),1500,false,true,true,false)
-		if isElement(source) then setTimer(function(pped) if isElement(pped) then setPedAnimation(pped)end end,1500,1,source) end
+		setTimer(function(pped) if isElement(pped) then setPedAnimation(pped)end end,1500,1,source)
 		local leped = source
 		triggerClientEvent(root, "sync.message", leped, leped, 240, 125, 0, "ALERT")
 		local rand1 = math.random(0,2)
@@ -138,12 +138,23 @@ function assigntarget ( player )
 				alertstable = regularAlertLines
 			end
 					
-			if not getElementData(source,"talking") and not isPedDead(source) then 
-			if isElement(source) then setTimer(triggerClientEvent,rand2,1,player,"onChatIncome", source,table.random(alertstable)); 
-			--sendNearbyPlayers(source,table.random(alertstable)) -- needs to be exported in dystopia_core
-			setElementData(source,"talking",true); 
-			end
-			if isElement(source) then setTimer(function(ped) if isElement(ped) then setElementData(ped,"talking",false) end end,3000+rand2,1,source) end
+			if not getElementData(source,"talking") and not isPedDead(source) then
+				setTimer(
+					function(source, player)
+						if isElement(source) and isElement(player) then
+							triggerClientEvent(player,"onChatIncome", source,table.random(alertstable))
+						end
+					end, rand2, 1, source
+				)
+				--sendNearbyPlayers(source,table.random(alertstable)) -- needs to be exported in dystopia_core
+				setElementData(source,"talking",true);
+				setTimer(
+					function(ped)
+						if isElement(ped) then
+							setElementData(ped,"talking",false)
+						end
+					end,3000+rand2,1,source
+				)
 			end
 		end
 	end
@@ -298,7 +309,7 @@ function chase_move (ped, oldTx, oldTy, oldTz, oldPx, oldPy, oldPz)
 								if (weap == 1) or (weap == 7) then
 									setPedWeaponSlot(ped, 0 )
 									triggerClientEvent ( "bot_Jump", ped )
-									setTimer ( setPedWeaponSlot, 850, 1, ped, weap)
+									setTimer ( function () if isElement(ped) then setPedWeaponSlot(ped, weap) end end, 850, 1)
 								else
 									triggerClientEvent ( "bot_Jump", ped )
 								end
@@ -456,7 +467,12 @@ function chase_move (ped, oldTx, oldTy, oldTz, oldPx, oldPy, oldPz)
 										local slot = getPedWeaponSlot(ped)
 										setPedWeaponSlot(ped, 0 )
 										triggerClientEvent ( "bot_Jump", ped )
-										if isElement(ped) then setTimer ( setPedWeaponSlot, 850, 1, ped, slot) end
+										if isElement(ped) then 
+												setTimer ( function(ped, slot)
+													if not isElement(ped) then return end
+													setPedWeaponSlot(ped, slot)
+												end, 850, 1, ped, slot) 
+										end
 									else
 										triggerClientEvent ( "bot_Jump", ped )
 									end
@@ -1222,56 +1238,107 @@ function spawnBot(x, y, z, rot, skin, interior, dimension, team, weapon, mode, m
 	if not skin then skin = 0 end
 	if not interior then interior = 0 end
 	if not dimension then dimension = 0 end
-	if isElement(team) == false then team = nil end
+	if not isElement(team) then team = nil end
 	if not weapon then weapon = 0 end
 	if not mode then mode = "hunting" end
 	if not modesubject then modesubject = nil end
 	if mode == "following" then
-		if not modesubject then return false end
+		if not modesubject then
+			return false
+		end
 	end
 	if mode == "chasing" then
-		if not modesubject then return false end
+		if not modesubject then
+			return false
+		end
 	end
-	local slothbot = createPed (tonumber(skin),tonumber(x),tonumber(y),tonumber(z))--spawns the ped
 	
-	local slothbotBackside = createColSphere(0,0,0,0.3) --ZZ
-	attachElements(slothbotBackside,slothbot,0,-1,0) --ZZ
-	setElementData(slothbot, "backSide", slothbotBackside,true) --ZZ
+	local slothbot = createPed(skin, x, y, z, rot) --spawns the ped
 	
-	if (slothbot ~= false) then
-		triggerEvent ( "onBotSpawned", slothbot )		
-		if isElement(slothbot) then setTimer ( setElementData, 200, 1, slothbot, "slothbot", true ) -- makes it a bot
-		setTimer ( setElementData, 200, 1, slothbot, "AllowFire", true ) -- makes it able to shoot when it wants
-		setTimer ( assigncontroller, 300, 1, slothbot ) --sets the bots controller
-		setTimer ( function () if isElement(slothbot) then giveWeapon(slothbot, tonumber(weapon), 99999, true) end end, 800, 1) --gives the weapon 
-		end
-		setElementData(slothbot, "BotWeapon", tonumber(weapon))
-		if team ~= nil then
-			setElementData(slothbot, "BotTeam", team)
-		end
-		if isElement(slothbot) then setTimer ( setElementInterior, 100, 1, slothbot, tonumber(interior)) --sets interior
-		setTimer ( setElementDimension, 100, 1, slothbot, tonumber(dimension)) --sets dimension
-		end
-		--sets the mode
-		if mode == "waiting" then
-			if isElement(slothbot) then setTimer ( setElementData, 600, 1, slothbot, "status", "waiting") end
-		elseif mode == "following" then
+	local slothbotBackside = createColSphere(0, 0, 0, 0.3) --ZZ
+	attachElements(slothbotBackside, slothbot, 0, -1, 0) --ZZ
+	setElementData(slothbot, "backSide", slothbotBackside, true) --ZZ
+	
+	triggerEvent("onBotSpawned", slothbot)
+	
+	setTimer(
+		function()
 			if isElement(slothbot) then
-			setTimer ( setElementData, 400, 1, slothbot, "leader", modesubject )
-			setTimer ( setElementData, 600, 1, slothbot, "status", "following")
+				setElementData(slothbot, "slothbot", true) -- makes it a bot
+				setElementData(slothbot, "AllowFire", true) -- makes it able to shoot when it wants
 			end
-		elseif mode == "chasing" then
+		end, 200, 1
+	)
+	
+	setTimer(
+		function()
 			if isElement(slothbot) then
-			setTimer ( setElementData, 400, 1, slothbot, "target", modesubject )
-			setTimer ( setElementData, 600, 1, slothbot, "status", "chasing")
+				assigncontroller(slothbot) --sets the bots controller
 			end
-		elseif mode == "guarding" then
-			if isElement(slothbot) then setTimer ( setBotGuard, 400, 1, slothbot, x, y, z) end
-		else
-			if isElement(slothbot) then setTimer ( function(slothbot) if isElement(slothbot) then setElementData(slothbot, "status", "hunting") end end, 600, 1, slothbot) end
-		end
-		return slothbot
+		end, 300, 1
+	)
+	
+	setTimer(
+		function()
+			if isElement(slothbot) then
+				giveWeapon(slothbot, weapon, 99999, true) --gives the weapon
+			end
+		end, 800, 1
+	)
+	
+	setElementData(slothbot, "BotWeapon", weapon)
+	
+	if team then
+		setElementData(slothbot, "BotTeam", team)
 	end
+	
+	setTimer(
+		function()
+			if isElement(slothbot) then
+				setElementInterior(slothbot, interior) --sets interior
+				setElementDimension(slothbot, dimension) --sets dimension
+			end
+		end, 100, 1
+	)
+	
+	--sets the mode
+	if mode ~= "guarding" then
+		setTimer(
+			function()
+				if isElement(slothbot) then
+					setElementData(slothbot, "status", mode)
+				end
+			end, 600, 1
+		)
+	end
+	
+	if mode == "following" then
+		setTimer(
+			function()
+				if isElement(slothbot) then
+					setElementData(slothbot, "leader", modesubject)
+				end
+			end, 400, 1
+		)
+	elseif mode == "chasing" then
+		setTimer(
+			function()
+				if isElement(slothbot) then
+					setElementData(slothbot, "target", modesubject)
+				end
+			end, 400, 1
+		)
+	elseif mode == "guarding" then
+		setTimer(
+			function()
+				if isElement(slothbot) then
+					setBotGuard(slothbot, x, y, z)
+				end
+			end, 400, 1
+		)
+	end
+	
+	return slothbot
 end
 
 function setBotTeam(ped, team)

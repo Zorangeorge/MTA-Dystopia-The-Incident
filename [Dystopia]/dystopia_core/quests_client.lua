@@ -142,15 +142,24 @@ removeEventHandler("onClientPedWasted",root,LouHarperMissionCheckKill)
 removeEventHandler("onClientPedWasted",root,MacMissionCheckKill)
 removeEventHandler("onClientPedWasted",root,Martin_MissionCheckKill)
 removeEventHandler("onClientPedWasted",root,Bo_Freemantle_MissionCheckKill)
-removeEventHandler("onClientColShapeHit",MiltonGoToDumpTargetZone,MiltonGoToDumpCheck)
-removeEventHandler("onClientColShapeHit",EllisTargetZone,EllisTargetZoneCheck)
-removeEventHandler("onClientColShapeHit",JesusTargetZone,JesusTargetZoneCheck)
-removeEventHandler("onClientColShapeHit", curr_mission_col, ReturnHomeMcCreadyMissionCheck)
-removeEventHandler("onClientVehicleExplode",curr_mission_vehicle,lootVanExplodes)
-removeEventHandler("onClientColShapeHit", curr_mission_col, RichmanMcCreadyMissionCheck)
-removeEventHandler("onClientColShapeHit", curr_mission_col, MansionMcCreadyMissionCheck)
-removeEventHandler("onClientColShapeHit", curr_mission_col, GroveMcCreadyMissionCheck)
-
+if isElement(MiltonGoToDumpTargetZone) then
+	removeEventHandler("onClientColShapeHit",MiltonGoToDumpTargetZone,MiltonGoToDumpCheck)
+end
+if isElement(EllisTargetZone) then
+	removeEventHandler("onClientColShapeHit",EllisTargetZone,EllisTargetZoneCheck)
+end
+if isElement(JesusTargetZone) then
+	removeEventHandler("onClientColShapeHit",JesusTargetZone,JesusTargetZoneCheck)
+end
+if isElement(curr_mission_col) then
+	removeEventHandler("onClientColShapeHit", curr_mission_col, ReturnHomeMcCreadyMissionCheck)
+	removeEventHandler("onClientColShapeHit", curr_mission_col, RichmanMcCreadyMissionCheck)
+	removeEventHandler("onClientColShapeHit", curr_mission_col, MansionMcCreadyMissionCheck)
+	removeEventHandler("onClientColShapeHit", curr_mission_col, GroveMcCreadyMissionCheck)
+end
+if isElement(curr_mission_vehicle) then
+	removeEventHandler("onClientVehicleExplode",curr_mission_vehicle,lootVanExplodes)
+end
 if isElement(curr_mission_col) then destroyElement(curr_mission_col); curr_mission_col = nil end
 if isElement(curr_mission_blip) then destroyElement(curr_mission_blip); curr_mission_blip = nil end
 if isElement(curr_mission_blip2) then destroyElement(curr_mission_blip2); curr_mission_blip2 = nil end

@@ -199,7 +199,7 @@ function wakeUp(player, _, _, kick_anim)
 			2500, 1)
 		else
 			setPedAnimation(player, "int_house", "bed_out_r", -1, false, true, true, false)
-			setTimer(saveBedRespawnPosition(player),1500,1)
+			setTimer(saveBedRespawnPosition, 1500, 1, player)
 		end
 	end
 	if isElement(player_in_bed[player]) then

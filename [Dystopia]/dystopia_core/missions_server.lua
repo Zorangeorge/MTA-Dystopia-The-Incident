@@ -1,3 +1,6 @@
+local MISSION_ELEMENT_DESTROY_DELAY = 10000 -- Delay (in ms) between mission end and mission cleanup
+
+
 addEvent("GiveReputation",true)
 function givePlayerRep (amount)
 givePlayerMoney(client,amount)
@@ -77,17 +80,6 @@ function warp_ped_into_vehicle(ped,vehicle)
 end
 addEventHandler("Dystopia_warpAPedInVehicle",root,warp_ped_into_vehicle)
 
-function clear_Mission_Ped_For_Player_Wasted()
-if playerMissionPeds[source] then  curr_mission_ped = playerMissionPeds[source]; setElementAlpha(curr_mission_ped,150); setTimer(destroyElement,10000,1,curr_mission_ped); setTimer(function() curr_mission_ped = nil end,10000,1); outputDebugString(getPlayerName(source)..": sv mission ped deletion...") end
-end
-addEventHandler("onPlayerWasted",root,clear_Mission_Ped_For_Player_Wasted)
-addEventHandler("onPlayerQuit",root,clear_Mission_Ped_For_Player_Wasted)
-
-function clear_Mission_Ped_For_Player()
-if playerMissionPeds[client] then  curr_mission_ped = playerMissionPeds[client]; setElementAlpha(curr_mission_ped,150); setTimer(destroyElement, 10000, 1, curr_mission_ped); setTimer(function() curr_mission_ped = nil end,10000,1); outputDebugString(getPlayerName(source)..": cl mission ped deletion...") end
-end
-addEventHandler("Dystopia_destroy_mission_ped_for_player",root,clear_Mission_Ped_For_Player)
-
 function create_mission_vehicle_for_player(model,x,y,z,r,plate,r1,g1,b1,r2,g2,b2)
 	local vehicle = createVehicle ( model, x, y, z, 0, 0, r, plate )
 	playerMissionVehicles[client] = vehicle
@@ -96,16 +88,37 @@ function create_mission_vehicle_for_player(model,x,y,z,r,plate,r1,g1,b1,r2,g2,b2
 end
 addEventHandler("Dystopia_create_mission_vehicle_for_player",root,create_mission_vehicle_for_player)
 
-function clear_Mission_Vehicle_For_Player_Wasted()
-if playerMissionVehicles[source] then  curr_mission_vehicle = playerMissionVehicles[source]; setElementAlpha(curr_mission_vehicle,150); setTimer(destroyElement,10000,1,curr_mission_vehicle); setTimer(function() curr_mission_vehicle = nil end,10000,1); outputDebugString(getPlayerName(source)..": sv mission vehicle deletion...") end
-end
-addEventHandler("onPlayerWasted",root,clear_Mission_Vehicle_For_Player_Wasted)
-addEventHandler("onPlayerQuit",root,clear_Mission_Vehicle_For_Player_Wasted)
 
-function clear_Mission_Vehicle_For_Player()
-if playerMissionVehicles[client] then  curr_mission_vehicle = playerMissionVehicles[client]; setElementAlpha(curr_mission_vehicle,150); setTimer(destroyElement, 10000, 1, curr_mission_vehicle); setTimer(function() curr_mission_vehicle = nil end,10000,1); outputDebugString(getPlayerName(source)..": cl mission vehicle deletion...") end
+function destroyMissionElementsForPlayer(player)
+	player = player and player or client
+	iprint(player)
+
+	local element = playerMissionVehicles[player]
+	if isElement(element) then
+		setElementAlpha(element, 150)
+		setTimer(function(element)
+			if isElement(element) then
+				destroyElement(element)
+				playerMissionVehicles[player] = nil
+			end
+		end, MISSION_ELEMENT_DESTROY_DELAY, 1, element)
+	end
+
+	element = playerMissionPeds[player]
+	if isElement(element) then
+		setElementAlpha(element, 150)
+		setTimer(function(element)
+			if isElement(element) then
+				destroyElement(element)
+				playerMissionPeds[player] = nil
+			end
+		end, MISSION_ELEMENT_DESTROY_DELAY, 1, element)
+	end
 end
-addEventHandler("Dystopia_destroy_mission_vehicle_for_player",root,clear_Mission_Vehicle_For_Player)
+addEventHandler("Dystopia_destroy_mission_vehicle_for_player", root, destroyMissionElementsForPlayer)
+addEventHandler("Dystopia_destroy_mission_ped_for_player", root, destroyMissionElementsForPlayer)
+addEventHandler("onPlayerWasted", root, destroyMissionElementsForPlayer)
+addEventHandler("onPlayerQuit", root, destroyMissionElementsForPlayer)
 
 ----------------CHIPPING AMBULANCE STUFF
 chipAmbulance = getElementByID("Chip_Ambulance")

@@ -327,7 +327,7 @@ addEventHandler ( "onPedWasted", getRootElement (),
 
 function DropAllWeapons ( droppedWeapons, ped )
 
-if not ped then return end
+	if not isElement(ped) then return end
 
 	setPedWeaponSlot(ped,0)
 	

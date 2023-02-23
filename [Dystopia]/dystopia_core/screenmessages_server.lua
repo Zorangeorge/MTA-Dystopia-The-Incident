@@ -1,16 +1,25 @@
 function outputTopBar( message, thePlayer, red, green, blue )
+	if type(message) ~= "string" then
+		error("Invalid message", 3)
+	end
 	if isElement( thePlayer ) then
 		triggerClientEvent ( thePlayer, "onTextAdd", thePlayer, message, red, green, blue )
 	end
 end
 
 function outputStatusInfo( message, thePlayer, red, green, blue )
+	if type(message) ~= "string" then
+		error("Invalid message", 3)
+	end
 	if isElement( thePlayer ) then
 		triggerClientEvent ( thePlayer, "onStatusAdd", thePlayer, message, red, green, blue )
 	end
 end
 
 function outputInteractInfo( message, thePlayer, red, green, blue )
+	if type(message) ~= "string" then
+		error("Invalid message", 3)
+	end
 	if isElement( thePlayer ) then
 		triggerClientEvent ( thePlayer, "onInteractAdd", thePlayer, message, red, green, blue )
 	end

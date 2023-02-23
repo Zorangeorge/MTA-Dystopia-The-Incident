@@ -233,7 +233,7 @@ function genericKillIconOnly (killer, weapon, bodypart)
 		cancelEvent()
 		
 		--if not killer or killer == source then
-			exports.killmessages:outputMessage ( {"",{"padding",width=3},{"icon",id=999},{"padding",width=3},{"color",r=r1,g=g1,b=b1},getPlayerName(source) }, getRootElement(),255,255,255)
+			exports.dystopia_killmessages:outputMessage ( {"",{"padding",width=3},{"icon",id=999},{"padding",width=3},{"color",r=r1,g=g1,b=b1},getPlayerName(source) }, getRootElement(),255,255,255)
 		--elseif getElementType(killer) == "player" then
 			--exports.killmessages:outputMessage ( {getPlayerName(killer),{"padding",width=3},{"icon",id=999},{"padding",width=3},{"color",r=r1,g=g1,b=b1},getPlayerName(source) }, getRootElement(),r2,g2,b2) 
 		--else 
