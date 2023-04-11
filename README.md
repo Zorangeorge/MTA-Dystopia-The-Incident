@@ -14,7 +14,7 @@ Gamemode is already in playable state. Some aspects are still not optimized, so 
 *All contributions are welcome*, but be aware: this project was and still is a learning experience for me. The codebase follows few to no standards, is poorly organized and is un-optimized; you're likely to encounter dead code, oddities, unneedingly cloned scripts and other stupid stuff: just about any kind of mistake you would expect a beginner to make. To give you an idea, when I started this I had only a very vague notion of what a variable is. Nonetheless, the result itself is very much playable and enjoyable. First things on my list are de-cluttering, cleaning, documenting and attempting to standardise the code.
 
 ### Test server:
-mtasa://37.187.171.204:22008
+mtasa://46.105.185.45:22008
 
 ### More details:
 
